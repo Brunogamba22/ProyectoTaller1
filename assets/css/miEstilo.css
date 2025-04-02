@@ -1,0 +1,17 @@
+.titulo{
+    background-color:#f5b030;
+    width:100vw;
+    margin: 0 auto;
+    text-align: center;
+    padding:3px 0;
+    
+ }
+
+/*estilo seccion principal*/
+.seccion1 {
+
+    background-color: #f5b030;
+    color:rgb(20, 21, 22);
+    text-align:center;
+    padding:3px 0;
+}
