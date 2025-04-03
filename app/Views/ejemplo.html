@@ -1,37 +1,43 @@
 <!DOCTYPE html>
+<!-- Declaración del tipo de documento y idioma -->
 <html lang="es">
   <head>
-    <meta charset="utf-8">
-    <!-- Meta viewport para hacer la página responsiva y adaptable a diferentes dispositivos -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Principal</title>
+    <!-- Metadatos básicos -->
+    <meta charset="utf-8"> <!-- Codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Configuración para responsive design -->
     
-    <!-- Enlace a la hoja de estilos de Bootstrap para estilos predeterminados -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <!-- Enlace a una hoja de estilos personalizada para modificar el diseño -->
-    <link rel="stylesheet" href="assets/CSS/miEstilo.css">
+    <title>Principal</title> <!-- Título que aparece en la pestaña del navegador -->
+    
+    <!-- Hojas de estilo -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css"> <!-- Framework Bootstrap para diseño -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!-- Iconos Font Awesome -->
+    <link rel="stylesheet" href="assets/css/miEstilo.css"> <!-- Nuestros estilos personalizados -->
   </head>
-  <body>
-    <!-- Encabezado principal de la página -->
+  
+  <!-- Cuerpo de la página con clase para el fondo -->
+  <body class="fondo-elegante">
+    <!-- Encabezado principal -->
     <header>
-      <h1 class="titulo">BIENVENIDOS A Actitud NOMAS</h1>
+      <!-- Título principal de la página -->
+      <h1 class="titulo">ESTOY RE LOCOOOO</h1>
     </header>
 
-    <!-- Barra de navegación con menú -->
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #343a40;">
-      <div class="container-fluid">
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-personalizada">
+      <div class="container-fluid"> <!-- Contenedor fluido para usar todo el ancho -->
         <!-- Logo de la empresa -->
-        <img src="<?php echo base_url('assets/img/logo2.0.png')?>" alt="marca" width="75" height="30" class="img-fluid">
+        <img src="<?php echo base_url('assets/img/logo2.0.png')?>" alt="Logo de la marca" width="75" height="30" class="img-fluid">
         
-        <!-- Botón para mostrar/ocultar el menú en dispositivos pequeños -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <!-- Botón para menú en móviles -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03">
+          <span class="navbar-toggler-icon"></span> <!-- Icono de hamburguesa -->
         </button> 
         
-        <!-- Menú de navegación -->
+        <!-- Contenido colapsable del menú -->
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <!-- Lista de navegación -->
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <!-- Enlaces a diferentes secciones de la página -->
+            <!-- Elementos del menú -->
             <li class="nav-item"><a class="nav-link active" href='quienes_somos'>Quienes somos</a></li>
             <li class="nav-item"><a class="nav-link" href="acerca_de">Acerca de</a></li>
             <li class="nav-item"><a class="nav-link" href="registrarse">Registrarse</a></li>
@@ -41,44 +47,42 @@
           <!-- Formulario de búsqueda -->
           <form class="d-flex" role="buscar">
             <input class="form-control me-2" type="search" placeholder="buscar" aria-label="Search">
-            <button class="btn btn-warning" type="submit">Buscar</button>
+            <button class="btn btn-buscar" type="submit">Buscar</button>
           </form>
         </div>
       </div>
     </nav>
 
+    <!-- Contenido principal -->
     <div class="content">
-      <!-- Sección de bienvenida con un mensaje promocional -->
+      <!-- Sección de bienvenida -->
       <div class="seccion1">
         <section>
           <h4>La ropa perfecta para cada ocasión. ¡Encuéntrala aquí! 🎯</h4>
         </section>  
       </div>
       
-      <!-- Carrusel de imágenes con productos destacados -->
-      <div id="carouselExample" class="carousel slide">
-        <div class="carousel-inner">
-          <!-- Primera imagen del carrusel (activa por defecto) -->
+      <!-- Carrusel de imágenes -->
+      <div id="carouselExample" class="carousel slide carrusel-personalizado" data-bs-ride="carousel">
+        <div class="carousel-inner"> <!-- Contenedor de las imágenes -->
+          <!-- Imágenes del carrusel -->
           <div class="carousel-item active">
-            <img src="assets/img/ejemProyectoBY1.jpeg" class="d-block w-100" alt="Imagen 1">
+            <img src="assets/img/ejemProyectoBY1.jpeg" class="d-block w-100" alt="Producto 1">
           </div>
-          <!-- Segunda imagen del carrusel -->
           <div class="carousel-item">
-            <img src="assets/img/ejemProyectoBY2.jpeg" class="d-block w-100" alt="Imagen 2">
+            <img src="assets/img/ejemProyectoBY2.jpeg" class="d-block w-100" alt="Producto 2">
           </div>
-          <!-- Tercera imagen del carrusel -->
           <div class="carousel-item">
-            <img src="assets/img/ejemProyectoBY3.jpeg" class="d-block w-100" alt="Imagen 3">
+            <img src="assets/img/ejemProyectoBY3.jpeg" class="d-block w-100" alt="Producto 3">
           </div>
         </div>
         
-        <!-- Botón para ir a la imagen anterior en el carrusel -->
+        <!-- Controles del carrusel -->
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Anterior</span>
         </button>
         
-        <!-- Botón para ir a la imagen siguiente en el carrusel -->
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Siguiente</span>
@@ -86,17 +90,19 @@
       </div>
     </div>
     
-    <!-- Footer con redes sociales -->
-    <footer class="bg-dark text-white text-center p-3 mt-4">
+    <!-- Pie de página -->
+    <footer class="footer-personalizado">
       <p>Síguenos en nuestras redes sociales</p>
-      <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i> Facebook</a>
-      <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i> Instagram</a>
-      <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i> Twitter</a>
-      <a href="#" class="text-white"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <div class="redes-sociales">
+        <!-- Enlaces a redes sociales -->
+        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="#" class="text-white"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
     </footer>
     
-    <!-- Scripts de Bootstrap para funcionalidad interactiva -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Scripts JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> <!-- Bootstrap JS -->
   </body>
 </html>

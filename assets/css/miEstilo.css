@@ -1,17 +1,182 @@
-.titulo{
-    background-color:#f5b030;
-    width:100vw;
-    margin: 0 auto;
-    text-align: center;
-    padding:3px 0;
-    
- }
+/* 
+ * ESTILOS PRINCIPALES PARA LA PÁGINA
+ * Autor: [Tu Nombre]
+ * Versión: 1.0
+ */
 
-/*estilo seccion principal*/
+/* ===== ESTILOS GENERALES ===== */
+body {
+    /* Fuente base para toda la página */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Reset de márgenes y configuración flexible */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Ocupa al menos toda la altura de la pantalla */
+    display: flex;
+    flex-direction: column; /* Organización en columna */
+}
+
+/* ===== OPCIONES DE FONDO ===== */
+.fondo-elegante {
+    /* Fondo gradiente claro */
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ed 100%);
+    color: #333; /* Color de texto principal */
+}
+
+.fondo-oscuro {
+    /* Fondo gradiente oscuro para contraste */
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: white; /* Texto blanco para mejor legibilidad */
+}
+
+.fondo-textura {
+    /* Fondo con textura sutil */
+    background-color: #f8f9fa;
+    background-image: url('https://www.transparenttextures.com/patterns/subtle-dots.png');
+}
+
+/* ===== ENCABEZADO ===== */
+.titulo {
+    /* Estilos para el título principal */
+    background-color: white;
+    color: #343a40; /* Color oscuro para contraste */
+    width: 100%; /* Ancho completo */
+    margin: 0; /* Sin margen */
+    text-align: center; /* Centrado */
+    padding: 15px 0; /* Espaciado interno */
+    font-size: 2.2rem; /* Tamaño grande */
+    font-weight: 700; /* Negrita */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* ===== BARRA DE NAVEGACIÓN ===== */
+.navbar-personalizada {
+    /* Personalización de la barra de navegación */
+    background-color: #343a40 !important; /* Color oscuro */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Sombra */
+    padding: 10px 0; /* Espaciado */
+}
+
+.nav-link {
+    /* Estilos para los enlaces del menú */
+    font-weight: 500; /* Semi-negrita */
+    transition: all 0.3s ease; /* Transición suave para efectos hover */
+    margin: 0 5px; /* Espaciado entre elementos */
+}
+
+.nav-link:hover {
+    /* Efecto al pasar el mouse */
+    transform: translateY(-2px); /* Movimiento sutil hacia arriba */
+    color: #fff !important; /* Color blanco */
+}
+
+/* ===== BOTÓN DE BÚSQUEDA ===== */
+.btn-buscar {
+    /* Estilos personalizados para el botón de búsqueda */
+    background-color: white;
+    color: #343a40; /* Color oscuro para texto */
+    border: 2px solid #343a40; /* Borde visible */
+    font-weight: 600; /* Negrita */
+    transition: all 0.3s ease; /* Transición para efectos hover */
+}
+
+.btn-buscar:hover {
+    /* Efecto hover para el botón */
+    background-color: #343a40; /* Fondo oscuro */
+    color: white; /* Texto blanco */
+    border-color: white; /* Borde blanco */
+}
+
+/* ===== SECCIÓN PRINCIPAL ===== */
+.content {
+    /* Contenedor principal del contenido */
+    padding: 20px; /* Espaciado interno */
+    flex: 1; /* Ocupa el espacio disponible */
+}
+
 .seccion1 {
+    /* Estilos para la sección de bienvenida */
+    background-color: white; /* Fondo blanco */
+    color: #343a40; /* Texto oscuro */
+    text-align: center; /* Centrado */
+    padding: 15px 0; /* Espaciado */
+    margin: 20px 0; /* Margen exterior */
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08); /* Sombra sutil */
+}
 
-    background-color: #f5b030;
-    color:rgb(20, 21, 22);
-    text-align:center;
-    padding:3px 0;
+.seccion1 h4 {
+    /* Estilos para el texto de bienvenida */
+    margin: 0; /* Sin margen */
+    font-size: 1.4rem; /* Tamaño mediano */
+    font-weight: 500; /* Peso medio */
+}
+
+/* ===== CARRUSEL ===== */
+.carrusel-personalizado {
+    /* Personalización del carrusel de imágenes */
+    margin: 30px auto; /* Centrado con margen */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    border-radius: 10px; /* Esquinas redondeadas */
+    overflow: hidden; /* Oculta lo que sobresale */
+    max-width: 1200px; /* Ancho máximo */
+}
+
+.carousel-item img {
+    /* Imágenes dentro del carrusel */
+    border-radius: 10px; /* Esquinas redondeadas */
+}
+
+/* ===== PIE DE PÁGINA ===== */
+.footer-personalizado {
+    /* Estilos para el footer */
+    background-color: #343a40; /* Fondo oscuro */
+    color: white; /* Texto blanco */
+    text-align: center; /* Centrado */
+    padding: 25px 0; /* Espaciado interno */
+    margin-top: auto; /* Se mantiene abajo */
+}
+
+.footer-personalizado p {
+    /* Texto del footer */
+    margin-bottom: 15px; /* Espaciado inferior */
+    font-size: 1.1rem; /* Tamaño ligeramente mayor */
+}
+
+.redes-sociales a {
+    /* Enlaces de redes sociales */
+    color: white; /* Texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    transition: all 0.3s ease; /* Transición para hover */
+    margin: 0 10px; /* Espaciado entre enlaces */
+    font-size: 0.95rem; /* Tamaño de fuente */
+}
+
+.redes-sociales a:hover {
+    /* Efecto hover para redes sociales */
+    color: #adb5bd; /* Color gris claro */
+    transform: translateY(-2px); /* Movimiento sutil */
+}
+
+/* ===== DISEÑO RESPONSIVE ===== */
+@media (max-width: 768px) {
+    /* Estilos para pantallas menores a 768px (móviles/tablets) */
+    
+    .titulo {
+        font-size: 1.8rem; /* Tamaño menor para título */
+        padding: 12px 0; /* Menor espaciado */
+    }
+    
+    .seccion1 h4 {
+        font-size: 1.2rem; /* Tamaño menor para texto */
+    }
+    
+    .redes-sociales a {
+        display: block; /* Apila los enlaces verticalmente */
+        margin: 8px 0; /* Espaciado entre enlaces apilados */
+    }
+    
+    .navbar-collapse {
+        padding-top: 15px; /* Espaciado superior para menú colapsado */
+    }
 }
