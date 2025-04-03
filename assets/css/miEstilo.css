@@ -16,6 +16,20 @@ body {
     flex-direction: column; /* Organización en columna */
 }
 
+header {
+    display: flex;            /* Activa Flexbox */
+    justify-content: center;  /* Centra la imagen horizontalmente */
+    align-items: center;      /* Centra la imagen verticalmente (opcional) */
+    height: 100px;            /* Ajusta la altura del header */
+    background-color: #f4f4f4; /* Color de fondo opcional */
+}
+
+/* Estilos para la imagen */
+header img {
+    max-width: 100%;  /* Evita que la imagen se desborde */
+    height: auto;     /* Mantiene la proporción */
+}
+
 /* ===== OPCIONES DE FONDO ===== */
 .fondo-elegante {
     /* Fondo gradiente claro */
