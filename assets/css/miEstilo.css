@@ -4,61 +4,39 @@
  * Versión: 1.0
  */
 
-/* ===== ESTILOS GENERALES ===== */
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Color de fondo suave */
 }
 
-/* Ajuste del input de búsqueda */
-.search-container {
-    display: flex;
-    align-items: center;
-    gap: 8px; /* Espacio entre la lupa y el input */
+/* Buscador */
+.search-box {
+    width: 250px;
 }
 
-.search-container input {
-    max-width: 200px; /* Limita el tamaño del input */
+.search-box input {
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    padding: 8px 15px;
+    width: 100%;
 }
 
-/* Ajuste del logo */
-.logo img {
-    max-height: 50px; /* Controla el tamaño del logo */
+/* Logo */
+.logo h2 {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
 }
 
-/* Alineación de los enlaces */
-.header-links a {
-    text-decoration: none;
-    color: #333; /* Color oscuro */
+/* Menú de usuario */
+.user-menu a {
+    font-size: 0.9rem;
     font-weight: bold;
-    transition: color 0.3s;
+    text-transform: uppercase;
 }
 
-.header-links a:hover {
-    color: #000; /* Color más oscuro al pasar el cursor */
-}
-
-/* Estilo del carrito */
-.cart-container {
-    position: relative;
-    display: inline-block;
-}
-
-.cart-badge {
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    background-color: black;
-    color: white;
-    font-size: 12px;
-    border-radius: 50%;
-    width: 18px;
-    height: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.user-menu i {
+    font-size: 1.2rem;
 }
 
 /* Estilos para la imagen */
