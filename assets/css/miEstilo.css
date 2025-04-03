@@ -4,10 +4,19 @@
  * Versión: 1.0
  */
 
+<<<<<<< HEAD
 /* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f8f9fa; /* Color de fondo suave */
+=======
+/* ===== ESTILOS GENERALES ===== */
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+>>>>>>> b671e73 (header actualizado)
 }
 
 
