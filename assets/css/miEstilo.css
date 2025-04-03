@@ -5,24 +5,14 @@
  */
 
 /* ===== ESTILOS GENERALES ===== */
+/* Estilos generales */
 body {
-    /* Fuente base para toda la página */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* Reset de márgenes y configuración flexible */
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    min-height: 100vh; /* Ocupa al menos toda la altura de la pantalla */
-    display: flex;
-    flex-direction: column; /* Organización en columna */
 }
 
-header {
-    display: flex;            /* Activa Flexbox */
-    justify-content: center;  /* Centra la imagen horizontalmente */
-    align-items: center;      /* Centra la imagen verticalmente (opcional) */
-    height: 100px;            /* Ajusta la altura del header */
-    background-color: #f4f4f4; /* Color de fondo opcional */
-}
+
 
 /* Estilos para la imagen */
 header img {
