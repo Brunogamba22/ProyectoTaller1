@@ -12,7 +12,54 @@ body {
     padding: 0;
 }
 
+/* Ajuste del input de búsqueda */
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espacio entre la lupa y el input */
+}
 
+.search-container input {
+    max-width: 200px; /* Limita el tamaño del input */
+}
+
+/* Ajuste del logo */
+.logo img {
+    max-height: 50px; /* Controla el tamaño del logo */
+}
+
+/* Alineación de los enlaces */
+.header-links a {
+    text-decoration: none;
+    color: #333; /* Color oscuro */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.header-links a:hover {
+    color: #000; /* Color más oscuro al pasar el cursor */
+}
+
+/* Estilo del carrito */
+.cart-container {
+    position: relative;
+    display: inline-block;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* Estilos para la imagen */
 header img {
