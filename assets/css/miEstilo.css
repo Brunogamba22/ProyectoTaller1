@@ -12,175 +12,153 @@ body {
     padding: 0;
 }
 
-
-
 /* Estilos para la imagen */
 header img {
-    max-width: 100%;  /* Evita que la imagen se desborde */
-    height: auto;     /* Mantiene la proporción */
+    max-width: 100%;
+    height: auto;
 }
 
 /* ===== OPCIONES DE FONDO ===== */
 .fondo-elegante {
-    /* Fondo gradiente claro */
     background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ed 100%);
-    color: #333; /* Color de texto principal */
+    color: #333;
 }
 
 .fondo-oscuro {
-    /* Fondo gradiente oscuro para contraste */
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: white; /* Texto blanco para mejor legibilidad */
+    color: white;
 }
 
 .fondo-textura {
-    /* Fondo con textura sutil */
     background-color: #f8f9fa;
     background-image: url('https://www.transparenttextures.com/patterns/subtle-dots.png');
 }
 
 /* ===== ENCABEZADO ===== */
 .titulo {
-    /* Estilos para el título principal */
     background-color: white;
-    color: #343a40; /* Color oscuro para contraste */
-    width: 100%; /* Ancho completo */
-    margin: 0; /* Sin margen */
-    text-align: center; /* Centrado */
-    padding: 15px 0; /* Espaciado interno */
-    font-size: 2.2rem; /* Tamaño grande */
-    font-weight: 700; /* Negrita */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    color: #343a40;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 2.2rem;
+    font-weight: 700;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* ===== BARRA DE NAVEGACIÓN ===== */
 .navbar-personalizada {
-    /* Personalización de la barra de navegación */
-    background-color: #343a40 !important; /* Color oscuro */
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Sombra */
-    padding: 10px 0; /* Espaciado */
+    background-color: #343a40 !important;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
 }
 
 .nav-link {
-    /* Estilos para los enlaces del menú */
-    font-weight: 500; /* Semi-negrita */
-    transition: all 0.3s ease; /* Transición suave para efectos hover */
-    margin: 0 5px; /* Espaciado entre elementos */
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin: 0 5px;
 }
 
 .nav-link:hover {
-    /* Efecto al pasar el mouse */
-    transform: translateY(-2px); /* Movimiento sutil hacia arriba */
-    color: #fff !important; /* Color blanco */
+    transform: translateY(-2px);
+    color: #fff !important;
 }
 
 /* ===== BOTÓN DE BÚSQUEDA ===== */
 .btn-buscar {
-    /* Estilos personalizados para el botón de búsqueda */
     background-color: white;
-    color: #343a40; /* Color oscuro para texto */
-    border: 2px solid #343a40; /* Borde visible */
-    font-weight: 600; /* Negrita */
-    transition: all 0.3s ease; /* Transición para efectos hover */
+    color: #343a40;
+    border: 2px solid #343a40;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
 .btn-buscar:hover {
-    /* Efecto hover para el botón */
-    background-color: #343a40; /* Fondo oscuro */
-    color: white; /* Texto blanco */
-    border-color: white; /* Borde blanco */
+    background-color: #343a40;
+    color: white;
+    border-color: white;
 }
 
 /* ===== SECCIÓN PRINCIPAL ===== */
 .content {
-    /* Contenedor principal del contenido */
-    padding: 20px; /* Espaciado interno */
-    flex: 1; /* Ocupa el espacio disponible */
+    padding: 20px;
+    flex: 1;
 }
 
 .seccion1 {
-    /* Estilos para la sección de bienvenida */
-    background-color: white; /* Fondo blanco */
-    color: #343a40; /* Texto oscuro */
-    text-align: center; /* Centrado */
-    padding: 15px 0; /* Espaciado */
-    margin: 20px 0; /* Margen exterior */
-    border-radius: 8px; /* Esquinas redondeadas */
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08); /* Sombra sutil */
+    background-color: white;
+    color: #343a40;
+    text-align: center;
+    padding: 15px 0;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
 .seccion1 h4 {
-    /* Estilos para el texto de bienvenida */
-    margin: 0; /* Sin margen */
-    font-size: 1.4rem; /* Tamaño mediano */
-    font-weight: 500; /* Peso medio */
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 500;
 }
 
 /* ===== CARRUSEL ===== */
 .carrusel-personalizado {
-    /* Personalización del carrusel de imágenes */
-    margin: 30px auto; /* Centrado con margen */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
-    border-radius: 10px; /* Esquinas redondeadas */
-    overflow: hidden; /* Oculta lo que sobresale */
-    max-width: 1200px; /* Ancho máximo */
+    margin: 30px auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 1200px;
 }
 
 .carousel-item img {
-    /* Imágenes dentro del carrusel */
-    border-radius: 10px; /* Esquinas redondeadas */
+    border-radius: 10px;
 }
 
 /* ===== PIE DE PÁGINA ===== */
 .footer-personalizado {
-    /* Estilos para el footer */
-    background-color: #343a40; /* Fondo oscuro */
-    color: white; /* Texto blanco */
-    text-align: center; /* Centrado */
-    padding: 25px 0; /* Espaciado interno */
-    margin-top: auto; /* Se mantiene abajo */
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: auto;
 }
 
 .footer-personalizado p {
-    /* Texto del footer */
-    margin-bottom: 15px; /* Espaciado inferior */
-    font-size: 1.1rem; /* Tamaño ligeramente mayor */
+    margin-bottom: 15px;
+    font-size: 1.1rem;
 }
 
 .redes-sociales a {
-    /* Enlaces de redes sociales */
-    color: white; /* Texto blanco */
-    text-decoration: none; /* Sin subrayado */
-    transition: all 0.3s ease; /* Transición para hover */
-    margin: 0 10px; /* Espaciado entre enlaces */
-    font-size: 0.95rem; /* Tamaño de fuente */
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin: 0 10px;
+    font-size: 0.95rem;
 }
 
 .redes-sociales a:hover {
-    /* Efecto hover para redes sociales */
-    color: #adb5bd; /* Color gris claro */
-    transform: translateY(-2px); /* Movimiento sutil */
+    color: #adb5bd;
+    transform: translateY(-2px);
 }
 
-/* ===== DISEÑO RESPONSIVE ===== */
+/* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {
-    /* Estilos para pantallas menores a 768px (móviles/tablets) */
-    
     .titulo {
-        font-size: 1.8rem; /* Tamaño menor para título */
-        padding: 12px 0; /* Menor espaciado */
+        font-size: 1.8rem;
+        padding: 12px 0;
     }
-    
+
     .seccion1 h4 {
-        font-size: 1.2rem; /* Tamaño menor para texto */
+        font-size: 1.2rem;
     }
-    
+
     .redes-sociales a {
-        display: block; /* Apila los enlaces verticalmente */
-        margin: 8px 0; /* Espaciado entre enlaces apilados */
+        display: block;
+        margin: 8px 0;
     }
-    
+
     .navbar-collapse {
-        padding-top: 15px; /* Espaciado superior para menú colapsado */
+        padding-top: 15px;
     }
 }
