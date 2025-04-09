@@ -18,66 +18,47 @@
   <body class="fondo-elegante">
     <!-- Encabezado principal -->
 
-    <header class="container-fluid py-3 border-bottom">
-      <div class="row align-items-center">
-          <!-- Barra de búsqueda -->
-          <div class="col-md-4 d-flex align-items-center">
-              <input type="text" class="form-control me-2" placeholder="Buscar">
-              <i class="fas fa-search"></i> <!-- Ícono de lupa -->
-          </div>
 
-          <!-- Logo centrado -->
-          <div class="col-md-4 text-center">
-              <img src="assets/img/logo.png" alt="Logo UMMA" class="img-fluid" style="max-height: 50px;">
-          </div>
-
-          <!-- Enlaces a la derecha -->
-          <div class="col-md-4 text-end">
-              <a href="#" class="text-dark fw-bold me-3">CREAR CUENTA</a>
-              <a href="#" class="text-dark fw-bold me-3">INICIAR SESIÓN</a>
-              <i class="fas fa-shopping-cart"></i> <!-- Ícono de carrito -->
-              <span class="badge bg-dark rounded-circle">0</span> <!-- Contador del carrito -->
-          </div>
-      </div>
-    </header>
-
-    <!-- BARRA DE NAVEGACIÓN -->
+    <!-- Barra de navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-personalizada">
-      <div class="container-fluid">
-        <!-- Logo -->
-        <img src="assets/img/logo2.0.png" alt="Logo de la marca" width="75" height="30" class="img-fluid">
-        
-        <!-- Botón para colapsar -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        
-        <!-- Enlaces de navegación -->
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link active" href="quienes_somos">Quienes somos</a></li>
-            <li class="nav-item"><a class="nav-link" href="acerca_de">Acerca de</a></li>
-            <li class="nav-item"><a class="nav-link" href="registrarse">Registrarse</a></li>
-            <li class="nav-item"><a class="nav-link" href="login">Login</a></li>
-          </ul>
+      <div class="container">
+          <a class="navbar-brand" href="#">UMMA</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Alternar navegación">
+              <span class="navbar-toggler-icon"></span>
+          </button>
 
-          <!-- Buscador -->
-          <form class="d-flex" role="buscar">
-            <input class="form-control me-2" type="search" placeholder="buscar" aria-label="Search">
-            <button class="btn btn-buscar" type="submit">Buscar</button>
-          </form>
-        </div>
+          <div class="collapse navbar-collapse" id="menuNavegacion">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Ropa</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Calzado</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Contacto</a>
+                  </li>
+              </ul>
+              <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Buscar productos..." aria-label="Buscar">
+                  <button class="btn btn-buscar" type="submit">Buscar</button>
+              </form>
+          </div>
       </div>
     </nav>
-  
-    <!-- Contenido principal -->
-    <div class="content">
-      <!-- Sección de bienvenida -->
-      <div class="seccion1">
-        <section>
-          <h4>La ropa perfecta para cada ocasión. ¡Encuéntrala aquí! 🎯</h4>
-        </section>  
-      </div>
+    
+    <!-- Título principal -->
+    <header>
+      <h1 class="titulo">Bienvenidos a UMMA</h1>
+    </header>
+    
+    <!-- Sección de bienvenida -->
+    <section class="seccion1 container">
+        <h4>Moda urbana al mejor precio. ¡Descubrí nuestras colecciones!</h4>
+    </section>
       
       <!-- Carrusel de imágenes -->
       <div id="carouselExample" class="carousel slide carrusel-personalizado" data-bs-ride="carousel">
