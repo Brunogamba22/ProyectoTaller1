@@ -6,7 +6,7 @@
     <meta charset="utf-8"> <!-- Codificación de caracteres -->
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Configuración para responsive design -->
     
-    <title>Principal</title> <!-- Título que aparece en la pestaña del navegador -->
+    <title>Inicio - UMMA</title> <!-- Título que aparece en la pestaña del navegador -->
     
     <!-- Hojas de estilo -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css"> <!-- Framework Bootstrap para diseño -->
@@ -40,6 +40,35 @@
           </div>
       </div>
     </header>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-personalizada">
+      <div class="container-fluid">
+        <!-- Logo -->
+        <img src="assets/img/logo2.0.png" alt="Logo de la marca" width="75" height="30" class="img-fluid">
+        
+        <!-- Botón para colapsar -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Enlaces de navegación -->
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="quienes_somos">Quienes somos</a></li>
+            <li class="nav-item"><a class="nav-link" href="acerca_de">Acerca de</a></li>
+            <li class="nav-item"><a class="nav-link" href="registrarse">Registrarse</a></li>
+            <li class="nav-item"><a class="nav-link" href="login">Login</a></li>
+          </ul>
+
+          <!-- Buscador -->
+          <form class="d-flex" role="buscar">
+            <input class="form-control me-2" type="search" placeholder="buscar" aria-label="Search">
+            <button class="btn btn-buscar" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
   
     <!-- Contenido principal -->
     <div class="content">
