@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Taller de Programación</title>
+    <meta charset="utf - 8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Taller de Programación</title>
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" integrity="" crossorigin="">
 </head>
 <body>
