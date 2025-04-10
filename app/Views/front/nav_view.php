@@ -14,8 +14,14 @@
                         <a class="nav-link active" href="<?php echo base_url('principal');?>">Inicio</a> <!--en PHP 'echo base_url' (especialmente en el framework CodeIgniter) significa:
                                                                                                 👉 Mostrar (imprimir) la URL base de tu aplicación web.-->
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url('ropa');?>">Ropa</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="<?php echo base_url('ropa');?>" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ropa</a>
+                        <ul class="dropdown-menu">
+                            <li> <a class="dropdown-item" href="#">Remeras</a></li>
+                            <li> <a class="dropdown-item" href="#">buzos</a></li>
+                            <li> <a class="dropdown-item" href="#">Camisas</a></li>
+                            <li> <a class="dropdown-item" href="#">Camperas</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url('calzado');?>">Calzado</a>

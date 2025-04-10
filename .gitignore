@@ -1,1 +1,49 @@
 writable/logs/*.log
+
+# Carpetas del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos temporales de editores
+*.sublime-project
+*.sublime-workspace
+*.vscode/
+*.code-workspace
+
+# Archivos de entorno
+.env
+.env.*
+
+# Logs
+*.log
+
+# Cache
+cache/
+storage/
+writable/cache/
+writable/logs/
+writable/session/
+writable/debugbar/
+
+# Composer
+/vendor/
+
+# Node
+/node_modules/
+
+# Archivos de XAMPP
+xampp/
+htdocs/index.php
+
+# Base de datos local
+*.sql
+*.sqlite
+
+# Archivos temporales de debugbar
+writable/debugbar/
+
+# Otros archivos innecesarios
+*.bak
+*.tmp
+*.swp
+*.idea/
