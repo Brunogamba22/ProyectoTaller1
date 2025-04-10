@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+
     <!-- Barra de navegación -->
     <section class="conteiner-fluid">
-        <nav class="navbar navbar-expand-lg navbar-dark navbar-personalizada">
+      <nav class="navbar navbar-expand-lg navbar-dark navbar-personalizada">
         <div class="container">
             <a class="navbar-brand" href="#">UMMA</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Alternar navegación">
@@ -16,9 +9,9 @@
             </button>
 
             <div class="collapse navbar-collapse" id="menuNavegacion">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" href="<?php echo base_url('prueba');?>">Inicio</a> <!--en PHP 'echo base_url' (especialmente en el framework CodeIgniter) significa:
+                        <a class="nav-link active" href="<?php echo base_url('principal');?>">Inicio</a> <!--en PHP 'echo base_url' (especialmente en el framework CodeIgniter) significa:
                                                                                                 👉 Mostrar (imprimir) la URL base de tu aplicación web.-->
                     </li>
                     <li class="nav-item">
@@ -40,8 +33,6 @@
                 </form>
             </div>
         </div>
-        </nav>
+      </nav>
     </section>
     
-</body>
-</html>
