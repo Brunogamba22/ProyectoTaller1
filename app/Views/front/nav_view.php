@@ -1,7 +1,7 @@
 
     <!-- Barra de navegación -->
     <section class="conteiner-fluid">
-      <nav class="navbar navbar-expand-lg navbar-dark navbar-personalizada">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-personalizada">
         <div class="container">
             <a class="navbar-brand" href="#">UMMA</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Alternar navegación">
@@ -12,12 +12,12 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" href="<?php echo base_url('principal');?>">Inicio</a> <!--en PHP 'echo base_url' (especialmente en el framework CodeIgniter) significa:
-                                                                                                👉 Mostrar (imprimir) la URL base de tu aplicación web.-->
+                                                                                                Mostrar (imprimir) la URL base de tu aplicación web.-->
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="<?php echo base_url('ropa');?>" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ropa</a>
                         <ul class="dropdown-menu">
-                            <li> <a class="dropdown-item" href="#">Remeras</a></li>
+                            <li> <a class="dropdown-item" href="remeras">Remeras</a></li>
                             <li> <a class="dropdown-item" href="#">Buzos</a></li>
                             <li> <a class="dropdown-item" href="#">Camisas</a></li>
                             <li> <a class="dropdown-item" href="#">Camperas</a></li>
@@ -39,6 +39,6 @@
                 </form>
             </div>
         </div>
-      </nav>
+    </nav>
     </section>
     

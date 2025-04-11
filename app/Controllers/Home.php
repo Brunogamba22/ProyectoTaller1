@@ -23,6 +23,26 @@ class Home extends BaseController
         echo view('front/footer_view');
     }
 
+    public function remeras()
+    {
+        $data['titulo'] = 'remeras';
+        echo view('front/head_view', $data);
+        echo view('front/nav_view');
+        echo view('front/ropa/remeras');
+        echo view('front/footer_view');
+    }
+
+    public function camperas()
+    {
+        $data['titulo'] = 'camperas';
+        echo view('front/head_view', $data);
+        echo view('front/nav_view');
+        echo view('front/ropa/camperas');
+        echo view('front/footer_view');
+    }
+
+
+
     public function calzado()
     {
         $data['titulo'] = 'calzado';
