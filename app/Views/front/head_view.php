@@ -6,7 +6,7 @@
     <meta charset="utf-8"> <!-- Codificación de caracteres -->
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Configuración para responsive design -->
     
-    <title>Inicio - UMMA</title> <!-- Título que aparece en la pestaña del navegador -->
+    <title><?php echo $titulo; ?> Inicio - UMMA</title> <!-- Título que aparece en la pestaña del navegador -->
     
     <!-- Hojas de estilo -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css"> <!-- Framework Bootstrap para diseño -->
