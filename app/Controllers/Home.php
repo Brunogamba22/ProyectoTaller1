@@ -9,16 +9,46 @@ class Home extends BaseController
     {
         $data['titulo'] = 'principal'; 
         echo view('front/head_view', $data);
-        echo view('front/navbar_view');
+        echo view('front/nav_view');
         echo view('front/principal');
         echo view('front/footer_view');
     }
 
+    public function ropa()
+    {
+        $data['titulo'] = 'ropa';
+        echo view('front/head_view', $data);
+        echo view('front/nav_view');
+        echo view('front/ropa');
+        echo view('front/footer_view');
+    }
+
+    public function calzado()
+    {
+        $data['titulo'] = 'calzado';
+        echo view('front/head_view', $data);
+        echo view('front/nav_view');
+        echo view('front/calzado');
+        echo view('front/footer_view');
+    }
+
+
+
     public function sobrenosotros()
     {
-        echo view('front/head_view');
-        echo view('front/navbar_view');
-        echo view('front/quienes_somos');
+        $data['titulo'] = 'sobrenosotros';
+        echo view('front/head_view', $data);
+        echo view('front/nav_view');
+        echo view('front/sobrenosotros');
+        echo view('front/footer_view');
+    }
+
+    public function contacto()
+    {
+        $data['titulo'] = 'contacto';
+        echo view('front/head_view', $data);
+        echo view('front/nav_view');
+        echo view('front/contacto');
         echo view('front/footer_view');
     }
 }

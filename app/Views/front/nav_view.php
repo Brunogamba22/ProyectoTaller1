@@ -18,7 +18,7 @@
                         <a class="nav-link dropdown-toggle" href="<?php echo base_url('ropa');?>" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ropa</a>
                         <ul class="dropdown-menu">
                             <li> <a class="dropdown-item" href="#">Remeras</a></li>
-                            <li> <a class="dropdown-item" href="#">buzos</a></li>
+                            <li> <a class="dropdown-item" href="#">Buzos</a></li>
                             <li> <a class="dropdown-item" href="#">Camisas</a></li>
                             <li> <a class="dropdown-item" href="#">Camperas</a></li>
                         </ul>
