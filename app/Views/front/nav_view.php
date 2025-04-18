@@ -20,7 +20,7 @@
                             <li> <a class="dropdown-item" href="remeras">Remeras</a></li>
                             <li> <a class="dropdown-item" href="#">Buzos</a></li>
                             <li> <a class="dropdown-item" href="#">Camisas</a></li>
-                            <li> <a class="dropdown-item" href="#">Camperas</a></li>
+                            <li> <a class="dropdown-item" href="camperas">Camperas</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
