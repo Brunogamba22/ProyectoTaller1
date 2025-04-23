@@ -27,6 +27,9 @@
                         <a class="nav-link" href="<?php echo base_url('calzado');?>">Calzado</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="<?php echo base_url('Comercializacion');?>">Comercialización</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url('sobrenosotros');?>">Sobre Nosotros</a>
                     </li>
                     <li class="nav-item">

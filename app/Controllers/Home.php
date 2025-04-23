@@ -54,6 +54,14 @@ class Home extends BaseController
 
 
 
+    public function comercializacion()
+    {
+        $data['titulo'] = 'Comercializacion';
+        echo view('front/head_view', $data);
+        echo view('front/nav_view');
+        echo view('front/Comercializacion');
+        echo view('front/footer_view');
+    }
     public function sobrenosotros()
     {
         $data['titulo'] = 'sobrenosotros';
@@ -62,7 +70,6 @@ class Home extends BaseController
         echo view('front/sobrenosotros');
         echo view('front/footer_view');
     }
-
     public function contacto()
     {
         $data['titulo'] = 'contacto';
