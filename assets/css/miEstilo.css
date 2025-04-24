@@ -21,7 +21,7 @@ header img {
 /* ===== OPCIONES DE FONDO ===== */
 .fondo-elegante {
     background: linear-gradient(135deg, #ffffff 0%, #e4e8ed 100%);
-    color: #333;
+    color: #000000;
 }
 
 .fondo-oscuro {
@@ -30,14 +30,14 @@ header img {
 }
 
 .fondo-textura {
-    background-color: #f8f9fa;
+    background-color: #000000;
     background-image: url('https://www.transparenttextures.com/patterns/subtle-dots.png');
 }
 
 /* ===== ENCABEZADO ===== */
 .titulo {
-    background-color: #D2BBA0 !important;
-    color: #343a40;
+    background-color: #d8e6e7!important;
+    color: #000000;
     width: 100%;
     margin: 0;
     text-align: center;
@@ -49,11 +49,7 @@ header img {
 
 /* ===== BARRA DE NAVEGACIÓN ===== */
 .navbar-personalizada {
-<<<<<<< HEAD
-    background-color: #869D7A !important;
-=======
-    background-color: #332814 !important;
->>>>>>> ramaBruno2.0
+    background-color: #d8e6e7 !important;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     padding: 10px 0;
 }
@@ -66,7 +62,15 @@ header img {
 
 .nav-link:hover {
     transform: translateY(-2px);
-    color: #ffffff !important;
+    color: #000000 !important;
+}
+
+.navbar-personalizada .nav-link {
+    color: #000000 !important;
+}
+
+.navbar-brand {
+    color: #000000 !important;
 }
 
 /* ===== BOTÓN DE BÚSQUEDA ===== */
@@ -91,7 +95,7 @@ header img {
 }
 
 .seccion1 {
-    background-color: #51da07!important;
+    background-color: #93C6D6!important;
     color: #343a40;
     text-align: center;
     padding: 30px 0;
@@ -121,8 +125,8 @@ header img {
 
 /* ===== PIE DE PÁGINA ===== */
 .footer-personalizado {
-    background-color: #343a40;
-    color: white;
+    background-color: #668586;
+    color: rgb(0, 0, 0) !important;
     text-align: center;
     padding: 25px 0;
     margin-top: auto;
@@ -134,7 +138,7 @@ header img {
 }
 
 .redes-sociales a {
-    color: white;
+    color: rgb(0, 0, 0) !important;
     text-decoration: none;
     transition: all 0.3s ease;
     margin: 0 10px;
@@ -142,7 +146,7 @@ header img {
 }
 
 .redes-sociales a:hover {
-    color: #adb5bd;
+    color: #000000  !important;
     transform: translateY(-2px);
 }
 

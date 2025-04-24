@@ -3,7 +3,7 @@
     <section class="conteiner-fluid">
     <nav class="navbar navbar-expand-lg navbar-dark navbar-personalizada">
         <div class="container">
-            <a class="navbar-brand" href="#">UMMA</a>
+            <a class="navbar-brand">UMMA</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Alternar navegación">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -15,25 +15,24 @@
                                                                                                 Mostrar (imprimir) la URL base de tu aplicación web.-->
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="<?php echo base_url('ropa');?>" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ropa</a>
+                        <a class="nav-link dropdown-toggle" href="<?php echo base_url('Productos');?>" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
                         <ul class="dropdown-menu">
-                            <li> <a class="dropdown-item" href="remeras">Remeras</a></li>
-                            <li> <a class="dropdown-item" href="#">Buzos</a></li>
-                            <li> <a class="dropdown-item" href="#">Camisas</a></li>
-                            <li> <a class="dropdown-item" href="camperas">Camperas</a></li>
+                            <li><a class="dropdown-item" href="<?php echo base_url('Productos'); ?>">TODOS LOS PRODUCTOS</a></li>
+                            <li> <a class="dropdown-item" href="<?php echo base_url('Remeras'); ?>">REMERAS</a></li>
+                            <li> <a class="dropdown-item" href="<?php echo base_url('Buzos'); ?>">BUZOS</a></li>
+                            <li> <a class="dropdown-item" href="<?php echo base_url('Camisas'); ?>">CAMISAS</a></li>
+                            <li> <a class="dropdown-item" href="<?php echo base_url('Camperas'); ?>">CAMPERAS</a></li>
+                            <li> <a class="dropdown-item" href="<?php echo base_url('Calzado'); ?>">CALZADO</a></li>
                         </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url('calzado');?>">Calzado</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url('Comercializacion');?>">Comercialización</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url('sobrenosotros');?>">Sobre Nosotros</a>
+                        <a class="nav-link" href="<?php echo base_url('Sobrenosotros');?>">Sobre Nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url('contacto');?>">Contacto</a>
+                        <a class="nav-link" href="<?php echo base_url('Contacto');?>">Contacto</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">

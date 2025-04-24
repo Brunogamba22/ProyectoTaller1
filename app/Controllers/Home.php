@@ -14,41 +14,59 @@ class Home extends BaseController
         echo view('front/footer_view');
     }
 
-    public function ropa()
+    public function productos()
     {
-        $data['titulo'] = 'ropa';
+        $data['titulo'] = 'Productos';
         echo view('front/head_view', $data);
         echo view('front/nav_view');
-        echo view('front/ropa');
+        echo view('front/Productos/productos');
         echo view('front/footer_view');
     }
 
     public function remeras()
     {
-        $data['titulo'] = 'remeras';
+        $data['titulo'] = 'Remeras';
         echo view('front/head_view', $data);
         echo view('front/nav_view');
-        echo view('front/ropa/remeras');
+        echo view('front/Productos/remeras');
         echo view('front/footer_view');
     }
+
+    public function buzos()
+    {
+        $data['titulo'] = 'Buzos';
+        echo view('front/head_view', $data);
+        echo view('front/nav_view');
+        echo view('front/Productos/buzos');
+        echo view('front/footer_view');
+    }
+
+    public function camisas()
+    {
+        $data['titulo'] = 'Camisas';
+        echo view('front/head_view', $data);
+        echo view('front/nav_view');
+        echo view('front/Productos/camisas');
+        echo view('front/footer_view');
+    }
+
 
     public function camperas()
     {
-        $data['titulo'] = 'camperas';
+        $data['titulo'] = 'Camperas';
         echo view('front/head_view', $data);
         echo view('front/nav_view');
-        echo view('front/ropa/camperas');
+        echo view('front/Productos/camperas');
         echo view('front/footer_view');
     }
-
 
 
     public function calzado()
     {
-        $data['titulo'] = 'calzado';
+        $data['titulo'] = 'Calzado';
         echo view('front/head_view', $data);
         echo view('front/nav_view');
-        echo view('front/calzado');
+        echo view('front/Productos/calzado');
         echo view('front/footer_view');
     }
 
