@@ -227,3 +227,11 @@ header img {
     border-radius: 0.5rem;
   }
   
+  /*estilo en la pagina "producto"*/
+  .img-producto {
+    height: 250px;           /*  Altura fija para todas las imágenes */
+    object-fit: contain;     /*  La imagen se ajusta entera al tamaño del contenedor, aunque puede dejar espacios vacíos arriba y abajo si no tiene la misma proporción.*/
+    width: 100%;             /*  Asegura que ocupe el ancho de la tarjeta */
+    background-color: #f8f9fa; /* Fondo claro si la imagen no llena todo */
+    
+  }
