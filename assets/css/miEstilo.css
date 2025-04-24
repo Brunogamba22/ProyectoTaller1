@@ -20,8 +20,13 @@ header img {
 
 /* ===== OPCIONES DE FONDO ===== */
 .fondo-elegante {
+<<<<<<< HEAD
     background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ed 100%);
     color: #333;
+=======
+    background: linear-gradient(135deg, #ffffff 0%, #e4e8ed 100%);
+    color: #000000;
+>>>>>>> ramaJonathan
 }
 
 .fondo-oscuro {
@@ -30,14 +35,19 @@ header img {
 }
 
 .fondo-textura {
-    background-color: #f8f9fa;
+    background-color: #000000;
     background-image: url('https://www.transparenttextures.com/patterns/subtle-dots.png');
 }
 
 /* ===== ENCABEZADO ===== */
 .titulo {
+<<<<<<< HEAD
     background-color: white;
     color: #343a40;
+=======
+    background-color: #d8e6e7!important;
+    color: #000000;
+>>>>>>> ramaJonathan
     width: 100%;
     margin: 0;
     text-align: center;
@@ -49,7 +59,11 @@ header img {
 
 /* ===== BARRA DE NAVEGACIÓN ===== */
 .navbar-personalizada {
+<<<<<<< HEAD
     background-color: #332814 !important;
+=======
+    background-color: #d8e6e7 !important;
+>>>>>>> ramaJonathan
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     padding: 10px 0;
 }
@@ -62,7 +76,19 @@ header img {
 
 .nav-link:hover {
     transform: translateY(-2px);
+<<<<<<< HEAD
     color: #fff !important;
+=======
+    color: #000000 !important;
+}
+
+.navbar-personalizada .nav-link {
+    color: #000000 !important;
+}
+
+.navbar-brand {
+    color: #000000 !important;
+>>>>>>> ramaJonathan
 }
 
 /* ===== BOTÓN DE BÚSQUEDA ===== */
@@ -87,7 +113,11 @@ header img {
 }
 
 .seccion1 {
+<<<<<<< HEAD
     background-color: white;
+=======
+    background-color: #93C6D6!important;
+>>>>>>> ramaJonathan
     color: #343a40;
     text-align: center;
     padding: 15px 0;
@@ -117,8 +147,8 @@ header img {
 
 /* ===== PIE DE PÁGINA ===== */
 .footer-personalizado {
-    background-color: #343a40;
-    color: white;
+    background-color: #668586;
+    color: rgb(0, 0, 0) !important;
     text-align: center;
     padding: 25px 0;
     margin-top: auto;
@@ -130,7 +160,7 @@ header img {
 }
 
 .redes-sociales a {
-    color: white;
+    color: rgb(0, 0, 0) !important;
     text-decoration: none;
     transition: all 0.3s ease;
     margin: 0 10px;
@@ -138,7 +168,7 @@ header img {
 }
 
 .redes-sociales a:hover {
-    color: #adb5bd;
+    color: #000000  !important;
     transform: translateY(-2px);
 }
 

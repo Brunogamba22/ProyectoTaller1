@@ -10,7 +10,7 @@
     
     <!-- Hojas de estilo -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css"> <!-- Framework Bootstrap para diseño -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> <!-- Iconos Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"> <!-- Iconos Font Awesome -->
     <link rel="stylesheet" href="assets/css/miEstilo.css"> <!-- Nuestros estilos personalizados -->
   </head>
   
