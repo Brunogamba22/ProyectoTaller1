@@ -30,7 +30,7 @@
                     <a 
                         class="nav-link dropdown-toggle text-light <?= (current_url() == base_url('Productos')) ? 'active' : '' ?>" 
                         id="productos-tab" 
-                        href="#" 
+                        href="<?= base_url('Productos') ?>" 
                         role="button" 
                         data-bs-toggle="dropdown" 
                         aria-expanded="false"

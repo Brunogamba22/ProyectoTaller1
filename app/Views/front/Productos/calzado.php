@@ -15,173 +15,118 @@
         <!-- Grid de Bootstrap: 1 columna en pantallas chicas, 3 en pantallas medianas en adelante -->
         <div class="row row-cols-1 row-cols-md-3 g-4">
             
-            <!-- === Producto 1 === -->
-            <div class="col"> <!-- Una columna del grid -->
-            <div class="card h-100"> <!-- Tarjeta que ocupa toda la altura disponible -->
-                
-                <!-- Imagen del producto -->
-                <img src="assets/img/Remera1.webp"alt="Camisa 1">
-                
-                <!-- Cuerpo de la tarjeta con la información del producto -->
-                <div class="card-body">
-                <h5 class="card-title">Remera Gris Oscuro Oversize</h5> <!-- Nombre del producto -->
-                <p class="card-text">Remera de algodón 100%. Talles del S al XL.</p> <!-- Descripción -->
-                <p><strong>Precio:</strong> $4500</p> <!-- Precio del producto -->
-                <p><strong>Stock disponible:</strong> 15 unidades</p> <!-- Cantidad disponible -->
+                    <!-- === Producto 1 === -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/img/Zapatillas/Zapa1.avif" alt="Zapatilla Skate 1" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Zapatilla Classic Black</h5>
+                        <p class="card-text">Zapatillas de estilo skatewear con un diseño clásico en negro. Suela gruesa y material duradero para mayor resistencia y comodidad.</p>
+                        <p><strong>Precio:</strong> $3500</p>
+                        <p><strong>Stock disponible:</strong> 12 unidades</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <button class="btn btn-primary">Agregar al carrito</button>
+                    </div>
                 </div>
-                
-                <!-- Pie de la tarjeta con el botón de acción -->
-                <div class="card-footer text-center">
-                <button class="btn btn-primary">Agregar al carrito</button> <!-- Botón para agregar -->
-                </div>
-
-            </div>
             </div>
 
             <!-- === Producto 2 === -->
             <div class="col">
-            <div class="card h-100">
-                <img src="assets/img/Remera2.webp" class="card-img-top" alt="Remera 2">
-                <div class="card-body">
-                <h5 class="card-title">Remera Azul Oversize</h5>
-                <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p><strong>Precio:</strong> $3900</p>
-                <p><strong>Stock disponible:</strong> 20 unidades</p>
+                <div class="card h-100">
+                    <img src="assets/img/Zapatillas/Zapatilla2.jpg" alt="Zapatilla Skate 2" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Zapatilla Skate White & Black</h5>
+                        <p class="card-text">Ideales para el estilo urbano. Comodidad garantizada para tus días de skate o casuales.</p>
+                        <p><strong>Precio:</strong> $3600</p>
+                        <p><strong>Stock disponible:</strong> 10 unidades</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <button class="btn btn-primary">Agregar al carrito</button>
+                    </div>
                 </div>
-                <div class="card-footer text-center">
-                <button class="btn btn-primary">Agregar al carrito</button>
-                </div>
-            </div>
             </div>
 
             <!-- === Producto 3 === -->
             <div class="col">
-            <div class="card h-100">
-                <img src="assets/img/Buzo1.webp" class="card-img-top" alt="Buzo 1">
-                <div class="card-body">
-                <h5 class="card-title">Buzo Canguro Gris</h5>
-                <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p><strong>Precio:</strong> $3900</p>
-                <p><strong>Stock disponible:</strong> 20 unidades</p>
-                </div>
-                <div class="card-footer text-center">
-                <button class="btn btn-primary">Agregar al carrito</button>
+                <div class="card h-100">
+                    <img src="assets/img/Zapatillas/Zapatilla3.jpg" alt="Zapatilla Skate 3" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Zapatilla Skate Low Top Black</h5>
+                        <p class="card-text">Zapatilla low top, con detalles que aportan un toque moderno. Perfectas para un look skate o urbano.</p>
+                        <p><strong>Precio:</strong> $3200</p>
+                        <p><strong>Stock disponible:</strong> 15 unidades</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <button class="btn btn-primary">Agregar al carrito</button>
+                    </div>
                 </div>
             </div>
-            </div>
-
 
             <!-- === Producto 4 === -->
             <div class="col">
-            <div class="card h-100">
-                <img src="assets/img/Buzo2.webp" class="card-img-top" alt="Remera 2">
-                <div class="card-body">
-                <h5 class="card-title">Buzo Canguro Negro</h5>
-                <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p><strong>Precio:</strong> $3900</p>
-                <p><strong>Stock disponible:</strong> 20 unidades</p>
+                <div class="card h-100">
+                    <img src="assets/img/Zapatillas/Zapatilla4.jpg" alt="Zapatilla Skate 4" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Zapatilla Skate Edition</h5>
+                        <p class="card-text">Zapatilla beige con detalles en azul, ideal para quienes buscan un estilo skate sin perder la elegancia.</p>
+                        <p><strong>Precio:</strong> $3300</p>
+                        <p><strong>Stock disponible:</strong> 8 unidades</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <button class="btn btn-primary">Agregar al carrito</button>
+                    </div>
                 </div>
-                <div class="card-footer text-center">
-                <button class="btn btn-primary">Agregar al carrito</button>
-                </div>
-            </div>
             </div>
 
             <!-- === Producto 5 === -->
             <div class="col">
-            <div class="card h-100">
-                <img src="assets/img/Gorra3.jpeg" class="card-img-top" alt="Remera 2">
-                <div class="card-body">
-                <h5 class="card-title">Remera Blanca Clásica</h5>
-                <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p><strong>Precio:</strong> $3900</p>
-                <p><strong>Stock disponible:</strong> 20 unidades</p>
+                <div class="card h-100">
+                    <img src="assets/img/Zapatillas/Zapatilla5.jpg" alt="Zapatilla Skate 5" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Zapatilla Skate Dark Charcoal</h5>
+                        <p class="card-text">Zapatilla de estilo skate con tonos oscuros. Resistente, perfecta para cualquier aventura urbana.</p>
+                        <p><strong>Precio:</strong> $3400</p>
+                        <p><strong>Stock disponible:</strong> 9 unidades</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <button class="btn btn-primary">Agregar al carrito</button>
+                    </div>
                 </div>
-                <div class="card-footer text-center">
-                <button class="btn btn-primary">Agregar al carrito</button>
-                </div>
-            </div>
             </div>
 
             <!-- === Producto 6 === -->
             <div class="col">
-            <div class="card h-100">
-                <img src="assets/img/Gorra3.jpeg" class="card-img-top" alt="Remera 2">
-                <div class="card-body">
-                <h5 class="card-title">Remera Blanca Clásica</h5>
-                <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p><strong>Precio:</strong> $3900</p>
-                <p><strong>Stock disponible:</strong> 20 unidades</p>
+                <div class="card h-100">
+                    <img src="assets/img/Zapatillas/Zapatilla6.webp" alt="Zapatilla Skate 6" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Zapatilla Skate Vibe</h5>
+                        <p class="card-text">Zapatilla de skatewear en un vibrante . Cómodas y con suela antideslizante, perfectas para tus actividades diarias.</p>
+                        <p><strong>Precio:</strong> $3700</p>
+                        <p><strong>Stock disponible:</strong> 10 unidades</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <button class="btn btn-primary">Agregar al carrito</button>
+                    </div>
                 </div>
-                <div class="card-footer text-center">
-                <button class="btn btn-primary">Agregar al carrito</button>
-                </div>
-            </div>
             </div>
 
             <!-- === Producto 7 === -->
             <div class="col">
-            <div class="card h-100">
-                <img src="assets/img/Gorra3.jpeg" class="card-img-top" alt="Remera 2">
-                <div class="card-body">
-                <h5 class="card-title">Remera Blanca Clásica</h5>
-                <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p><strong>Precio:</strong> $3900</p>
-                <p><strong>Stock disponible:</strong> 20 unidades</p>
+                <div class="card h-100">
+                    <img src="assets/img/Zapatillas/Zapatilla7.webp" alt="Zapatilla Jordan" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Zapatilla Jordan Retro 1</h5>
+                        <p class="card-text">Zapatillas Jordan Retro 1, un clásico de la marca. Con detalles en cuero premium y la icónica silueta, estas zapatillas ofrecen estilo y comodidad.</p>
+                        <p><strong>Precio:</strong> $12900</p>
+                        <p><strong>Stock disponible:</strong> 5 unidades</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <button class="btn btn-primary">Agregar al carrito</button>
+                    </div>
                 </div>
-                <div class="card-footer text-center">
-                <button class="btn btn-primary">Agregar al carrito</button>
-                </div>
-            </div>
             </div>
 
-            <!-- === Producto 8 === -->
-            <div class="col">
-            <div class="card h-100">
-                <img src="assets/img/Gorra3.jpeg" class="card-img-top" alt="Remera 2">
-                <div class="card-body">
-                <h5 class="card-title">Remera Blanca Clásica</h5>
-                <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p><strong>Precio:</strong> $3900</p>
-                <p><strong>Stock disponible:</strong> 20 unidades</p>
-                </div>
-                <div class="card-footer text-center">
-                <button class="btn btn-primary">Agregar al carrito</button>
-                </div>
-            </div>
-            </div>
-
-            <!-- === Producto 9 === -->
-            <div class="col">
-            <div class="card h-100">
-                <img src="assets/img/Gorra3.jpeg" class="card-img-top" alt="Remera 2">
-                <div class="card-body">
-                <h5 class="card-title">Remera Blanca Clásica</h5>
-                <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p><strong>Precio:</strong> $3900</p>
-                <p><strong>Stock disponible:</strong> 20 unidades</p>
-                </div>
-                <div class="card-footer text-center">
-                <button class="btn btn-primary">Agregar al carrito</button>
-                </div>
-            </div>
-            </div>
-
-            <!-- === Producto 10 === -->
-            <div class="col">
-            <div class="card h-100">
-                <img src="assets/img/Gorra3.jpeg" class="card-img-top" alt="Remera 2">
-                <div class="card-body">
-                <h5 class="card-title">Remera Blanca Clásica</h5>
-                <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p><strong>Precio:</strong> $3900</p>
-                <p><strong>Stock disponible:</strong> 20 unidades</p>
-                </div>
-                <div class="card-footer text-center">
-                <button class="btn btn-primary">Agregar al carrito</button>
-                </div>
-            </div>
-            </div>
 
             <!-- Podés seguir agregando más productos duplicando bloques como este -->
 
