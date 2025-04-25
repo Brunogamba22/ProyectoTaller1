@@ -121,6 +121,12 @@ header img {
 
 .carousel-item img {
     border-radius: 10px;
+
+    /* Estilo para limitar la altura de las imágenes del carrusel */
+    height: 1000px; /* Podés ajustar esta altura */
+    object-fit: cover;
+
+  
 }
 
 /* ===== PIE DE PÁGINA ===== */
@@ -234,4 +240,11 @@ header img {
     width: 100%;             /*  Asegura que ocupe el ancho de la tarjeta */
     background-color: #f8f9fa; /* Fondo claro si la imagen no llena todo */
     
+  }
+
+  /*estilo en la pagina "Comercializacion"*/
+
+  .card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   }
