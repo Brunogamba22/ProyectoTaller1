@@ -69,7 +69,7 @@
     <!-- Tarjeta 3 -->
     <div class="col">
       <div class="card h-100 text-center shadow-sm">
-        <img src="assets/img/Buzos/buzo2.webp" class="card-img-top" alt="Sandalias">
+        <img src="assets/img/Zapatillas/Zapatilla5.jpg" class="card-img-top" alt="Sandalias">
         <div class="card-body">
           <h5 class="card-title">Calzados</h5>
           <p class="card-text">Perfectas para los días de calor. Cómodas y con mucha onda.</p>
@@ -82,7 +82,7 @@
   <!-- Tarjeta 4 -->
   <div class="col">
       <div class="card h-100 text-center shadow-sm">
-        <img src="assets/img/Buzos/buzo3.webp" class="card-img-top" alt="Sandalias">
+        <img src="assets/img/Camisas/Camisa8.png" class="card-img-top" alt="Sandalias">
         <div class="card-body">
           <h5 class="card-title">Camisas</h5>
           <p class="card-text">Perfectas para ir elegante a todos lados. Cómodas y super facheras.</p>
@@ -95,10 +95,10 @@
     <!-- Tarjeta 5 -->
     <div class="col">
       <div class="card h-100 text-center shadow-sm">
-        <img src="assets/img/Buzos/buzo4.webp" class="card-img-top" alt="Sandalias">
+        <img src="assets/img/Camperas/Campera1.png" class="card-img-top" alt="Sandalias">
         <div class="card-body">
           <h5 class="card-title">Camperas</h5>
-          <p class="card-text">Ideales para los dias de frescos o invierno.Muy abrigadas y de calidad premium.</p>
+          <p class="card-text">Ideales para los dias de frescos o invierno. Muy abrigadas y de calidad premium.</p>
         </div>
       </div>
     </div>
