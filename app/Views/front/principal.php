@@ -42,7 +42,7 @@
 
 <!-- 🛍️ Sección destacada de productos -->
 <section class="container mb-5">
-  <h2 class="text-center mb-4">Nuestras categorías</h2>
+  <h2 class="text-center mb-4">Nuestras Categorías</h2>
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <!-- Tarjeta 1 -->
     <div class="col">
