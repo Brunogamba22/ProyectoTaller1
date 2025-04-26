@@ -26,7 +26,7 @@
                         <p><strong>Stock disponible:</strong> 12 unidades</p>
                     </div>
                     <div class="card-footer text-center">
-                        <button class="btn btn-primary">Agregar al carrito</button>
+                        <button class="btn btn-dorado">Agregar al carrito</button>
                     </div>
                 </div>
             </div>
@@ -42,7 +42,7 @@
                         <p><strong>Stock disponible:</strong> 10 unidades</p>
                     </div>
                     <div class="card-footer text-center">
-                        <button class="btn btn-primary">Agregar al carrito</button>
+                        <button class="btn btn-dorado">Agregar al carrito</button>
                     </div>
                 </div>
             </div>
@@ -58,7 +58,7 @@
                         <p><strong>Stock disponible:</strong> 15 unidades</p>
                     </div>
                     <div class="card-footer text-center">
-                        <button class="btn btn-primary">Agregar al carrito</button>
+                        <button class="btn btn-dorado">Agregar al carrito</button>
                     </div>
                 </div>
             </div>
@@ -74,7 +74,7 @@
                         <p><strong>Stock disponible:</strong> 8 unidades</p>
                     </div>
                     <div class="card-footer text-center">
-                        <button class="btn btn-primary">Agregar al carrito</button>
+                        <button class="btn btn-dorado">Agregar al carrito</button>
                     </div>
                 </div>
             </div>
@@ -90,7 +90,7 @@
                         <p><strong>Stock disponible:</strong> 9 unidades</p>
                     </div>
                     <div class="card-footer text-center">
-                        <button class="btn btn-primary">Agregar al carrito</button>
+                        <button class="btn btn-dorado">Agregar al carrito</button>
                     </div>
                 </div>
             </div>
@@ -106,7 +106,7 @@
                         <p><strong>Stock disponible:</strong> 10 unidades</p>
                     </div>
                     <div class="card-footer text-center">
-                        <button class="btn btn-primary">Agregar al carrito</button>
+                        <button class="btn btn-dorado">Agregar al carrito</button>
                     </div>
                 </div>
             </div>
@@ -122,7 +122,7 @@
                         <p><strong>Stock disponible:</strong> 5 unidades</p>
                     </div>
                     <div class="card-footer text-center">
-                        <button class="btn btn-primary">Agregar al carrito</button>
+                        <button class="btn btn-dorado">Agregar al carrito</button>
                     </div>
                 </div>
             </div>
