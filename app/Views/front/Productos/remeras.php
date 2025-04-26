@@ -25,7 +25,7 @@
                 
                 <!-- Cuerpo de la tarjeta con la información del producto -->
                 <div class="card-body">
-                <h5 class="card-title">Remera Gris Oscuro Oversize</h5> <!-- Nombre del producto -->
+                <h5 class="card-title">Remera Negra Oversize</h5> <!-- Nombre del producto -->
                 <p class="card-text">Remera de algodón 100%. Talles del S al XL.</p> <!-- Descripción -->
                 <p class="producto-info"><strong>Precio:</strong> $4500</p> <!-- Precio del producto -->
                 <p class="producto-info"><strong>Stock disponible:</strong> 15 unidades</p> <!-- Cantidad disponible -->
@@ -44,7 +44,7 @@
             <div class="card h-100">
                 <img src="assets/img/Remeras/Remera2.webp" class="card-img-top img-producto" alt="Remera 2">
                 <div class="card-body">
-                <h5 class="card-title">Remera Azul Oversize</h5>
+                <h5 class="card-title">Remera Gris Oscuro Oversize</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
                 <p class="producto-info"><strong>Precio:</strong> $3900</p>
                 <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
@@ -59,9 +59,9 @@
             <!-- === Producto 3 remera3=== -->
             <div class="col">
             <div class="card h-100">
-                <img src="assets/img/Remeras/Remera3.webp" class="card-img-top img-producto" alt="Remera 3">
+                <img src="assets/img/Remeras/Remera4.webp" class="card-img-top img-producto" alt="Remera 3">
                 <div class="card-body">
-                <h5 class="card-title">Remera Blanca Clásica</h5>
+                <h5 class="card-title">Remera Beige Oversize</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
                 <p class="producto-info"><strong>Precio:</strong> $3900</p>
                 <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
@@ -72,12 +72,12 @@
             </div>
             </div>
 
-             <!-- === Producto 4 remera4=== -->
+            <!-- === Producto 4 remera4=== -->
             <div class="col">
                 <div class="card h-100">
                 <img src="assets/img/Remeras/Remera4.webp" class="card-img-top img-producto" alt="Remera 4">
                 <div class="card-body">
-                <h5 class="card-title">Remera Rock and roll</h5>
+                <h5 class="card-title">Remera Beige Oversize</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
                 <p class="producto-info"><strong>Precio:</strong> $3900</p>
                 <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
@@ -93,7 +93,7 @@
             <div class="card h-100">
                 <img src="assets/img/Remeras/Remera5.webp" class="card-img-top img-producto" alt="Remera 5">
                 <div class="card-body">
-                <h5 class="card-title">Remera Rock and roll</h5>
+                <h5 class="card-title">Remera Blanca Oversize</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
                 <p class="producto-info"><strong>Precio:</strong> $3900</p>
                 <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
@@ -109,7 +109,7 @@
             <div class="card h-100">
                 <img src="assets/img/Remeras/Remera6.webp" class="card-img-top img-producto" alt="Remera 6">
                 <div class="card-body">
-                <h5 class="card-title">Remera Rock and roll</h5>
+                <h5 class="card-title">Remera Negra Oversize</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
                 <p class="producto-info"><strong>Precio:</strong> $3900</p>
                 <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
@@ -120,12 +120,12 @@
             </div>
             </div>
 
-             <!-- === Producto 7 remera7=== -->
-             <div class="col">
+            <!-- === Producto 7 remera7=== -->
+            <div class="col">
             <div class="card h-100">
                 <img src="assets/img/Remeras/Remera7.webp" class="card-img-top img-producto" alt="Remera 7">
                 <div class="card-body">
-                <h5 class="card-title">Remera Rock and roll</h5>
+                <h5 class="card-title">Remera Arena Oversize</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
                 <p class="producto-info"><strong>Precio:</strong> $3900</p>
                 <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
@@ -141,7 +141,7 @@
             <div class="card h-100">
                 <img src="assets/img/Remeras/Remera8.webp" class="card-img-top img-producto" alt="Remera 8">
                 <div class="card-body">
-                <h5 class="card-title">Remera Rock and roll</h5>
+                <h5 class="card-title">Remera Total White</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
                 <p class="producto-info"><strong>Precio:</strong> $3900</p>
                 <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
@@ -157,7 +157,7 @@
             <div class="card h-100">
                 <img src="assets/img/Remeras/Remera9.webp" class="card-img-top img-producto" alt="Remera 9">
                 <div class="card-body">
-                <h5 class="card-title">Remera Rock and roll</h5>
+                <h5 class="card-title">Remera Verde Militar</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
                 <p class="producto-info"><strong>Precio:</strong> $3900</p>
                 <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
@@ -171,7 +171,7 @@
             <!-- === Producto 10 remera10=== -->
             <div class="col">
             <div class="card h-100">
-                <img src="assets/img/Remeras/Remera10.webp" class="card-img-top img-producto" alt="Remera 10">
+                <img src="assets/img/Remeras/Remera10.jpg" class="card-img-top img-producto" alt="Remera 10">
                 <div class="card-body">
                 <h5 class="card-title">Remera Rock and roll</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
