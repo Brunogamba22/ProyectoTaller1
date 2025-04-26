@@ -22,8 +22,8 @@
                     <div class="card-body">
                         <h5 class="card-title">Zapatilla Classic Black</h5>
                         <p class="card-text">Zapatillas de estilo skatewear con un diseño clásico en negro. Suela gruesa y material duradero para mayor resistencia y comodidad.</p>
-                        <p><strong>Precio:</strong> $3500</p>
-                        <p><strong>Stock disponible:</strong> 12 unidades</p>
+                        <p class="producto-info"><strong>Precio:</strong> $3500</p>
+                        <p class="producto-info"><strong>Stock disponible:</strong> 12 unidades</p>
                     </div>
                     <div class="card-footer text-center">
                         <button class="btn btn-dorado">Agregar al carrito</button>
@@ -38,8 +38,8 @@
                     <div class="card-body">
                         <h5 class="card-title">Zapatilla Skate White & Black</h5>
                         <p class="card-text">Ideales para el estilo urbano. Comodidad garantizada para tus días de skate o casuales.</p>
-                        <p><strong>Precio:</strong> $3600</p>
-                        <p><strong>Stock disponible:</strong> 10 unidades</p>
+                        <p class="producto-info"><strong>Precio:</strong> $3600</p>
+                        <p class="producto-info"><strong>Stock disponible:</strong> 10 unidades</p>
                     </div>
                     <div class="card-footer text-center">
                         <button class="btn btn-dorado">Agregar al carrito</button>
@@ -54,8 +54,8 @@
                     <div class="card-body">
                         <h5 class="card-title">Zapatilla Skate Low Top Black</h5>
                         <p class="card-text">Zapatilla low top, con detalles que aportan un toque moderno. Perfectas para un look skate o urbano.</p>
-                        <p><strong>Precio:</strong> $3200</p>
-                        <p><strong>Stock disponible:</strong> 15 unidades</p>
+                        <p class="producto-info"><strong>Precio:</strong> $3200</p>
+                        <p class="producto-info"><strong>Stock disponible:</strong> 15 unidades</p>
                     </div>
                     <div class="card-footer text-center">
                         <button class="btn btn-dorado">Agregar al carrito</button>
@@ -70,8 +70,8 @@
                     <div class="card-body">
                         <h5 class="card-title">Zapatilla Skate Edition</h5>
                         <p class="card-text">Zapatilla beige con detalles en azul, ideal para quienes buscan un estilo skate sin perder la elegancia.</p>
-                        <p><strong>Precio:</strong> $3300</p>
-                        <p><strong>Stock disponible:</strong> 8 unidades</p>
+                        <p class="producto-info"><strong>Precio:</strong> $3300</p>
+                        <p class="producto-info"><strong>Stock disponible:</strong> 8 unidades</p>
                     </div>
                     <div class="card-footer text-center">
                         <button class="btn btn-dorado">Agregar al carrito</button>
@@ -86,8 +86,8 @@
                     <div class="card-body">
                         <h5 class="card-title">Zapatilla Skate Dark Charcoal</h5>
                         <p class="card-text">Zapatilla de estilo skate con tonos oscuros. Resistente, perfecta para cualquier aventura urbana.</p>
-                        <p><strong>Precio:</strong> $3400</p>
-                        <p><strong>Stock disponible:</strong> 9 unidades</p>
+                        <p class="producto-info"><strong>Precio:</strong> $3400</p>
+                        <p class="producto-info"><strong>Stock disponible:</strong> 9 unidades</p>
                     </div>
                     <div class="card-footer text-center">
                         <button class="btn btn-dorado">Agregar al carrito</button>
@@ -102,8 +102,8 @@
                     <div class="card-body">
                         <h5 class="card-title">Zapatilla Skate Vibe</h5>
                         <p class="card-text">Zapatilla de skatewear en un vibrante . Cómodas y con suela antideslizante, perfectas para tus actividades diarias.</p>
-                        <p><strong>Precio:</strong> $3700</p>
-                        <p><strong>Stock disponible:</strong> 10 unidades</p>
+                        <p class="producto-info"><strong>Precio:</strong> $3700</p>
+                        <p class="producto-info"><strong>Stock disponible:</strong> 10 unidades</p>
                     </div>
                     <div class="card-footer text-center">
                         <button class="btn btn-dorado">Agregar al carrito</button>
@@ -118,8 +118,8 @@
                     <div class="card-body">
                         <h5 class="card-title">Zapatilla Jordan Retro 1</h5>
                         <p class="card-text">Zapatillas Jordan Retro 1, un clásico de la marca. Con detalles en cuero premium y la icónica silueta, estas zapatillas ofrecen estilo y comodidad.</p>
-                        <p><strong>Precio:</strong> $12900</p>
-                        <p><strong>Stock disponible:</strong> 5 unidades</p>
+                        <p class="producto-info"><strong>Precio:</strong> $12900</p>
+                        <p class="producto-info"><strong>Stock disponible:</strong> 5 unidades</p>
                     </div>
                     <div class="card-footer text-center">
                         <button class="btn btn-dorado">Agregar al carrito</button>
@@ -128,7 +128,7 @@
             </div>
 
 
-            <!-- Podés seguir agregando más productos duplicando bloques como este -->
+            
 
         </div>
         </div>

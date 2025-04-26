@@ -27,8 +27,8 @@
                 <div class="card-body">
                 <h5 class="card-title">Remera Gris Oscuro Oversize</h5> <!-- Nombre del producto -->
                 <p class="card-text">Remera de algodón 100%. Talles del S al XL.</p> <!-- Descripción -->
-                <p><strong>Precio:</strong> $4500</p> <!-- Precio del producto -->
-                <p><strong>Stock disponible:</strong> 15 unidades</p> <!-- Cantidad disponible -->
+                <p class="producto-info"><strong>Precio:</strong> $4500</p> <!-- Precio del producto -->
+                <p class="producto-info"><strong>Stock disponible:</strong> 15 unidades</p> <!-- Cantidad disponible -->
                 </div>
                 
                 <!-- Pie de la tarjeta con el botón de acción -->
@@ -46,8 +46,8 @@
                 <div class="card-body">
                 <h5 class="card-title">Remera Azul Oversize</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p><strong>Precio:</strong> $3900</p>
-                <p><strong>Stock disponible:</strong> 20 unidades</p>
+                <p class="producto-info"><strong>Precio:</strong> $3900</p>
+                <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
                 <button class="btn btn-dorado">Agregar al carrito</button>
@@ -63,8 +63,8 @@
                 <div class="card-body">
                 <h5 class="card-title">Remera Blanca Clásica</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p><strong>Precio:</strong> $3900</p>
-                <p><strong>Stock disponible:</strong> 20 unidades</p>
+                <p class="producto-info"><strong>Precio:</strong> $3900</p>
+                <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
                 <button class="btn btn-dorado">Agregar al carrito</button>
@@ -79,8 +79,8 @@
                 <div class="card-body">
                 <h5 class="card-title">Remera Rock and roll</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p><strong>Precio:</strong> $3900</p>
-                <p><strong>Stock disponible:</strong> 20 unidades</p>
+                <p class="producto-info"><strong>Precio:</strong> $3900</p>
+                <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
                 <button class="btn btn-dorado">Agregar al carrito</button>
@@ -95,8 +95,8 @@
                 <div class="card-body">
                 <h5 class="card-title">Remera Rock and roll</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p><strong>Precio:</strong> $3900</p>
-                <p><strong>Stock disponible:</strong> 20 unidades</p>
+                <p class="producto-info"><strong>Precio:</strong> $3900</p>
+                <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
                 <button class="btn btn-dorado">Agregar al carrito</button>
@@ -111,8 +111,8 @@
                 <div class="card-body">
                 <h5 class="card-title">Remera Rock and roll</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p><strong>Precio:</strong> $3900</p>
-                <p><strong>Stock disponible:</strong> 20 unidades</p>
+                <p class="producto-info"><strong>Precio:</strong> $3900</p>
+                <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
                 <button class="btn btn-dorado">Agregar al carrito</button>
@@ -127,8 +127,8 @@
                 <div class="card-body">
                 <h5 class="card-title">Remera Rock and roll</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p><strong>Precio:</strong> $3900</p>
-                <p><strong>Stock disponible:</strong> 20 unidades</p>
+                <p class="producto-info"><strong>Precio:</strong> $3900</p>
+                <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
                 <button class="btn btn-dorado">Agregar al carrito</button>
@@ -143,8 +143,8 @@
                 <div class="card-body">
                 <h5 class="card-title">Remera Rock and roll</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p><strong>Precio:</strong> $3900</p>
-                <p><strong>Stock disponible:</strong> 20 unidades</p>
+                <p class="producto-info"><strong>Precio:</strong> $3900</p>
+                <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
                 <button class="btn btn-dorado">Agregar al carrito</button>
@@ -159,8 +159,8 @@
                 <div class="card-body">
                 <h5 class="card-title">Remera Rock and roll</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p><strong>Precio:</strong> $3900</p>
-                <p><strong>Stock disponible:</strong> 20 unidades</p>
+                <p class="producto-info"><strong>Precio:</strong> $3900</p>
+                <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
                 <button class="btn btn-dorado">Agregar al carrito</button>
@@ -175,8 +175,8 @@
                 <div class="card-body">
                 <h5 class="card-title">Remera Rock and roll</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p><strong>Precio:</strong> $3900</p>
-                <p><strong>Stock disponible:</strong> 20 unidades</p>
+                <p class="producto-info"><strong>Precio:</strong> $3900</p>
+                <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
                 <button class="btn btn-dorado">Agregar al carrito</button>

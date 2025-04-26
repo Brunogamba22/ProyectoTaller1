@@ -23,8 +23,8 @@
             <div class="card-body">
                 <h5 class="card-title">Camisa Mocha Brown</h5>
                 <p class="card-text">Camisa de algodón suave con corte regular. Ideal para uso casual o semiformal.</p>
-                <p><strong>Precio:</strong> $7200</p>
-                <p><strong>Stock disponible:</strong> 12 unidades</p>
+                <p class="producto-info"><strong>Precio:</strong> $7200</p>
+                <p class="producto-info"><strong>Stock disponible:</strong> 12 unidades</p>
             </div>
             <div class="card-footer text-center">
                 <button class="btn btn-dorado">Agregar al carrito</button>
@@ -39,8 +39,8 @@
             <div class="card-body">
                 <h5 class="card-title">Camisa Mao Camel</h5>
                 <p class="card-text">Camisa estilo mao en tono camel, versátil y elegante. Tela liviana ideal para media estación.</p>
-                <p><strong>Precio:</strong> $7400</p>
-                <p><strong>Stock disponible:</strong> 10 unidades</p>
+                <p class="producto-info"><strong>Precio:</strong> $7400</p>
+                <p class="producto-info"><strong>Stock disponible:</strong> 10 unidades</p>
             </div>
             <div class="card-footer text-center">
                 <button class="btn btn-dorado">Agregar al carrito</button>
@@ -55,8 +55,8 @@
             <div class="card-body">
             <h5 class="card-title">Camisa Rayada Bail Out</h5>
             <p class="card-text">Diseño a rayas verticales con botones ocultos. Un clásico moderno que no pasa de moda.</p>
-            <p><strong>Precio:</strong> $7650</p>
-            <p><strong>Stock disponible:</strong> 8 unidades</p>
+            <p class="producto-info"><strong>Precio:</strong> $7650</p>
+            <p class="producto-info"><strong>Stock disponible:</strong> 8 unidades</p>
             </div>
             <div class="card-footer text-center">
             <button class="btn btn-dorado">Agregar al carrito</button>
@@ -71,8 +71,8 @@
             <div class="card-body">
             <h5 class="card-title">Camisa Rayada Bail Out</h5>
             <p class="card-text">Camisa fresca y colorida, perfecta para destacar con estilo en cualquier ocasión.</p>
-            <p><strong>Precio:</strong> $7300</p>
-            <p><strong>Stock disponible:</strong> 14 unidades</p>
+            <p class="producto-info"><strong>Precio:</strong> $7300</p>
+            <p class="producto-info"><strong>Stock disponible:</strong> 14 unidades</p>
             </div>
             <div class="card-footer text-center">
             <button class="btn btn-dorado">Agregar al carrito</button>
@@ -87,8 +87,8 @@
             <div class="card-body">
             <h5 class="card-title">Camisa Tube Riders Black</h5>
             <p class="card-text">Look urbano con detalles minimalistas. Color negro profundo ideal para combinar.</p>
-            <p><strong>Precio:</strong> $7800</p>
-            <p><strong>Stock disponible:</strong> 9 unidades</p>
+            <p class="producto-info"><strong>Precio:</strong> $7800</p>
+            <p class="producto-info"><strong>Stock disponible:</strong> 9 unidades</p>
             </div>
             <div class="card-footer text-center">
             <button class="btn btn-dorado">Agregar al carrito</button>
@@ -103,8 +103,8 @@
             <div class="card-body">
             <h5 class="card-title">Camisa Corderoy Folcklore Mugo</h5>
             <p class="card-text">Camisa de corderoy grueso, ideal para otoño-invierno. Estilo folclórico moderno.</p>
-            <p><strong>Precio:</strong> $7950</p>
-            <p><strong>Stock disponible:</strong> 7 unidades</p>
+            <p class="producto-info"><strong>Precio:</strong> $7950</p>
+            <p class="producto-info"><strong>Stock disponible:</strong> 7 unidades</p>
             </div>
             <div class="card-footer text-center">
             <button class="btn btn-dorado">Agregar al carrito</button>
@@ -119,8 +119,8 @@
             <div class="card-body">
             <h5 class="card-title">Camisa Riptide Vibes White</h5>
             <p class="card-text">Camisa blanca con detalles surferos. Fresca y liviana, ideal para el verano.</p>
-            <p><strong>Precio:</strong> $7500</p>
-            <p><strong>Stock disponible:</strong> 11 unidades</p>
+            <p class="producto-info"><strong>Precio:</strong> $7500</p>
+            <p class="producto-info"><strong>Stock disponible:</strong> 11 unidades</p>
             </div>
             <div class="card-footer text-center">
             <button class="btn btn-dorado">Agregar al carrito</button>
@@ -135,8 +135,8 @@
                 <div class="card-body">
                 <h5 class="card-title">Camisa Mao Terracota</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p><strong>Precio:</strong> $3900</p>
-                <p><strong>Stock disponible:</strong> 20 unidades</p>
+                <p class="producto-info"><strong>Precio:</strong> $3900</p>
+                <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
                 <button class="btn btn-dorado">Agregar al carrito</button>
@@ -144,7 +144,7 @@
             </div>
             </div>
 
-            <!-- Podés seguir agregando más productos duplicando bloques como este -->
+            
 
         </div>
         </div>

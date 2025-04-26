@@ -22,8 +22,8 @@
                 <div class="card-body">
                 <h5 class="card-title">Buzo Canguro Gris</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p><strong>Precio:</strong> $3900</p>
-                <p><strong>Stock disponible:</strong> 20 unidades</p>
+                <p class="producto-info"><strong>Precio:</strong> $3900</p>
+                <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
                 <button class="btn btn-dorado">Agregar al carrito</button>
@@ -39,8 +39,8 @@
                 <div class="card-body">
                 <h5 class="card-title">Buzo Canguro Negro</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p><strong>Precio:</strong> $3900</p>
-                <p><strong>Stock disponible:</strong> 20 unidades</p>
+                <p class="producto-info"><strong>Precio:</strong> $3900</p>
+                <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
                 <button class="btn btn-dorado">Agregar al carrito</button>
@@ -55,8 +55,8 @@
                 <div class="card-body">
                 <h5 class="card-title">Buzo Canguro Negro</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p><strong>Precio:</strong> $3900</p>
-                <p><strong>Stock disponible:</strong> 20 unidades</p>
+                <p class="producto-info"><strong>Precio:</strong> $3900</p>
+                <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
                 <button class="btn btn-dorado">Agregar al carrito</button>
@@ -71,8 +71,8 @@
                 <div class="card-body">
                 <h5 class="card-title">Buzo Canguro Negro</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p><strong>Precio:</strong> $3900</p>
-                <p><strong>Stock disponible:</strong> 20 unidades</p>
+                <p class="producto-info"><strong>Precio:</strong> $3900</p>
+                <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
                 <button class="btn btn-dorado">Agregar al carrito</button>
@@ -87,8 +87,8 @@
                 <div class="card-body">
                 <h5 class="card-title">Buzo Canguro Negro</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p><strong>Precio:</strong> $3900</p>
-                <p><strong>Stock disponible:</strong> 20 unidades</p>
+                <p class="producto-info"><strong>Precio:</strong> $3900</p>
+                <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
                 <button class="btn btn-dorado">Agregar al carrito</button>
@@ -103,8 +103,8 @@
                 <div class="card-body">
                 <h5 class="card-title">Buzo Canguro Negro</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p><strong>Precio:</strong> $3900</p>
-                <p><strong>Stock disponible:</strong> 20 unidades</p>
+                <p class="producto-info"><strong>Precio:</strong> $3900</p>
+                <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
                 <button class="btn btn-dorado">Agregar al carrito</button>
@@ -119,8 +119,8 @@
                 <div class="card-body">
                 <h5 class="card-title">Buzo Canguro Negro</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p><strong>Precio:</strong> $3900</p>
-                <p><strong>Stock disponible:</strong> 20 unidades</p>
+                <p class="producto-info"><strong>Precio:</strong> $3900</p>
+                <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
                 <button class="btn btn-dorado">Agregar al carrito</button>
@@ -135,8 +135,8 @@
                 <div class="card-body">
                 <h5 class="card-title">Buzo Canguro Negro</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p><strong>Precio:</strong> $3900</p>
-                <p><strong>Stock disponible:</strong> 20 unidades</p>
+                <p class="producto-info"><strong>Precio:</strong> $3900</p>
+                <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
                 <button class="btn btn-dorado">Agregar al carrito</button>
@@ -151,8 +151,8 @@
                 <div class="card-body">
                 <h5 class="card-title">Buzo Canguro Rose</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p><strong>Precio:</strong> $3900</p>
-                <p><strong>Stock disponible:</strong> 20 unidades</p>
+                <p class="producto-info"><strong>Precio:</strong> $3900</p>
+                <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
                 <button class="btn btn-dorado">Agregar al carrito</button>
@@ -167,15 +167,15 @@
                 <div class="card-body">
                 <h5 class="card-title">Remera Blanca Clásica</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p><strong>Precio:</strong> $3900</p>
-                <p><strong>Stock disponible:</strong> 20 unidades</p>
+                <p class="producto-info"><strong>Precio:</strong> $3900</p>
+                <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
                 <button class="btn btn-dorado">Agregar al carrito</button>
                 </div>
             </div>
             </div>
-            <!-- Podés seguir agregando más productos duplicando bloques como este -->
+            
 
         </div>
         </div>

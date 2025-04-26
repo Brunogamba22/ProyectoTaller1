@@ -15,7 +15,7 @@
         <div class="card-body">
           <h5 class="tarjeta-nombre">Bruno Gamba</h5>
           <p class="tarjeta-texto">Co-fundador de la marca. Apasionado por la moda urbana y el diseño, se encarga de la estrategia, branding y gestión creativa.</p>
-          <a href="#" class="btn btn-umma">Mas datos</a>
+          <a href="#" class="btn btn-dorado">Mas datos</a>
         </div>
       </div>
     </div>
@@ -25,7 +25,7 @@
         <div class="card-body">
           <h5 class="tarjeta-nombre">Jonathan Garcia</h5>
           <p class="tarjeta-texto">Co-fundador y responsable del área técnica. Especialista en e-commerce y sistemas, lidera el desarrollo de la tienda online.</p>
-          <a href="#" class="btn btn-umma">Mas datos</a>
+          <a href="#" class="btn btn-dorado">Mas datos</a>
         </div>
       </div>
     </div>

@@ -10,7 +10,7 @@
 </section>
 
 <div class="container" style="max-width: 700px;">
-  <div class="card contacto-card p-4 shadow mb-5">
+<div class="card contacto-card p-4 shadow mb-5 animate__animated animate__fadeInUp">
     <form>
       <div class="mb-3">
         <label for="nombre" class="form-label">Nombre</label>
