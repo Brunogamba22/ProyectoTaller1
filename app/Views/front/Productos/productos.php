@@ -26,7 +26,7 @@
                 
                 <!-- Cuerpo de la tarjeta con la información del producto -->
                 <div class="card-body">
-                <h5 class="card-title">Remera Gris Oscuro Oversize</h5> <!-- Nombre del producto -->
+                <h5 class="card-title">Remera Negra Oversize</h5> <!-- Nombre del producto -->
                 <p class="card-text">Remera de algodón 100%. Talles del S al XL.</p> <!-- Descripción -->
                 <p class="producto-info"><strong>Precio:</strong> $4500</p> <!-- Precio del producto -->
                 <p class="producto-info"><strong>Stock disponible:</strong> 15 unidades</p> <!-- Cantidad disponible -->
@@ -45,7 +45,7 @@
             <div class="card h-100">
                 <img src="assets/img/Remeras/Remera2.webp" class="card-img-top img-producto" alt="Remera 2">
                 <div class="card-body">
-                <h5 class="card-title">Remera Azul Oversize</h5>
+                <h5 class="card-title">Remera Gris Oscuro Oversize</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
                 <p class="producto-info"><strong>Precio:</strong> $3900</p>
                 <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
@@ -60,9 +60,9 @@
             <!-- === Producto 3 remera3=== -->
             <div class="col">
             <div class="card h-100">
-                <img src="assets/img/Remeras/Remera3.webp" class="card-img-top img-producto" alt="Remera 3">
+                <img src="assets/img/Remeras/Remera4.webp" class="card-img-top img-producto" alt="Remera 3">
                 <div class="card-body">
-                <h5 class="card-title">Remera Blanca Clásica</h5>
+                <h5 class="card-title">Remera Beige Oversize</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
                 <p class="producto-info"><strong>Precio:</strong> $3900</p>
                 <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
@@ -73,12 +73,12 @@
             </div>
             </div>
 
-             <!-- === Producto 4 remera4=== -->
+            <!-- === Producto 4 remera4=== -->
             <div class="col">
                 <div class="card h-100">
                 <img src="assets/img/Remeras/Remera4.webp" class="card-img-top img-producto" alt="Remera 4">
                 <div class="card-body">
-                <h5 class="card-title">Remera Rock and roll</h5>
+                <h5 class="card-title">Remera Beige Oversize</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
                 <p class="producto-info"><strong>Precio:</strong> $3900</p>
                 <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
@@ -94,7 +94,7 @@
             <div class="card h-100">
                 <img src="assets/img/Remeras/Remera5.webp" class="card-img-top img-producto" alt="Remera 5">
                 <div class="card-body">
-                <h5 class="card-title">Remera Rock and roll</h5>
+                <h5 class="card-title">Remera Blanca Oversize</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
                 <p class="producto-info"><strong>Precio:</strong> $3900</p>
                 <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
@@ -110,7 +110,7 @@
             <div class="card h-100">
                 <img src="assets/img/Remeras/Remera6.webp" class="card-img-top img-producto" alt="Remera 6">
                 <div class="card-body">
-                <h5 class="card-title">Remera Rock and roll</h5>
+                <h5 class="card-title">Remera Negra Oversize</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
                 <p class="producto-info"><strong>Precio:</strong> $3900</p>
                 <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
@@ -126,7 +126,7 @@
             <div class="card h-100">
                 <img src="assets/img/Remeras/Remera7.webp" class="card-img-top img-producto" alt="Remera 7">
                 <div class="card-body">
-                <h5 class="card-title">Remera Rock and roll</h5>
+                <h5 class="card-title">Remera Arena Oversize</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
                 <p class="producto-info"><strong>Precio:</strong> $3900</p>
                 <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
@@ -142,7 +142,7 @@
             <div class="card h-100">
                 <img src="assets/img/Remeras/Remera8.webp" class="card-img-top img-producto" alt="Remera 8">
                 <div class="card-body">
-                <h5 class="card-title">Remera Rock and roll</h5>
+                <h5 class="card-title">Remera Total White</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
                 <p class="producto-info"><strong>Precio:</strong> $3900</p>
                 <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
@@ -158,7 +158,7 @@
             <div class="card h-100">
                 <img src="assets/img/Remeras/Remera9.webp" class="card-img-top img-producto" alt="Remera 9">
                 <div class="card-body">
-                <h5 class="card-title">Remera Rock and roll</h5>
+                <h5 class="card-title">Remera Verde Militar</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
                 <p class="producto-info"><strong>Precio:</strong> $3900</p>
                 <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
@@ -172,7 +172,7 @@
             <!-- === Producto 10 remera10=== -->
             <div class="col">
             <div class="card h-100">
-                <img src="assets/img/Remeras/Remera10.webp" class="card-img-top img-producto" alt="Remera 10">
+                <img src="assets/img/Remeras/Remera10.jpg" class="card-img-top img-producto" alt="Remera 10">
                 <div class="card-body">
                 <h5 class="card-title">Remera Rock and roll</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
@@ -189,12 +189,12 @@
 
             <!-- ------------------------------------------------------- -->
             <!-- ============== COMIENZO SECCION BUZOS ============== -->
-            <!-- === Producto  Buzo1 === -->
-            <div class="col">
-            <div class="card h-100">
+                <!-- === Producto  Buzo1 === -->
+            <div class="col"><!-- Una columna del grid -->
+            <div class="card h-100"><!-- Tarjeta que ocupa toda la altura disponible -->
                 <img src="assets/img/Buzos/Buzo1.webp" class="card-img-top img-producto" alt="Buzo 1">
                 <div class="card-body">
-                <h5 class="card-title">Buzo Canguro Gris</h5>
+                <h5 class="card-title">Buzo Canguro Negro</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
                 <p class="producto-info"><strong>Precio:</strong> $3900</p>
                 <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
@@ -211,7 +211,7 @@
             <div class="card h-100">
                 <img src="assets/img/Buzos/Buzo2.webp" class="card-img-top img-producto" alt="buzo 2">
                 <div class="card-body">
-                <h5 class="card-title">Buzo Canguro Negro</h5>
+                <h5 class="card-title">Buzo Canguro Marron</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
                 <p class="producto-info"><strong>Precio:</strong> $3900</p>
                 <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
@@ -227,7 +227,7 @@
             <div class="card h-100">
                 <img src="assets/img/Buzos/Buzo3.webp" class="card-img-top img-producto" alt="buzo 3">
                 <div class="card-body">
-                <h5 class="card-title">Buzo Canguro Negro</h5>
+                <h5 class="card-title">Buzo Cuello Redondo</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
                 <p class="producto-info"><strong>Precio:</strong> $3900</p>
                 <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
@@ -259,7 +259,7 @@
             <div class="card h-100">
                 <img src="assets/img/Buzos/Buzo5.webp" class="card-img-top img-producto" alt="buzo 5">
                 <div class="card-body">
-                <h5 class="card-title">Buzo Canguro Negro</h5>
+                <h5 class="card-title">Buzo Canguro Blanco</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
                 <p class="producto-info"><strong>Precio:</strong> $3900</p>
                 <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
@@ -275,7 +275,7 @@
             <div class="card h-100">
                 <img src="assets/img/Buzos/Buzo6.webp" class="card-img-top img-producto" alt="buzo 6">
                 <div class="card-body">
-                <h5 class="card-title">Buzo Canguro Negro</h5>
+                <h5 class="card-title">Buzo Canguro Blanco</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
                 <p class="producto-info"><strong>Precio:</strong> $3900</p>
                 <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
@@ -285,78 +285,13 @@
                 </div>
             </div>
             </div>
-
-            <!-- === Producto  Buzo7=== -->
-            <div class="col">
-            <div class="card h-100">
-                <img src="assets/img/Buzos/Buzo7.webp" class="card-img-top img-producto" alt="buzo 7">
-                <div class="card-body">
-                <h5 class="card-title">Buzo Canguro Negro</h5>
-                <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p class="producto-info"><strong>Precio:</strong> $3900</p>
-                <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
-                </div>
-                <div class="card-footer text-center">
-                <button class="btn btn-dorado">Agregar al carrito</button>
-                </div>
-            </div>
-            </div>
-
-            <!-- === Producto  buzo8=== -->
-            <div class="col">
-            <div class="card h-100">
-                <img src="assets/img/Buzos/HoodieNoirFadeOup.webp" class="card-img-top img-producto" alt="Hoodie Noir Fade Oup">
-                <div class="card-body">
-                <h5 class="card-title">Buzo Canguro Negro</h5>
-                <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p class="producto-info"><strong>Precio:</strong> $3900</p>
-                <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
-                </div>
-                <div class="card-footer text-center">
-                <button class="btn btn-dorado">Agregar al carrito</button>
-                </div>
-            </div>
-            </div>
-
-            <!-- === Producto  buzo9=== -->
-            <div class="col">
-            <div class="card h-100">
-                <img src="assets/img/Buzos/HoodieBrownFadeOut.webp" class="card-img-top img-producto" alt="Hoodie Brown Fade Oup">
-                <div class="card-body">
-                <h5 class="card-title">Buzo Canguro Rose</h5>
-                <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p class="producto-info"><strong>Precio:</strong> $3900</p>
-                <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
-                </div>
-                <div class="card-footer text-center">
-                <button class="btn btn-dorado">Agregar al carrito</button>
-                </div>
-            </div>
-            </div>
-
-            <!-- === Producto  buzo10=== -->
-            <div class="col">
-            <div class="card h-100">
-                <img src="assets/img/Buzos/HoodieRose.webp" class="card-img-top img-producto" alt="Hoodie Rose">
-                <div class="card-body">
-                <h5 class="card-title">Remera Blanca Clásica</h5>
-                <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p class="producto-info"><strong>Precio:</strong> $3900</p>
-                <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
-                </div>
-                <div class="card-footer text-center">
-                <button class="btn btn-dorado">Agregar al carrito</button>
-                </div>
-            </div>
-            </div>
-
             <!-- ============== FIN SECCION BUZOS ============== -->
             <!-- ------------------------------------------------------- -->
             
 
             <!-- ------------------------------------------------------- -->
             <!-- ============== COMIENZO SECCION CAMISAS ============== -->
-              <!-- === Producto 1 === -->
+            <!-- === Producto 1 === -->
             <!-- === Camisa 1 === -->
         <div class="col">
         <div class="card h-100">
