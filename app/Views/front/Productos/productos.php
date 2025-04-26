@@ -34,7 +34,7 @@
                 
                 <!-- Pie de la tarjeta con el botón de acción -->
                 <div class="card-footer text-center">
-                <button class="btn btn-primary">Agregar al carrito</button> <!-- Botón para agregar -->
+                <button class="btn btn-dorado">Agregar al carrito</button> <!-- Botón para agregar -->
                 </div>
 
             </div>
@@ -51,7 +51,7 @@
                 <p><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
-                <button class="btn btn-primary">Agregar al carrito</button>
+                <button class="btn btn-dorado">Agregar al carrito</button>
                 </div>
             </div>
             </div>
@@ -68,7 +68,7 @@
                 <p><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
-                <button class="btn btn-primary">Agregar al carrito</button>
+                <button class="btn btn-dorado">Agregar al carrito</button>
                 </div>
             </div>
             </div>
@@ -84,7 +84,7 @@
                 <p><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
-                <button class="btn btn-primary">Agregar al carrito</button>
+                <button class="btn btn-dorado">Agregar al carrito</button>
                 </div>
             </div>
             </div>
@@ -100,7 +100,7 @@
                 <p><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
-                <button class="btn btn-primary">Agregar al carrito</button>
+                <button class="btn btn-dorado">Agregar al carrito</button>
                 </div>
             </div>
             </div>
@@ -116,7 +116,7 @@
                 <p><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
-                <button class="btn btn-primary">Agregar al carrito</button>
+                <button class="btn btn-dorado">Agregar al carrito</button>
                 </div>
             </div>
             </div>
@@ -132,7 +132,7 @@
                 <p><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
-                <button class="btn btn-primary">Agregar al carrito</button>
+                <button class="btn btn-dorado">Agregar al carrito</button>
                 </div>
             </div>
             </div>
@@ -148,7 +148,7 @@
                 <p><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
-                <button class="btn btn-primary">Agregar al carrito</button>
+                <button class="btn btn-dorado">Agregar al carrito</button>
                 </div>
             </div>
             </div>
@@ -164,7 +164,7 @@
                 <p><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
-                <button class="btn btn-primary">Agregar al carrito</button>
+                <button class="btn btn-dorado">Agregar al carrito</button>
                 </div>
             </div>
             </div>
@@ -180,7 +180,7 @@
                 <p><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
-                <button class="btn btn-primary">Agregar al carrito</button>
+                <button class="btn btn-dorado">Agregar al carrito</button>
                 </div>
             </div>
             </div>
@@ -200,7 +200,7 @@
                 <p><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
-                <button class="btn btn-primary">Agregar al carrito</button>
+                <button class="btn btn-dorado">Agregar al carrito</button>
                 </div>
             </div>
             </div>
@@ -217,7 +217,7 @@
                 <p><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
-                <button class="btn btn-primary">Agregar al carrito</button>
+                <button class="btn btn-dorado">Agregar al carrito</button>
                 </div>
             </div>
             </div>
@@ -233,7 +233,7 @@
                 <p><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
-                <button class="btn btn-primary">Agregar al carrito</button>
+                <button class="btn btn-dorado">Agregar al carrito</button>
                 </div>
             </div>
             </div>
@@ -249,7 +249,7 @@
                 <p><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
-                <button class="btn btn-primary">Agregar al carrito</button>
+                <button class="btn btn-dorado">Agregar al carrito</button>
                 </div>
             </div>
             </div>
@@ -265,7 +265,7 @@
                 <p><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
-                <button class="btn btn-primary">Agregar al carrito</button>
+                <button class="btn btn-dorado">Agregar al carrito</button>
                 </div>
             </div>
             </div>
@@ -281,7 +281,7 @@
                 <p><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
-                <button class="btn btn-primary">Agregar al carrito</button>
+                <button class="btn btn-dorado">Agregar al carrito</button>
                 </div>
             </div>
             </div>
@@ -297,7 +297,7 @@
                 <p><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
-                <button class="btn btn-primary">Agregar al carrito</button>
+                <button class="btn btn-dorado">Agregar al carrito</button>
                 </div>
             </div>
             </div>
@@ -313,7 +313,7 @@
                 <p><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
-                <button class="btn btn-primary">Agregar al carrito</button>
+                <button class="btn btn-dorado">Agregar al carrito</button>
                 </div>
             </div>
             </div>
@@ -329,7 +329,7 @@
                 <p><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
-                <button class="btn btn-primary">Agregar al carrito</button>
+                <button class="btn btn-dorado">Agregar al carrito</button>
                 </div>
             </div>
             </div>
@@ -345,7 +345,7 @@
                 <p><strong>Stock disponible:</strong> 20 unidades</p>
                 </div>
                 <div class="card-footer text-center">
-                <button class="btn btn-primary">Agregar al carrito</button>
+                <button class="btn btn-dorado">Agregar al carrito</button>
                 </div>
             </div>
             </div>
