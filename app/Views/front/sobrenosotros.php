@@ -13,9 +13,9 @@
       <div class="card w-100">
         <img src="assets/img/persona1.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Bruno Gamba</h5>
-          <p class="card-text">Co-fundador de la marca. Apasionado por la moda urbana y el diseño, se encarga de la estrategia, branding y gestión creativa.</p>
-          <a href="#" class="btn btn-primary">Mas datos</a>
+          <h5 class="tarjeta-nombre">Bruno Gamba</h5>
+          <p class="tarjeta-texto">Co-fundador de la marca. Apasionado por la moda urbana y el diseño, se encarga de la estrategia, branding y gestión creativa.</p>
+          <a href="#" class="btn btn-umma">Mas datos</a>
         </div>
       </div>
     </div>
@@ -23,9 +23,9 @@
       <div class="card w-100">
         <img src="assets/img/persona2.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Jonathan Garcia</h5>
-          <p class="card-text">Co-fundador y responsable del área técnica. Especialista en e-commerce y sistemas, lidera el desarrollo de la tienda online.</p>
-          <a href="#" class="btn btn-primary">Mas datos</a>
+          <h5 class="tarjeta-nombre">Jonathan Garcia</h5>
+          <p class="tarjeta-texto">Co-fundador y responsable del área técnica. Especialista en e-commerce y sistemas, lidera el desarrollo de la tienda online.</p>
+          <a href="#" class="btn btn-umma">Mas datos</a>
         </div>
       </div>
     </div>

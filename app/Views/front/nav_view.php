@@ -7,7 +7,7 @@
         <!-- Logo / Marca -->
         <a class="navbar-brand text-black" href="#">UMMA</a>
 
-        <!-- Botón hamburguesa para móviles -->
+        <!-- Botón para móviles -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Alternar navegación">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -80,7 +80,7 @@
                 <li class="nav-item ms-lg-auto">
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Buscar productos..." aria-label="Buscar">
-                        <button class="btn btn-danger" type="submit">Buscar</button>
+                        <button class="btn btn-buscar" type="submit">Buscar</button>
                     </form>
                 </li>
 

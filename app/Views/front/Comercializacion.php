@@ -12,7 +12,7 @@
     
     <!-- Tarjeta: Tipos de entrega -->
     <div class="col">
-      <div class="card h-100 text-center shadow-sm border-0 bg-light animate__animated animate__fadeInUp" style="transition: transform 0.3s;">
+      <div class="card h-100 text-center shadow-sm border-0 animate__animated animate__fadeInUp" >
         <div class="card-body">
           <i class="bi bi-truck display-4 text-primary mb-3"></i>
           <h5 class="card-title fw-semibold">Tipos de Entrega</h5>
@@ -25,7 +25,7 @@
 
     <!-- Tarjeta: Formas de envío -->
     <div class="col">
-      <div class="card h-100 text-center shadow-sm border-0 bg-light animate__animated animate__fadeInUp" style="transition: transform 0.3s;">
+      <div class="card h-100 text-center shadow-sm border-0 animate__animated animate__fadeInUp" >
         <div class="card-body">
           <i class="bi bi-geo-alt-fill display-4 text-danger mb-3"></i>
           <h5 class="card-title fw-semibold">Formas de Envío</h5>
@@ -38,7 +38,7 @@
 
     <!-- Tarjeta: Formas de pago -->
     <div class="col">
-      <div class="card h-100 text-center shadow-sm border-0 bg-light animate__animated animate__fadeInUp" style="transition: transform 0.3s;">
+      <div class="card h-100 text-center shadow-sm border-0 animate__animated animate__fadeInUp" >
         <div class="card-body">
           <i class="bi bi-credit-card display-4 text-success mb-3"></i>
           <h5 class="card-title fw-semibold">Formas de Pago</h5>
