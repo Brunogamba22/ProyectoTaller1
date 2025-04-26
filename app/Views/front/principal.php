@@ -3,15 +3,14 @@
   <h1 class="titulo text-center my-4">Bienvenidos a UMMA</h1>
 </header>
 
+<!-- Sección de bienvenida -->
+<section class="seccion1 container text-center mb-5">
+  <h4>Moda urbana al mejor precio. ¡Descubrí nuestras colecciones!</h4>
+</section>
+
 <!-- Carrusel de imágenes -->
 <section class="container-fluid px-0 mb-5">
-  <div id="carouselExample" class="carousel slide position-relative" data-bs-ride="carousel">
-
-    <!-- TEXTO SUPERPUESTO -->
-    <div class="carrusel-texto-superpuesto animate__animated animate__fadeInDown">
-      <h4>Moda urbana al mejor precio. ¡Descubrí nuestras colecciones!</h4>
-    </div>
-
+  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="assets/img/Carrusel1.jpg" class="d-block w-100" alt="modelo 1">
@@ -29,7 +28,6 @@
         <img src="assets/img/Carrusel5.jpg" class="d-block w-100" alt="modelo 5">
       </div>
     </div>
-
     <!-- Controles -->
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -39,10 +37,8 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Siguiente</span>
     </button>
-
   </div>
 </section>
-
 
 <!-- 🛍️ Sección destacada de productos -->
 <section class="container mb-5">
@@ -73,7 +69,7 @@
     <!-- Tarjeta 3 -->
     <div class="col">
       <div class="card h-100 text-center shadow-sm">
-        <img src="assets/img/Zapatillas/Zapatilla5.jpg" class="card-img-top" alt="Sandalias">
+        <img src="assets/img/Zapatillas/Zapatilla5.jpg" class="card-img-top" alt="Zapatillas">
         <div class="card-body">
           <h5 class="card-title">Calzados</h5>
           <p class="card-text">Perfectas para los días de calor. Cómodas y con mucha onda.</p>
@@ -86,7 +82,7 @@
   <!-- Tarjeta 4 -->
   <div class="col">
       <div class="card h-100 text-center shadow-sm">
-        <img src="assets/img/Camisas/Camisa8.png" class="card-img-top" alt="Sandalias">
+        <img src="assets/img/Camisas/Camisa8.png" class="card-img-top" alt="Camisas">
         <div class="card-body">
           <h5 class="card-title">Camisas</h5>
           <p class="card-text">Perfectas para ir elegante a todos lados. Cómodas y super facheras.</p>
@@ -99,7 +95,7 @@
     <!-- Tarjeta 5 -->
     <div class="col">
       <div class="card h-100 text-center shadow-sm">
-        <img src="assets/img/Camperas/Campera1.png" class="card-img-top" alt="Sandalias">
+        <img src="assets/img/Camperas/Campera1.png" class="card-img-top" alt="Camperas">
         <div class="card-body">
           <h5 class="card-title">Camperas</h5>
           <p class="card-text">Ideales para los dias de frescos o invierno. Muy abrigadas y de calidad premium.</p>
@@ -109,31 +105,25 @@
   </div>
 </section>
 
-<!-- 🧾 Sección de confianza mejorada -->
-<section class="seccion-confianza py-5">
+<!-- 🧾 Sección de confianza -->
+<section class="bg-light py-5">
   <div class="container text-center">
-    <h2 class="titulo-confianza mb-5">¿Por qué elegir UMMA?</h2>
+    <h2 class="mb-4">¿Por qué elegir UMMA?</h2>
     <div class="row row-cols-1 row-cols-md-3 g-4">
       <div class="col">
-        <div class="card-confianza">
-          <i class="bi bi-box-seam icono-confianza"></i>
-          <h3 class="titulo-item">Envíos a todo el país</h3>
-          <p class="texto-item">Recibí tus pedidos donde estés con seguimiento online.</p>
-        </div>
+        <i class="bi bi-box-seam display-4 text-primary mb-3"></i>
+        <h5>Envíos a todo el país</h5>
+        <p>Recibí tus pedidos donde estés con seguimiento online.</p>
       </div>
       <div class="col">
-        <div class="card-confianza">
-          <i class="bi bi-piggy-bank icono-confianza"></i>
-          <h3 class="titulo-item">Precios accesibles</h3>
-          <p class="texto-item">Calidad y estilo sin gastar de más.</p>
-        </div>
+        <i class="bi bi-piggy-bank display-4 text-success mb-3"></i>
+        <h5>Precios accesibles</h5>
+        <p>Calidad y estilo sin gastar de más.</p>
       </div>
       <div class="col">
-        <div class="card-confianza">
-          <i class="bi bi-patch-check-fill icono-confianza"></i>
-          <h3 class="titulo-item">Productos garantizados</h3>
-          <p class="texto-item">Te aseguramos satisfacción o te devolvemos tu dinero.</p>
-        </div>
+        <i class="bi bi-patch-check-fill display-4 text-danger mb-3"></i>
+        <h5>Productos garantizados</h5>
+        <p>Te aseguramos satisfacción o te devolvemos tu dinero.</p>
       </div>
     </div>
   </div>

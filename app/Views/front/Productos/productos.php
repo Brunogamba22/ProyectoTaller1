@@ -74,8 +74,8 @@
             </div>
 
              <!-- === Producto 4 remera4=== -->
-             <div class="col">
-            <div class="card h-100">
+            <div class="col">
+                <div class="card h-100">
                 <img src="assets/img/Remeras/Remera4.webp" class="card-img-top img-producto" alt="Remera 4">
                 <div class="card-body">
                 <h5 class="card-title">Remera Rock and roll</h5>
@@ -121,8 +121,8 @@
             </div>
             </div>
 
-             <!-- === Producto 7 remera7=== -->
-             <div class="col">
+            <!-- === Producto 7 remera7=== -->
+            <div class="col">
             <div class="card h-100">
                 <img src="assets/img/Remeras/Remera7.webp" class="card-img-top img-producto" alt="Remera 7">
                 <div class="card-body">
