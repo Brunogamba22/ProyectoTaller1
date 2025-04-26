@@ -1,6 +1,6 @@
 <!-- Banner de promoción -->
 <div class="container-fluid bg-warning text-dark text-center py-3">
-  <h4 class="mb-0">🚚 ¡Envíos GRATIS en compras mayores a $15.000 a todo el país!</h4>
+  <h4 class="mb-0">🚚 ¡Envíos GRATIS en compras mayores a $50.000 a todo el país!</h4>
 </div>
 
 <!-- Sección Comercialización -->
@@ -17,7 +17,7 @@
           <i class="bi bi-truck display-4 text-primary mb-3"></i>
           <h5 class="card-title fw-semibold">Tipos de Entrega</h5>
           <p class="card-text">
-            Retiro en local, envío a domicilio en el día (Posadas) y a todo el país con correo.
+            Retiro en local, envío a domicilio en el día (Corrientes Capital) y a todo el país con correo.
           </p>
         </div>
       </div>
@@ -30,7 +30,7 @@
           <i class="bi bi-geo-alt-fill display-4 text-danger mb-3"></i>
           <h5 class="card-title fw-semibold">Formas de Envío</h5>
           <p class="card-text">
-            Envíos con seguimiento. ¡Gratis desde $15.000! Tiempo estimado: 3-7 días hábiles.
+            Envíos con seguimiento. ¡Gratis desde $50.000! Tiempo estimado: 3-7 días hábiles.
           </p>
         </div>
       </div>
@@ -70,17 +70,17 @@
           <td>Retiro en local</td>
           <td>Gratis</td>
           <td>Inmediato</td>
-          <td>Posadas</td>
+          <td>Corrientes Capital</td>
         </tr>
         <tr>
           <td>Delivery en el día</td>
-          <td>$800</td>
+          <td>$5000</td>
           <td>24 hs</td>
-          <td>Posadas</td>
+          <td>Corrientes Capital</td>
         </tr>
         <tr>
           <td>Correo a domicilio</td>
-          <td>$1600 (gratis desde $15.000)</td>
+          <td>$2500 (gratis desde $15.000)</td>
           <td>3-7 días hábiles</td>
           <td>Todo el país</td>
         </tr>

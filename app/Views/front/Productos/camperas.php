@@ -22,8 +22,8 @@
                         <div class="card-body">
                             <h5 class="card-title">Campera Rompevientos Hovy</h5>
                             <p class="card-text">Rompevientos liviano ideal para media estación. Resistente al viento y de secado rápido. Estilo urbano y moderno.</p>
-                            <p><strong>Precio:</strong> $8900</p>
-                            <p><strong>Stock disponible:</strong> 7 unidades</p>
+                            <p class="producto-info"><strong>Precio:</strong> $8900</p>
+                            <p class="producto-info"><strong>Stock disponible:</strong> 7 unidades</p>
                         </div>
                         <div class="card-footer text-center">
                             <button class="btn btn-dorado">Agregar al carrito</button>
@@ -38,8 +38,8 @@
                         <div class="card-body">
                             <h5 class="card-title">Chaqueta Urban Ventura Negra</h5>
                             <p class="card-text">Chaqueta negra con estilo urbano. Corte recto y bolsillos frontales. Comodidad y diseño para uso diario.</p>
-                            <p><strong>Precio:</strong> $9800</p>
-                            <p><strong>Stock disponible:</strong> 6 unidades</p>
+                            <p class="producto-info"><strong>Precio:</strong> $9800</p>
+                            <p class="producto-info"><strong>Stock disponible:</strong> 6 unidades</p>
                         </div>
                         <div class="card-footer text-center">
                             <button class="btn btn-dorado">Agregar al carrito</button>
@@ -54,8 +54,8 @@
                         <div class="card-body">
                             <h5 class="card-title">Campera Rompevientos Irupé Negra</h5>
                             <p class="card-text">Rompevientos color negro, ideal para días frescos y ventosos. Liviana, compacta y fácil de guardar.</p>
-                            <p><strong>Precio:</strong> $8500</p>
-                            <p><strong>Stock disponible:</strong> 9 unidades</p>
+                            <p class="producto-info"><strong>Precio:</strong> $8500</p>
+                            <p class="producto-info"><strong>Stock disponible:</strong> 9 unidades</p>
                         </div>
                         <div class="card-footer text-center">
                             <button class="btn btn-dorado">Agregar al carrito</button>
@@ -70,15 +70,15 @@
                         <div class="card-body">
                             <h5 class="card-title">Chaqueta Urban Oxnard Negra</h5>
                             <p class="card-text">Chaqueta con diseño minimalista y urbano. Cierre frontal, cuello alto y tela resistente. Ideal para días frescos.</p>
-                            <p><strong>Precio:</strong> $9900</p>
-                            <p><strong>Stock disponible:</strong> 4 unidades</p>
+                            <p class="producto-info"><strong>Precio:</strong> $9900</p>
+                            <p class="producto-info"><strong>Stock disponible:</strong> 4 unidades</p>
                         </div>
                         <div class="card-footer text-center">
                             <button class="btn btn-dorado">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
-                <!-- Podés seguir agregando más productos duplicando bloques como este -->
+                
             </div>
         </div>
     </body>
