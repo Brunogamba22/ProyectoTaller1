@@ -101,75 +101,7 @@
             <div class="card h-100">
                 <img src="assets/img/Buzos/Buzo6.webp" class="card-img-top img-producto" alt="buzo 6">
                 <div class="card-body">
-<<<<<<< HEAD
-                <h5 class="card-title">Buzo Canguro Negro</h5>
-                <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p class="producto-info"><strong>Precio:</strong> $3900</p>
-                <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
-                </div>
-                <div class="card-footer text-center">
-                <button class="btn btn-dorado">Agregar al carrito</button>
-                </div>
-            </div>
-            </div>
-
-            <!-- === Producto  Buzo7=== -->
-            <div class="col">
-            <div class="card h-100">
-                <img src="assets/img/Buzos/Buzo7.webp" class="card-img-top img-producto" alt="buzo 7">
-                <div class="card-body">
-                <h5 class="card-title">Buzo Canguro Negro</h5>
-                <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p class="producto-info"><strong>Precio:</strong> $3900</p>
-                <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
-                </div>
-                <div class="card-footer text-center">
-                <button class="btn btn-dorado">Agregar al carrito</button>
-                </div>
-            </div>
-            </div>
-
-            <!-- === Producto  buzo8=== -->
-            <div class="col">
-            <div class="card h-100">
-                <img src="assets/img/Buzos/HoodieNoirFadeOup.webp" class="card-img-top img-producto" alt="Hoodie Noir Fade Oup">
-                <div class="card-body">
-                <h5 class="card-title">Buzo Canguro Negro</h5>
-                <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p class="producto-info"><strong>Precio:</strong> $3900</p>
-                <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
-                </div>
-                <div class="card-footer text-center">
-                <button class="btn btn-dorado">Agregar al carrito</button>
-                </div>
-            </div>
-            </div>
-
-            <!-- === Producto  buzo9=== -->
-            <div class="col">
-            <div class="card h-100">
-                <img src="assets/img/Buzos/HoodieBrownFadeOut.webp" class="card-img-top img-producto" alt="Hoodie Brown Fade Oup">
-                <div class="card-body">
-                <h5 class="card-title">Buzo Canguro Rose</h5>
-                <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p class="producto-info"><strong>Precio:</strong> $3900</p>
-                <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
-                </div>
-                <div class="card-footer text-center">
-                <button class="btn btn-dorado">Agregar al carrito</button>
-                </div>
-            </div>
-            </div>
-
-            <!-- === Producto  buzo10=== -->
-            <div class="col">
-            <div class="card h-100">
-                <img src="assets/img/Buzos/HoodieRose.webp" class="card-img-top img-producto" alt="Hoodie Rose">
-                <div class="card-body">
-                <h5 class="card-title">Remera Blanca Clásica</h5>
-=======
                 <h5 class="card-title">Buzo Canguro Blanco</h5>
->>>>>>> ramaJonathan
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
                 <p class="producto-info"><strong>Precio:</strong> $3900</p>
                 <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
@@ -179,12 +111,7 @@
                 </div>
             </div>
             </div>
-<<<<<<< HEAD
-            
-
-=======
             <!-- Podés seguir agregando más productos duplicando bloques como este -->
->>>>>>> ramaJonathan
         </div>
         </div>
     </body>
