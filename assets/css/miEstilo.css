@@ -7,649 +7,604 @@
 
 /* ===== PALETA DE COLORES ===== */
 :root {
-    --marron-oscuro: #3E2723;
-    --marron-medio: #4E342E;
-    --marron-claro: #5D4037;
-    --beige: #D7CCC8;
-    --crema: #EFEBE9;
-    --dorado: #C8A97E;
-    --texto-oscuro: #2E211B;
-    --texto-claro: #EFEBE9;
-  }
-  
-  /* ===== ESTILOS GENERALES ===== */
-  body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    padding-top: 70px;
-    background-color: var(--marron-medio);
-    color: var(--texto-claro);
-    line-height: 1.6;
-  }
-  
-  /* ===== OPCIONES DE FONDO ===== */
-  .fondo-elegante {
-    background: linear-gradient(135deg, var(--marron-medio) 0%, var(--marron-oscuro) 100%);
-    color: var(--texto-claro);
-  }
-  
-  .fondo-oscuro {
-    background: linear-gradient(135deg, var(--marron-oscuro) 0%, #1E130F 100%);
-    color: var(--texto-claro);
-  }
-  
-  .fondo-textura {
-    background-color: var(--marron-claro);
-    background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
-  }
-  
-  /* ===== ENCABEZADO ===== */
-  .titulo {
-    background-color: var(--marron-claro) !important;
-    color: var(--texto-claro);
-    width: 100%;
-    margin: 0;
-    text-align: center;
-    padding: 15px 0;
-    font-size: 2.2rem;
-    font-weight: 700;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    letter-spacing: 1px;
-  }
-  
-  /* ===== BARRA DE NAVEGACIÓN ===== */
-  .navbar-personalizada {
-    background-color: var(--marron-claro) !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    padding: 6px 0;
-  }
-  
-  .navbar-personalizada .nav-link {
-    color: var(--texto-claro) !important;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    margin: 0 5px;
-    padding: 6px 16px;
-    border-radius: 2rem;
-    background-color: var(--marron-medio);
-  }
-  
-  .navbar-personalizada .nav-link:hover {
-    background-color: var(--dorado);
-    transform: translateY(-2px);
-    color: var(--texto-oscuro) !important;
-  }
-  
-  .navbar-personalizada .nav-link.active {
-    background-color: var(--dorado);
-    color: var(--texto-oscuro) !important;
-    font-weight: 600;
-  }
-  
-  .navbar-brand {
-    color: var(--texto-claro) !important;
-    font-weight: 700;
-    font-size: 1.2rem;
-    letter-spacing: 0.5px;
-  }
-  
-  /* ===== BUSCADOR ===== */
-  form.d-flex input.form-control {
-    border-radius: 2rem 0 0 2rem;
-    border: 1px solid var(--dorado);
-    padding: 6px 12px;
-    font-size: 0.9rem;
-    background-color: var(--beige);
-  }
-  
-  form.d-flex button.btn-buscar {
-    background-color: var(--dorado);
-    color: var(--texto-oscuro);
-    border: none;
-    font-weight: 600;
-    border-radius: 0 2rem 2rem 0;
-    padding: 6px 16px;
-    transition: background-color 0.3s ease;
-  }
-  
-  form.d-flex button.btn-buscar:hover {
-    background-color: #B89B6E;
-  }
-  
+  --marron-oscuro: #3E2723; /* Color base oscuro para fondos principales */
+  --marron-medio: #4E342E;  /* Color intermedio para secciones */
+  --marron-claro: #5D4037;  /* Color claro para acentos */
+  --beige: #D7CCC8;         /* Color neutro para textos secundarios */
+  --crema: #EFEBE9;         /* Color claro para fondos de texto */
+  --dorado: #C8A97E;        /* Color de acento premium (botones, bordes) */
+  --texto-oscuro: #2E211B;  /* Texto legible sobre fondos claros */
+  --texto-claro: #EFEBE9;   /* Texto legible sobre fondos oscuros */
+}
 
-  
-  /* ===== CARRUSEL CON TEXTO SUPERPUESTO ===== */
+/* ===== ESTILOS GENERALES ===== */
+body {
+  font-family: 'Poppins', sans-serif; /* Fuente moderna y legible */
+  margin: 0;                          /* Elimina márgenes predeterminados */
+  padding: 0;                         /* Elimina rellenos predeterminados */
+  padding-top: 70px;                  /* Espacio para navbar fija */
+  background-color: var(--marron-medio); /* Fondo principal */
+  color: var(--texto-claro);          /* Color de texto predeterminado */
+  line-height: 1.6;                   /* Espaciado entre líneas para legibilidad */
+}
+
+/* ===== OPCIONES DE FONDO ===== */
+.fondo-elegante {
+  background: linear-gradient(135deg, var(--marron-medio) 0%, var(--marron-oscuro) 100%); /* Degradado diagonal suave */
+  color: var(--texto-claro); /* Asegura contraste de texto */
+}
+
+.fondo-oscuro {
+  background: linear-gradient(135deg, var(--marron-oscuro) 0%, #1E130F 100%); /* Degradado más contrastado */
+  color: var(--texto-claro);
+}
+
+.fondo-textura {
+  background-color: var(--marron-claro); /* Fondo base */
+  background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png'); /* Textura de fibras de papel */
+}
+
+/* ===== ENCABEZADO ===== */
+.titulo {
+  background-color: var(--marron-claro) !important; /* Fondo contrastado */
+  color: var(--texto-claro); /* Texto claro */
+  width: 100%;               /* Ocupa todo el ancho */
+  margin: 0;                 /* Elimina márgenes */
+  text-align: center;        /* Centra el texto */
+  padding: 15px 0;           /* Espaciado vertical */
+  font-size: 2.2rem;         /* Tamaño grande para jerarquía */
+  font-weight: 700;          /* Negrita */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+  letter-spacing: 1px;       /* Espaciado entre letras */
+}
+
+/* ===== BARRA DE NAVEGACIÓN ===== */
+.navbar-personalizada {
+  background-color: var(--marron-claro) !important; /* Fondo coherente */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+  padding: 6px 0; /* Espaciado interno reducido */
+}
+
+.navbar-personalizada .nav-link {
+  color: var(--texto-claro) !important; /* Texto claro */
+  font-weight: 500;          /* Peso intermedio */
+  transition: all 0.3s ease; /* Transición suave para hover */
+  margin: 0 5px;             /* Espaciado horizontal */
+  padding: 6px 16px;         /* Relleno amplio */
+  border-radius: 2rem;       /* Forma de cápsula */
+  background-color: var(--marron-medio); /* Fondo contrastado */
+}
+
+.navbar-personalizada .nav-link:hover {
+  background-color: var(--dorado); /* Cambio de color al interactuar */
+  transform: translateY(-2px);    /* Efecto de levitación */
+  color: var(--texto-oscuro) !important; /* Texto oscuro para contraste */
+}
+
+.navbar-personalizada .nav-link.active {
+  background-color: var(--dorado); /* Resalta el enlace activo */
+  color: var(--texto-oscuro) !important;
+  font-weight: 600; /* Negrita para mayor énfasis */
+}
+
+.navbar-brand {
+  color: var(--texto-claro) !important; /* Color coherente */
+  font-weight: 700;          /* Negrita para marca */
+  font-size: 1.2rem;        /* Tamaño ligeramente mayor */
+  letter-spacing: 0.5px;    /* Espaciado elegante */
+}
+
+/* ===== BUSCADOR ===== */
+form.d-flex input.form-control {
+  border-radius: 2rem 0 0 2rem; /* Redondeo izquierdo */
+  border: 1px solid var(--dorado); /* Borde dorado */
+  padding: 6px 12px;           /* Relleno cómodo */
+  font-size: 0.9rem;           /* Tamaño legible */
+  background-color: var(--beige); /* Fondo claro para input */
+}
+
+form.d-flex button.btn-buscar {
+  background-color: var(--dorado); /* Color de acento */
+  color: var(--texto-oscuro);     /* Texto oscuro */
+  border: none;                   /* Sin borde */
+  font-weight: 600;               /* Negrita */
+  border-radius: 0 2rem 2rem 0;   /* Redondeo derecho */
+  padding: 6px 16px;              /* Relleno simétrico */
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+form.d-flex button.btn-buscar:hover {
+  background-color: #B89B6E; /* Color dorado oscuro al interactuar */
+}
+
+
+
+/* ===== CARRUSEL CON TEXTO SUPERPUESTO ===== */
 .container-fluid.px-0.position-relative {
-  position: relative;
+position: relative; /* Permite posicionamiento absoluto de hijos */
 }
 
 .carousel {
-  position: relative;
+position: relative; /* Contexto para elementos posicionados */
 }
 
 .carousel-item img {
-  width: 100%;
-  height: 700px;
-  object-fit: cover;
-  filter: brightness(0.7); /* Oscurece ligeramente las imágenes para mejor contraste */
+width: 100%;        /* Ocupa todo el ancho */
+height: 700px;      /* Altura fija */
+object-fit: cover;  /* Recorte inteligente */
+filter: brightness(0.7); /* Oscurece imagen para mejor contraste de texto */
 }
 
 .overlay-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width: 80%;
-  max-width: 800px;
-  z-index: 10;
-  color: white;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  animation: fadeIn 1.5s ease-in-out;
+position: absolute; /* Superposición sobre imagen */
+top: 50%;           /* Centrado vertical */
+left: 50%;          /* Centrado horizontal */
+transform: translate(-50%, -50%); /* Ajuste preciso */
+text-align: center; /* Texto centrado */
+width: 80%;         /* Ancho controlado */
+max-width: 800px;   /* Máximo para legibilidad */
+z-index: 10;        /* Asegura visibilidad */
+color: white;       /* Texto blanco */
+text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para contraste */
+animation: fadeIn 1.5s ease-in-out; /* Animación de entrada */
 }
 
 .titulo-carrusel {
-  font-size: 3.5rem;
-  font-weight: 700;
-  color: var(--dorado);
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+font-size: 3.5rem;       /* Tamaño impactante */
+font-weight: 700;        /* Negrita */
+color: var(--dorado);    /* Color de acento */
+margin-bottom: 1rem;     /* Espaciado inferior */
+text-transform: uppercase; /* Mayúsculas */
+letter-spacing: 2px;     /* Espaciado elegante */
 }
 
 .subtitulo-carrusel {
-  font-size: 1.8rem;
-  font-weight: 400;
-  background-color: rgba(62, 39, 35, 0.8);
-  padding: 15px 25px;
-  border-radius: 50px;
-  display: inline-block;
-  border: 2px solid var(--dorado);
+font-size: 1.8rem;       /* Tamaño legible */
+font-weight: 400;        /* Peso normal */
+background-color: rgba(62, 39, 35, 0.8); /* Fondo semitransparente */
+padding: 15px 25px;      /* Relleno generoso */
+border-radius: 50px;      /* Forma ovalada */
+display: inline-block;    /* Ajuste de ancho */
+border: 2px solid var(--dorado); /* Borde decorativo */
 }
 
 /* Animación */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translate(-50%, -40%); }
-  to { opacity: 1; transform: translate(-50%, -50%); }
+from { opacity: 0; transform: translate(-50%, -40%); } /* Inicio invisible */
+to { opacity: 1; transform: translate(-50%, -50%); }   /* Final visible */
 }
 
 /* Responsive */
 @media (max-width: 992px) {
-  .titulo-carrusel {
-    font-size: 2.5rem;
-  }
-  
-  .subtitulo-carrusel {
-    font-size: 1.3rem;
-  }
+.titulo-carrusel {
+  font-size: 2.5rem; /* Reduce tamaño en tablets */
+}
+
+.subtitulo-carrusel {
+  font-size: 1.3rem; /* Ajuste proporcional */
+}
 }
 
 @media (max-width: 768px) {
-  .carousel-item img {
-    height: 500px;
-  }
-  
-  .titulo-carrusel {
-    font-size: 2rem;
-  }
-  
-  .subtitulo-carrusel {
-    font-size: 1rem;
-    padding: 10px 15px;
-  }
+.carousel-item img {
+  height: 500px; /* Altura menor en móviles */
+}
+
+.titulo-carrusel {
+  font-size: 2rem; /* Tamaño móvil */
+}
+
+.subtitulo-carrusel {
+  font-size: 1rem; /* Texto más compacto */
+  padding: 10px 15px; /* Relleno reducido */
+}
 }
 /* ===== FIN DEL ESTILO CARRUSEL ===== */
 
 
-  /* ===== FOOTER ===== */
-  .footer-marron {
-    background-color: var(--marron-oscuro);
-    padding: 2.5rem 0;
-    margin-top: 3rem;
-    border-top: 2px solid var(--dorado);
-  }
-  
-  .titulo-footer {
-    color: var(--dorado);
-    font-weight: 700;
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-  }
-  
-  .subtitulo-footer {
-    color: var(--dorado);
-    font-weight: 600;
-    margin-bottom: 1.2rem;
-    letter-spacing: 0.5px;
-  }
-  
-  .texto-footer {
-    color: var(--beige);
-    font-size: 1rem;
-    line-height: 1.6;
-    opacity: 0.9;
-  }
-  
-  .enlace-footer {
-    color: var(--beige);
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: inline-block;
-    margin-bottom: 0.5rem;
-    font-size: 0.95rem;
-  }
-  
-  .enlace-footer:hover {
-    color: var(--dorado);
-    transform: translateX(5px);
-  }
-  
-  .redes-sociales {
-    margin-top: 0.5rem;
-  }
-  
-  .iconos-redes {
-    display: flex;
-    gap: 1.2rem;
-  }
-  
-  .iconos-redes a {
-    color: var(--beige);
-    font-size: 1.3rem;
-    transition: all 0.3s ease;
-  }
-  
-  .iconos-redes a:hover {
-    color: var(--dorado);
-    transform: translateY(-3px);
-  }
-  
-  .borde-superior {
-    border-top: 1px solid rgba(200, 169, 126, 0.3);
-  }
-  
-  .footer-marron small {
-    color: var(--beige);
-    opacity: 0.7;
-    font-size: 0.85rem;
-  }
-  
-  /* ===== SECCIÓN SOBRE NOSOTROS ===== */
-  .sobre-nosotros {
-    margin: 60px 0;
-  }
-  
-  .sobre-nosotros h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--dorado);
-  }
-  
-  .sobre-nosotros .intro {
-    font-size: 1.3rem;
-    max-width: 800px;
-    margin: 20px auto;
-    color: var(--beige);
-  }
-  
-  .mision-vision {
-    margin: 60px 0;
-  }
-  
-  .mision-vision h4 {
-    font-weight: 600;
-    margin-top: 40px;
-    color: var(--dorado);
-  }
-  
-  .mision-vision p {
-    max-width: 800px;
-    margin: 0 auto 20px;
-    color: var(--beige);
-    font-size: 1.3rem;
-  }
-  
-  .frase-final p {
-    font-style: italic;
-    color: var(--dorado);
-    margin-top: 30px;
-    font-size: 1.1rem;
-  }
- 
-/* ===== SECCIÓN CONTACTO ===== */
+/* ===== FOOTER ===== */
+.footer-marron {
+  background-color: var(--marron-oscuro); /* Fondo oscuro */
+  padding: 2.5rem 0;       /* Espaciado vertical */
+  margin-top: 3rem;         /* Separación de contenido */
+  border-top: 2px solid var(--dorado); /* Línea decorativa */
+}
 
+.titulo-footer {
+  color: var(--dorado);     /* Color de acento */
+  font-weight: 700;         /* Negrita */
+  font-size: 1.4rem;        /* Tamaño destacado */
+  margin-bottom: 1rem;      /* Espaciado inferior */
+}
+
+.subtitulo-footer {
+  color: var(--dorado);     /* Coherencia visual */
+  font-weight: 600;         /* Seminegrita */
+  margin-bottom: 1.2rem;    /* Espaciado */
+  letter-spacing: 0.5px;    /* Refinamiento tipográfico */
+}
+
+.texto-footer {
+  color: var(--beige);      /* Texto suave */
+  font-size: 1rem;          /* Tamaño estándar */
+  line-height: 1.6;         /* Interlineado amplio */
+  opacity: 0.9;             /* Ligera transparencia */
+}
+
+.enlace-footer {
+  color: var(--beige);      /* Coherencia */
+  text-decoration: none;    /* Sin subrayado */
+  transition: all 0.3s ease; /* Efecto suave */
+  display: inline-block;    /* Permite transformaciones */
+  margin-bottom: 0.5rem;   /* Espaciado entre enlaces */
+  font-size: 0.95rem;      /* Tamaño ligeramente reducido */
+}
+
+.enlace-footer:hover {
+  color: var(--dorado);     /* Cambio al interactuar */
+  transform: translateX(5px); /* Desplazamiento derecho */
+}
+
+.redes-sociales {
+  margin-top: 0.5rem;       /* Separación de elementos */
+}
+
+.iconos-redes {
+  display: flex;            /* Disposición horizontal */
+  gap: 1.2rem;             /* Espaciado entre iconos */
+}
+
+.iconos-redes a {
+  color: var(--beige);      /* Color neutro */
+  font-size: 1.3rem;       /* Tamaño visible */
+  transition: all 0.3s ease; /* Animación suave */
+}
+
+.iconos-redes a:hover {
+  color: var(--dorado);     /* Color al interactuar */
+  transform: translateY(-3px); /* Efecto de levitación */
+}
+
+.borde-superior {
+  border-top: 1px solid rgba(200, 169, 126, 0.3); /* Línea sutil */
+}
+
+.footer-marron small {
+  color: var(--beige);      /* Texto discreto */
+  opacity: 0.7;             /* Transparencia */
+  font-size: 0.85rem;       /* Tamaño pequeño */
+}
+
+/* ===== SECCIÓN SOBRE NOSOTROS ===== */
+.sobre-nosotros {
+  margin: 60px 0;           /* Espaciado vertical */
+}
+
+.sobre-nosotros h2 {
+  font-size: 2.5rem;        /* Tamaño destacado */
+  font-weight: 700;         /* Negrita */
+  color: var(--dorado);     /* Color de acento */
+}
+
+.sobre-nosotros .intro {
+  font-size: 1.3rem;        /* Tamaño legible */
+  max-width: 800px;         /* Ancho controlado */
+  margin: 20px auto;        /* Centrado */
+  color: var(--beige);      /* Color suave */
+}
+
+.mision-vision {
+  margin: 60px 0;           /* Espaciado sección */
+}
+
+.mision-vision h4 {
+  font-weight: 600;         /* Seminegrita */
+  margin-top: 40px;         /* Separación de títulos */
+  color: var(--dorado);     /* Color destacado */
+}
+
+.mision-vision p {
+  max-width: 800px;         /* Limita ancho de texto */
+  margin: 0 auto 20px;      /* Centrado con espaciado */
+  color: var(--beige);      /* Color legible */
+  font-size: 1.3rem;        /* Tamaño generoso */
+}
+
+.frase-final p {
+  font-style: italic;       /* Cursiva elegante */
+  color: var(--dorado);     /* Color especial */
+  margin-top: 30px;         /* Espaciado superior */
+  font-size: 1.1rem;        /* Tamaño reducido */
+}
+
+/* ===== SECCIÓN CONTACTO ===== */
 .contacto-section h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--dorado);
+  font-size: 2.5rem;        /* Tamaño coherente */
+  font-weight: 700;         /* Negrita */
+  color: var(--dorado);     /* Color de acento */
 }
 
 .text-beige {
-  color: var(--beige);
+  color: var(--beige);      /* Clase utilitaria */
 }
 
 .text-dorado {
-  color: var(--dorado);
+  color: var(--dorado);     /* Clase utilitaria */
 }
 
 .link-dorado {
-  color: var(--dorado);
-  text-decoration: none;
+  color: var(--dorado);     /* Enlace especial */
+  text-decoration: none;    /* Sin subrayado */
 }
 
 .link-dorado:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Subrayado al interactuar */
 }
 
 /* Estilo de la tarjeta de contacto */
 .contacto-card {
-  background-color: var(--marron-claro);
-  border: 1px solid var(--dorado);
-  border-radius: 1rem;
+  background-color: var(--marron-claro); /* Fondo coherente */
+  border: 1px solid var(--dorado);      /* Borde decorativo */
+  border-radius: 1rem;                  /* Esquinas redondeadas */
 }
 
 /* Animación de entrada para el formulario */
 .animate__fadeInUp {
-  --animate-duration: 1s;
+  --animate-duration: 1s; /* Duración personalizada */
 }
 
 
 /*********** BOTON DORADO ***********/
 .btn-dorado {
-  background-color: var(--dorado);
-  border: none;
-  color: white;
-  font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: var(--dorado); /* Color de acento */
+  border: none;                   /* Sin bordes */
+  color: white;                   /* Texto claro */
+  font-weight: bold;              /* Negrita */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones combinadas */
 }
 
 .btn-dorado:hover {
-  background-color: #c5a757; /* un dorado un poco más oscuro */
-  transform: translateY(-3px);
+  background-color: #c5a757; /* Variante oscura al interactuar */
+  transform: translateY(-3px); /* Efecto de levitación */
 }
 
 /*********** FIN BOTON DORADO ***********/
 
 /* Otros medios */
 .otros-medios h5 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 1.5rem;        /* Tamaño destacado */
+  margin-bottom: 1rem;      /* Espaciado inferior */
 }
 
 .otros-medios p {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.1rem;        /* Tamaño legible */
+  margin-bottom: 0.5rem;    /* Espaciado entre párrafos */
 }
 
+/* ===== FORMULARIO CONTACTO ===== */
+form input, form textarea {
+  border-radius: 0.5rem;        /* Esquinas redondeadas */
+  background-color: var(--beige); /* Fondo claro */
+  border: 1px solid var(--dorado); /* Borde sutil */
+}
 
+/* Labels del formulario de contacto */
+form label {
+  color: var(--beige);      /* Color legible */
+  font-weight: 600;         /* Seminegrita para énfasis */
+}
 
+/* ===== PRODUCTOS ===== */
+.img-producto {
+  height: 250px;            /* Altura fija */
+  object-fit: contain;      /* Muestra imagen completa */
+  width: 100%;              /* Ancho completo */
+  background-color: var(--marron-medio); /* Fondo de respaldo */
+  padding: 15px;            /* Relleno interno */
+  border-radius: 8px;       /* Esquinas redondeadas */
+}
 
-
-  /* ===== FORMULARIO CONTACTO ===== */
-  
-  
-  form input, form textarea {
-    border-radius: 0.5rem;
-    background-color: var(--beige);
-    border: 1px solid var(--dorado);
-  }
-  /* Labels del formulario de contacto */
-  form label {
-  color: var(--beige); /*color claro  */
-  font-weight: 600; /* Opcional: para que destaque un poquito más */
-  }
-  
-  /* ===== PRODUCTOS ===== */
-  .img-producto {
-    height: 250px;
-    object-fit: contain;
-    width: 100%;
-    background-color: var(--marron-medio);
-    padding: 15px;
-    border-radius: 8px;
-  }
-  
-  /* ===== TARJETAS DE CATEGORÍAS UNIFORMES ===== */
+/* ===== TARJETAS DE CATEGORÍAS UNIFORMES ===== */
 /* Contenedor principal de tarjetas */
 .row.row-cols-1.row-cols-md-3.g-4 {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;            /* Layout flexible */
+  flex-wrap: wrap;          /* Ajuste responsivo */
 }
 
 /* Cada columna */
 .row.row-cols-1.row-cols-md-3.g-4 > .col {
-    display: flex;
+  display: flex;            /* Alineación correcta */
 }
 
 /* ===== Tarjetas generales ===== */
 .card {
-  transition: all 0.3s ease;
+  transition: all 0.3s ease; /* Animación suave */
 }
 
 /* Hover general para todas las tarjetas */
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  border-color: var(--dorado);
+  transform: translateY(-5px); /* Efecto de elevación */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+  border-color: var(--dorado); /* Borde destacado */
 }
 
 /* ===== Tarjetas específicas de comercialización ===== */
 .card.h-100 {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  border-radius: 1rem;
-  background-color: var(--marron-claro);
-  border: 1px solid var(--dorado);
-  overflow: hidden;
-  /* ya tienen transition heredado de .card */
+  width: 100%;              /* Ocupa todo el ancho */
+  display: flex;            /* Flexbox para alineación */
+  flex-direction: column;   /* Disposición vertical */
+  border-radius: 1rem;      /* Esquinas muy redondeadas */
+  background-color: var(--marron-claro); /* Fondo coherente */
+  border: 1px solid var(--dorado); /* Borde decorativo */
+  overflow: hidden;         /* Oculta excesos */
 }
 
 /* Hover especial solo para las tarjetas h-100 */
 .card.h-100:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
-  border-color: var(--dorado);
+  transform: translateY(-10px) scale(1.03); /* Efecto más pronunciado */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25); /* Sombra más intensa */
+  border-color: var(--dorado); /* Refuerzo visual */
 }
-
 
 /* Contenedor de imagen fijo */
 .card-img-top {
-  width: 100%;
-  height: 310px; /* Altura fija para todas las imágenes */
-  object-fit: cover; /* Ajusta la imagen manteniendo proporciones */
-  background-color: var(--marron-medio); /* Fondo para imágenes no cuadradas */
+  width: 100%;              /* Ancho completo */
+  height: 310px;            /* Altura fija para uniformidad */
+  object-fit: cover;        /* Recorte inteligente */
+  background-color: var(--marron-medio); /* Fondo de respaldo */
 }
 
 /* Título y texto */
 /*texto de tarjeta nombre de "SOBRE NOSOTROS"*/
 .tarjeta-nombre {
-    color: var(--marron-medio);
-    margin-bottom: 0.75rem;
-    font-size: 1.25rem;
+  color: var(--marron-medio); /* Color contrastado */
+  margin-bottom: 0.75rem;    /* Espaciado inferior */
+  font-size: 1.25rem;        /* Tamaño destacado */
 }
+
 /*texto de tarjeta de "SOBRE NOSOTROS"*/
 .tarjeta-texto{
-  color: var(--marron-medio);
-  flex-grow: 1; /* Hace que los textos ocupen el espacio disponible */
+  color: var(--marron-medio); /* Color coherente */
+  flex-grow: 1;              /* Ocupa espacio disponible */
 }
 
 /*titulo de tarjetas de productos*/
 .card-title {
-  color: var(--dorado);
-  margin-bottom: 0.75rem;
-  font-size: 1.25rem;
+  color: var(--dorado);      /* Color de acento */
+  margin-bottom: 0.75rem;    /* Espaciado estándar */
+  font-size: 1.25rem;        /* Tamaño legible */
 }
+
 /*texto de tarjetas de productos*/
 .card-text {
-    color: var(--beige);
-    flex-grow: 1; /* Hace que los textos ocupen el espacio disponible */
+  color: var(--beige);       /* Texto suave */
+  flex-grow: 1;              /* Distribución flexible */
 }
 
 /* ===== TEXTO Precio y stock de productos =====*/
 .producto-info {
-  color: var(--beige);
-  font-weight: 500; /* Opcional: para que se vea un poco más grueso */
-  margin-bottom: 0.5rem;
+  color: var(--beige);       /* Color legible */
+  font-weight: 500;          /* Peso medio */
+  margin-bottom: 0.5rem;     /* Espaciado reducido */
 }
 
-/* Efectos hover */
-.card {
-    transition: all 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    border-color: var(--dorado);
-}
-
-/* Responsive */
+/* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {
-    .card-img-top {
-        height: 200px;
-    }
-}
-  
-  /* ===== RESPONSIVO ===== */
-  @media (max-width: 768px) {
-    .titulo {
-      font-size: 1.8rem;
-      padding: 12px 0;
-    }
-  
-    .seccion1 h4 {
-      font-size: 1.2rem;
-    }
-  
-    .redes-sociales a {
-      display: block;
-      margin: 8px 0;
-    }
-    
-    .navbar-collapse {
-      padding-top: 15px;
-    }
-    
-    .carrusel-texto-superpuesto {
-      width: 90%;
-      top: 15%;
-      padding: 10px;
-    }
-    
-    .carrusel-texto-superpuesto h4 {
-      font-size: 1.5rem;
-    }
-  }
-  
-  @media (max-width: 992px) {
-    .navbar-nav .nav-link {
-      width: 100%;
-      text-align: center;
-      margin: 5px 0;
-    }
+  .titulo {
+      font-size: 1.8rem;     /* Reducción proporcional */
+      padding: 12px 0;       /* Ajuste de espaciado */
   }
 
+  .seccion1 h4 {
+      font-size: 1.2rem;     /* Tamaño móvil */
+  }
+
+  .redes-sociales a {
+      display: block;        /* Apilado vertical */
+      margin: 8px 0;         /* Espaciado uniforme */
+  }
   
+  .navbar-collapse {
+      padding-top: 15px;     /* Espaciado superior */
+  }
+  
+  .carrusel-texto-superpuesto {
+      width: 90%;            /* Ancho adaptativo */
+      top: 15%;              /* Posición ajustada */
+      padding: 10px;         /* Relleno reducido */
+  }
+  
+  .carrusel-texto-superpuesto h4 {
+      font-size: 1.5rem;     /* Tamaño móvil */
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar-nav .nav-link {
+      width: 100%;           /* Ancho completo */
+      text-align: center;    /* Centrado */
+      margin: 5px 0;         /* Espaciado vertical */
+  }
+}
 
 /* ===== SECCIÓN DE CONFIANZA ===== */
 .seccion-confianza {
-  background-color: var(--marron-oscuro);
-  border-top: 2px solid var(--dorado);
+  background-color: var(--marron-oscuro); /* Fondo oscuro */
+  border-top: 2px solid var(--dorado);    /* Bordes decorativos */
   border-bottom: 2px solid var(--dorado);
 }
 
 .titulo-confianza {
-  color: var(--dorado);
-  font-size: 2.2rem;
-  font-weight: 700;
-  position: relative;
-  padding-bottom: 15px;
+  color: var(--dorado);      /* Color destacado */
+  font-size: 2.2rem;         /* Tamaño grande */
+  font-weight: 700;          /* Negrita */
+  position: relative;        /* Contexto para pseudo-elemento */
+  padding-bottom: 15px;      /* Espacio para subrayado */
 }
 
 .titulo-confianza::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 3px;
-  background-color: var(--dorado);
+  content: '';               /* Pseudo-elemento */
+  position: absolute;        /* Posicionamiento */
+  bottom: 0;                /* Alineación inferior */
+  left: 50%;                /* Centrado horizontal */
+  transform: translateX(-50%); /* Ajuste preciso */
+  width: 100px;             /* Ancho controlado */
+  height: 3px;              /* Grosor de línea */
+  background-color: var(--dorado); /* Color de acento */
 }
 
 .card-confianza {
-  background-color: var(--marron-claro);
-  border-radius: 10px;
-  padding: 30px 20px;
-  height: 100%;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(200, 169, 126, 0.3);
+  background-color: var(--marron-claro); /* Fondo coherente */
+  border-radius: 10px;       /* Esquinas redondeadas */
+  padding: 30px 20px;        /* Relleno generoso */
+  height: 100%;              /* Altura completa */
+  transition: all 0.3s ease; /* Animación suave */
+  border: 1px solid rgba(200, 169, 126, 0.3); /* Borde sutil */
 }
 
 .card-confianza:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  border-color: var(--dorado);
+  transform: translateY(-5px); /* Efecto de elevación */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra interactiva */
+  border-color: var(--dorado); /* Borde destacado */
 }
 
 .icono-confianza {
-  color: var(--dorado) !important;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  display: inline-block;
+  color: var(--dorado) !important; /* Color de acento */
+  font-size: 2.5rem;        /* Tamaño grande */
+  margin-bottom: 20px;       /* Espaciado inferior */
+  display: inline-block;     /* Comportamiento en línea */
 }
 
 .titulo-item {
-  color: var(--dorado);
-  font-size: 1.4rem;
-  margin-bottom: 15px;
-  font-weight: 600;
+  color: var(--dorado);      /* Color coherente */
+  font-size: 1.4rem;         /* Tamaño destacado */
+  margin-bottom: 15px;       /* Espaciado */
+  font-weight: 600;          /* Seminegrita */
 }
 
 .texto-item {
-  color: var(--beige);
-  font-size: 1rem;
-  line-height: 1.6;
-  max-width: 250px;
-  margin: 0 auto;
+  color: var(--beige);       /* Texto legible */
+  font-size: 1rem;           /* Tamaño estándar */
+  line-height: 1.6;          /* Interlineado amplio */
+  max-width: 250px;          /* Ancho controlado */
+  margin: 0 auto;            /* Centrado */
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .titulo-confianza {
-    font-size: 1.8rem;
+      font-size: 1.8rem;     /* Ajuste para móviles */
   }
   
   .card-confianza {
-    padding: 25px 15px;
+      padding: 25px 15px;    /* Relleno reducido */
   }
   
   .titulo-item {
-    font-size: 1.2rem;
+      font-size: 1.2rem;     /* Tamaño móvil */
   }
   
   .texto-item {
-    font-size: 0.9rem;
+      font-size: 0.9rem;     /* Texto más compacto */
   }
 }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .titulo-confianza {
-      font-size: 1.8rem;
-    }
-    
-    .card-confianza {
-      padding: 25px 15px;
-    }
-    
-    .titulo-item {
-      font-size: 1.2rem;
-    }
-    
-    .texto-item {
-      font-size: 0.9rem;
-    }
-  }
