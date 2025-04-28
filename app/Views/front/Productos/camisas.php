@@ -2,7 +2,7 @@
 <html lang="es"> <!-- Indica que el idioma del documento es español -->
     <head>
         <meta charset="UTF-8"> <!-- Define la codificación de caracteres para admitir tildes y caracteres especiales -->
-        <title> <?php echo $titulo; ?> Camperas </title> <!-- Título que se muestra en la pestaña del navegador -->
+        <title> <?php echo $titulo; ?> Camisas </title> <!-- Título que se muestra en la pestaña del navegador -->
         </head>
     <body>
 
@@ -10,7 +10,7 @@
         <div class="container py-5">
         
         <!-- Título centrado y con margen inferior -->
-        <h2 class="mb-4 text-center">Catálogo de Camperas</h2>
+        <h2 class="mb-4 text-center">Catálogo de Camisas</h2>
         
         <!-- Grid de Bootstrap: 1 columna en pantallas chicas, 3 en pantallas medianas en adelante -->
         <div class="row row-cols-1 row-cols-md-3 g-4">

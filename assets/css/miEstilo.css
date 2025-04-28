@@ -60,7 +60,7 @@ body {
 
 /* ===== BARRA DE NAVEGACIÓN ===== */
 .navbar-personalizada {
-  background-color: var(--marron-claro) !important; /* Fondo coherente */
+  background-color: var(--texto-oscuro) !important; /* Fondo coherente */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
   padding: 6px 0; /* Espaciado interno reducido */
 }
@@ -204,7 +204,7 @@ to { opacity: 1; transform: translate(-50%, -50%); }   /* Final visible */
 
 /* ===== FOOTER ===== */
 .footer-marron {
-  background-color: var(--marron-oscuro); /* Fondo oscuro */
+  background-color: var(--texto-oscuro); /* Fondo oscuro */
   padding: 2.5rem 0;       /* Espaciado vertical */
   margin-top: 3rem;         /* Separación de contenido */
   border-top: 2px solid var(--dorado); /* Línea decorativa */

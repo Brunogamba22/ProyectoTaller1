@@ -1,5 +1,5 @@
 <!-- Footer de la página principal -->
-<footer class="footer-marron bg-dark text-white pt-4 pb-3 mt-5">
+<footer class="footer-marron text-white pt-4 pb-3 mt-5">
   <!-- Contenedor general para centrar y aplicar márgenes -->
   <div class="container">
     <div class="row">
