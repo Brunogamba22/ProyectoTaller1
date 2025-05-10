@@ -46,7 +46,7 @@ body {
 
 /* ===== ENCABEZADO ===== */
 .titulo {
-  background-color: var(--marron-claro) !important; /* Fondo contrastado */
+  background-color: var(--marron-claro) !important; /*important se usa para forzar que una regla se aplique, Fondo contrastado */
   color: var(--texto-claro); /* Texto claro */
   width: 100%;               /* Ocupa todo el ancho */
   margin: 0;                 /* Elimina márgenes */
