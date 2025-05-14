@@ -16,3 +16,5 @@ $routes->get('Camisas', 'Home::camisas');
 $routes->get('Comercializacion', 'Home::comercializacion');
 $routes->get('Sobrenosotros', 'Home::sobrenosotros');
 $routes->get('Contacto', 'Home::contacto');
+$routes->get('registrarse', 'Usuario_controller::create');
+$routes->post('usuario/guardar', 'Usuario_controller::guardar');
