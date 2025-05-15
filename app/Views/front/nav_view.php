@@ -103,6 +103,16 @@ Utiliza Bootstrap 5 para crear una navbar responsive con opciones colapsables en
                         </a>
                     </li>
 
+                    <li class="nav-item">
+                        <a 
+                            class="nav-link text-black btn btn-link <?= (current_url() == base_url('Registrarse')) ? 'active' : '' ?>" 
+                            id="registrarse-tab" 
+                            href="<?= base_url('Registrarse') ?>"
+                        >
+                            Registrarse
+                        </a>
+                    </li>
+
                     <!-- Buscador de productos -->
                     <li class="nav-item ms-lg-auto"> <!-- ms-lg-auto: empuja el buscador a la derecha en pantallas grandes -->
                         <form class="d-flex" role="search">

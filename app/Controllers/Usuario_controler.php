@@ -5,19 +5,14 @@ use CodeIgniter\Controller;
 
 class Usuario_controller extends Controller
 {
+    
+    //Constructor:  Carga los helpers de formularios y URLs para usarlos fácilmente
     public function __construct(){
         helper(['form', 'url']);
     }
+    
 
-    public function create()
-    {
-        $dato['titulo'] = 'Registro';
-        echo view('front/head_view', $dato);
-        echo view('front/nav_view');
-        echo view('back/usuario/registro'); // Esta es la vista con el formulario
-        echo view('front/footer_view');
-    }
-
+    //Este método se ejecuta cuando el formulario se envía
     public function formValidation()
     {
         $input = $this->validate([
@@ -30,7 +25,7 @@ class Usuario_controller extends Controller
 
         if (!$input) {
             return redirect()->back()->withInput()->with('validation', \Config\Services::validation())
-                                                 ->with('fail', 'Error en los datos ingresados');
+                                            ->with('fail', 'Error en los datos ingresados');
         }
 
         // Guardar en base de datos
