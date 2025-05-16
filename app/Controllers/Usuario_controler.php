@@ -10,7 +10,7 @@ class Usuario_controller extends Controller
     public function __construct(){
         helper(['form', 'url']);
     }
-    
+
 
     //Este método se ejecuta cuando el formulario se envía
     public function formValidation()
