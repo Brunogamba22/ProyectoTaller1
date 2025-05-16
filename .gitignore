@@ -47,3 +47,7 @@ writable/debugbar/
 *.tmp
 *.swp
 *.idea/
+
+# Archivos de sistema Windows
+desktop.ini
+**/desktop.ini
