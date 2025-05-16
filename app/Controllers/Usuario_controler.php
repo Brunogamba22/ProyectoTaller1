@@ -7,7 +7,7 @@ class Usuario_controller extends Controller
 {
     
     //Constructor:  Carga los helpers de formularios y URLs para usarlos fácilmente
-    public function __construct(){
+    public function construct(){
         helper(['form', 'url']);
     }
     
