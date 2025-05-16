@@ -18,4 +18,4 @@ $routes->get('Sobrenosotros', 'Home::sobrenosotros');
 $routes->get('Contacto', 'Home::contacto');
 $routes->get('Registrarse', 'Home::create');
 $routes->post('/enviar-form', 'Usuario_controller::formValidation');
-
+$routes->get('/dashboard', 'Dashboard::index', ['filters'=> 'auth']);
