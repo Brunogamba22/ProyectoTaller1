@@ -1,4 +1,6 @@
 <?php
+//Este archivo de Filtro comprobará si el usuario ha iniciado sesión,
+//y lo  redirigirá a la página de inicio de sesión si el mismo  no ha iniciado la misma.
 namespace App\Filters;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\Filters\FilterInterface;

@@ -19,3 +19,4 @@ $routes->get('Contacto', 'Home::contacto');
 $routes->get('Registrarse', 'Home::create');
 $routes->post('/enviar-form', 'Usuario_controller::formValidation');
 $routes->get('/dashboard', 'Dashboard::index', ['filters'=> 'auth']);
+$routes->get('/logout','login_controlador::logout');
