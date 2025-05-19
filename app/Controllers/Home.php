@@ -8,6 +8,7 @@ class Home extends BaseController
     public function index()
     {
         $data['titulo'] = 'principal'; 
+        $data['show_login_modal'] = !session()->get('logged_in'); // TRUE si no está logueado
         echo view('front/head_view', $data);
         echo view('front/nav_view');
         echo view('front/principal');
@@ -147,5 +148,16 @@ class Home extends BaseController
         echo view('back/registro'); // Esta es la vista con el formulario
         echo view('front/footer_view');
     }
+
+    public function loguearse()
+    {
+        
+        $data['titulo'] = 'Login';
+        echo view('front/head_view', $data);
+        echo view('front/nav_view');
+        echo view('back/login'); // Esta es la vista con el formulario
+        echo view('front/footer_view');
+    }
+
 
 }
