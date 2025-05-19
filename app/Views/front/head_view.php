@@ -16,7 +16,23 @@
 
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </head>
+
+  <?php if (isset($show_login_modal) && $show_login_modal): ?>
+  <script>
+      $(document).ready(function() {
+          var myModal = new bootstrap.Modal(document.getElementById('loginModal'));
+          myModal.show();
+          
+          // Opcional: guardar en localStorage que ya se mostró
+          localStorage.setItem('modalShown', 'true');
+      });
+  </script>
+<?php endif; ?>
   
   <!-- Apertura del cuerpo de la página con clase para el fondo -->
   <body class="fondo-elegante">

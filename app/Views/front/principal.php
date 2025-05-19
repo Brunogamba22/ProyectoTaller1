@@ -1,3 +1,37 @@
+<!-- Modal para invitación a registrarse/iniciar sesión -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">¡Bienvenido a UMMA!</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="text-center mb-4">
+                    <i class="bi bi-person-circle" style="font-size: 3rem; color: var(--dorado);"></i>
+                </div>
+                <p class="text-center">Para disfrutar de una experiencia personalizada y realizar compras, te recomendamos:</p>
+                
+                <div class="d-grid gap-2">
+                    <a href="<?= base_url('login') ?>" class="btn btn-primary btn-lg">
+                        <i class="bi bi-box-arrow-in-right"></i> Iniciar sesión
+                    </a>
+                    <a href="<?= base_url('Registrarse') ?>" class="btn btn-success btn-lg">
+                        <i class="bi bi-person-plus"></i> Crear cuenta
+                    </a>
+                </div>
+                
+                <div class="text-center mt-3">
+                    <a href="#" class="text-muted" data-bs-dismiss="modal" onclick="localStorage.setItem('modalShown', 'true')">Continuar como invitado</a>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <small class="text-muted">Al registrarte aceptas nuestros <a href="#">Términos y Condiciones</a></small>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Sección: Carrusel de imágenes con texto superpuesto -->
 <section class="container-fluid px-0 mb-5 position-relative">
   
@@ -181,3 +215,19 @@
   </div>
 
 </section>
+<script>
+// Controlar el comportamiento del modal
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = new bootstrap.Modal(document.getElementById('loginModal'));
+    
+    // Mostrar modal solo si es necesario
+    <?php if (isset($show_login_modal) && $show_login_modal): ?>
+    modal.show();
+    <?php endif; ?>
+
+    // Guardar preferencia al continuar como invitado
+    document.querySelector('[data-bs-dismiss="modal"]').addEventListener('click', function() {
+        localStorage.setItem('modalShown', 'true');
+    });
+});
+</script>
