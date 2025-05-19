@@ -20,3 +20,9 @@ $routes->get('Registrarse', 'Home::create');
 $routes->post('/enviar-form', 'Usuario_controller::formValidation');
 $routes->get('/dashboard', 'Dashboard::index', ['filters'=> 'auth']);
 $routes->get('/logout','login_controlador::logout');
+
+
+$routes->get('TerminoYcondiciones', 'Home::TerminosYcondiciones');
+$routes->get('PoliticaDeprivacidad', 'Home::PoliticaDeprivacidad');
+$routes->get('PreguntasFrecuentes', 'Home::PreguntasFrecuentes');
+$routes->get('carrito', 'Home::carrito');

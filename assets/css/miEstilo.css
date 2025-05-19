@@ -23,19 +23,19 @@ body {
   margin: 0;                          /* Elimina márgenes predeterminados */
   padding: 0;                         /* Elimina rellenos predeterminados */
   padding-top: 70px;                  /* Espacio para navbar fija */
-  background-color: var(--marron-medio); /* Fondo principal */
+  background-color: var(--marron-claro); /* Fondo principal */
   color: var(--texto-claro);          /* Color de texto predeterminado */
   line-height: 1.6;                   /* Espaciado entre líneas para legibilidad */
 }
 
 /* ===== OPCIONES DE FONDO ===== */
 .fondo-elegante {
-  background: linear-gradient(135deg, var(--marron-medio) 0%, var(--marron-oscuro) 100%); /* Degradado diagonal suave */
+  background: linear-gradient(135deg, var(--marron-medio) 0%, var(--dorado) 100%); /* Degradado diagonal suave */
   color: var(--texto-claro); /* Asegura contraste de texto */
 }
 
 .fondo-oscuro {
-  background: linear-gradient(135deg, var(--marron-oscuro) 0%, #1E130F 100%); /* Degradado más contrastado */
+  background: linear-gradient(135deg, var(--dorado) 0%, #1E130F 100%); /* Degradado más contrastado */
   color: var(--texto-claro);
 }
 
@@ -117,6 +117,94 @@ form.d-flex button.btn-buscar:hover {
   background-color: #B89B6E; /* Color dorado oscuro al interactuar */
 }
 
+/* ===== COMIENZO ESTILOS DEL CARRITO ===== */
+.navbar-personalizada .fa-shopping-cart {
+  transition: all 0.3s ease;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.navbar-personalizada .fa-shopping-cart:hover {
+  background-color: var(--dorado);
+  color: var(--texto-oscuro) !important;
+  transform: scale(1.1);
+}
+
+.badge {
+  font-size: 0.65rem;
+  padding: 0.25em 0.4em;
+}
+
+/* Ajuste para móviles */
+@media (max-width: 991.98px) {
+  .navbar-personalizada .fa-shopping-cart {
+    margin-left: 15px;
+    margin-top: 10px;
+  }
+  
+  .navbar-personalizada .badge {
+    top: 5px !important;
+    left: 80% !important;
+  }
+} 
+
+/*---plantilla del carrito---*/
+
+
+/* ===== ESTILOS DEL CARRITO ===== */
+
+
+.card-header{
+  background-color: var(--dorado);
+}
+.btn-outline-marron {
+    border-color: var(--marron-claro);
+    color: var(--marron-claro);
+}
+
+.btn-outline-marron:hover {
+    background-color: var(--marron-claro);
+    color: var(--texto-claro);
+}
+
+/* Estilos para los inputs de cantidad */
+.input-group .btn-outline-marron {
+    padding: 0.25rem 0.5rem;
+}
+
+.input-group .form-control {
+    max-width: 50px;
+    padding: 0.25rem;
+}
+
+/* Efectos para los items del carrito */
+.cart-items .row {
+    transition: all 0.3s ease;
+}
+
+.cart-items .row:hover {
+    background-color: rgba(239, 235, 233, 0.3);
+}
+
+.remove-item {
+    transition: all 0.2s ease;
+}
+
+.remove-item:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 767.98px) {
+    .cart-items .row > div {
+        margin-bottom: 0.5rem;
+    }
+    
+    .cart-items .row > div.text-end {
+        text-align: left !important;
+    }
+}
+/* ===== FIN ESTILOS DEL CARRITO ===== */
 
 
 /* ===== CARRUSEL CON TEXTO SUPERPUESTO ===== */
@@ -300,7 +388,7 @@ to { opacity: 1; transform: translate(-50%, -50%); }   /* Final visible */
 .mision-vision h4 {
   font-weight: 600;         /* Seminegrita */
   margin-top: 40px;         /* Separación de títulos */
-  color: var(--dorado);     /* Color destacado */
+  color: var(--texto-oscuro);     /* Color destacado */
 }
 
 .mision-vision p {
@@ -312,7 +400,7 @@ to { opacity: 1; transform: translate(-50%, -50%); }   /* Final visible */
 
 .frase-final p {
   font-style: italic;       /* Cursiva elegante */
-  color: var(--dorado);     /* Color especial */
+  color: var(--texto-oscuro);     /* Color especial */
   margin-top: 30px;         /* Espaciado superior */
   font-size: 1.1rem;        /* Tamaño reducido */
 }
@@ -325,12 +413,13 @@ to { opacity: 1; transform: translate(-50%, -50%); }   /* Final visible */
 }
 
 .text-beige {
-  color: var(--beige);      /* Clase utilitaria */
+  color: var(--marron-medio);      /* Clase utilitaria */
 }
 
 .text-dorado {
-  color: var(--dorado);     /* Clase utilitaria */
+  color: var(--texto-oscuro);     /* Clase utilitaria */
 }
+
 
 .link-dorado {
   color: var(--dorado);     /* Enlace especial */
@@ -358,7 +447,7 @@ to { opacity: 1; transform: translate(-50%, -50%); }   /* Final visible */
 .btn-dorado {
   background-color: var(--dorado); /* Color de acento */
   border: none;                   /* Sin bordes */
-  color: white;                   /* Texto claro */
+  color:var(--marron-oscuro);                   /* Texto claro */
   font-weight: bold;              /* Negrita */
   transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones combinadas */
 }
@@ -589,6 +678,202 @@ form label {
   max-width: 250px;          /* Ancho controlado */
   margin: 0 auto;            /* Centrado */
 }
+
+/* =====PRINCIPIO SECCIÓN DE TERMINOS Y CONDICIONES ===== */
+     /* Estilos específicos para Términos y Condiciones */
+.hero-section-terminos {
+    background: linear-gradient(135deg, var(--marron-oscuro) 0%, var(--marron-medio) 100%);
+    color: var(--texto-claro);
+    padding: 4rem 0;
+    margin-bottom: 3rem;
+}
+
+.terminos-container {
+    background: var(--crema);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--texto-oscuro);
+}
+
+.terminos-container h2 {
+    color: var(--marron-oscuro);
+    margin-top: 2.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--dorado);
+}
+
+.terminos-list {
+    list-style-type: none;
+    padding-left: 1.5rem;
+}
+
+.terminos-list li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.terminos-list li:before {
+    content: "•";
+    color: var(--dorado);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.highlight-box {
+    background-color: var(--beige);
+    border-left: 4px solid var(--dorado);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 4px 4px 0;
+}
+
+.alert-terminos {
+    background-color: var(--beige);
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 2rem;
+}
+
+.alert-terminos a {
+    color: var(--marron-oscuro);
+    font-weight: 600;
+    text-decoration: underline;
+}
+ /* =====FIN SECCIÓN DE TERMINOS Y CONDICIONES ===== */
+
+ /* =====COMIENZO SECCIÓN DE POLITICA DE PRIVACIDAD ===== */
+/* Estilos específicos para Política de Privacidad */
+.hero-section-privacidad {
+    background: linear-gradient(135deg, var(--marron-medio) 0%, var(--marron-claro) 100%);
+    color: var(--texto-claro);
+    padding: 4rem 0;
+    margin-bottom: 3rem;
+}
+
+.privacidad-container {
+    background: var(--crema);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--texto-oscuro);
+}
+
+.privacidad-container h2 {
+    color: var(--marron-oscuro);
+    margin-top: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--dorado);
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+.data-table th {
+    background-color: var(--marron-claro);
+    color: var(--texto-claro);
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.data-table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--beige);
+}
+
+.data-table tr:nth-child(even) {
+    background-color: var(--beige);
+}
+/* =====FIN SECCIÓN DE POLITICA DE PRIVACIDAD ===== */
+
+/* =====COMIENZO SECCION PREGUNTAS FRECUENTES ===== */
+.hero-section-faq {
+    background: linear-gradient(135deg, var(--marron-claro) 0%, var(--dorado) 100%);
+    color: var(--texto-claro);
+    padding: 4rem 0;
+    margin-bottom: 3rem;
+}
+
+.faq-container {
+    background: var(--crema);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--texto-oscuro);
+}
+
+
+.faq-category {
+    color: var(--marron-oscuro);
+    margin: 2rem 0 1rem 0;
+    font-size: 1.25rem;
+}
+
+.faq-item {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--beige);
+    padding-bottom: 1rem;
+}
+
+.faq-question {
+    color: var(--marron-oscuro);
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.75rem 0;
+    transition: all 0.3s;
+}
+
+.faq-question:hover {
+    color: var(--dorado);
+}
+
+.faq-question:after {
+    content: '+';
+    float: right;
+    font-weight: bold;
+    color: var(--dorado);
+}
+
+.faq-question[aria-expanded="true"]:after {
+    content: '-';
+}
+
+.faq-answer {
+    padding: 1rem 0 0 0;
+    color: var(--texto-oscuro);
+}
+
+.faq-contact {
+    background-color: var(--beige);
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 2rem;
+}
+
+.faq-contact a {
+    color: var(--marron-oscuro);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* =====FIN SECCIÓN DE PREGUNTAS FRECUENTES ===== */
+
+/* ===== COMIENZO ESTILOS DEL FORMULARIO DE REGISTRO ===== */
+/* ===== ESTILOS DEL FORMULARIO DE REGISTRO ===== */
+
+
+
+/* ===== FIN ESTILOS DEL FORMULARIO DE REGISTRO ===== */
+
+
 
 /* Responsive */
 @media (max-width: 768px) {

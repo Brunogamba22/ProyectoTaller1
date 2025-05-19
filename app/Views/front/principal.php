@@ -52,7 +52,7 @@
 <section class="container mb-5">
   
   <!-- Título principal de la sección -->
-  <h2 class="text-center mb-4" style="color: var(--dorado); font-size: 2rem; position: relative; padding-bottom: 10px;">
+  <h2 class="text-center mb-4" style="color: var(--texto-oscuro); font-size: 2rem; position: relative; padding-bottom: 10px;">
     Nuestras Categorías
     <!-- Línea dorada decorativa debajo del título -->
     <span style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 80px; height: 3px; background-color: var(--dorado);"></span>

@@ -125,6 +125,22 @@ Utiliza Bootstrap 5 para crear una navbar responsive con opciones colapsables en
                             <button class="btn btn-buscar" type="submit">Buscar</button>
                         </form>
                     </li>
+
+                    <!-- Nuevo ítem: Carrito de compras -->
+                    <li class="nav-item ms-2">
+                        <a 
+                            class="nav-link position-relative" 
+                            href="<?= base_url('carrito') ?>"
+                            aria-label="Carrito de compras"
+                        >
+                            <i class="fas fa-shopping-cart fa-lg" style="color: var(--dorado);"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                0 <!-- Aquí puedes poner el número dinámico de items -->
+                                <span class="visually-hidden">items en el carrito</span>
+                            </span>
+                        </a>
+                    </li>
+                    
                 </ul>
                 <!-- Fin lista de navegación -->
             </div>

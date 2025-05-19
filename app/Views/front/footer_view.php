@@ -18,10 +18,10 @@
         <h6 class="subtitulo-footer">Enlaces</h6>
         <!-- Lista de enlaces rápidos a otras páginas del sitio -->
         <ul class="list-unstyled">
-          <li><a href="#" class="enlace-footer">Términos y Condiciones</a></li>
-          <li><a href="#" class="enlace-footer">Política de Privacidad</a></li>
-          <li><a href="#" class="enlace-footer">Preguntas Frecuentes</a></li>
-          <li><a href="/contacto.html" class="enlace-footer">Contacto</a></li>
+          <li><a href="<?= base_url('TerminoYcondiciones') ?>" class="enlace-footer">Términos y Condiciones</a></li>
+          <li><a href="<?= base_url('PoliticaDeprivacidad') ?>" class="enlace-footer">Política de Privacidad</a></li>
+          <li><a href="<?= base_url('PreguntasFrecuentes') ?>" class="enlace-footer">Preguntas Frecuentes</a></li>
+          <li><a href="<?= base_url('Contacto') ?>" class="enlace-footer">Contacto</a></li>
         </ul>
       </div>
 

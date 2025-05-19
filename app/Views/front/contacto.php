@@ -5,7 +5,7 @@
     <h2 class="mb-3">Contacto</h2>
 
     <!-- Texto de introducción invitando a los usuarios a contactar -->
-    <p class="lead text-beige">
+    <p class="lead link-dorado">
       ¿Querés saber más? ¿Tenés una duda, sugerencia o propuesta?<br>
       ¡Escribinos! Siempre estamos atentos.
     </p>
@@ -62,7 +62,11 @@
     <h5 class="text-dorado">O contactanos por otros medios:</h5>
 
     <!-- Datos de contacto extra -->
-    <p class="text-beige"><strong>Correo:</strong> Umma@hotmail.com</p>
+     <!-- correo -->
+    <p class="text-beige">
+      <strong>Correo:</strong> 
+      <a href="https://www.instagram.com/ucalzados/" target="_blank" class="link-dorado">Umma@hotmail.com</a>
+    </p>
     <p class="text-beige">
       <strong>Instagram:</strong> 
       <!-- Enlace que abre en una nueva pestaña (target="_blank") -->

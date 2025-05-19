@@ -1,53 +1,68 @@
-<div class="container pt-5 mt-5 mb-5">
-  <div class="card-header text-justify">
-    <div class="row d-flex justify-content-center">
-      <div class="card col-lg-3" style="width: 50%;">
-        <h4>Registrarse</h4>
-
-        <!-- Usamos el servicio de validación de CodeIgniter -->
-        <?php $validation = \Config\Services::validation(); ?>
-
-        <form method="post" action="<?= base_url('/enviar-form') ?>">
-          <?= csrf_field(); ?> <!-- Token de seguridad -->
-
-          <?php if (!empty(session()->getFlashdata('fail'))): ?>
-            <div class="alert alert-danger"><?= session()->getFlashdata('fail'); ?></div>
-          <?php endif; ?>
-
-          <?php if (!empty(session()->getFlashdata('success'))): ?>
-            <div class="alert alert-success"><?= session()->getFlashdata('success'); ?></div>
-          <?php endif; ?>
-
-          <div class="card-body justify-content-center" media="(max-width:768px)">
-            <div class="mb-2">
-              <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-              <input type="text" name="nombre" class="form-control" placeholder="nombre" value="<?= old('nombre') ?>">
-
-              <!-- Error -->
-              <?php if ($validation->getError('nombre')): ?>
-                <div class="alert alert-danger mt-2">
-                  <?= $validation->getError('nombre'); ?>
+<div class="container">
+    <br>
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card registro-card">
+                <div class="card-header registro-header">
+                    Inicio de Sesión
                 </div>
-              <?php endif; ?>
-            </div>
+                <div class="card-body">
 
-            <div class="mb-3">
-              <label for="exampleFormControlTextarea1" class="form-label">Apellido</label>
-              <input type="text" name="apellido" class="form-control" placeholder="apellido" value="<?= old('apellido') ?>">
+                    <!-- Campo Nombre -->
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            name="nombre"
+                            id="nombre"
+                            placeholder="Tu nombre"
+                        />
+                        <small class="form-text text-muted">Ingrese su nombre</small>
+                    </div>
 
-              <!-- Error -->
-              <?php if ($validation->getError('apellido')): ?>
-                <div class="alert alert-danger mt-2">
-                  <?= $validation->getError('apellido'); ?>
+                    <!-- Campo Apellido -->
+                    <div class="mb-3">
+                        <label for="apellido" class="form-label">Apellido</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            name="apellido"
+                            id="apellido"
+                            placeholder="Tu apellido"
+                        />
+                        <small class="form-text text-muted">Ingrese su apellido</small>
+                    </div>
+
+                    <!-- Campo Email -->
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            name="email"
+                            id="email"
+                            placeholder="email"
+                        />
+                        <small class="form-text text-muted">Ingrese su Email</small>
+                    </div>
+
+                    <!-- Campo Contraseña -->
+                    <div class="mb-3">
+                        <label for="contrasenia" class="form-label">Contraseña</label>
+                        <input
+                            type="password"
+                            class="form-control"
+                            name="pass"
+                            id="contrasenia"
+                            placeholder="contraseña"
+                        />
+                        <small class="form-text text-muted">Ingrese su contraseña</small>
+                    </div>
+
+                    <button type="button" class="btn btn-primary w-100">Iniciar Sesión</button>
                 </div>
-              <?php endif; ?>
             </div>
-
-            <button type="submit" class="btn btn-primary w-100">Registrar</button>
-          </div>
-        </form>
-
-      </div>
+        </div>
     </div>
-  </div>
 </div>

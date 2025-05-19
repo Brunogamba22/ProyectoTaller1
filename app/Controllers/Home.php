@@ -97,6 +97,47 @@ class Home extends BaseController
         echo view('front/footer_view');
     }
 
+    //muestra la vista de politica de priv
+     public function PoliticaDePrivacidad()
+    {
+        $data['titulo'] = 'PoliticaDePrivacidad';
+        echo view('front/head_view', $data);
+        echo view('front/nav_view');
+        echo view('front/PoliticaDePrivacidad');
+        echo view('front/footer_view');
+    }
+
+    //muestra la vista de TerminosYcondiciones
+     public function TerminosYcondiciones()
+    {
+        $data['titulo'] = 'TerminosYcondiciones';
+        echo view('front/head_view', $data);
+        echo view('front/nav_view');
+        echo view('front/terminosYcondiciones');
+        echo view('front/footer_view');
+    }
+
+    //muestra la vista de PreguntasFrecuentes
+     public function PreguntasFrecuentes()
+    {
+        $data['titulo'] = 'PreguntasFrecuentes';
+        echo view('front/head_view', $data);
+        echo view('front/nav_view');
+        echo view('front/preguntasFrecuentes');
+        echo view('front/footer_view');
+    }
+
+    //muestra la vista de carrito
+     public function carrito()
+    {
+        $data['titulo'] = 'carrito';
+        echo view('front/head_view', $data);
+        echo view('front/nav_view');
+        echo view('back/carrito');
+        echo view('front/footer_view');
+    }
+
+
     //Muestra la vista del formulario registro
     public function create()
     {
