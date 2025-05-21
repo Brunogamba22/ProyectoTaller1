@@ -22,7 +22,7 @@
                 </div>
                 
                 <div class="text-center mt-3">
-                    <a href="#" class="text-muted" data-bs-dismiss="modal" onclick="localStorage.setItem('modalShown', 'true')">Continuar como invitado</a>
+                    <a href="<?= base_url('principal') ?>" class="text-muted" data-bs-dismiss="modal" onclick="localStorage.setItem('modalShown', 'true')">Continuar como invitado</a>
                 </div>
             </div>
             <div class="modal-footer justify-content-center">
@@ -215,19 +215,17 @@
   </div>
 
 </section>
-<script>
-// Controlar el comportamiento del modal
-document.addEventListener('DOMContentLoaded', function() {
-    const modal = new bootstrap.Modal(document.getElementById('loginModal'));
-    
-    // Mostrar modal solo si es necesario
-    <?php if (isset($show_login_modal) && $show_login_modal): ?>
-    modal.show();
-    <?php endif; ?>
 
-    // Guardar preferencia al continuar como invitado
-    document.querySelector('[data-bs-dismiss="modal"]').addEventListener('click', function() {
-        localStorage.setItem('modalShown', 'true');
-    });
-});
+<!--
+    Script para controlar la visualización del modal de invitación a registrarse/iniciar sesión.
+    - show_login_modal: variable booleana generada por PHP que indica si debe mostrarse el modal.
+    - miCodigo.js: contiene la lógica para mostrar el modal, guardar la preferencia del usuario y gestionar el cierre/redirección.
+    
+    Si show_login_modal es true, el modal se muestra automáticamente.
+    Cuando el usuario hace clic en "Continuar como invitado", se guarda la preferencia en localStorage y en una cookie,
+    y se cierra el modal antes de redirigir. Así, el backend puede saber si debe volver a mostrar el modal o no.
+-->
+<script>
+    var show_login_modal = <?= isset($show_login_modal) && $show_login_modal ? 'true' : 'false' ?>;
 </script>
+<script src="<?= base_url('assets/js/miCodigo.js') ?>"></script>
