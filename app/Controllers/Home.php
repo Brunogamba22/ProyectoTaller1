@@ -8,7 +8,8 @@ class Home extends BaseController
     public function index()
     {
         $data['titulo'] = 'principal'; 
-        $data['show_login_modal'] = !session()->get('logged_in'); // TRUE si no está logueado
+        // Siempre mostrar el modal para pruebas de estilo
+        $data['show_login_modal'] = !session()->get('logged_in');
         echo view('front/head_view', $data);
         echo view('front/nav_view');
         echo view('front/principal');

@@ -22,7 +22,6 @@ $routes->get('/logout','login_controller::logout');// Cierra sesión
 $routes->post('/enviar-form', 'Usuario_controller::formValidation');
 $routes->get('Registrarse', 'Home::create');
 $routes->get('/dashboard', 'Dashboard::index', ['filters'=> 'auth']);
-<<<<<<< HEAD
 $routes->get('/logout','login_controlador::logout');
 
 
@@ -30,7 +29,3 @@ $routes->get('TerminoYcondiciones', 'Home::TerminosYcondiciones');
 $routes->get('PoliticaDeprivacidad', 'Home::PoliticaDeprivacidad');
 $routes->get('PreguntasFrecuentes', 'Home::PreguntasFrecuentes');
 $routes->get('carrito', 'Home::carrito');
-=======
-
-
->>>>>>> ramaJonathan
