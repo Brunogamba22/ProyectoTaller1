@@ -5,14 +5,12 @@ use CodeIgniter\Controller;
 
 class Usuario_controller extends Controller
 {
-    
-    //Constructor:  Carga los helpers de formularios y URLs para usarlos fácilmente
-    public function construct(){
+    // Constructor: Carga los helpers de formularios y URLs para usarlos fácilmente
+    public function __construct(){
         helper(['form', 'url']);
     }
 
-
-    //Este método se ejecuta cuando el formulario se envía
+    // Este método se ejecuta cuando el formulario se envía
     public function formValidation()
     {
         $input = $this->validate([
@@ -23,21 +21,31 @@ class Usuario_controller extends Controller
             'pass'    => 'required|min_length[3]|max_length[10]'
         ]);
 
+
+        //Instanciamos el modelo yguardamos losdatos si lavalidación fuecorrecta.
+        //Lugo enviamoselmensaje deéxito consetFlashdata
+        $formModel = new Usuario_model();
+
         if (!$input) {
-            return redirect()->back()->withInput()->with('validation', \Config\Services::validation())
-                                            ->with('fail', 'Error en los datos ingresados');
+            $data['titulo']= 'registro';
+            echo view('front/head_view', $data);
+            echo view('front/nav_view');
+            echo view('back/registro', ['validation' => $this->validator]);
+            echo view('front/footer_view');
+            ;
+        } else {
+    // Guardar los datos si la validación fue correcta
+    $formModel->save([
+        'nombre'   => $this->request->getVar('nombre'),
+        'apellido' => $this->request->getVar('apellido'),
+        'usuario'  => $this->request->getVar('usuario'),
+        'email'    => $this->request->getVar('email'),
+        'pass'     => password_hash($this->request->getVar('pass'), PASSWORD_DEFAULT)
+    ]);
+
+    // Mensaje de éxito usando Flashdata (se muestra una sola vez)
+    session()->setFlashdata('success', 'Usuario registrado con éxito');
+    return redirect()->to('/registro');
         }
-
-        // Guardar en base de datos
-        $usuarioModel = new Usuario_model();
-        $usuarioModel->save([
-            'nombre'   => $this->request->getPost('nombre'),
-            'apellido' => $this->request->getPost('apellido'),
-            'usuario'  => $this->request->getPost('usuario'),
-            'email'    => $this->request->getPost('email'),
-            'pass'     => password_hash($this->request->getPost('pass'), PASSWORD_DEFAULT)
-        ]);
-
-        return redirect()->to('/registro')->with('success', 'Usuario registrado exitosamente');
     }
 }
