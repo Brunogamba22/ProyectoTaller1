@@ -143,7 +143,7 @@ class Home extends BaseController
 
 
     //Muestra la vista del formulario registro
-    public function create()
+    public function registro()
     {
         $dato['titulo'] = 'registrarse';
         echo view('front/head_view', $dato);

@@ -33,17 +33,15 @@ $routes->get('login', 'Home::loguearse');
 $routes->post('/auth', 'Login_controller::auth');
 // Cierra sesión
 $routes->get('/logout','login_controller::logout');
+
+//REGISTRARSE
+// Página de registro de usuario
+$routes->get('Registrarse', 'Home::registro');
 // Procesa el registro de usuario
 $routes->post('/enviar-form', 'Usuario_controller::formValidation');
-// Página de registro de usuario
-$routes->get('Registrarse', 'Home::create');
 
 // Página de dashboard (requiere autenticación)
 $routes->get('/dashboard', 'Dashboard::index', ['filters'=> 'auth']);
-<<<<<<< HEAD
-
-=======
->>>>>>> ramaJonathan
 
 // Página de términos y condiciones
 $routes->get('TerminoYcondiciones', 'Home::TerminosYcondiciones');
