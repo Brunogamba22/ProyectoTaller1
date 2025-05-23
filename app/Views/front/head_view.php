@@ -23,17 +23,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </head>
 
-  <?php if (isset($show_login_modal) && $show_login_modal): ?>
-  <script>
-      $(document).ready(function() {
-          var myModal = new bootstrap.Modal(document.getElementById('loginModal'));
-          myModal.show();
-          
-          // Opcional: guardar en localStorage que ya se mostró
-          localStorage.setItem('modalShown', 'true');
-      });
-  </script>
-<?php endif; ?>
-  
   <!-- Apertura del cuerpo de la página con clase para el fondo -->
   <body class="fondo-elegante">

@@ -405,43 +405,44 @@ to { opacity: 1; transform: translate(-50%, -50%); }   /* Final visible */
   font-size: 1.1rem;        /* Tamaño reducido */
 }
 
-/* ===== SECCIÓN CONTACTO ===== */
-.contacto-section h2 {
-  font-size: 2.5rem;        /* Tamaño coherente */
-  font-weight: 700;         /* Negrita */
-  color: var(--dorado);     /* Color de acento */
-}
-
-.text-beige {
-  color: var(--marron-medio);      /* Clase utilitaria */
-}
-
-.text-dorado {
-  color: var(--texto-oscuro);     /* Clase utilitaria */
-}
-
-
-.link-dorado {
-  color: var(--dorado);     /* Enlace especial */
-  text-decoration: none;    /* Sin subrayado */
-}
-
-.link-dorado:hover {
-  text-decoration: underline; /* Subrayado al interactuar */
-}
-
-/* Estilo de la tarjeta de contacto */
-.contacto-card {
-  background-color: var(--marron-claro); /* Fondo coherente */
-  border: 1px solid var(--dorado);      /* Borde decorativo */
-  border-radius: 1rem;                  /* Esquinas redondeadas */
-}
-
-/* Animación de entrada para el formulario */
-.animate__fadeInUp {
-  --animate-duration: 1s; /* Duración personalizada */
-}
-
+/* =====INICIO SECCIÓN CONTACTO ===== */
+ /* Efectos hover */
+  .btn-enviar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(200, 169, 126, 0.3);
+    background-color: #d4b78a !important;
+  }
+  
+  a:hover {
+    text-decoration: underline !important;
+    color: var(--marron-claro) !important;
+  }
+  
+  /* Transiciones suaves */
+  .form-control, .btn, .input-group-text, .icono-contacto {
+    transition: all 0.3s ease;
+  }
+  
+  /* Efecto focus en inputs */
+  .form-control:focus {
+    border-color: var(--dorado) !important;
+    box-shadow: 0 0 0 0.25rem rgba(200, 169, 126, 0.25);
+  }
+  
+  .icono-contacto:hover {
+    background-color: var(--dorado) !important;
+  }
+  
+  .icono-contacto:hover i {
+    color: white !important;
+  }
+  
+  /* Placeholder con color suave */
+  ::placeholder {
+    color: #BDBDBD !important;
+    opacity: 1;
+  }
+/* =====FIN SECCIÓN CONTACTO ===== */
 
 /*********** BOTON DORADO ***********/
 .btn-dorado {
@@ -866,10 +867,30 @@ form label {
 
 /* =====FIN SECCIÓN DE PREGUNTAS FRECUENTES ===== */
 
+
 /* ===== COMIENZO ESTILOS DEL FORMULARIO DE REGISTRO ===== */
-/* ===== ESTILOS DEL FORMULARIO DE REGISTRO ===== */
-
-
+ /* Efectos hover */
+    .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(200, 169, 126, 0.3);
+    }
+    
+    /* Transiciones suaves */
+    .form-control, .btn, .input-group-text {
+        transition: all 0.3s ease;
+    }
+    
+    /* Efecto focus en inputs */
+    .form-control:focus {
+        border-color: var(--dorado) !important;
+        box-shadow: 0 0 0 0.25rem rgba(200, 169, 126, 0.25);
+    }
+    
+    /* Placeholder con color suave */
+    ::placeholder {
+        color: var(--beige) !important;
+        opacity: 1;
+    }
 
 /* ===== FIN ESTILOS DEL FORMULARIO DE REGISTRO ===== */
 
@@ -893,3 +914,177 @@ form label {
       font-size: 0.9rem;     /* Texto más compacto */
   }
 }
+
+/* ===== INICIO ESTILOS DEL MODAL===== */
+.form-group-enhanced {
+        margin-bottom: 1.75rem;
+    }
+    
+    .form-label-enhanced {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: var(--marron-medio);
+        font-weight: 600;
+        font-size: 1.05rem;
+    }
+    
+    .input-group-enhanced {
+        position: relative;
+        display: flex;
+        align-items: center;
+        border: 2px solid var(--beige);
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        background-color: white;
+    }
+    
+    .input-group-enhanced:hover {
+        border-color: var(--dorado);
+    }
+    
+    .input-group-icon {
+        padding: 0 1rem;
+        color: var(--dorado);
+        font-size: 1.2rem;
+    }
+    
+    .form-control-enhanced {
+        flex: 1;
+        padding: 1rem 0.75rem;
+        border: none;
+        background: transparent;
+        font-size: 1rem;
+        color: var(--marron-oscuro);
+        height: auto;
+    }
+    
+    .form-control-enhanced:focus {
+        outline: none;
+        box-shadow: none;
+    }
+    
+    .btn-toggle-password {
+        background: transparent;
+        border: none;
+        padding: 0 1rem;
+        color: var(--marron-claro);
+        cursor: pointer;
+        transition: color 0.2s ease;
+    }
+    
+    .btn-toggle-password:hover {
+        color: var(--dorado);
+    }
+    
+    .btn-register-enhanced {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 1.1rem;
+        background: linear-gradient(135deg, var(--dorado) 0%, var(--marron-claro) 100%);
+        color: var(--texto-oscuro);
+        border: none;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(200, 169, 126, 0.3);
+    }
+    
+    .btn-register-enhanced:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(200, 169, 126, 0.4);
+    }
+    
+    .btn-register-enhanced i {
+        margin-left: 0.75rem;
+        transition: transform 0.3s ease;
+    }
+    
+    .btn-register-enhanced:hover i {
+        transform: translateX(3px);
+    }
+    
+    .login-link-text {
+        color: var(--marron-claro);
+        font-size: 1.05rem;
+    }
+    
+    .login-link {
+        color: var(--dorado);
+        font-weight: 600;
+        text-decoration: none;
+        position: relative;
+    }
+    
+    .login-link::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: var(--dorado);
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.3s ease;
+    }
+    
+    .login-link:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    
+    /* Efecto focus mejorado */
+    .input-group-enhanced:focus-within {
+        border-color: var(--dorado);
+        box-shadow: 0 0 0 3px rgba(200, 169, 126, 0.2);
+    }
+    
+    /* Placeholder más visible */
+    ::placeholder {
+        color: #BDBDBD !important;
+        opacity: 1 !important;
+    }
+/* ===== FIN ESTILOS DEL MODAL ===== */
+
+
+
+
+/* ===== INICIO ESTILOS FORMULARIO INICIO SESION ===== */
+  /* Efectos hover */
+    .input-group-login:hover {
+        border-color: var(--dorado) !important;
+    }
+    
+    .login-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(200, 169, 126, 0.3);
+    }
+    
+    /* Efecto focus */
+    .input-group-login:focus-within {
+        border-color: var(--dorado) !important;
+        box-shadow: 0 0 0 3px rgba(200, 169, 126, 0.2);
+    }
+    
+    /* Botones redes sociales */
+    button[type="button"]:hover {
+        background-color: var(--beige) !important;
+        color: var(--marron-oscuro) !important;
+    }
+    
+    /* Placeholder */
+    ::placeholder {
+        color: #BDBDBD !important;
+        opacity: 1 !important;
+    }
+    
+    /* Iconos */
+    .bi {
+        transition: color 0.2s ease;
+    }
+/* ===== FIN ESTILOS FORMULARIO INICIO SESION===== */

@@ -5,22 +5,47 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Mostrar el modal solo si es necesario
     if (typeof show_login_modal !== 'undefined' && show_login_modal) {
-        modal.show();
+        // Solo mostrar si la preferencia NO está guardada
+        if (!localStorage.getItem('modalMostrado') && !document.cookie.includes('modalShown=1')) {
+            modal.show();
+        }
     }
 
     // Selecciona el enlace de "Continuar como invitado"
-    const enlaceInvitado = document.querySelector('a[onclick*="modalShown"]');
+    const enlaceInvitado = document.querySelector('a.guest-link');
     if (enlaceInvitado) {
         enlaceInvitado.addEventListener('click', function(e) {
             e.preventDefault(); // Evita la recarga inmediata
             localStorage.setItem('modalMostrado', 'true'); // Guardar preferencia en localStorage
-            // Guardar cookie por 30 días
             document.cookie = "modalShown=1; path=/; max-age=" + (60*60*24*30);
-            modal.hide();
-            // Redirigir después de cerrar el modal
-            setTimeout(function() {
+            // Redirigir después de cerrar el modal SOLO cuando el modal ya esté oculto
+            const handler = function() {
                 window.location.href = enlaceInvitado.getAttribute('href');
-            }, 300); // Espera a que el modal se cierre
+                document.getElementById('loginModal').removeEventListener('hidden.bs.modal', handler);
+            };
+            document.getElementById('loginModal').addEventListener('hidden.bs.modal', handler);
+            modal.hide();
         });
     }
+
+    // Selecciona el botón de cerrar (X) del modal
+    const botonCerrar = document.querySelector('#loginModal .btn-close');
+    if (botonCerrar) {
+        botonCerrar.addEventListener('click', function() {
+            localStorage.setItem('modalMostrado', 'true'); // Guardar preferencia en localStorage
+            document.cookie = "modalShown=1; path=/; max-age=" + (60*60*24*30);
+            modal.hide(); // Solo cerrar, no redirigir
+        });
+    }
+
+    // Elimina backdrop si queda colgado
+    document.getElementById('loginModal').addEventListener('hidden.bs.modal', function () {
+        const backdrop = document.querySelector('.modal-backdrop');
+        if (backdrop) {
+            backdrop.remove();
+            document.body.classList.remove('modal-open');
+            document.body.style = '';
+        }
+    });
 });
+
