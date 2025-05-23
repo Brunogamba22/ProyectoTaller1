@@ -40,11 +40,7 @@ $routes->get('Registrarse', 'Home::create');
 
 // Página de dashboard (requiere autenticación)
 $routes->get('/dashboard', 'Dashboard::index', ['filters'=> 'auth']);
-<<<<<<< HEAD
-=======
-$routes->get('/logout','login_controlador::logout');
 
->>>>>>> ramaJonathan
 
 // Página de términos y condiciones
 $routes->get('TerminoYcondiciones', 'Home::TerminosYcondiciones');
