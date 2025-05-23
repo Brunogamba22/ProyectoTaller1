@@ -1,4 +1,4 @@
-<div div class="register-container" style="background-color: #C8A97E; min-height: 100vh; padding: 3rem 0;">
+<div class="register-container" style="background-color: #C8A97E; min-height: 100vh; padding: 3rem 0;">
     <div class="container">
         <!-- Tarjeta de registro -->
         <div class="card mx-auto p-4 p-lg-5 border-0" style="max-width: 700px; background-color: white; border-radius: 18px; box-shadow: 0 12px 35px rgba(62, 39, 35, 0.1);">
@@ -6,9 +6,18 @@
                 <span style="display: inline-block; padding: 0 1rem; background: white; position: relative; z-index: 1;">Registro</span>
                 <span style="position: absolute; top: 50%; left: 0; right: 0; height: 2px; background: var(--beige); z-index: 0; transform: translateY(-50%);"></span>
             </h2>
-            
-            <!-- Formulario mejorado -->
-            <form>
+            <!--usamos el serivico de validacion de codeigniter Services::validation() -->
+            <?php $validation = \Config\Services::validation(); ?>
+            <!-- Formulario -->
+            <form method="post" action="<?= base_url('/enviar-form') ?>" >
+                <?= csrf_field() ?> <!-- Token CSRF: genera un campo oculto o teken de seguridad -->
+                <?php if(!empty(session()->getFlashdata('fail'))): ?>
+                    <div class="alert alert-danger"><?= session()->getFlashdata('fail'); ?></div>
+                <?php endif; ?>
+                <?php if(!empty(session()->getFlashdata('success'))): ?>
+                    <div class="alert alert-success"><?= session()->getFlashdata('success'); ?></div>
+                <?php endif; ?>
+                
                 <div class="row g-4">
                     <!-- Nombre  -->
                     <div class="col-md-6">
@@ -18,8 +27,13 @@
                                 <span class="input-group-icon">
                                     <i class="bi bi-person-fill"></i>
                                 </span>
-                                <input type="text" class="form-control-enhanced" id="nombre" placeholder="Ej: María">
+                                <input name="nombre" type="text" class="form-control-enhanced <?= ($validation->getError('nombre')) ? 'is-invalid' : '' ?>" id="nombre" placeholder="Ej: María" value="<?= old('nombre') ?>">
                             </div>
+                            <?php if($validation->getError('nombre')): ?>
+                                <div class="invalid-feedback d-block">
+                                    <?= $validation->getError('nombre') ?>
+                                </div>
+                            <?php endif; ?>
                         </div>
                     </div>
                     
@@ -31,8 +45,13 @@
                                 <span class="input-group-icon">
                                     <i class="bi bi-person-fill"></i>
                                 </span>
-                                <input type="text" class="form-control-enhanced" id="apellido" placeholder="Ej: González">
+                                <input name="apellido" type="text" class="form-control-enhanced <?= ($validation->getError('apellido')) ? 'is-invalid' : '' ?>" id="apellido" placeholder="Ej: González" value="<?= old('apellido') ?>">
                             </div>
+                            <?php if($validation->getError('apellido')): ?>
+                                <div class="invalid-feedback d-block">
+                                    <?= $validation->getError('apellido') ?>
+                                </div>
+                            <?php endif; ?>
                         </div>
                     </div>
                     
@@ -44,8 +63,13 @@
                                 <span class="input-group-icon">
                                     <i class="bi bi-envelope-fill"></i>
                                 </span>
-                                <input type="email" class="form-control-enhanced" id="email" placeholder="Ej: ejemplo@correo.com">
+                                <input name="email" type="email" class="form-control-enhanced <?= ($validation->getError('email')) ? 'is-invalid' : '' ?>" id="email" placeholder="Ej: ejemplo@correo.com" value="<?= old('email') ?>">
                             </div>
+                            <?php if($validation->getError('email')): ?>
+                                <div class="invalid-feedback d-block">
+                                    <?= $validation->getError('email') ?>
+                                </div>
+                            <?php endif; ?>
                         </div>
                     </div>
                     
@@ -57,11 +81,16 @@
                                 <span class="input-group-icon">
                                     <i class="bi bi-lock-fill"></i>
                                 </span>
-                                <input type="password" class="form-control-enhanced" id="password" placeholder="Mínimo 8 caracteres">
+                                <input name="password" type="password" class="form-control-enhanced <?= ($validation->getError('password')) ? 'is-invalid' : '' ?>" id="password" placeholder="Mínimo 8 caracteres">
                                 <button class="btn-toggle-password" type="button">
                                     <i class="bi bi-eye-fill"></i>
                                 </button>
                             </div>
+                            <?php if($validation->getError('password')): ?>
+                                <div class="invalid-feedback d-block">
+                                    <?= $validation->getError('password') ?>
+                                </div>
+                            <?php endif; ?>
                         </div>
                     </div>
                     
