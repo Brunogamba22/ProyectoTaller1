@@ -1,65 +1,34 @@
-<!-- 
-Barra de navegación principal tipo Tabs 
-Utiliza Bootstrap 5 para crear una navbar responsive con opciones colapsables en móviles.
--->
+<?php
+$session = session();
+$nombre = $session->get('nombre');
+$perfil = $session->get('perfil_id'); // Asegúrate de que este campo sea el correcto
+?>
 
-<section class="container-fluid p-0"> <!-- Contenedor que ocupa todo el ancho de la pantalla sin padding -->
-    
-    <!-- Navbar principal -->
+<section class="container-fluid p-0">
     <nav class="navbar navbar-expand-lg navbar-dark navbar-personalizada fixed-top shadow">
-        <div class="container"> <!-- Contenedor que centra el contenido -->
-
-            <!-- Logo / Marca del sitio -->
+        <div class="container">
             <a class="navbar-brand text-black" href="#">UMMA</a>
 
-            <!-- Botón para móviles -->
-            <!-- Se muestra en resoluciones pequeñas para abrir/cerrar el menú de navegación -->
-            <button 
-                class="navbar-toggler" 
-                type="button" 
-                data-bs-toggle="collapse" 
-                data-bs-target="#menuNavegacion" 
-                aria-controls="menuNavegacion" 
-                aria-expanded="false" 
-                aria-label="Alternar navegación"
-            >
-                <span class="navbar-toggler-icon"></span> <!-- Icono de menú hamburguesa -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion"
+                aria-controls="menuNavegacion" aria-expanded="false" aria-label="Alternar navegación">
+                <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Menú colapsable (contenido que se oculta/muestra en móviles) -->
             <div class="collapse navbar-collapse" id="menuNavegacion">
-                
-                <!-- Lista de elementos de navegación -->
-                <ul class="navbar-nav w-100 align-items-center"> <!-- w-100: ocupa todo el ancho -->
+                <ul class="navbar-nav w-100 align-items-center">
 
-                    <!-- Ítem: Inicio -->
-                    <li class="nav-item" role="presentation">
-                        <a 
-                            class="nav-link text-light btn btn-link <?= (current_url() == base_url('principal')) ? 'active' : '' ?>" 
-                            id="inicio-tab" 
-                            href="<?= base_url('principal') ?>"
-                        >
-                            Inicio
-                        </a>
+                    <li class="nav-item">
+                        <a class="nav-link text-light <?= (current_url() == base_url('principal')) ? 'active' : '' ?>"
+                            href="<?= base_url('principal') ?>">Inicio</a>
                     </li>
 
-                    <!-- Ítem: Productos con submenú desplegable, 
-                    (current_url() == base_url('Productos')) ? 'active' : '' 
-                    Resalta la sección activa según la URL actual (resalta la página donde estás navegando). 
-                    -->
+                    <!-- Dropdown Productos -->
                     <li class="nav-item dropdown">
-                        <a 
-                            class="nav-link dropdown-toggle text-light <?= (current_url() == base_url('Productos')) ? 'active' : '' ?>" 
-                            id="productos-tab" 
-                            href="#" 
-                            role="button" 
-                            data-bs-toggle="dropdown" 
-                            aria-expanded="false"
-                        >
+                        <a class="nav-link dropdown-toggle text-light <?= (current_url() == base_url('Productos')) ? 'active' : '' ?>"
+                            href="#" id="productos-tab" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
                             Productos
                         </a>
-
-                        <!-- Submenú de categorías -->
                         <ul class="dropdown-menu" aria-labelledby="productos-tab">
                             <li><a class="dropdown-item" href="<?= base_url('Productos') ?>">TODOS LOS PRODUCTOS</a></li>
                             <li><a class="dropdown-item" href="<?= base_url('Remeras') ?>">REMERAS</a></li>
@@ -70,93 +39,77 @@ Utiliza Bootstrap 5 para crear una navbar responsive con opciones colapsables en
                         </ul>
                     </li>
 
-                    <!-- Ítem: Comercialización -->
                     <li class="nav-item">
-                        <a 
-                            class="nav-link text-black btn btn-link <?= (current_url() == base_url('Comercializacion')) ? 'active' : '' ?>" 
-                            id="comercializacion-tab" 
-                            href="<?= base_url('Comercializacion') ?>"
-                        >
-                            Comercialización
-                        </a>
-                    </li>
-
-                    <!-- Ítem: Sobre Nosotros -->
-                    <li class="nav-item">
-                        <a 
-                            class="nav-link text-black btn btn-link <?= (current_url() == base_url('Sobrenosotros')) ? 'active' : '' ?>" 
-                            id="sobrenosotros-tab" 
-                            href="<?= base_url('Sobrenosotros') ?>"
-                        >
-                            Sobre Nosotros
-                        </a>
-                    </li>
-
-                    <!-- Ítem: Contacto -->
-                    <li class="nav-item">
-                        <a 
-                            class="nav-link text-black btn btn-link <?= (current_url() == base_url('Contacto')) ? 'active' : '' ?>" 
-                            id="contacto-tab" 
-                            href="<?= base_url('Contacto') ?>"
-                        >
-                            Contacto
-                        </a>
+                        <a class="nav-link text-black <?= (current_url() == base_url('Comercializacion')) ? 'active' : '' ?>"
+                            href="<?= base_url('Comercializacion') ?>">Comercialización</a>
                     </li>
 
                     <li class="nav-item">
-                        <a 
-                            class="nav-link text-black btn btn-link <?= (current_url() == base_url('Registrarse')) ? 'active' : '' ?>" 
-                            id="registrarse-tab" 
-                            href="<?= base_url('Registrarse') ?>"
-                        >
-                            Registrarse
-                        </a>
+                        <a class="nav-link text-black <?= (current_url() == base_url('Sobrenosotros')) ? 'active' : '' ?>"
+                            href="<?= base_url('Sobrenosotros') ?>">Sobre Nosotros</a>
                     </li>
 
                     <li class="nav-item">
-                        <a 
-                            class="nav-link text-black btn btn-link <?= (current_url() == base_url('login')) ? 'active' : '' ?>" 
-                            id="loguearse-tab" 
-                            href="<?= base_url('login') ?>"
-                        >
-                            Login
-                        </a>
+                        <a class="nav-link text-black <?= (current_url() == base_url('Contacto')) ? 'active' : '' ?>"
+                            href="<?= base_url('Contacto') ?>">Contacto</a>
                     </li>
 
-                    <!-- Buscador de productos -->
-                    <li class="nav-item ms-lg-auto"> <!-- ms-lg-auto: empuja el buscador a la derecha en pantallas grandes -->
+                    <!-- Opciones según perfil -->
+                    <?php if ($perfil == 1): // ADMIN ?>
+                        <li class="nav-item">
+                            <a class="nav-link text-warning" href="<?= base_url('lista_usuarios') ?>">CRUD Usuarios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-warning" href="<?= base_url('Producto_controller') ?>">CRUD Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-warning" href="<?= base_url('ventas') ?>">Muestra Ventas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-warning" href="<?= base_url('listar_consultas') ?>">Consultas</a>
+                        </li>
+                    <?php elseif ($perfil == 2): // CLIENTE ?>
+                        <li class="nav-item">
+                            <span class="nav-link disabled">Cliente: <?= $nombre ?></span>
+                        </li>
+                    <?php endif; ?>
+
+                    <!-- Botones de Login / Logout -->
+                    <?php if ($session->get('isLoggedIn')): ?>
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="<?= base_url('logout') ?>">Cerrar Sesión</a>
+                        </li>
+                    <?php else: ?>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="<?= base_url('Registrarse') ?>">Registrarse</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="<?= base_url('login') ?>">Login</a>
+                        </li>
+                    <?php endif; ?>
+
+                    <!-- Buscador -->
+                    <li class="nav-item ms-lg-auto">
                         <form class="d-flex" role="search">
-                            <input 
-                                class="form-control me-2" 
-                                type="search" 
-                                placeholder="Buscar productos..." 
-                                aria-label="Buscar"
-                            >
+                            <input class="form-control me-2" type="search" placeholder="Buscar productos..."
+                                aria-label="Buscar">
                             <button class="btn btn-buscar" type="submit">Buscar</button>
                         </form>
                     </li>
 
-                    <!-- Nuevo ítem: Carrito de compras -->
+                    <!-- Carrito -->
                     <li class="nav-item ms-2">
-                        <a 
-                            class="nav-link position-relative" 
-                            href="<?= base_url('carrito') ?>"
-                            aria-label="Carrito de compras"
-                        >
+                        <a class="nav-link position-relative" href="<?= base_url('carrito') ?>" aria-label="Carrito de compras">
                             <i class="fas fa-shopping-cart fa-lg" style="color: var(--dorado);"></i>
                             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                0 <!-- Aquí puedes poner el número dinámico de items -->
+                                0
                                 <span class="visually-hidden">items en el carrito</span>
                             </span>
                         </a>
                     </li>
-                    
+
                 </ul>
-                <!-- Fin lista de navegación -->
             </div>
-            <!-- Fin contenido colapsable -->
-        </div> <!-- Fin contenedor centralizado -->
+        </div>
     </nav>
-    <!-- Fin navbar -->
 </section>
-<!-- Fin sección navbar -->

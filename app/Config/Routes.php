@@ -41,7 +41,7 @@ $routes->get('Registrarse', 'Home::registro');
 $routes->post('/enviar-form', 'Usuario_controller::formValidation');
 
 // Página de dashboard (requiere autenticación)
-$routes->get('/dashboard', 'Dashboard::index', ['filters'=> 'auth']);
+$routes->get('/panel', 'Panel_controller::index', ['filters'=> 'auth']);
 
 // Página de términos y condiciones
 $routes->get('TerminoYcondiciones', 'Home::TerminosYcondiciones');
@@ -51,3 +51,8 @@ $routes->get('PoliticaDeprivacidad', 'Home::PoliticaDeprivacidad');
 $routes->get('PreguntasFrecuentes', 'Home::PreguntasFrecuentes');
 // Página del carrito de compras
 $routes->get('carrito', 'Home::carrito');
+
+
+
+//Panel de Usuario
+$routes->get('lista_usuarios', '::TerminosYcondiciones');
