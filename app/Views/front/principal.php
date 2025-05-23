@@ -1,32 +1,47 @@
 <!-- Modal para invitación a registrarse/iniciar sesión -->
 <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header bg-primary text-white">
-                <h5 class="modal-title">¡Bienvenido a UMMA!</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-content border-0 overflow-hidden">
+            <!-- Cabecera con gradiente dorado -->
+            <div class="modal-header border-0" style="background: linear-gradient(135deg, var(--marron-oscuro) 0%, var(--dorado) 100%);">
+                <div class="w-100 text-center position-relative">
+                    <h5 class="modal-title text-white mb-0 fw-bold">¡Bienvenido a UMMA!</h5>
+                    <button type="button" class="btn-close btn-close-white position-absolute end-0 top-50 translate-middle-y" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
             </div>
-            <div class="modal-body">
+            
+            <div class="modal-body p-4" style="background-color: var(--crema);">
+                <!-- Icono moderno -->
                 <div class="text-center mb-4">
-                    <i class="bi bi-person-circle" style="font-size: 3rem; color: var(--dorado);"></i>
-                </div>
-                <p class="text-center">Para disfrutar de una experiencia personalizada y realizar compras, te recomendamos:</p>
-                
-                <div class="d-grid gap-2">
-                    <a href="<?= base_url('login') ?>" class="btn btn-primary btn-lg">
-                        <i class="bi bi-box-arrow-in-right"></i> Iniciar sesión
-                    </a>
-                    <a href="<?= base_url('Registrarse') ?>" class="btn btn-success btn-lg">
-                        <i class="bi bi-person-plus"></i> Crear cuenta
-                    </a>
+                    <div class="icon-circle mb-3" style="background: linear-gradient(135deg, var(--dorado) 0%, var(--marron-claro) 100%);">
+                        <i class="bi bi-person-fill text-white" style="font-size: 2rem;"></i>
+                    </div>
+                    <p class="mb-4" style="color: var(--texto-oscuro);">Para disfrutar de una experiencia personalizada y realizar compras, te recomendamos:</p>
                 </div>
                 
-                <div class="text-center mt-3">
-                    <a href="<?= base_url('principal') ?>" class="text-muted" data-bs-dismiss="modal" onclick="localStorage.setItem('modalShown', 'true')">Continuar como invitado</a>
+                <!-- Botones con efecto hover moderno -->
+                <div class="d-grid gap-3">
+                    <a href="<?= base_url('login') ?>" class="btn btn-login btn-lg rounded-pill py-3">
+                        <i class="bi bi-box-arrow-in-right me-2"></i> Iniciar sesión
+                    </a>
+                    <a href="<?= base_url('Registrarse') ?>" class="btn btn-register btn-lg rounded-pill py-3">
+                        <i class="bi bi-person-plus me-2"></i> Crear cuenta
+                    </a>
+                </div>
+                
+                <!-- Enlace invitado con transición suave -->
+                <div class="text-center mt-4">
+                    <a href="<?= base_url('principal') ?>" class="guest-link" data-bs-dismiss="modal" onclick="localStorage.setItem('modalShown', 'true')">
+                        Continuar como invitado
+                    </a>
                 </div>
             </div>
-            <div class="modal-footer justify-content-center">
-                <small class="text-muted">Al registrarte aceptas nuestros <a href="#">Términos y Condiciones</a></small>
+            
+            <!-- Footer con texto pequeño -->
+            <div class="modal-footer justify-content-center border-0 pt-0" style="background-color: var(--crema);">
+                <small class="text-muted" style="color: var(--marron-claro) !important;">Al registrarte aceptas nuestros 
+                    <a href="TerminoYcondiciones" class="text-decoration-underline" style="color: var(--dorado);">Términos y Condiciones</a>
+                </small>
             </div>
         </div>
     </div>

@@ -1,68 +1,86 @@
-<div class="container">
-    <br>
-    <div class="row justify-content-center">
-        <div class="col-md-4">
-            <div class="card registro-card">
-                <div class="card-header registro-header">
-                    Inicio de Sesión
+<div div class="register-container" style="background-color: #C8A97E; min-height: 100vh; padding: 3rem 0;">
+    <div class="container">
+        <!-- Tarjeta de registro -->
+        <div class="card mx-auto p-4 p-lg-5 border-0" style="max-width: 700px; background-color: white; border-radius: 18px; box-shadow: 0 12px 35px rgba(62, 39, 35, 0.1);">
+            <h2 class="text-center mb-5" style="color: var(--marron-oscuro); font-size: 2rem; position: relative;">
+                <span style="display: inline-block; padding: 0 1rem; background: white; position: relative; z-index: 1;">Registro</span>
+                <span style="position: absolute; top: 50%; left: 0; right: 0; height: 2px; background: var(--beige); z-index: 0; transform: translateY(-50%);"></span>
+            </h2>
+            
+            <!-- Formulario mejorado -->
+            <form>
+                <div class="row g-4">
+                    <!-- Nombre  -->
+                    <div class="col-md-6">
+                        <div class="form-group-enhanced">
+                            <label for="nombre" class="form-label-enhanced">Nombre</label>
+                            <div class="input-group-enhanced">
+                                <span class="input-group-icon">
+                                    <i class="bi bi-person-fill"></i>
+                                </span>
+                                <input type="text" class="form-control-enhanced" id="nombre" placeholder="Ej: María">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Apellido -->
+                    <div class="col-md-6">
+                        <div class="form-group-enhanced">
+                            <label for="apellido" class="form-label-enhanced">Apellido</label>
+                            <div class="input-group-enhanced">
+                                <span class="input-group-icon">
+                                    <i class="bi bi-person-fill"></i>
+                                </span>
+                                <input type="text" class="form-control-enhanced" id="apellido" placeholder="Ej: González">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Email -->
+                    <div class="col-12">
+                        <div class="form-group-enhanced">
+                            <label for="email" class="form-label-enhanced">Email</label>
+                            <div class="input-group-enhanced">
+                                <span class="input-group-icon">
+                                    <i class="bi bi-envelope-fill"></i>
+                                </span>
+                                <input type="email" class="form-control-enhanced" id="email" placeholder="Ej: ejemplo@correo.com">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contraseña -->
+                    <div class="col-12">
+                        <div class="form-group-enhanced">
+                            <label for="password" class="form-label-enhanced">Contraseña</label>
+                            <div class="input-group-enhanced">
+                                <span class="input-group-icon">
+                                    <i class="bi bi-lock-fill"></i>
+                                </span>
+                                <input type="password" class="form-control-enhanced" id="password" placeholder="Mínimo 8 caracteres">
+                                <button class="btn-toggle-password" type="button">
+                                    <i class="bi bi-eye-fill"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Botón de registro  -->
+                    <div class="col-12 mt-5">
+                        <button type="submit" class="btn-register-enhanced">
+                            <span>Crear mi cuenta</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Enlace a login -->
+                    <div class="col-12 text-center mt-4">
+                        <p class="login-link-text">¿Ya tienes una cuenta? 
+                            <a href="login" class="login-link">Inicia sesión aquí</a>
+                        </p>
+                    </div>
                 </div>
-                <div class="card-body">
-
-                    <!-- Campo Nombre -->
-                    <div class="mb-3">
-                        <label for="nombre" class="form-label">Nombre</label>
-                        <input
-                            type="text"
-                            class="form-control"
-                            name="nombre"
-                            id="nombre"
-                            placeholder="Tu nombre"
-                        />
-                        <small class="form-text text-muted">Ingrese su nombre</small>
-                    </div>
-
-                    <!-- Campo Apellido -->
-                    <div class="mb-3">
-                        <label for="apellido" class="form-label">Apellido</label>
-                        <input
-                            type="text"
-                            class="form-control"
-                            name="apellido"
-                            id="apellido"
-                            placeholder="Tu apellido"
-                        />
-                        <small class="form-text text-muted">Ingrese su apellido</small>
-                    </div>
-
-                    <!-- Campo Email -->
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input
-                            type="text"
-                            class="form-control"
-                            name="email"
-                            id="email"
-                            placeholder="email"
-                        />
-                        <small class="form-text text-muted">Ingrese su Email</small>
-                    </div>
-
-                    <!-- Campo Contraseña -->
-                    <div class="mb-3">
-                        <label for="contrasenia" class="form-label">Contraseña</label>
-                        <input
-                            type="password"
-                            class="form-control"
-                            name="pass"
-                            id="contrasenia"
-                            placeholder="contraseña"
-                        />
-                        <small class="form-text text-muted">Ingrese su contraseña</small>
-                    </div>
-
-                    <button type="button" class="btn btn-primary w-100">Iniciar Sesión</button>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
 </div>

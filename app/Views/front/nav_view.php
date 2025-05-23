@@ -51,7 +51,7 @@ Utiliza Bootstrap 5 para crear una navbar responsive con opciones colapsables en
                         <a 
                             class="nav-link dropdown-toggle text-light <?= (current_url() == base_url('Productos')) ? 'active' : '' ?>" 
                             id="productos-tab" 
-                            href="<?= base_url('Productos') ?>" 
+                            href="#" 
                             role="button" 
                             data-bs-toggle="dropdown" 
                             aria-expanded="false"
