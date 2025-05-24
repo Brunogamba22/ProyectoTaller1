@@ -1,13 +1,13 @@
 <?php
 $session = session();
 $nombre = $session->get('nombre');
-$perfil = $session->get('perfil_id'); // Asegúrate de que este campo sea el correcto
+$logged_in = $session->get('logged_in');
 ?>
 
 <section class="container-fluid p-0">
     <nav class="navbar navbar-expand-lg navbar-dark navbar-personalizada fixed-top shadow">
         <div class="container">
-            <a class="navbar-brand text-black" href="#">UMMA</a>
+            <a class="navbar-brand text-black" href="<?= base_url('principal') ?>">UMMA</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion"
                 aria-controls="menuNavegacion" aria-expanded="false" aria-label="Alternar navegación">
@@ -17,6 +17,7 @@ $perfil = $session->get('perfil_id'); // Asegúrate de que este campo sea el cor
             <div class="collapse navbar-collapse" id="menuNavegacion">
                 <ul class="navbar-nav w-100 align-items-center">
 
+                    <!-- Menú principal -->
                     <li class="nav-item">
                         <a class="nav-link text-light <?= (current_url() == base_url('principal')) ? 'active' : '' ?>"
                             href="<?= base_url('principal') ?>">Inicio</a>
@@ -54,32 +55,22 @@ $perfil = $session->get('perfil_id'); // Asegúrate de que este campo sea el cor
                             href="<?= base_url('Contacto') ?>">Contacto</a>
                     </li>
 
-                    <!-- Opciones según perfil -->
-                    <?php if ($perfil == 1): // ADMIN ?>
+                    <!-- Opciones específicas para cliente logueado -->
+                    <?php if ($logged_in): ?>
                         <li class="nav-item">
-                            <a class="nav-link text-warning" href="<?= base_url('lista_usuarios') ?>">CRUD Usuarios</a>
+                            <span class="nav-link">Bienvenido: <?= $nombre ?></span>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-warning" href="<?= base_url('Producto_controller') ?>">CRUD Productos</a>
+                            <a class="nav-link text-info" href="<?= base_url('cliente/pedidos') ?>">Mis Pedidos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-warning" href="<?= base_url('ventas') ?>">Muestra Ventas</a>
+                            <a class="nav-link text-info" href="<?= base_url('cliente/perfil') ?>">Mi Perfil</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-warning" href="<?= base_url('listar_consultas') ?>">Consultas</a>
-                        </li>
-                    <?php elseif ($perfil == 2): // CLIENTE ?>
-                        <li class="nav-item">
-                            <span class="nav-link disabled">Cliente: <?= $nombre ?></span>
-                        </li>
-                    <?php endif; ?>
-
-                    <!-- Botones de Login / Logout -->
-                    <?php if ($session->get('isLoggedIn')): ?>
                         <li class="nav-item">
                             <a class="nav-link text-danger" href="<?= base_url('logout') ?>">Cerrar Sesión</a>
                         </li>
                     <?php else: ?>
+                        <!-- Opciones para no logueados -->
                         <li class="nav-item">
                             <a class="nav-link text-black" href="<?= base_url('Registrarse') ?>">Registrarse</a>
                         </li>

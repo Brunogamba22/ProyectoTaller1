@@ -5,6 +5,8 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
+
+// RUTAS CLIENTE
 // Página principal
 $routes->get('/', 'Home::index');
 // Página principal (alias)
