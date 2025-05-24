@@ -40,7 +40,7 @@ class Usuario_controller extends Controller
         'apellido' => $this->request->getVar('apellido'),
         'usuario'  => $this->request->getVar('usuario'),
         'email'    => $this->request->getVar('email'),
-        'pass'     => password_hash($this->request->getVar('pass'), PASSWORD_DEFAULT)
+        'password'     => password_hash($this->request->getVar('pass'), PASSWORD_DEFAULT)
     ]);
 
     // Mensaje de éxito usando Flashdata (se muestra una sola vez)

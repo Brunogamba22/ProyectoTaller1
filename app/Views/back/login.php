@@ -1,3 +1,9 @@
+<?php if (session()->getFlashdata('error')): ?>
+    <div class="alert alert-danger text-center">
+        <?= session()->getFlashdata('error') ?>
+    </div>
+<?php endif; ?>
+
 <div class="login-container" style="background-color:  #C8A97E; min-height: 100vh; display: flex; align-items: center; padding: 2rem 0;">
     <div class="container">
         <div class="row justify-content-center">
@@ -8,11 +14,10 @@
                         <span style="display: inline-block; padding: 0 1rem; background: white; position: relative; z-index: 1;">Iniciar Sesión</span>
                         <span style="position: absolute; top: 50%; left: 0; right: 0; height: 2px; background: var(--beige); z-index: 0; transform: translateY(-50%);"></span>
                     </h2>
-                    
                     <!-- Cuerpo del formulario -->
                     <div class="login-body" style="padding: 2.5rem;">
                         <!-- Formulario -->
-                        <form>
+                        <form action="<?= base_url('/auth') ?>" method="post">
                             <!-- Campo Email -->
                             <div class="form-group-login" style="margin-bottom: 1.75rem;">
                                 <label for="login-email" style="display: block; margin-bottom: 0.5rem; color: var(--marron-medio); font-weight: 600;">Email</label>
@@ -20,10 +25,9 @@
                                     <span style="padding: 0 1rem; color: var(--dorado);">
                                         <i class="bi bi-envelope-fill"></i>
                                     </span>
-                                    <input type="email" id="login-email" placeholder="tucorreo@ejemplo.com" style="flex: 1; padding: 1rem 0.75rem; border: none; background: transparent; font-size: 1rem; color: var(--marron-oscuro);">
+                                    <input type="email" id="login-email" name="email" placeholder="tucorreo@ejemplo.com" style="flex: 1; padding: 1rem 0.75rem; border: none; background: transparent; font-size: 1rem; color: var(--marron-oscuro);" required>
                                 </div>
                             </div>
-                            
                             <!-- Campo Contraseña -->
                             <div class="form-group-login" style="margin-bottom: 2rem;">
                                 <label for="login-password" style="display: block; margin-bottom: 0.5rem; color: var(--marron-medio); font-weight: 600;">Contraseña</label>
@@ -31,7 +35,7 @@
                                     <span style="padding: 0 1rem; color: var(--dorado);">
                                         <i class="bi bi-lock-fill"></i>
                                     </span>
-                                    <input type="password" id="login-password" placeholder="Ingresa tu contraseña" style="flex: 1; padding: 1rem 0.75rem; border: none; background: transparent; font-size: 1rem; color: var(--marron-oscuro);">
+                                    <input type="password" id="login-password" name="pass" placeholder="Ingresa tu contraseña" style="flex: 1; padding: 1rem 0.75rem; border: none; background: transparent; font-size: 1rem; color: var(--marron-oscuro);" required>
                                     <button type="button" style="background: none; border: none; padding: 0 1rem; color: var(--marron-claro); cursor: pointer;">
                                         <i class="bi bi-eye-fill"></i>
                                     </button>
@@ -40,12 +44,10 @@
                                     <a href="#" style="color: var(--dorado); text-decoration: none; font-size: 0.9rem;">¿Olvidaste tu contraseña?</a>
                                 </div>
                             </div>
-                            
                             <!-- Botón de Inicio de Sesión -->
                             <button type="submit" class="login-btn" style="width: 100%; padding: 1rem; background-color: var(--dorado); color: var(--texto-oscuro); border: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease; margin-bottom: 1.5rem;">
                                 Iniciar Sesión
                             </button>
-                            
                             <!-- Redes sociales -->
                             <div style="text-align: center; margin: 1.5rem 0;">
                                 <p style="color: var(--marron-claro); position: relative; margin: 1.5rem 0;">
@@ -61,7 +63,6 @@
                                     </button>
                                 </div>
                             </div>
-                            
                             <!-- Enlace a registro -->
                             <div style="text-align: center;">
                                 <p style="color: var(--marron-claro);">¿No tienes una cuenta? 
@@ -75,3 +76,6 @@
         </div>
     </div>
 </div>
+
+echo '<pre>'; print_r($data); echo '</pre>';
+
