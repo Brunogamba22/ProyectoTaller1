@@ -72,7 +72,23 @@
                             <?php endif; ?>
                         </div>
                     </div>
-                    
+                    <!-- Usuario -->
+                    <div class="col-md-6">
+                        <div class="form-group-enhanced">
+                            <label for="usuario" class="form-label-enhanced">Usuario</label>
+                            <div class="input-group-enhanced">
+                                <span class="input-group-icon">
+                                    <i class="bi bi-person-fill"></i>
+                                </span>
+                                <input name="usuario" type="text" class="form-control-enhanced <?= ($validation->getError('usuario')) ? 'is-invalid' : '' ?>" id="usuario" placeholder="Ej: María2216" value="<?= old('usuario') ?>">
+                            </div>
+                            <?php if($validation->getError('usuario')): ?>
+                                <div class="invalid-feedback d-block">
+                                    <?= $validation->getError('usuario') ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    </div>
                     <!-- Contraseña -->
                     <div class="col-12">
                         <div class="form-group-enhanced">
@@ -81,14 +97,14 @@
                                 <span class="input-group-icon">
                                     <i class="bi bi-lock-fill"></i>
                                 </span>
-                                <input name="password" type="password" class="form-control-enhanced <?= ($validation->getError('password')) ? 'is-invalid' : '' ?>" id="password" placeholder="Mínimo 8 caracteres">
+                                <input name="pass" type="password" class="form-control-enhanced <?= ($validation->getError('pass')) ? 'is-invalid' : '' ?>" id="pass" placeholder="Mínimo 4 caracteres">
                                 <button class="btn-toggle-password" type="button">
                                     <i class="bi bi-eye-fill"></i>
                                 </button>
                             </div>
-                            <?php if($validation->getError('password')): ?>
+                            <?php if($validation->getError('pass')): ?>
                                 <div class="invalid-feedback d-block">
-                                    <?= $validation->getError('password') ?>
+                                    <?= $validation->getError('pass') ?>
                                 </div>
                             <?php endif; ?>
                         </div>
