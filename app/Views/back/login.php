@@ -77,5 +77,3 @@
     </div>
 </div>
 
-echo '<pre>'; print_r($data); echo '</pre>';
-

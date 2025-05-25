@@ -40,11 +40,7 @@ class Usuario_controller extends Controller
         'apellido' => $this->request->getVar('apellido'),
         'usuario'  => $this->request->getVar('usuario'),
         'email'    => $this->request->getVar('email'),
-<<<<<<< HEAD:app/Controllers/Usuario_controller.php
-        'pass'     => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT)
-=======
-        'password'     => password_hash($this->request->getVar('pass'), PASSWORD_DEFAULT)
->>>>>>> ramaJonathan:app/Controllers/Usuario_controler.php
+        'pass'     => password_hash($this->request->getVar('pass'), PASSWORD_DEFAULT)
     ]);
 
     // Mensaje de éxito usando Flashdata (se muestra una sola vez)

@@ -22,6 +22,9 @@ class Login_controller extends BaseController
 
         $data = $model->where('email', $email)->first();
 
+
+
+
         if ($data) {
             $pass_bd = $data['pass'];
             $baja = $data['baja'];
@@ -30,6 +33,20 @@ class Login_controller extends BaseController
                 $session->setFlashdata('error', 'Usuario dado de baja');
                 return redirect()->to('/login');
             }
+
+            echo "<h2>🧪 Debug Login</h2>";
+
+$passwordIngresada = $this->request->getVar('pass');
+$usuarioBD = $model->where('email', $email)->first();
+
+echo "🔑 Contraseña ingresada: $passwordIngresada<br>";
+echo "🔐 Hash en BD: " . $usuarioBD['pass'] . "<br>";
+
+$resultado = password_verify($passwordIngresada, $usuarioBD['pass']);
+echo "✅ ¿Coinciden?: " . ($resultado ? 'SÍ' : 'NO');
+
+exit;
+
 
             // Verifica la contraseña (ahora debería estar hasheada)
             if (password_verify($password, $pass_bd)) {

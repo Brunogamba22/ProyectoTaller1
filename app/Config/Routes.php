@@ -1,60 +1,77 @@
 <?php
-
 use CodeIgniter\Router\RouteCollection;
 
 /**
  * @var RouteCollection $routes
  */
 
-// RUTAS CLIENTE
-// Página principal
-$routes->get('/', 'Home::index');
-// Página principal (alias)
-$routes->get('principal', 'Home::index');
-// Página de productos
-$routes->get('Productos', 'Home::productos');
-// Página de remeras
-$routes->get('Remeras', 'Home::remeras');
-// Página de buzos
-$routes->get('Buzos', 'Home::buzos');
-// Página de camperas
-$routes->get('Camperas', 'Home::camperas');
-// Página de calzado
-$routes->get('Calzado', 'Home::calzado');
-// Página de camisas
-$routes->get('Camisas', 'Home::camisas');
-// Página de comercialización
-$routes->get('Comercializacion', 'Home::comercializacion');
-// Página sobre nosotros
-$routes->get('Sobrenosotros', 'Home::sobrenosotros');
-// Página de contacto
-$routes->get('Contacto', 'Home::contacto');
-// Página de login
-$routes->get('login', 'Home::loguearse');
-// Procesa el login
-$routes->post('/auth', 'Login_controller::auth');
-// Cierra sesión
-$routes->get('/logout','login_controller::logout');
+// ==============================================
+// RUTAS PÚBLICAS (accesibles sin autenticación)
+// ==============================================
 
-//REGISTRARSE
-// Página de registro de usuario
+// Páginas principales
+$routes->get('/', 'Home::index');
+$routes->get('principal', 'Home::index');
+
+// Catálogo de productos
+$routes->get('Productos', 'Home::productos');
+$routes->get('Remeras', 'Home::remeras');
+$routes->get('Buzos', 'Home::buzos');
+$routes->get('Camperas', 'Home::camperas');
+$routes->get('Calzado', 'Home::calzado');
+$routes->get('Camisas', 'Home::camisas');
+
+// Información de la empresa
+$routes->get('Comercializacion', 'Home::comercializacion');
+$routes->get('Sobrenosotros', 'Home::sobrenosotros');
+$routes->get('Contacto', 'Home::contacto');
+
+// Autenticación
+$routes->get('login', 'Home::loguearse');
+$routes->post('/auth', 'Login_controller::auth');
 $routes->get('Registrarse', 'Home::registro');
-// Procesa el registro de usuario
 $routes->post('/enviar-form', 'Usuario_controller::formValidation');
 
-// Página de dashboard (requiere autenticación)
-$routes->get('/panel', 'Panel_controller::index', ['filters'=> 'auth']);
-
-// Página de términos y condiciones
+// Páginas legales
 $routes->get('TerminoYcondiciones', 'Home::TerminosYcondiciones');
-// Página de política de privacidad
 $routes->get('PoliticaDeprivacidad', 'Home::PoliticaDeprivacidad');
-// Página de preguntas frecuentes
 $routes->get('PreguntasFrecuentes', 'Home::PreguntasFrecuentes');
-// Página del carrito de compras
-$routes->get('carrito', 'Home::carrito');
+
+// ==============================================
+// RUTAS PARA CLIENTES LOGUEADOS (perfil_id = 2)
+// ==============================================
+$routes->group('cliente', ['filter' => 'auth:2'], function($routes) {
+    // Panel de cliente
+    $routes->get('panel', 'Cliente_controller::panel');
+    
+    // Carrito y compras
+    $routes->get('carrito', 'Cliente_controller::carrito');
+    $routes->get('mis-pedidos', 'Cliente_controller::misPedidos');
+    $routes->get('mi-perfil', 'Cliente_controller::miPerfil');
+    
+    // Cerrar sesión
+    $routes->get('logout', 'Login_controller::logout');
+});
+
+// ==============================================
+// RUTAS PARA ADMINISTRADORES (perfil_id = 1)
+// ==============================================
+$routes->group('admin', ['filter' => 'auth:1'], function($routes) {
+    $routes->get('panel', 'Admin_controller::panel');
+    // ... otras rutas de admin
+});
+
+// ==============================================
+// RUTAS COMUNES AUTENTICADAS (cualquier perfil)
+// ==============================================
+$routes->group('', ['filter' => 'auth'], function($routes) {
+    // Rutas que requieren login pero no un perfil específico
+    $routes->get('perfil', 'User_controller::perfil');
+});
 
 
 
-//Panel de Usuario
-$routes->get('lista_usuarios', '::TerminosYcondiciones');
+
+
+
+
