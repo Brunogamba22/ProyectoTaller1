@@ -57,11 +57,11 @@ $routes->group('cliente', ['filter' => 'auth:2'], function($routes) {
 // RUTAS PARA ADMINISTRADORES (perfil_id = 1)
 // ==============================================
 $routes->group('admin', ['filter' => 'auth:1'], function($routes) {
-    $routes->get('panel', 'Admin_controller::panel');
+    $routes->get('panel', 'Admin/Dashboard::panel');
     // ... otras rutas de admin
 });
 
-// ==============================================
+// ==============================================1
 // RUTAS COMUNES AUTENTICADAS (cualquier perfil)
 // ==============================================
 $routes->group('', ['filter' => 'auth'], function($routes) {

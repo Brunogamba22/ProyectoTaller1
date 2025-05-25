@@ -18,7 +18,8 @@ class Login_controller extends BaseController
         $model = new Usuario_model();
 
         $email = $this->request->getVar('email');
-        $password = $this->request->getVar('pass');
+        $password = trim($this->request->getVar('pass'));
+
 
         $data = $model->where('email', $email)->first();
 
@@ -34,20 +35,8 @@ class Login_controller extends BaseController
                 return redirect()->to('/login');
             }
 
-            echo "<h2>🧪 Debug Login</h2>";
 
-$passwordIngresada = $this->request->getVar('pass');
-$usuarioBD = $model->where('email', $email)->first();
-
-echo "🔑 Contraseña ingresada: $passwordIngresada<br>";
-echo "🔐 Hash en BD: " . $usuarioBD['pass'] . "<br>";
-
-$resultado = password_verify($passwordIngresada, $usuarioBD['pass']);
-echo "✅ ¿Coinciden?: " . ($resultado ? 'SÍ' : 'NO');
-
-exit;
-
-
+ 
             // Verifica la contraseña (ahora debería estar hasheada)
             if (password_verify($password, $pass_bd)) {
                 $ses_data = [
@@ -64,7 +53,7 @@ exit;
 
                 // Redirección según perfil
                 if ($data['perfil_id'] == 1) { // Admin
-                    return redirect()->to('/admin/dashboard');
+                    return redirect()->to('/Admin/Dashboard');
                 } else { // Cliente
                     return redirect()->to('/cliente/dashboard');
                 }
