@@ -51,7 +51,7 @@ class Login_controller extends BaseController
 
                 // Redirección según perfil
                 if ($data['perfil_id'] == 1) { // Admin
-                    return redirect()->to('/');
+                    return redirect()->to('admin');
                 } else { // Cliente
                     return redirect()->to('/');
                 }

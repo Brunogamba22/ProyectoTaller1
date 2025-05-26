@@ -2,6 +2,7 @@
 $session = session();
 $nombre = $session->get('nombre');
 $logged_in = $session->get('logged_in');
+$perfil_id = $session->get('perfil_id');
 ?>
 
 <section class="container-fluid p-0">
@@ -55,22 +56,28 @@ $logged_in = $session->get('logged_in');
                             href="<?= base_url('Contacto') ?>">Contacto</a>
                     </li>
 
-                    <!-- Opciones específicas para cliente logueado -->
                     <?php if ($logged_in): ?>
                         <li class="nav-item">
                             <span class="nav-link">Bienvenido: <?= $nombre ?></span>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-info" href="<?= base_url('cliente/pedidos') ?>">Mis Pedidos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-info" href="<?= base_url('cliente/perfil') ?>">Mi Perfil</a>
-                        </li>
+
+                        <?php if ($perfil_id == 2): // Solo clientes ?>
+                            <li class="nav-item">
+                                <a class="nav-link text-info" href="<?= base_url('cliente/pedidos') ?>">Mis Pedidos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-info" href="<?= base_url('cliente/perfil') ?>">Mi Perfil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-info" href="<?= base_url('carrito') ?>">Carrito</a>
+                            </li>
+                        <?php endif; ?>
+
                         <li class="nav-item">
                             <a class="nav-link text-danger" href="<?= base_url('/logout') ?>">Cerrar Sesión</a>
                         </li>
                     <?php else: ?>
-                        <!-- Opciones para no logueados -->
+                        <!-- No logueado -->
                         <li class="nav-item">
                             <a class="nav-link text-black" href="<?= base_url('Registrarse') ?>">Registrarse</a>
                         </li>
@@ -78,6 +85,7 @@ $logged_in = $session->get('logged_in');
                             <a class="nav-link text-black" href="<?= base_url('login') ?>">Login</a>
                         </li>
                     <?php endif; ?>
+
 
                     <!-- Buscador -->
                     <li class="nav-item ms-lg-auto">

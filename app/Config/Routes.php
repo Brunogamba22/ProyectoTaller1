@@ -41,34 +41,20 @@ $routes->get('PreguntasFrecuentes', 'Home::PreguntasFrecuentes');
 // ==============================================
 // RUTAS PARA CLIENTES LOGUEADOS (perfil_id = 2)
 // ==============================================
-$routes->group('cliente', ['filter' => 'auth:2'], function($routes) {
-    // Panel de cliente
-    $routes->get('panel', 'Cliente_controller::panel');
-    
-    // Carrito y compras
-    $routes->get('carrito', 'Cliente_controller::carrito');
-    $routes->get('mis-pedidos', 'Cliente_controller::misPedidos');
-    $routes->get('mi-perfil', 'Cliente_controller::miPerfil');
-    
-    // Cerrar sesión
-    $routes->get('logout', 'Login_controller::logout');
-});
+
 
 // ==============================================
 // RUTAS PARA ADMINISTRADORES (perfil_id = 1)
 // ==============================================
-$routes->group('admin', ['filter' => 'auth:1'], function($routes) {
-    $routes->get('panel', 'Dashboard_Admin::panel');
-    // ... otras rutas de admin
-});
+
+$routes->get('admin', 'Dashboard_Admin::index');
+// ... otras rutas de admin
+
 
 // ==============================================1
 // RUTAS COMUNES AUTENTICADAS (cualquier perfil)
 // ==============================================
-$routes->group('', ['filter' => 'auth'], function($routes) {
-    // Rutas que requieren login pero no un perfil específico
-    $routes->get('perfil', 'User_controller::perfil');
-});
+
 
 
 

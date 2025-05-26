@@ -1,16 +1,23 @@
 <?php
-namespace App\Controllers\Admin;
+namespace App\Controllers;
 
 use App\Controllers\BaseController;
 
 class Dashboard_Admin extends BaseController
 {
-    public function panel()
+    public function index()
     {
         $data['titulo'] = 'Administrador';
         echo view('front/head_view', $data);
-        echo view('front/nav_adminstrador');
-        echo view('front/Productos/productos');
-        echo view('front/footer_view');
+        echo view('back/dashboard');
     }
+
+
+
+
+
+
+
+
+    
 }
