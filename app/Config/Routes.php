@@ -42,7 +42,7 @@ $routes->get('PreguntasFrecuentes', 'Home::PreguntasFrecuentes');
 // ==============================================
 $routes->group('cliente', ['filter' => 'auth:2'], function($routes) {
     // Panel de cliente
-    $routes->get('panel', 'Cliente_controller::panel');
+    $routes->get('panel', 'Cliente\Cliente_controller::panel');
     
     // Carrito y compras
     $routes->get('carrito', 'Cliente_controller::carrito');
@@ -50,9 +50,9 @@ $routes->group('cliente', ['filter' => 'auth:2'], function($routes) {
     $routes->get('mi-perfil', 'Cliente_controller::miPerfil');
     
     // Cerrar sesión
-    $routes->get('logout', 'Login_controller::logout');
+   
 });
-
+ $routes->get('logout', 'Login_controller::logout');
 // ==============================================
 // RUTAS PARA ADMINISTRADORES (perfil_id = 1)
 // ==============================================

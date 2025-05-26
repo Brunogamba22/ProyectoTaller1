@@ -53,9 +53,9 @@ class Login_controller extends BaseController
 
                 // Redirección según perfil
                 if ($data['perfil_id'] == 1) { // Admin
-                    return redirect()->to('/Admin/Dashboard');
+                    return redirect()->to('');
                 } else { // Cliente
-                    return redirect()->to('/cliente/dashboard');
+                    return redirect()->to('');
                 }
             } else {
                 $session->setFlashdata('error', 'Contraseña incorrecta');
