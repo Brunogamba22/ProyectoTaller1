@@ -59,64 +59,200 @@ body {
 }
 
 /* ===== BARRA DE NAVEGACIÓN ===== */
-.navbar-personalizada {
-  background-color: var(--texto-oscuro) !important; /* Fondo coherente */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
-  padding: 6px 0; /* Espaciado interno reducido */
+.navbar-umma {
+        background-color: white;
+        transition: all 0.3s ease;
+    }
+    
+    .navbar-umma .nav-link {
+        color: var(--marron-oscuro);
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        position: relative;
+    }
+    
+    .navbar-umma .nav-link.active,
+    .navbar-umma .nav-link:hover {
+        color: var(--dorado);
+    }
+    
+    .navbar-umma .nav-link.active::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 1rem;
+        right: 1rem;
+        height: 2px;
+        background-color: var(--dorado);
+    }
+    
+    /* Dropdown */
+    .dropdown-menu {
+      
+        border: none;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        margin-top: 0.5rem;
+    }
+    
+    .dropdown-item {
+        padding: 0.5rem 1.25rem;
+        color: var(--marron-oscuro);
+    }
+    
+    .dropdown-item:hover {
+        background-color: var(--beige);
+        color: var(--marron-oscuro);
+    }
+
+        /* Asegurar que el dropdown funcione correctamente */
+    .navbar .dropdown-menu {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .navbar .dropdown-menu.show {
+        display: block;
+        opacity: 1;
+    }
+
+    /* Contenedor principal del buscador */
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 1rem; /* Espaciado */
 }
 
-.navbar-personalizada .nav-link {
-  color: var(--texto-claro) !important; /* Texto claro */
-  font-weight: 500;          /* Peso intermedio */
-  transition: all 0.3s ease; /* Transición suave para hover */
-  margin: 0 5px;             /* Espaciado horizontal */
-  padding: 6px 16px;         /* Relleno amplio */
-  border-radius: 2rem;       /* Forma de cápsula */
-  background-color: var(--marron-medio); /* Fondo contrastado */
+/* Icono de lupa */
+.search-icon {
+    color: var(--marron-oscuro);
+    font-size: 1.25rem;
+    background: transparent;
+    border: none;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex; /* Asegura que el icono se muestre */
+    align-items: center;
 }
 
-.navbar-personalizada .nav-link:hover {
-  background-color: var(--dorado); /* Cambio de color al interactuar */
-  transform: translateY(-2px);    /* Efecto de levitación */
-  color: var(--texto-oscuro) !important; /* Texto oscuro para contraste */
+.search-icon:hover {
+    color: var(--dorado);
+    transform: scale(1.1);
 }
 
-.navbar-personalizada .nav-link.active {
-  background-color: var(--dorado); /* Resalta el enlace activo */
-  color: var(--texto-oscuro) !important;
-  font-weight: 600; /* Negrita para mayor énfasis */
+/* Barra de búsqueda */
+.search-bar {
+    position: absolute;
+    right: 0;
+    top: 100%; /* Cambiado para que aparezca debajo del icono */
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    z-index: 1000;
 }
 
-.navbar-brand {
-  color: var(--texto-claro) !important; /* Color coherente */
-  font-weight: 700;          /* Negrita para marca */
-  font-size: 1.2rem;        /* Tamaño ligeramente mayor */
-  letter-spacing: 0.5px;    /* Espaciado elegante */
+.search-bar.active {
+    width: 250px;
+    opacity: 1;
+    visibility: visible;
+    padding: 0.5rem 1rem;
 }
 
-/* ===== BUSCADOR ===== */
-form.d-flex input.form-control {
-  border-radius: 2rem 0 0 2rem; /* Redondeo izquierdo */
-  border: 1px solid var(--dorado); /* Borde dorado */
-  padding: 6px 12px;           /* Relleno cómodo */
-  font-size: 0.9rem;           /* Tamaño legible */
-  background-color: var(--beige); /* Fondo claro para input */
+.search-input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    padding: 0.5rem;
+    outline: none;
+}
+.search-bar .search-close:hover {
+    color: var(--dorado);
 }
 
-form.d-flex button.btn-buscar {
-  background-color: var(--dorado); /* Color de acento */
-  color: var(--texto-oscuro);     /* Texto oscuro */
-  border: none;                   /* Sin borde */
-  font-weight: 600;               /* Negrita */
-  border-radius: 0 2rem 2rem 0;   /* Redondeo derecho */
-  padding: 6px 16px;              /* Relleno simétrico */
-  transition: background-color 0.3s ease; /* Transición suave */
+body.search-active {
+    overflow: hidden;
 }
 
-form.d-flex button.btn-buscar:hover {
-  background-color: #B89B6E; /* Color dorado oscuro al interactuar */
+.search-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1050;
 }
 
+.search-bar.active {
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .search-bar.active {
+        width: 180px;
+    }
+    
+    .search-container {
+        margin-left: 0.5rem;
+    }
+}
+    
+    /* Carrito */
+    .cart-icon {
+        position: relative;
+        color: var(--marron-oscuro);
+        font-size: 1.25rem;
+    }
+    
+    .cart-badge {
+        position: absolute;
+        top: -5px;
+        right: -10px;
+        background-color: var(--dorado);
+        color: white;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        font-size: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Botones de autenticación */
+    .btn-outline {
+        border: 1px solid var(--dorado);
+        color: var(--dorado);
+    }
+    
+    .btn-primary {
+        background-color: var(--dorado);
+        border-color: var(--dorado);
+        color: var(--texto-oscuro);
+    }
+    
+    /* Menú usuario */
+    .user-dropdown {
+        display: flex;
+        align-items: center;
+    }
+    
+    /* Efecto scroll */
+    .navbar-scrolled {
+        box-shadow: 0 2px 10px rgba(62, 39, 35, 0.1);
+    }
 /* ===== COMIENZO ESTILOS DEL CARRITO ===== */
 .navbar-personalizada .fa-shopping-cart {
   transition: all 0.3s ease;

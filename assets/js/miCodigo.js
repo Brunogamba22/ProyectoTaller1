@@ -49,3 +49,43 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+
+// Versión mejorada con más control
+document.addEventListener('DOMContentLoaded', function() {
+    const searchIcon = document.querySelector('.search-icon');
+    const searchBar = document.querySelector('.search-bar');
+    
+    function toggleSearch() {
+        searchBar.classList.toggle('active');
+        document.body.classList.toggle('search-active');
+        
+        if(searchBar.classList.contains('active')) {
+            const input = searchBar.querySelector('input');
+            input && input.focus();
+        }
+    }
+    
+    if(searchIcon && searchBar) {
+        searchIcon.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleSearch();
+        });
+        
+        document.addEventListener('click', function(e) {
+            if(!e.target.closest('.search-container')) {
+                searchBar.classList.remove('active');
+                document.body.classList.remove('search-active');
+            }
+        });
+        
+        // Cerrar con ESC
+        document.addEventListener('keydown', function(e) {
+            if(e.key === 'Escape' && searchBar.classList.contains('active')) {
+                searchBar.classList.remove('active');
+                document.body.classList.remove('search-active');
+            }
+        });
+    }
+});

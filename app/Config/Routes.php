@@ -41,6 +41,8 @@ $routes->get('PreguntasFrecuentes', 'Home::PreguntasFrecuentes');
 // ==============================================
 // RUTAS PARA CLIENTES LOGUEADOS (perfil_id = 2)
 // ==============================================
+$routes->get('carrito', 'Home::carrito');
+$routes->get('miPerfil', 'Home::');
 
 
 // ==============================================
