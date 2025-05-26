@@ -28,7 +28,8 @@ $routes->get('Contacto', 'Home::contacto');
 
 // Autenticación
 $routes->get('login', 'Home::loguearse');
-$routes->post('/auth', 'Login_controller::auth');
+$routes->post('/auth', 'login_controller::auth');
+$routes->get('logout', 'login_controller::logout');
 $routes->get('Registrarse', 'Home::registro');
 $routes->post('/enviar-form', 'Usuario_controller::formValidation');
 
@@ -57,7 +58,7 @@ $routes->group('cliente', ['filter' => 'auth:2'], function($routes) {
 // RUTAS PARA ADMINISTRADORES (perfil_id = 1)
 // ==============================================
 $routes->group('admin', ['filter' => 'auth:1'], function($routes) {
-    $routes->get('panel', 'Admin/Dashboard::panel');
+    $routes->get('panel', 'Dashboard_Admin::panel');
     // ... otras rutas de admin
 });
 

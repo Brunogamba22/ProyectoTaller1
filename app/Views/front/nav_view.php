@@ -67,7 +67,7 @@ $logged_in = $session->get('logged_in');
                             <a class="nav-link text-info" href="<?= base_url('cliente/perfil') ?>">Mi Perfil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-danger" href="<?= base_url('logout') ?>">Cerrar Sesión</a>
+                            <a class="nav-link text-danger" href="<?= base_url('/logout') ?>">Cerrar Sesión</a>
                         </li>
                     <?php else: ?>
                         <!-- Opciones para no logueados -->
