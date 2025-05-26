@@ -26,17 +26,15 @@ class Login_controller extends BaseController
 
 
 
-        if ($data) {
-            $pass_bd = $data['pass'];
-            $baja = $data['baja'];
+            if ($data) {
+                $pass_bd = $data['pass'];
+                $baja = $data['baja'];
 
             if ($baja == 'SI') { // Ajusta según tu campo 'baja'
                 $session->setFlashdata('error', 'Usuario dado de baja');
                 return redirect()->to('/login');
             }
 
-
- 
             // Verifica la contraseña (ahora debería estar hasheada)
             if (password_verify($password, $pass_bd)) {
                 $ses_data = [
@@ -53,24 +51,25 @@ class Login_controller extends BaseController
 
                 // Redirección según perfil
                 if ($data['perfil_id'] == 1) { // Admin
-                    return redirect()->to('/Admin/Dashboard');
+                    return redirect()->to('/');
                 } else { // Cliente
-                    return redirect()->to('/cliente/dashboard');
+                    return redirect()->to('/');
                 }
             } else {
                 $session->setFlashdata('error', 'Contraseña incorrecta');
                 return redirect()->to('/login');
-            }
-        } else {
-            $session->setFlashdata('error', 'Email no registrado');
-            return redirect()->to('/login');
-        }
+                }
+                } else {
+                    $session->setFlashdata('error', 'Email no registrado');
+                    return redirect()->to('/login');
+                }
     }
 
     public function logout()
     {
         $session = session();
         $session->destroy();
-        return redirect()->to('/');
+        // Redirige siempre al login tras cerrar sesión
+        return redirect()->to('/login');
     }
 }

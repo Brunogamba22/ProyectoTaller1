@@ -40,6 +40,7 @@ class Usuario_controller extends Controller
         'apellido' => $this->request->getVar('apellido'),
         'usuario'  => $this->request->getVar('usuario'),
         'email'    => $this->request->getVar('email'),
+        // Guardar la contraseña hasheada
         'pass'     => password_hash($this->request->getVar('pass'), PASSWORD_DEFAULT)
     ]);
 
