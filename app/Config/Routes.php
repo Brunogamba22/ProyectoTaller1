@@ -50,14 +50,21 @@ $routes->get('miPerfil', 'Home::');
 // ==============================================
 
 $routes->get('admin', 'Dashboard_Admin::index');
+$routes->get('AltaProductos', 'Dashboard_Admin::altaProductos');
+$routes->get('Listado', 'Dashboard_Admin::listaProductos');
+$routes->get('EdicionProductos', 'Dashboard_Admin::edicionProductos');
+$routes->get('CategoriaProductos', 'Dashboard_Admin::categoriaProductos');
 // ... otras rutas de admin
 
 
-// ==============================================1
+// ==============================================
 // RUTAS COMUNES AUTENTICADAS (cualquier perfil)
 // ==============================================
-
-
+// Rutas para CRUD de productos ARREGLAR ESTAS RUTAS
+$routes->get('producto/editar/(:num)', 'ProductoController::editar/$1');
+$routes->post('producto/actualizar/(:num)', 'ProductoController::actualizar/$1');
+$routes->get('producto/crear', 'ProductoController::crearproducto');
+$routes->post('producto/store', 'ProductoController::store');
 
 
 

@@ -15,6 +15,7 @@
   --dorado: #C8A97E;        /* Color de acento premium (botones, bordes) */
   --texto-oscuro: #2E211B;  /* Texto legible sobre fondos claros */
   --texto-claro: #EFEBE9;   /* Texto legible sobre fondos oscuros */
+  --azul-facha: #0f1024;
 }
 
 /* ===== ESTILOS GENERALES ===== */
@@ -1224,3 +1225,169 @@ form label {
         transition: color 0.2s ease;
     }
 /* ===== FIN ESTILOS FORMULARIO INICIO SESION===== */
+
+/* ===== INICIO ESTILOS DEL NAVEGADOR DEL ADMINISTRADOR ===== */
+
+/* ===== NAVBAR ADMIN ===== */
+/* ===== PALETA DE COLORES ADMIN ===== */
+:root {
+    --azul-admin: #204d4b;
+    --azul-admin-claro: #11323f;
+    --azul-admin-hover: #10454d;
+    --azul-admin-gradient: linear-gradient(135deg, #033044 0%, #043649 100%);
+    --texto-admin: #e8eaf6;
+    --texto-admin-hover: #ffffff;
+}
+
+/* ===== NAVBAR ADMIN ===== */
+.bg-gradient-admin {
+    background: var(--azul-admin-gradient) !important;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+    color: var(--texto-admin) !important;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: var(--texto-admin-hover) !important;
+    transform: translateX(3px);
+}
+
+.admin-nav-link {
+    color: var(--texto-admin) !important;
+    font-weight: 500;
+    padding: 0.6rem 1rem !important;
+    margin: 0 0.15rem !important;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.admin-nav-link:hover, .admin-nav-link:focus {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    color: var(--texto-admin-hover) !important;
+    transform: translateY(-2px);
+}
+
+.admin-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--texto-admin-hover);
+    transition: all 0.3s ease;
+}
+
+.admin-nav-link:hover::after {
+    width: 70%;
+    left: 15%;
+}
+
+/* Dropdown Menu */
+.dropdown-menu-admin {
+    background-color: var(--azul-admin-claro);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 0;
+    margin-top: 8px !important;
+}
+
+.dropdown-item {
+    color: var(--texto-admin);
+    padding: 0.5rem 1.5rem;
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+}
+
+.dropdown-item:hover {
+    background-color: var(--azul-admin-hover);
+    color: var(--texto-admin-hover);
+    transform: translateX(5px);
+}
+
+.dropdown-divider {
+    border-color: rgba(255, 255, 255, 0.1);
+    margin: 0.5rem 0;
+}
+
+/* Botón de Logout */
+.logout-btn {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border-left: 2px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.logout-btn:hover {
+    background-color: rgba(255, 0, 0, 0.2) !important;
+}
+
+/* Efecto activo */
+.nav-link.active {
+    background-color: rgba(255, 255, 255, 0.25) !important;
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        padding: 1rem 0;
+        background-color: var(--azul-admin);
+        border-radius: 0 0 12px 12px;
+    }
+    
+    .admin-nav-link {
+        margin: 0.25rem 0 !important;
+        padding: 0.75rem 1.5rem !important;
+    }
+    
+    .dropdown-menu-admin {
+        margin-left: 1.5rem;
+        width: calc(100% - 3rem);
+        background-color: var(--azul-admin-claro);
+    }
+    
+    .logout-btn {
+        border-left: none !important;
+        margin-top: 0.5rem !important;
+    }
+
+  }
+/* ===== FIN ESTILOS DEL NAVEGADOR DEL ADMINISTRADOR ===== */
+
+/* ===== INICIO ESTILOS ALTA DE PRODUCTOS DEL ADMINISTRADOR ===== */
+/* Fondo con degradado para el encabezado de la tarjeta */
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #3E2723 0%, #5D4037 100%);
+}
+
+/* Estilos para el área de subida de imágenes tipo "dropzone" */
+.dropzone {
+    border: 2px dashed #D7CCC8; /* Borde punteado gris claro */
+    transition: all 0.3s ease;  /* Suaviza los cambios visuales */
+    cursor: pointer;           /* Muestra el cursor como mano */
+}
+
+/* Estilo al pasar el mouse por encima del área de subida */
+.dropzone:hover {
+    border-color: #C8A97E;     /* Cambia color del borde */
+    background-color: rgba(200, 169, 126, 0.05); /* Fondo apenas visible */
+}
+
+/* Estilos para inputs y selects grandes */
+.form-control-lg,
+.form-select-lg {
+    padding: 0.75rem 1rem;     /* Espaciado interno generoso */
+    border-radius: 0.5rem;     /* Bordes redondeados */
+}
+
+/* Estilo para la tarjeta */
+.card {
+    border-radius: 1rem;       /* Bordes redondeados grandes */
+    overflow: hidden;          /* Oculta contenido desbordado */
+}
