@@ -10,7 +10,7 @@
         <div class="container py-5">
         
         <!-- Título centrado y con margen inferior -->
-        <h2 class="mb-4 text-center">Catálogo de Productos</h2>
+        <h2 class="mb-4 text-center" >Catálogo de Productos</h2>
         
         <!-- Grid de Bootstrap: 1 columna en pantallas chicas, 3 en pantallas medianas en adelante -->
         <div class="row row-cols-1 row-cols-md-3 g-4">

@@ -24,14 +24,14 @@ body {
   margin: 0;                          /* Elimina márgenes predeterminados */
   padding: 0;                         /* Elimina rellenos predeterminados */
   padding-top: 70px;                  /* Espacio para navbar fija */
-  background-color: var(--marron-claro); /* Fondo principal */
+  background-color: var(--crema); /* Fondo principal */
   color: var(--texto-claro);          /* Color de texto predeterminado */
   line-height: 1.6;                   /* Espaciado entre líneas para legibilidad */
 }
 
 /* ===== OPCIONES DE FONDO ===== */
 .fondo-elegante {
-  background: linear-gradient(135deg, var(--marron-medio) 0%, var(--dorado) 100%); /* Degradado diagonal suave */
+  background: linear-gradient(135deg, var(--beige) 0%, var(--dorado) 100%); /* Degradado diagonal suave */
   color: var(--texto-claro); /* Asegura contraste de texto */
 }
 
@@ -89,7 +89,7 @@ body {
     
     /* Dropdown */
     .dropdown-menu {
-      
+        
         border: none;
         box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         border-radius: 8px;

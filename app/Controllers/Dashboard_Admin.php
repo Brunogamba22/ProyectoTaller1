@@ -33,7 +33,13 @@ class Dashboard_Admin extends BaseController
 
      public function edicionProductos()
     {   
-        $data['titulo'] = 'edición de Productos';
+        $categoriaModel = new \App\Models\Categoria_model();
+    
+        $data = [
+            'titulo' => 'Edición de Productos',
+            'categorias' => $categoriaModel->getCategorias(),
+            'producto' => [] // Array vacío para evitar errores en la vista
+        ];
         // Aquí podrías cargar los datos de los productos para edición desde la base de datos
         echo view('front/head_view', $data);
         echo view('back/CRUD_Productos/Edit');

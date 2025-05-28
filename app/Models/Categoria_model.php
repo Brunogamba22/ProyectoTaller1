@@ -8,10 +8,17 @@ class Categoria_model extends Model
     protected $primaryKey = 'id';
     protected $allowedFields = ['nombre'];
 
+<<<<<<< HEAD
     public function getCategoria()
     {   
         return $this->findAll();
 
+=======
+    // Método para obtener todas las categorías
+    public function getCategorias()
+    {
+        return $this->findAll();
+>>>>>>> ramaJonathan
     }
 }
 
