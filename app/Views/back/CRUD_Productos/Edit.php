@@ -17,16 +17,11 @@
                         <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
                     <?php endif; ?>
 
-<<<<<<< HEAD
-                    <!-- Formulario de edición -->
-                    <form action="<?= base_url('modifica/' .$old['id']);?>" method="post" enctype="multipart/form-data">
-=======
                     <!-- Acción del formulario: actualizar si hay ID, o crear nuevo -->
                     <?php
                         $formAction = isset($producto['id']) ? base_url('producto/actualizar/' . $producto['id']) : base_url('producto/store');
                     ?>
                     <form action="<?= $formAction ?>" method="post" enctype="multipart/form-data">
->>>>>>> ramaJonathan
 
                         <!-- Nombre -->
                         <div class="mb-3">

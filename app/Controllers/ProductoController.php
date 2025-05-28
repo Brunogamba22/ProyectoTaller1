@@ -118,26 +118,12 @@ class ProductoController extends Controller
     public function editar($id = null)
     {
         $productoModel = new Producto_model();
-<<<<<<< HEAD
-        $data ['old'] = $productoModel-> where('id', $id)-> firt();
-=======
->>>>>>> ramaJonathan
         $categoriaModel = new Categoria_model();
-        $data['categorias']= $categoriaModel-> getCategoria();
-        //$producto = $productoModel->find($id);
-        //$categorias = $categoriaModel->getCategoria();
+        
+        $producto = $productoModel->find($id);
+        $categorias = $categoriaModel->getCategoria();
 
         // Verifica que el producto exista
-<<<<<<< HEAD
-        if (!$data ['old']) {
-            throw new \CodeIgniter\Exceptions\PageNotFoundException('Producto no encontrado');
-        }
-
-        //$data = [
-       //     'producto' => $producto,
-        //    'categorias' => $categorias
-        //];
-=======
         
         if (!$producto) {
             // Mejor manejo del error
@@ -153,7 +139,6 @@ class ProductoController extends Controller
         ];
 
 
->>>>>>> ramaJonathan
         
         //echo view('back/CRUD_Productos/Edit', $data);
     }
