@@ -14,7 +14,7 @@
                     <?php endif; ?>
 
                     <!-- Formulario de edición -->
-                    <form action="<?= base_url('producto/actualizar/' . $producto['id']) ?>" method="post" enctype="multipart/form-data">
+                    <form action="<?= base_url('modifica/' .$old['id']);?>" method="post" enctype="multipart/form-data">
 
                         <!-- Campo: Nombre del producto -->
                         <div class="mb-3">

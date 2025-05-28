@@ -7,4 +7,11 @@ class Categoria_model extends Model
     protected $table = 'categorias';
     protected $primaryKey = 'id';
     protected $allowedFields = ['nombre'];
+
+    public function getCategoria()
+    {   
+        return $this->findAll();
+
+    }
 }
+

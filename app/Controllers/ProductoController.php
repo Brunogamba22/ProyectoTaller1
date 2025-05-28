@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 // Importamos los modelos necesarios
-use App\Models\Producto_Model;
+use App\Models\Producto_model;
 use App\Models\Usuario_Model;
 use App\Models\Ventas_cabecera_model;
 use App\Models\Ventas_detalle_model;
@@ -114,23 +114,24 @@ class Producto_controller extends Controller
     }
 
         // 🟡 Muestra el formulario para editar un producto existente
-    public function editar($id)
+    public function editar($id = null)
     {
-        $productoModel = new Producto_Model();
+        $productoModel = new Producto_model();
+        $data ['old'] = $productoModel-> where('id', $id)-> firt();
         $categoriaModel = new Categoria_model();
-
-        $producto = $productoModel->find($id);
-        $categorias = $categoriaModel->getCategorias();
+        $data['categorias']= $categoriaModel-> getCategoria();
+        //$producto = $productoModel->find($id);
+        //$categorias = $categoriaModel->getCategoria();
 
         // Verifica que el producto exista
-        if (!$producto) {
+        if (!$data ['old']) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Producto no encontrado');
         }
 
-        $data = [
-            'producto' => $producto,
-            'categorias' => $categorias
-        ];
+        //$data = [
+       //     'producto' => $producto,
+        //    'categorias' => $categorias
+        //];
         
         echo view('back/CRUD_Productos/Edit', $data);
     }
