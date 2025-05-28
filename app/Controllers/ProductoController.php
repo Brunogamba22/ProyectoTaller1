@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 // Importamos los modelos necesarios
-use App\Models\Producto_Model;
+use App\Models\Producto_model;
 use App\Models\Usuario_Model;
 use App\Models\Ventas_cabecera_model;
 use App\Models\Ventas_detalle_model;
@@ -11,7 +11,7 @@ use App\Models\categoria_model;
 
 use CodeIgniter\Controller;
 
-class Producto_controller extends Controller
+class ProductoController extends Controller
 {
     public function __construct()
     {
@@ -21,10 +21,11 @@ class Producto_controller extends Controller
         $session = session();
     }
 
+
     // 🟢 Muestra la lista de productos
     public function index()
     {
-        $productoModel = new Producto_Model();
+        $productoModel = new Producto_model();
 
         // Obtener todos los productos desde el modelo
         $data['producto'] = $productoModel->getProductoAll(); // Esta función debe estar en el modelo
@@ -41,10 +42,10 @@ class Producto_controller extends Controller
     // 🟠 Muestra el formulario de alta de producto
     public function crearproducto()
     {
-        $categoriasModel = new categoria_model();
+        $categoriasModel = new Categoria_model();
         $data['categorias'] = $categoriasModel->getCategorias(); // Obtener categorías desde BD
 
-        $productoModel = new Producto_Model();
+        $productoModel = new Producto_model();
         $data['producto'] = $productoModel->getProductoAll();
 
         echo view('back/CRUD_Productos/AltaDeProductos', $data);
@@ -64,11 +65,11 @@ class Producto_controller extends Controller
             'imagen'      => 'uploaded[imagen]|mime_in[imagen,image/jpg,image/jpeg,image/png]'
         ]);
 
-        $productoModel = new Producto_Model();
+        $productoModel = new Producto_model();
 
         // ❌ Si falla la validación
         if (!$input) {
-            $categoriaModel = new categoria_model();
+            $categoriaModel = new Categoria_model();
             $data['categorias'] = $categoriaModel->getCategorias();
             $data['validation'] = $this->validator;
 
@@ -116,29 +117,36 @@ class Producto_controller extends Controller
         // 🟡 Muestra el formulario para editar un producto existente
     public function editar($id)
     {
-        $productoModel = new Producto_Model();
+        $productoModel = new Producto_model();
         $categoriaModel = new Categoria_model();
 
         $producto = $productoModel->find($id);
         $categorias = $categoriaModel->getCategorias();
 
         // Verifica que el producto exista
+        
         if (!$producto) {
-            throw new \CodeIgniter\Exceptions\PageNotFoundException('Producto no encontrado');
+            // Mejor manejo del error
+                session()->setFlashdata('error', 'Producto no encontrado');
+                return redirect()->to(base_url('Listado'));
         }
 
         $data = [
+            'titulo' => 'Editar Producto',
             'producto' => $producto,
-            'categorias' => $categorias
+            'categorias' => $categorias,
+            'validation' => session()->getFlashdata('validation') // Para mantener errores de validación
         ];
+
+
         
-        echo view('back/CRUD_Productos/Edit', $data);
+        //echo view('back/CRUD_Productos/Edit', $data);
     }
 
     // 🔵 Procesa el formulario de edición y actualiza el producto
     public function actualizar($id)
     {
-        $productoModel = new Producto_Model();
+        $productoModel = new Producto_model();
 
         // Validaciones mínimas necesarias
         $rules = [
@@ -162,7 +170,7 @@ class Producto_controller extends Controller
 
             // También pasamos el producto actual y las categorías
             $data['producto'] = $productoModel->find($id);
-            $categoriaModel = new categoria_model();
+            $categoriaModel = new Categoria_model();
             $data['categorias'] = $categoriaModel->getCategorias();
 
             echo view('back/CRUD_Productos/Edit', $data);
@@ -196,5 +204,8 @@ class Producto_controller extends Controller
         // Redirigimos al listado
         return redirect()->to(base_url('admin/productos'));
     }
+
+   
+
 
 }

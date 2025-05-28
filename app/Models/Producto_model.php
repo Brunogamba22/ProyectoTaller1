@@ -15,4 +15,12 @@ class Producto_model extends Model
         'categoria_id',
         'activo'
     ];
+
+    public function getProductosConCategorias()
+    {
+    return $this->db->table('productos')
+        ->join('categorias', 'categorias.id = productos.categoria_id')
+        ->get()
+        ->getResultArray();
+    }
 }

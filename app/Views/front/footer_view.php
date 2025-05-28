@@ -56,14 +56,9 @@
   </div>
 </footer>
 
-<!-- Script de Bootstrap: necesario para que funcione el carrusel y otros componentes -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Scripts JS necesarios -->
 
-<!-- Script para mostrar automáticamente el año actual en el footer -->
-<script>
-  // Se obtiene el elemento con ID "year" y se actualiza su contenido
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+<script src="<?= base_url('assets/js/miCodigo.js') ?>"></script>
 
 </body>
 </html>
