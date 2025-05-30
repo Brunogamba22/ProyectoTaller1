@@ -18,7 +18,7 @@
                 <!-- === Producto  Buzo1 === -->
             <div class="col"><!-- Una columna del grid -->
             <div class="card h-100"><!-- Tarjeta que ocupa toda la altura disponible -->
-                <img src="assets/img/Buzos/Buzo1.webp" class="card-img-top img-producto" alt="Buzo 1">
+                <img src="assets/img/Buzos/Buzo1_CanguroNegro.webp" class="card-img-top img-producto" alt="Buzo 1">
                 <div class="card-body">
                 <h5 class="card-title">Buzo Canguro Negro</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
@@ -35,7 +35,7 @@
             <!-- === Producto  Buzo2=== -->
             <div class="col">
             <div class="card h-100">
-                <img src="assets/img/Buzos/Buzo2.webp" class="card-img-top img-producto" alt="buzo 2">
+                <img src="assets/img/Buzos/Buzo2_CanguroMarron.webp" class="card-img-top img-producto" alt="buzo 2">
                 <div class="card-body">
                 <h5 class="card-title">Buzo Canguro Marron</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
@@ -51,7 +51,7 @@
             <!-- === Producto  Buzo3=== -->
             <div class="col">
             <div class="card h-100">
-                <img src="assets/img/Buzos/Buzo3.webp" class="card-img-top img-producto" alt="buzo 3">
+                <img src="assets/img/Buzos/Buzo3_CuelloRedondo.webp" class="card-img-top img-producto" alt="buzo 3">
                 <div class="card-body">
                 <h5 class="card-title">Buzo Cuello Redondo</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
@@ -67,9 +67,9 @@
             <!-- === Producto  Buzo4=== -->
             <div class="col">
             <div class="card h-100">
-                <img src="assets/img/Buzos/Buzo4.webp" class="card-img-top img-producto" alt="buzo 4">
+                <img src="assets/img/Buzos/Buzo4_CanguroPalmera.webp" class="card-img-top img-producto" alt="buzo 4">
                 <div class="card-body">
-                <h5 class="card-title">Buzo Canguro Negro</h5>
+                <h5 class="card-title">Buzo Canguro Negro Palmera</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
                 <p class="producto-info"><strong>Precio:</strong> $3900</p>
                 <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
@@ -83,7 +83,7 @@
             <!-- === Producto  Buzo5=== -->
             <div class="col">
             <div class="card h-100">
-                <img src="assets/img/Buzos/Buzo5.webp" class="card-img-top img-producto" alt="buzo 5">
+                <img src="assets/img/Buzos/Buzo5_CanguroBlanco.webp" class="card-img-top img-producto" alt="buzo 5">
                 <div class="card-body">
                 <h5 class="card-title">Buzo Canguro Blanco</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
@@ -99,9 +99,9 @@
             <!-- === Producto  Buzo6=== -->
             <div class="col">
             <div class="card h-100">
-                <img src="assets/img/Buzos/Buzo6.webp" class="card-img-top img-producto" alt="buzo 6">
+                <img src="assets/img/Buzos/Buzo6_CanguroBanvak.webp" class="card-img-top img-producto" alt="buzo 6">
                 <div class="card-body">
-                <h5 class="card-title">Buzo Canguro Blanco</h5>
+                <h5 class="card-title">Buzo Canguro Banvak</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
                 <p class="producto-info"><strong>Precio:</strong> $3900</p>
                 <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>

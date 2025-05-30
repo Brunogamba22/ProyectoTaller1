@@ -19,7 +19,7 @@
             <!-- === Camisa 1 === -->
         <div class="col">
         <div class="card h-100">
-            <img src="assets/img/Camisas/Camisa1.png" alt="Camisa Mocha Brown" class="card-img-top">
+            <img src="assets/img/Camisas/CamisaMochaBrown.png" alt="Camisa Mocha Brown" class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title">Camisa Mocha Brown</h5>
                 <p class="card-text">Camisa de algodón suave con corte regular. Ideal para uso casual o semiformal.</p>
@@ -35,7 +35,7 @@
         <!-- === Camisa 2 === -->
         <div class="col">
         <div class="card h-100">
-            <img src="assets/img/Camisas/Camisa2.png" alt="Camisa Mao Camel" class="card-img-top">
+            <img src="assets/img/Camisas/Camisa2_MaoCamel.png" alt="Camisa Mao Camel" class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title">Camisa Mao Camel</h5>
                 <p class="card-text">Camisa estilo mao en tono camel, versátil y elegante. Tela liviana ideal para media estación.</p>
@@ -51,7 +51,7 @@
         <!-- === Camisa 3 === -->
         <div class="col">
         <div class="card h-100">
-            <img src="assets/img/Camisas/Camisa3.png" alt="Camisa Rayada Bail Out" class="card-img-top">
+            <img src="assets/img/Camisas/Camisa3_VerdeCorta.png" alt="Camisa Rayada Bail Out" class="card-img-top">
             <div class="card-body">
             <h5 class="card-title">Camisa Rayada Bail Out</h5>
             <p class="card-text">Diseño a rayas verticales con botones ocultos. Un clásico moderno que no pasa de moda.</p>
@@ -67,7 +67,7 @@
         <!-- === Camisa 4 === -->
         <div class="col">
         <div class="card h-100">
-            <img src="assets/img/Camisas/Camisa4.png" alt="" class="card-img-top">
+            <img src="assets/img/Camisas/Camisa4_RayadaBailOut.png" alt="" class="card-img-top">
             <div class="card-body">
             <h5 class="card-title">Camisa Rayada Bail Out</h5>
             <p class="card-text">Camisa fresca y colorida, perfecta para destacar con estilo en cualquier ocasión.</p>
@@ -83,7 +83,7 @@
         <!-- === Camisa 5 === -->
         <div class="col">
         <div class="card h-100">
-            <img src="assets/img/Camisas/Camisa5.png" alt="Camisa Tube Riders Black" class="card-img-top">
+            <img src="assets/img/Camisas/Camisa5_TubeRidersBlack.png" alt="Camisa Tube Riders Black" class="card-img-top">
             <div class="card-body">
             <h5 class="card-title">Camisa Tube Riders Black</h5>
             <p class="card-text">Look urbano con detalles minimalistas. Color negro profundo ideal para combinar.</p>
@@ -99,7 +99,7 @@
         <!-- === Camisa 6 === -->
         <div class="col">
         <div class="card h-100">
-            <img src="assets/img/Camisas/Camisa6.png" alt="Camisa Corderoy Folcklore Mugo" class="card-img-top">
+            <img src="assets/img/Camisas/Camisa6_CorderoyFolckloreMugo.png" alt="Camisa Corderoy Folcklore Mugo" class="card-img-top">
             <div class="card-body">
             <h5 class="card-title">Camisa Corderoy Folcklore Mugo</h5>
             <p class="card-text">Camisa de corderoy grueso, ideal para otoño-invierno. Estilo folclórico moderno.</p>
@@ -115,7 +115,7 @@
         <!-- === Camisa 7 === -->
         <div class="col">
         <div class="card h-100">
-            <img src="assets/img/Camisas/Camisa7.png" alt="Camisa Riptide Vibes White" class="card-img-top">
+            <img src="assets/img/Camisas/Camisa7_RiptideVibesWhite.png" alt="Camisa Riptide Vibes White" class="card-img-top">
             <div class="card-body">
             <h5 class="card-title">Camisa Riptide Vibes White</h5>
             <p class="card-text">Camisa blanca con detalles surferos. Fresca y liviana, ideal para el verano.</p>
@@ -131,7 +131,7 @@
             <!-- === Producto 8 === -->
             <div class="col">
             <div class="card h-100">
-                <img src="assets/img/Camisas/Camisa8.png" class="card-img-top" alt="Remera 2">
+                <img src="assets/img/Camisas/Camisa8_MaoTerracota.png" class="card-img-top" alt="Remera 2">
                 <div class="card-body">
                 <h5 class="card-title">Camisa Mao Terracota</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>

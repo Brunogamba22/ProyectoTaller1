@@ -21,7 +21,7 @@
             <div class="card h-100"> <!-- Tarjeta que ocupa toda la altura disponible -->
                 
                 <!-- Imagen del producto -->
-                <img src="assets/img/Remeras/Remera1.webp" class="card-img-top img-producto" alt="remera 1">
+                <img src="assets/img/Remeras/RemeraNegraOversize.webp" class="card-img-top img-producto" alt="Remera Negra Oversize">
                 
                 <!-- Cuerpo de la tarjeta con la información del producto -->
                 <div class="card-body">
@@ -42,7 +42,7 @@
             <!-- === Producto 2 Remera2=== -->
             <div class="col">
             <div class="card h-100">
-                <img src="assets/img/Remeras/Remera2.webp" class="card-img-top img-producto" alt="Remera 2">
+                <img src="assets/img/Remeras/RemeraGrisOscuroOversize.webp" class="card-img-top img-producto" alt="Remera Gris Oscuro Oversize">
                 <div class="card-body">
                 <h5 class="card-title">Remera Gris Oscuro Oversize</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
@@ -59,23 +59,7 @@
             <!-- === Producto 3 remera3=== -->
             <div class="col">
             <div class="card h-100">
-                <img src="assets/img/Remeras/Remera4.webp" class="card-img-top img-producto" alt="Remera 3">
-                <div class="card-body">
-                <h5 class="card-title">Remera Beige Oversize</h5>
-                <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
-                <p class="producto-info"><strong>Precio:</strong> $3900</p>
-                <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
-                </div>
-                <div class="card-footer text-center">
-                <button class="btn btn-dorado">Agregar al carrito</button>
-                </div>
-            </div>
-            </div>
-
-            <!-- === Producto 4 remera4=== -->
-            <div class="col">
-                <div class="card h-100">
-                <img src="assets/img/Remeras/Remera4.webp" class="card-img-top img-producto" alt="Remera 4">
+                <img src="assets/img/Remeras/RemeraBeigeOversize.webp" class="card-img-top img-producto" alt="Remera Beige Oversize">
                 <div class="card-body">
                 <h5 class="card-title">Remera Beige Oversize</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
@@ -91,9 +75,9 @@
             <!-- === Producto 5 remera5=== -->
             <div class="col">
             <div class="card h-100">
-                <img src="assets/img/Remeras/Remera5.webp" class="card-img-top img-producto" alt="Remera 5">
+                <img src="assets/img/Remeras/RemeraBlancaSolOversize.webp" class="card-img-top img-producto" alt="Remera Blanca Sol Oversize">
                 <div class="card-body">
-                <h5 class="card-title">Remera Blanca Oversize</h5>
+                <h5 class="card-title">Remera Blanca Sol Oversize</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
                 <p class="producto-info"><strong>Precio:</strong> $3900</p>
                 <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>
@@ -107,7 +91,7 @@
             <!-- === Producto 6 remera6=== -->
             <div class="col">
             <div class="card h-100">
-                <img src="assets/img/Remeras/Remera6.webp" class="card-img-top img-producto" alt="Remera 6">
+                <img src="assets/img/Remeras/RemeraNegraOversize1.webp" class="card-img-top img-producto" alt="Remera Negra Oversize 1">
                 <div class="card-body">
                 <h5 class="card-title">Remera Negra Oversize</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
@@ -123,7 +107,7 @@
             <!-- === Producto 7 remera7=== -->
             <div class="col">
             <div class="card h-100">
-                <img src="assets/img/Remeras/Remera7.webp" class="card-img-top img-producto" alt="Remera 7">
+                <img src="assets/img/Remeras/RemeraArenaOversize.webp" class="card-img-top img-producto" alt="Remera Arena Oversize">
                 <div class="card-body">
                 <h5 class="card-title">Remera Arena Oversize</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
@@ -139,7 +123,7 @@
             <!-- === Producto 8 remera8=== -->
             <div class="col">
             <div class="card h-100">
-                <img src="assets/img/Remeras/Remera8.webp" class="card-img-top img-producto" alt="Remera 8">
+                <img src="assets/img/Remeras/RemeraTotalWhite.webp" class="card-img-top img-producto" alt="Remera Total White">
                 <div class="card-body">
                 <h5 class="card-title">Remera Total White</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
@@ -155,7 +139,7 @@
             <!-- === Producto 9 remera9=== -->
             <div class="col">
             <div class="card h-100">
-                <img src="assets/img/Remeras/Remera9.webp" class="card-img-top img-producto" alt="Remera 9">
+                <img src="assets/img/Remeras/RemeraVerdeMilitar.webp" class="card-img-top img-producto" alt="Remera Verde Militar">
                 <div class="card-body">
                 <h5 class="card-title">Remera Verde Militar</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
@@ -171,9 +155,9 @@
             <!-- === Producto 10 remera10=== -->
             <div class="col">
             <div class="card h-100">
-                <img src="assets/img/Remeras/Remera10.jpg" class="card-img-top img-producto" alt="Remera 10">
+                <img src="assets/img/Remeras/RemeraNaranjaMecanica.jpg" class="card-img-top img-producto" alt="Remera Naranja Mecanica">
                 <div class="card-body">
-                <h5 class="card-title">Remera Rock and roll</h5>
+                <h5 class="card-title">Remera Naranja Mecanica</h5>
                 <p class="card-text">Ideal para combinar con cualquier outfit. Suave al tacto.</p>
                 <p class="producto-info"><strong>Precio:</strong> $3900</p>
                 <p class="producto-info"><strong>Stock disponible:</strong> 20 unidades</p>

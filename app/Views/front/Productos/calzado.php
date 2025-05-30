@@ -18,7 +18,7 @@
                     <!-- === Producto 1 === -->
             <div class="col">
                 <div class="card h-100">
-                    <img src="assets/img/Zapatillas/Zapa1.avif" alt="Zapatilla Skate 1" class="card-img-top">
+                    <img src="assets/img/Calzado/ZapatillaClassicBlack.avif" alt="Zapatilla Classic Black" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">Zapatilla Classic Black</h5>
                         <p class="card-text">Zapatillas de estilo skatewear con un diseño clásico en negro. Suela gruesa y material duradero para mayor resistencia y comodidad.</p>
@@ -34,7 +34,7 @@
             <!-- === Producto 2 === -->
             <div class="col">
                 <div class="card h-100">
-                    <img src="assets/img/Zapatillas/Zapatilla2.jpg" alt="Zapatilla Skate 2" class="card-img-top">
+                    <img src="assets/img/Calzado/SkateWhite&Black.jpg" alt="Skate White & Black" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">Zapatilla Skate White & Black</h5>
                         <p class="card-text">Ideales para el estilo urbano. Comodidad garantizada para tus días de skate o casuales.</p>
@@ -50,7 +50,7 @@
             <!-- === Producto 3 === -->
             <div class="col">
                 <div class="card h-100">
-                    <img src="assets/img/Zapatillas/Zapatilla3.jpg" alt="Zapatilla Skate 3" class="card-img-top">
+                    <img src="assets/img/Calzado/SkateLowTopBlack.jpg" alt="Skate Low Top Black" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">Zapatilla Skate Low Top Black</h5>
                         <p class="card-text">Zapatilla low top, con detalles que aportan un toque moderno. Perfectas para un look skate o urbano.</p>
@@ -66,7 +66,7 @@
             <!-- === Producto 4 === -->
             <div class="col">
                 <div class="card h-100">
-                    <img src="assets/img/Zapatillas/Zapatilla4.jpg" alt="Zapatilla Skate 4" class="card-img-top">
+                    <img src="assets/img/Calzado/SkateEdition.jpg" alt="Skate Edition" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">Zapatilla Skate Edition</h5>
                         <p class="card-text">Zapatilla beige con detalles en azul, ideal para quienes buscan un estilo skate sin perder la elegancia.</p>
@@ -82,7 +82,7 @@
             <!-- === Producto 5 === -->
             <div class="col">
                 <div class="card h-100">
-                    <img src="assets/img/Zapatillas/Zapatilla5.jpg" alt="Zapatilla Skate 5" class="card-img-top">
+                    <img src="assets/img/Calzado/SkateDarkCharcoal.jpg" alt="Zapatilla Skate Dark Charcoal" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">Zapatilla Skate Dark Charcoal</h5>
                         <p class="card-text">Zapatilla de estilo skate con tonos oscuros. Resistente, perfecta para cualquier aventura urbana.</p>
@@ -98,7 +98,7 @@
             <!-- === Producto 6 === -->
             <div class="col">
                 <div class="card h-100">
-                    <img src="assets/img/Zapatillas/Zapatilla6.webp" alt="Zapatilla Skate 6" class="card-img-top">
+                    <img src="assets/img/Calzado/SkateVibe.webp" alt="Zapatilla Skate Vibe" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">Zapatilla Skate Vibe</h5>
                         <p class="card-text">Zapatilla de skatewear en un vibrante . Cómodas y con suela antideslizante, perfectas para tus actividades diarias.</p>
@@ -114,7 +114,7 @@
             <!-- === Producto 7 === -->
             <div class="col">
                 <div class="card h-100">
-                    <img src="assets/img/Zapatillas/Zapatilla7.webp" alt="Zapatilla Jordan" class="card-img-top">
+                    <img src="assets/img/Calzado/JordanRetro1.webp" alt="Zapatilla Jordan" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">Zapatilla Jordan Retro 1</h5>
                         <p class="card-text">Zapatillas Jordan Retro 1, un clásico de la marca. Con detalles en cuero premium y la icónica silueta, estas zapatillas ofrecen estilo y comodidad.</p>

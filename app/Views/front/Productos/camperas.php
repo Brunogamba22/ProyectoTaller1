@@ -18,7 +18,7 @@
                             <!-- === Campera 1 === -->
                 <div class="col">
                     <div class="card h-100">
-                        <img src="assets/img/Camperas/Campera1.png" alt="Campera Rompevientos Hovy" class="card-img-top">
+                        <img src="assets/img/Camperas/CamperaRompevientosHovy.png" alt="Campera Rompevientos Hovy" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">Campera Rompevientos Hovy</h5>
                             <p class="card-text">Rompevientos liviano ideal para media estación. Resistente al viento y de secado rápido. Estilo urbano y moderno.</p>
@@ -34,7 +34,7 @@
                 <!-- === Campera 2 === -->
                 <div class="col">
                     <div class="card h-100">
-                        <img src="assets/img/Camperas/Campera2.png" alt="Chaqueta Urban Ventura Negra" class="card-img-top">
+                        <img src="assets/img/Camperas/CamperaUrbanVenturaNegra.png" alt="Chaqueta Urban Ventura Negra" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">Chaqueta Urban Ventura Negra</h5>
                             <p class="card-text">Chaqueta negra con estilo urbano. Corte recto y bolsillos frontales. Comodidad y diseño para uso diario.</p>
@@ -50,7 +50,7 @@
                 <!-- === Campera 3 === -->
                 <div class="col">
                     <div class="card h-100">
-                        <img src="assets/img/Camperas/Campera3.png" alt="Campera Rompevientos Irupé Negra" class="card-img-top">
+                        <img src="assets/img/Camperas/CamperaRompevientosIrupeNegra.png" alt="Campera Rompevientos Irupé Negra" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">Campera Rompevientos Irupé Negra</h5>
                             <p class="card-text">Rompevientos color negro, ideal para días frescos y ventosos. Liviana, compacta y fácil de guardar.</p>
@@ -66,7 +66,7 @@
                 <!-- === Campera 4 === -->
                 <div class="col">
                     <div class="card h-100">
-                        <img src="assets/img/Camperas/Campera4.png" alt="Chaqueta Urban Oxnard Negra" class="card-img-top">
+                        <img src="assets/img/Camperas/ChaquetaUrbanOxnardNegra.png" alt="Chaqueta Urban Oxnard Negra" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">Chaqueta Urban Oxnard Negra</h5>
                             <p class="card-text">Chaqueta con diseño minimalista y urbano. Cierre frontal, cuello alto y tela resistente. Ideal para días frescos.</p>
