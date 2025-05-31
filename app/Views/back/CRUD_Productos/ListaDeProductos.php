@@ -26,10 +26,10 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Nombre</th>
-                                    <th>Imagen</th>
+                                   <!-- <th>Imagen</th>-->
                                     <th>Categoría</th>
                                     <th>Precio</th>
-                                    <th>Precio Venta</th>
+                                   <!-- <th>Precio Venta</th>-->
                                     <th>Stock</th>
                                     <th>Acciones</th>
                                 </tr>
@@ -42,7 +42,7 @@
                                             <td><?= $prod['id'] ?></td>
 
                                             <!-- Mostrar nombre del producto -->
-                                            <td><?= esc($prod['nombre_prod']) ?></td>
+                                            <td><?= esc($prod['nombre']) ?></td>
 
                                             <!-- Mostrar imagen del producto (si existe) -->
                                             <td>
@@ -53,7 +53,8 @@
                                             <td><?= esc($prod['categoria']) ?></td>
 
                                             <td>$<?= number_format($prod['precio'], 2) ?></td>
-                                            <td>$<?= number_format($prod['precio_vta'], 2) ?></td>
+                                            <td>$<!--?= number_format($prod['precio_vta'], 2) -->?></td>
+
                                             <td><?= $prod['stock'] ?></td>
 
                                             <!-- Botones de acción: Editar y Eliminar -->

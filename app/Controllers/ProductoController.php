@@ -59,7 +59,7 @@ class ProductoController extends Controller
             'nombre_prod' => 'required|min_length[3]',
             'categoria'   => 'is_not_unique(categorias.id)', // Valida que exista
             'precio'      => 'required|numeric',
-            'precio_vta'  => 'required|numeric',
+            //'precio_vta'  => 'required|numeric',
             'stock'       => 'required',
             'stock_min'   => 'required',
             'imagen'      => 'uploaded[imagen]|mime_in[imagen,image/jpg,image/jpeg,image/png]'
@@ -205,7 +205,20 @@ class ProductoController extends Controller
         return redirect()->to(base_url('admin/productos'));
     }
 
-   
+    //PARA MOSTRAR LA LISTA DE PRODUCTOS EN EL ADMIN
+   public function listaProductosAdmin()
+{
+    $productoModel = new Producto_model();
+
+    // Usamos tu método que ya trae las categorías
+    $data['productos'] = $productoModel->getProductosConCategorias();
+    $data['titulo'] = 'Lista de Productos';
+
+    echo view('front/head_view', $data);
+    echo view('front/nav_view');
+    echo view('back/CRUD_Productos/ListaDeProductos', $data);
+    echo view('front/footer_view');
+}
 
 
 }

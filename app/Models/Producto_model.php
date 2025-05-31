@@ -11,7 +11,6 @@ class Producto_model extends Model
         'descripcion',
         'precio',
         'stock',
-        'imagen',
         'categoria_id',
         'activo'
     ];
