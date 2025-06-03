@@ -23,13 +23,20 @@ class Dashboard_Admin extends BaseController
         echo view('back/dashboard');
     }
 
-    public function listaProductos()
-    {   
-        $data['titulo'] = 'Lista de Productos';
-        echo view('front/head_view', $data);
-        echo view('back/CRUD_Productos/ListaDeProductos');
-        echo view('back/dashboard');
-    }
+       //PARA MOSTRAR LA LISTA DE PRODUCTOS EN EL ADMIN
+   public function listaProductosAdmin()
+{
+    $productoModel = new \App\Models\Producto_model();
+
+    // Usamos tu método que ya trae las categorías
+    $data['producto'] = $productoModel->getProductosConCategorias();
+    $data['titulo'] = 'Lista de Productos';
+
+    echo view('front/head_view', $data);
+    echo view('front/nav_view');
+    echo view('back/CRUD_Productos/ListaDeProductos', $data);
+    echo view('front/footer_view');
+}
 
      public function edicionProductos()
     {   

@@ -11,15 +11,19 @@ class Producto_model extends Model
         'descripcion',
         'precio',
         'stock',
+        'imagen',
         'categoria_id',
         'activo'
     ];
 
-    public function getProductosConCategorias()
-    {
+    // Modificar el método para obtener productos
+    public function getProductosConCategorias() {
     return $this->db->table('productos')
+        ->select('productos.*, categorias.nombre as categoria_nombre')
         ->join('categorias', 'categorias.id = productos.categoria_id')
         ->get()
         ->getResultArray();
-    }
+}
+
+
 }

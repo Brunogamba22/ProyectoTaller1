@@ -51,10 +51,10 @@ $routes->get('miPerfil', 'Home::');
 
 $routes->get('admin', 'Dashboard_Admin::index');
 $routes->get('AltaProductos', 'Dashboard_Admin::altaProductos');
-$routes->get('Listado', 'Dashboard_Admin::listaProductos');
+$routes->get('Listado', 'Dashboard_Admin::listaProductosAdmin');
 $routes->get('EdicionProductos', 'Dashboard_Admin::edicionProductos');
 $routes->get('CategoriaProductos', 'Dashboard_Admin::categoriaProductos');
-// ... otras rutas de admin
+// ... otras rutas de admins
 
 
 // ==============================================

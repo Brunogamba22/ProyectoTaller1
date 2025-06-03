@@ -61,7 +61,7 @@ class ProductoController extends Controller
             'precio'      => 'required|numeric',
             //'precio_vta'  => 'required|numeric',
             'stock'       => 'required',
-            'stock_min'   => 'required',
+            //'stock_min'   => 'required',
             'imagen'      => 'uploaded[imagen]|mime_in[imagen,image/jpg,image/jpeg,image/png]'
         ]);
 
@@ -85,21 +85,21 @@ class ProductoController extends Controller
             // Obtenemos el archivo de imagen
             $img = $this->request->getFile('imagen');
 
-            // Creamos un nombre aleatorio para evitar conflictos
-            $nombre_aleatorio = $img->getRandomName();
+             // Creamos nombre legible en lugar de aleatorio
+            $nombreImagen = strtolower(str_replace(' ', '_', $this->request->getVar('nombre_prod'))) . '.' . $img->guessExtension();
 
-            // Movemos la imagen a la carpeta /assets/uploads
-            $img->move(ROOTPATH . 'assets/uploads', $nombre_aleatorio);
+            // Movemos la imagen a la carpeta específica
+            $img->move(ROOTPATH . 'assets/uploads/productos/', $nombreImagen);
 
             // Armamos el array con los datos del formulario
             $data = [
                 'nombre_prod' => $this->request->getVar('nombre_prod'),
-                'imagen'      => $nombre_aleatorio, // Guardamos solo el nombre del archivo
+                'imagen'      => $nombreImagen, // Guardamos solo el nombre del archivo
                 'categoria_id'=> $this->request->getVar('categoria'),
                 'precio'      => $this->request->getVar('precio'),
-                'precio_vta'  => $this->request->getVar('precio_vta'),
+                //'precio_vta'  => $this->request->getVar('precio_vta'),
                 'stock'       => $this->request->getVar('stock'),
-                'stock_min'   => $this->request->getVar('stock_min'),
+                //'stock_min'   => $this->request->getVar('stock_min'),
                 // 'eliminado' => NO (opcional, si manejás baja lógica)
             ];
 
@@ -182,9 +182,9 @@ class ProductoController extends Controller
             'nombre_prod'  => $this->request->getVar('nombre_prod'),
             'categoria_id' => $this->request->getVar('categoria'),
             'precio'       => $this->request->getVar('precio'),
-            'precio_vta'   => $this->request->getVar('precio_vta'),
+           // 'precio_vta'   => $this->request->getVar('precio_vta'),
             'stock'        => $this->request->getVar('stock'),
-            'stock_min'    => $this->request->getVar('stock_min')
+           // 'stock_min'    => $this->request->getVar('stock_min')
         ];
 
         // Si se subió una imagen nueva, la procesamos
@@ -204,21 +204,6 @@ class ProductoController extends Controller
         // Redirigimos al listado
         return redirect()->to(base_url('admin/productos'));
     }
-
-    //PARA MOSTRAR LA LISTA DE PRODUCTOS EN EL ADMIN
-   public function listaProductosAdmin()
-{
-    $productoModel = new Producto_model();
-
-    // Usamos tu método que ya trae las categorías
-    $data['productos'] = $productoModel->getProductosConCategorias();
-    $data['titulo'] = 'Lista de Productos';
-
-    echo view('front/head_view', $data);
-    echo view('front/nav_view');
-    echo view('back/CRUD_Productos/ListaDeProductos', $data);
-    echo view('front/footer_view');
-}
 
 
 }

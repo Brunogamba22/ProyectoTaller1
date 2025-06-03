@@ -26,7 +26,7 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Nombre</th>
-                                   <!-- <th>Imagen</th>-->
+                                    <th>Imagen</th>
                                     <th>Categoría</th>
                                     <th>Precio</th>
                                    <!-- <th>Precio Venta</th>-->
@@ -44,13 +44,22 @@
                                             <!-- Mostrar nombre del producto -->
                                             <td><?= esc($prod['nombre']) ?></td>
 
-                                            <!-- Mostrar imagen del producto (si existe) -->
+                                            <!-- IMAGEN DE LOS PRODUCTOS -->
                                             <td>
-                                                <img src="<?= base_url('assets/uploads/' . $prod['imagen']) ?>" alt="Imagen" width="60" class="img-thumbnail">
+                                                <?php if (!empty($prod['imagen'])) : ?>
+                                                    <img src="<?= base_url('assets/uploads/productos/' . $prod['imagen']) ?>" 
+                                                        alt="<?= esc($prod['nombre']) ?>" 
+                                                        width="60" 
+                                                        class="img-thumbnail">
+                                                <?php else : ?>
+                                                    <img src="<?= base_url('assets/uploads/default.png') ?>" 
+                                                        width="60"
+                                                        class="img-thumbnail">
+                                                <?php endif; ?>
                                             </td>
 
                                             <!-- Mostrar nombre de categoría (se asume que ya está resuelto como string en el array) -->
-                                            <td><?= esc($prod['categoria']) ?></td>
+                                            <td><?= esc($prod['categoria_nombre']) ?></td>
 
                                             <td>$<?= number_format($prod['precio'], 2) ?></td>
                                             <td>$<!--?= number_format($prod['precio_vta'], 2) -->?></td>
