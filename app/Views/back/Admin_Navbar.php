@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-admin shadow-sm fixed-top">
     <div class="container-fluid px-4">
         <!-- Brand/Logo -->
-        <a class="navbar-brand d-flex align-items-center fw-bold" href="<?= base_url('admin/panel') ?>">
+        <a class="navbar-brand d-flex align-items-center fw-bold" href="<?= base_url('admin') ?>">
             <i class="fas fa-shield-alt me-2"></i>
             <span>Panel Admin UMMA</span>
         </a>

@@ -1391,3 +1391,108 @@ form label {
     border-radius: 1rem;       /* Bordes redondeados grandes */
     overflow: hidden;          /* Oculta contenido desbordado */
 }
+
+
+
+/* ===== INICIO ESTILOS DEL FOOTER ADMIN ===== */
+/* Estilos base */
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Contenedor principal (ajusta el selector según tu estructura) */
+.main-container {
+  flex: 1;
+}
+.umma-admin-footer {
+  background: #1e2430;
+  color: #a8b2c9;
+  padding: 12px 24px;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+  border-top: 1px solid #2a3244;
+  margin-top: auto;
+}
+
+.umma-footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estado del sistema */
+.umma-system-status {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #2a3244;
+  margin-bottom: 10px;
+}
+
+.umma-status-badge {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.umma-status-badge.online {
+  background: #4caf50;
+  box-shadow: 0 0 8px #4caf5060;
+}
+
+.umma-divider {
+  color: #3a4556;
+}
+
+/* Enlaces de soporte */
+.umma-support-links {
+  display: flex;
+  gap: 20px;
+}
+
+.umma-support-links a {
+  color: #a8b2c9;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s;
+}
+
+.umma-support-links a:hover {
+  color: #5d78ff;
+}
+
+.umma-support-links i {
+  font-size: 14px;
+}
+
+/* Información legal */
+.umma-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.umma-legal-info {
+  display: flex;
+  gap: 20px;
+}
+
+.umma-user {
+  color: #d1d6e3;
+}
+
+
+
+/* ===== FIN ESTILOS FOOTER ADMIN===== */
