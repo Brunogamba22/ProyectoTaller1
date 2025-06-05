@@ -17,10 +17,13 @@ class Producto_model extends Model
     ];
 
     // Modificar el método para obtener productos
-    public function getProductosConCategorias() {
-    return $this->db->table('productos')
-        ->select('productos.*, categorias.nombre as categoria_nombre')
-        ->join('categorias', 'categorias.id = productos.categoria_id')
+  public function getProductosConCategorias() {
+    return $this->db->table('productos p')
+        ->select('p.*, categorias.nombre as categoria_nombre, 
+                 SUM(pt.stock) as stock_total')
+        ->join('categorias', 'categorias.id = p.categoria_id')
+        ->join('producto_tallas pt', 'pt.producto_id = p.id', 'left')
+        ->groupBy('p.id')
         ->get()
         ->getResultArray();
 }

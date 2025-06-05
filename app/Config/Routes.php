@@ -64,7 +64,7 @@ $routes->get('CategoriaProductos', 'Dashboard_Admin::categoriaProductos');
 $routes->get('producto/editar/(:num)', 'ProductoController::editar/$1');
 $routes->post('producto/actualizar/(:num)', 'ProductoController::actualizar/$1');
 $routes->get('producto/crear', 'ProductoController::crearproducto');
-$routes->post('producto/store', 'ProductoController::store');
+$routes->post('enviar-prod', 'ProductoController::store');
 
 
 

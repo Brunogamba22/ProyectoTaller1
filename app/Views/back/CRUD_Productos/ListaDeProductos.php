@@ -29,7 +29,6 @@
                                     <th>Imagen</th>
                                     <th>Categoría</th>
                                     <th>Precio</th>
-                                   <!-- <th>Precio Venta</th>-->
                                     <th>Stock</th>
                                     <th>Acciones</th>
                                 </tr>
@@ -40,10 +39,8 @@
                                     <?php foreach ($producto as $prod) : ?>
                                         <tr>
                                             <td><?= $prod['id'] ?></td>
-
-                                            <!-- Mostrar nombre del producto -->
                                             <td><?= esc($prod['nombre']) ?></td>
-
+                                            
                                             <!-- IMAGEN DE LOS PRODUCTOS -->
                                             <td>
                                                 <?php if (!empty($prod['imagen'])) : ?>
@@ -57,40 +54,39 @@
                                                         class="img-thumbnail">
                                                 <?php endif; ?>
                                             </td>
-
-                                            <!-- Mostrar nombre de categoría (se asume que ya está resuelto como string en el array) -->
+                                            
                                             <td><?= esc($prod['categoria_nombre']) ?></td>
-
                                             <td>$<?= number_format($prod['precio'], 2) ?></td>
-                                            <td>$<!--?= number_format($prod['precio_vta'], 2) -->?></td>
-
-                                            <td><?= $prod['stock'] ?></td>
-
-                                            <!-- Botones de acción: Editar y Eliminar -->
+                                            <td><?= isset($prod['stock_total']) ? $prod['stock_total'] : $prod['stock'] ?></td>
+                                            
+                                            <!-- Columna Acciones (ahora arriba de los botones) -->
                                             <td class="text-center">
-                                                <a href="<?= base_url('producto/editar/' . $prod['id']) ?>" class="btn btn-sm btn-warning me-1">
-                                                    <i class="fas fa-edit"></i>
-                                                </a>
-
-                                                <a href="<?= base_url('producto/eliminar/' . $prod['id']) ?>" class="btn btn-sm btn-danger"
-                                                    onclick="return confirm('¿Estás seguro de eliminar este producto?');">
-                                                    <i class="fas fa-trash-alt"></i>
-                                                </a>
+                                                <!-- Contenedor de acciones -->
+                                                <div class="d-flex flex-column align-items-center">
+                                                    <!-- Botones de acciones -->
+                                                    <div class="btn-group">
+                                                        <a href="<?= base_url('producto/editar/' . $prod['id']) ?>" class="btn btn-sm btn-warning me-1">
+                                                            <i class="fas fa-edit"></i> Editar
+                                                        </a>
+                                                        <a href="<?= base_url('producto/eliminar/' . $prod['id']) ?>" class="btn btn-sm btn-danger"
+                                                            onclick="return confirm('¿Estás seguro de eliminar este producto?');">
+                                                            <i class="fas fa-trash-alt"></i> Eliminar
+                                                        </a>
+                                                    </div>
+                                                </div>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>
                                 <?php else : ?>
-                                    <!-- Mensaje si no hay productos -->
                                     <tr>
-                                        <td colspan="8" class="text-center text-muted">No hay productos cargados.</td>
+                                        <td colspan="7" class="text-center text-muted">No hay productos cargados.</td>
                                     </tr>
                                 <?php endif; ?>
                             </tbody>
                         </table>
-                    </div> <!-- end table-responsive -->
-                </div> <!-- end card-body -->
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
-<!-- end container -->

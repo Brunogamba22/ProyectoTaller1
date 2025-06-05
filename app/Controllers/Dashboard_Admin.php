@@ -15,13 +15,19 @@ class Dashboard_Admin extends BaseController
     /*****************************************************************
      * SECCIÓN PRODUCTOS
      *****************************************************************/
-  public function altaProductos()
-    {   
-        $data['titulo'] = 'Alta de Productos';
-        echo view('front/head_view', $data);
-        echo view('back/CRUD_Productos/AltaDeProductos');
-        echo view('back/dashboard');
-    }
+public function altaProductos()
+{   
+    helper('form'); // <-- Agregá esta línea
+
+    $categoriaModel = new \App\Models\Categoria_model();
+    $data['categorias'] = $categoriaModel->getCategorias(); // ⬅️ También faltaba esto
+
+    $data['titulo'] = 'Alta de Productos';
+    echo view('front/head_view', $data);
+    echo view('back/CRUD_Productos/AltaDeProductos', $data); // <-- Pasamos $data correctamente
+    echo view('back/dashboard');
+}
+
 
        //PARA MOSTRAR LA LISTA DE PRODUCTOS EN EL ADMIN
    public function listaProductosAdmin()

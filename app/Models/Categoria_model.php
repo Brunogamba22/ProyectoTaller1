@@ -4,11 +4,11 @@ use CodeIgniter\Model;
 
 class Categoria_model extends Model
 {
-    protected $table = 'categorias';
+    protected $table = 'categorias'; 
     protected $primaryKey = 'id';
     protected $allowedFields = ['nombre'];
+    protected $returnType = 'array'; // Asegura que devuelva arrays
 
-    // Método para obtener todas las categorías
     public function getCategorias()
     {
         return $this->findAll();

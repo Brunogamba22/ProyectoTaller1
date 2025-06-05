@@ -57,7 +57,7 @@ class ProductoController extends Controller
         // Definimos las reglas de validación
         $input = $this->validate([
             'nombre_prod' => 'required|min_length[3]',
-            'categoria'   => 'is_not_unique(categorias.id)', // Valida que exista
+            'categoria'   => 'required|is_not_unique[categorias.id]',
             'precio'      => 'required|numeric',
             //'precio_vta'  => 'required|numeric',
             'stock'       => 'required',
@@ -191,7 +191,7 @@ class ProductoController extends Controller
         $img = $this->request->getFile('imagen');
         if ($img->isValid() && !$img->hasMoved()) {
             $nombre_aleatorio = $img->getRandomName();
-            $img->move(ROOTPATH . 'assets/uploads', $nombre_aleatorio);
+            $img->move(ROOTPATH . 'assets/uploads/productos', $nombre_aleatorio);
             $data['imagen'] = $nombre_aleatorio; // reemplazamos la imagen
         }
 
