@@ -4,7 +4,7 @@
     </div>
 <?php endif; ?>
 
-<div class="login-container" style="background-color:  #C8A97E; min-height: 100vh; display: flex; align-items: center; padding: 2rem 0;">
+<div class="login-container" style="background-color:  #C8A97E; min-height: calc(100vh - 160px); display: flex; align-items: center; padding: 2rem 0;">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-6">
