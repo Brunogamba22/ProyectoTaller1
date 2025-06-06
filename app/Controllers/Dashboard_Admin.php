@@ -2,6 +2,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\Usuario_model;
 
 class Dashboard_Admin extends BaseController
 {
@@ -14,25 +15,66 @@ class Dashboard_Admin extends BaseController
     }
 
     /*****************************************************************
+     * SECCIÓN USUARIOS
+     *****************************************************************/
+
+    public function listarUsuarios(){
+        $usuarioModel = new Usuario_model();
+
+        $data = [
+            'usuarios' => $usuarioModel->orderBy('id_usuarios', 'ASC')->findAll(),
+            'titulo' => 'Lista de Usuarios'
+        ];
+
+        echo view('front/head_view', $data);
+        echo view('back/Admin_Navbar');
+        echo view('back/CRUD_Usuarios/ListaUsuarios', $data);
+        echo view('back/Admin_Footer');
+    }
+
+    public function editar($id = null)
+    {
+        $usuarioModel = new Usuario_model();
+
+        // Verificamos si el ID es válido
+        if ($id === null || !$usuarioModel->find($id)) {
+            return redirect()->to('/listaUsuarios')->with('error', 'Usuario no encontrado');
+        } else {
+            $data = [
+            'usuario' => $usuarioModel->find($id),
+            'titulo' => 'Editar Usuario'
+            ];
+        }
+        echo view('front/head_view', $data);
+            echo view('back/Admin_Navbar');
+            echo view('back/CRUD_Usuarios/EditUsuarios', $data);
+            echo view('back/Admin_Footer');
+
+        
+    }
+
+
+
+    /*****************************************************************
      * SECCIÓN PRODUCTOS
      *****************************************************************/
 
-public function altaProductos()
-{   
-    helper('form'); // <-- Agregá esta línea
+    public function altaProductos()
+    {   
+        helper('form'); // <-- Agregá esta línea
 
-    $categoriaModel = new \App\Models\Categoria_model();
-    $data['categorias'] = $categoriaModel->getCategorias(); // ⬅️ También faltaba esto
+        $categoriaModel = new \App\Models\Categoria_model();
+        $data['categorias'] = $categoriaModel->getCategorias(); // ⬅️ También faltaba esto
 
-    $data['titulo'] = 'Alta de Productos';
-        echo view('front/head_view', $data);
-        echo view('back/CRUD_Productos/AltaDeProductos');
-        echo view('back/Admin_Navbar');
-        echo view('back/Admin_Footer');
-}
+        $data['titulo'] = 'Alta de Productos';
+            echo view('front/head_view', $data);
+            echo view('back/CRUD_Productos/AltaDeProductos');
+            echo view('back/Admin_Navbar');
+            echo view('back/Admin_Footer');
+    }
 
 
-       //PARA MOSTRAR LA LISTA DE PRODUCTOS EN EL ADMIN
+    //PARA MOSTRAR LA LISTA DE PRODUCTOS EN EL ADMIN
     public function listaProductosAdmin()
     {
         $productoModel = new \App\Models\Producto_model();
