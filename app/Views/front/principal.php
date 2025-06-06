@@ -115,7 +115,7 @@
       <a href="<?= base_url('Remeras') ?>" class="text-decoration-none text-dark">
         <div class="card h-100 text-center shadow-sm card-categoria">
           <div class="card-img-container">
-            <img src="assets/img/Remeras/Remera1.webp" class="card-img-top" alt="Remeras">
+            <img src="assets/img/Remeras/RemeraArenaOversize.webp" class="card-img-top" alt="Remeras">
           </div>
           <div class="card-body">
             <h5 class="card-title">Remeras</h5>
@@ -130,7 +130,7 @@
       <a href="<?= base_url('Buzos') ?>" class="text-decoration-none text-dark">
         <div class="card h-100 text-center shadow-sm card-categoria">
           <div class="card-img-container">
-            <img src="assets/img/Buzos/buzo1.webp" class="card-img-top" alt="Buzos">
+            <img src="assets/img/Buzos/Buzo1_CanguroNegro.webp" class="card-img-top" alt="Buzos">
           </div>
           <div class="card-body">
             <h5 class="card-title">Buzos</h5>
@@ -145,7 +145,7 @@
       <a href="<?= base_url('Calzado') ?>" class="text-decoration-none text-dark">
         <div class="card h-100 text-center shadow-sm card-categoria">
           <div class="card-img-container">
-            <img src="assets/img/Zapatillas/Zapatilla5.jpg" class="card-img-top" alt="Zapatillas">
+            <img src="assets/img/Calzado/JordanRetro1.webp" class="card-img-top" alt="Zapatillas">
           </div>
           <div class="card-body">
             <h5 class="card-title">Calzados</h5>
@@ -160,7 +160,7 @@
       <a href="<?= base_url('Camisas') ?>" class="text-decoration-none text-dark">
         <div class="card h-100 text-center shadow-sm card-categoria">
           <div class="card-img-container">
-            <img src="assets/img/Camisas/Camisa8.png" class="card-img-top" alt="Camisas">
+            <img src="assets/img/Camisas/Camisa2_MaoCamel.png" class="card-img-top" alt="Camisas">
           </div>
           <div class="card-body">
             <h5 class="card-title">Camisas</h5>
@@ -175,7 +175,7 @@
       <a href="<?= base_url('Camperas') ?>" class="text-decoration-none text-dark">
         <div class="card h-100 text-center shadow-sm card-categoria">
           <div class="card-img-container">
-            <img src="assets/img/Camperas/Campera1.png" class="card-img-top" alt="Camperas">
+            <img src="assets/img/Camperas/CamperaRompevientosHovy.png" class="card-img-top" alt="Camperas">
           </div>
           <div class="card-body">
             <h5 class="card-title">Camperas</h5>
