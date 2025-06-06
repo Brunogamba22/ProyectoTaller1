@@ -10,6 +10,7 @@ class Producto_model extends Model
         'nombre',
         'descripcion',
         'precio',
+        'precio_vta',
         'stock',
         'imagen',
         'categoria_id',

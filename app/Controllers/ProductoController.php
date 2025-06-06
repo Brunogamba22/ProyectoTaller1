@@ -59,9 +59,8 @@ class ProductoController extends Controller
             'nombre_prod' => 'required|min_length[3]',
             'categoria'   => 'required|is_not_unique[categorias.id]',
             'precio'      => 'required|numeric',
-            //'precio_vta'  => 'required|numeric',
+            'precio_vta'  => 'required|numeric',
             'stock'       => 'required',
-            //'stock_min'   => 'required',
             'imagen'      => 'uploaded[imagen]|mime_in[imagen,image/jpg,image/jpeg,image/png]'
         ]);
 
@@ -97,9 +96,8 @@ class ProductoController extends Controller
                 'imagen'      => $nombreImagen, // Guardamos solo el nombre del archivo
                 'categoria_id'=> $this->request->getVar('categoria'),
                 'precio'      => $this->request->getVar('precio'),
-                //'precio_vta'  => $this->request->getVar('precio_vta'),
-                'stock'       => $this->request->getVar('stock'),
-                //'stock_min'   => $this->request->getVar('stock_min'),
+                'precio_vta'  => $this->request->getVar('precio_vta'),
+                'stock'       => 0 
                 // 'eliminado' => NO (opcional, si manejás baja lógica)
             ];
 
@@ -182,9 +180,9 @@ class ProductoController extends Controller
             'nombre_prod'  => $this->request->getVar('nombre_prod'),
             'categoria_id' => $this->request->getVar('categoria'),
             'precio'       => $this->request->getVar('precio'),
-           // 'precio_vta'   => $this->request->getVar('precio_vta'),
+            'precio_vta'   => $this->request->getVar('precio_vta'),
             'stock'        => $this->request->getVar('stock'),
-           // 'stock_min'    => $this->request->getVar('stock_min')
+            'stock_min'    => $this->request->getVar('stock_min')
         ];
 
         // Si se subió una imagen nueva, la procesamos
