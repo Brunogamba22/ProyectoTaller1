@@ -54,6 +54,13 @@ $routes->get('AltaProductos', 'Dashboard_Admin::altaProductos');
 $routes->get('Listado', 'Dashboard_Admin::listaProductosAdmin');
 $routes->get('EdicionProductos', 'Dashboard_Admin::edicionProductos');
 $routes->get('CategoriaProductos', 'Dashboard_Admin::categoriaProductos');
+
+//Rutas para CRUD de usuarios
+$routes->get('listaUsuarios', 'Dashboard_Admin::listarUsuarios');
+$routes->get('usuarioEdit/(:num)', 'Dashboard_Admin::editar/$1');
+$routes->post('usuarioEliminar', 'Dashboard_Admin::eliminarUsuario');
+$routes->get('usuarioEstado', 'Dashboard_Admin::estadoUsuario');
+
 // ... otras rutas de admins
 
 

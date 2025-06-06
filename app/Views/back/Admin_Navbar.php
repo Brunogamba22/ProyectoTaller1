@@ -20,7 +20,7 @@
                         <i class="fas fa-users-cog me-1"></i> Usuarios
                     </a>
                     <ul class="dropdown-menu dropdown-menu-admin">
-                        <li><a class="dropdown-item" href="<?= base_url('admin/usuarios') ?>">
+                        <li><a class="dropdown-item" href="<?= base_url('listaUsuarios') ?>">
                             <i class="fas fa-list-ol me-2"></i>Listado Completo
                         </a></li>
                         <li><a class="dropdown-item" href="<?= base_url('admin/usuarios/nuevo') ?>">
