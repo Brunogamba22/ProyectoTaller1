@@ -17,12 +17,12 @@
         <form action="<?= base_url('/enviar-prod') ?>" method="post" enctype="multipart/form-data">
             <div class="card-body media" style="max-width:568px">
             <div class="mb-2">
-                <label for="nombre_prod" class="form-label">Producto</label>
-                <input class="form-control" type="text" name="nombre_prod" id="nombre_prod" value="<?= set_value('nombre_prod'); ?>" placeholder="Nombre del producto" autofocus>
+                <label for="nombre" class="form-label">Producto</label>
+                <input class="form-control" type="text" name="nombre" id="nombre_prod" value="<?= set_value('nombre'); ?>" placeholder="Nombre del producto" autofocus>
                 <!-- error de validación -->
-                <?php if ($validation->getError('nombre_prod')) : ?>
+                <?php if ($validation->getError('nombre')) : ?>
                     <div class="alert alert-danger mt-2">
-                        <?= $validation->getError('nombre_prod'); ?>
+                        <?= $validation->getError('nombre'); ?>
                     </div>
                 <?php endif; ?>
             </div>

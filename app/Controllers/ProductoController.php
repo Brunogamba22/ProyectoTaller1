@@ -28,12 +28,12 @@ class ProductoController extends Controller
         $productoModel = new Producto_model();
 
         // Obtener todos los productos desde el modelo
-        $data['producto'] = $productoModel->getProductoAll(); // Esta función debe estar en el modelo
+        $data['producto'] = $productoModel->getProductosConCategorias(); // Esta función debe estar en el modelo
 
         $dato['titulo'] = 'Crud productos';
 
         // Cargamos las vistas
-        echo view('front/head_view_crud', $data);
+        echo view('front/head_view', $dato);
         echo view('front/nav_view');
         echo view('back/productos/AltaDeProductos', $data);
         echo view('front/footer_view');
@@ -60,7 +60,7 @@ class ProductoController extends Controller
     {
         // Definimos las reglas de validación
         $input = $this->validate([
-            'nombre_prod' => 'required|min_length[3]',
+            'nombre' => 'required|min_length[3]',
             'categoria'   => 'required|is_not_unique[categorias.id]',
             'precio'      => 'required|numeric',
             'precio_vta'  => 'required|numeric',
@@ -89,19 +89,19 @@ class ProductoController extends Controller
             $img = $this->request->getFile('imagen');
 
              // Creamos nombre legible en lugar de aleatorio
-            $nombreImagen = strtolower(str_replace(' ', '_', $this->request->getVar('nombre_prod'))) . '.' . $img->guessExtension();
+            $nombreImagen = strtolower(str_replace(' ', '_', $this->request->getVar('nombre'))) . '.' . $img->guessExtension();
 
             // Movemos la imagen a la carpeta específica
             $img->move(ROOTPATH . 'assets/uploads/productos/', $nombreImagen);
 
             // Armamos el array con los datos del formulario
             $data = [
-                'nombre_prod' => $this->request->getVar('nombre_prod'),
+                'nombre' => $this->request->getVar('nombre'),
                 'imagen'      => $nombreImagen, // Guardamos solo el nombre del archivo
                 'categoria_id'=> $this->request->getVar('categoria'),
                 'precio'      => $this->request->getVar('precio'),
                 'precio_vta'  => $this->request->getVar('precio_vta'),
-                'stock'       => 0 
+                'stock'       => $this->request->getVar('stock'),
                 // 'eliminado' => NO (opcional, si manejás baja lógica)
             ];
 
@@ -152,7 +152,7 @@ class ProductoController extends Controller
 
         // Validaciones mínimas necesarias
         $rules = [
-            'nombre_prod' => 'required|min_length[3]',
+            'nombre' => 'required|min_length[3]',
             'categoria'   => 'is_not_unique(categorias.id)',
             'precio'      => 'required|numeric',
             'precio_vta'  => 'required|numeric',
@@ -181,7 +181,7 @@ class ProductoController extends Controller
 
         // Obtenemos los datos del formulario
         $data = [
-            'nombre_prod'  => $this->request->getVar('nombre_prod'),
+            'nombre'  => $this->request->getVar('nombre'),
             'categoria_id' => $this->request->getVar('categoria'),
             'precio'       => $this->request->getVar('precio'),
             'precio_vta'   => $this->request->getVar('precio_vta'),
