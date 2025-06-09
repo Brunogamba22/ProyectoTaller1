@@ -6,7 +6,7 @@
                 <div class="card-header bg-gradient-primary text-white d-flex justify-content-between align-items-center">
                     <h4 class="mb-0"><i class="fas fa-boxes me-2"></i>Listado de Productos</h4>
                     <!-- Botón para agregar nuevo producto -->
-                    <a href="<?= base_url('producto/crear') ?>" class="btn btn-light text-primary">
+                    <a href="<?= base_url('AltaProductos') ?>" class="btn btn-light text-primary">
                         <i class="fas fa-plus"></i> Nuevo Producto
                     </a>
                 </div>

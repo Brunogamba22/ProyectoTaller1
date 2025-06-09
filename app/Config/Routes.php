@@ -70,7 +70,7 @@ $routes->get('usuarioEstado', 'Dashboard_Admin::estadoUsuario');
 // Rutas para CRUD de productos ARREGLAR ESTAS RUTAS
 $routes->get('producto/editar/(:num)', 'ProductoController::editar/$1');
 $routes->post('producto/actualizar/(:num)', 'ProductoController::actualizar/$1');
-$routes->get('producto/crear', 'ProductoController::crearproducto');
+$routes->get('producto/crear', 'Dashboard_Admin::listaProductosAdmin');
 $routes->post('enviar-prod', 'ProductoController::store');
 
 
