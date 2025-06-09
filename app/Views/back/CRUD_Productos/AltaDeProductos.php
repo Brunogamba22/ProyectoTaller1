@@ -52,7 +52,28 @@
                          </div>
                     <?php endif; ?>
                 </div>
+                <!-- Precio de venta -->
+                <div class="mb-2">
+                    <label for="precio_vta" class="form-label">Precio de Venta</label>
+                    <input class="form-control" type="text" name="precio_vta" id="precio_vta" value="<?= set_value('precio_vta'); ?>">
+                    <!-- Error -->
+                    <?php if ($validation->getError('precio_vta')): ?>
+                        <div class="alert alert-danger mt-2">
+                            <?= $validation->getError('precio_vta'); ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
                 
+                <div class="mb-2">
+                    <label for="stock_min" class="form-label">Stock Mínimo</label>
+                    <input class="form-control" type="text" name="stock_min" id="stock_min" value="<?= set_value('stock_min'); ?>">
+                    <!-- Error -->
+                    <?php if ($validation->getError('stock_min')): ?>
+                        <div class="alert alert-danger mt-2">
+                            <?= $validation->getError('stock_min'); ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
                 <div class="mb-2">
 
                     <label for="stock" class="form-label">Stock</label>

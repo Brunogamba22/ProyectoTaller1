@@ -29,6 +29,7 @@
                                     <th>Imagen</th>
                                     <th>Categoría</th>
                                     <th>Precio</th>
+                                    <th>Precio_vta</th>
                                     <th>Stock</th>
                                     <th>Acciones</th>
                                 </tr>
