@@ -58,7 +58,9 @@
                                             
                                             <td><?= esc($prod['categoria_nombre']) ?></td>
                                             <td>$<?= number_format($prod['precio'], 2) ?></td>
-                                            <td><?= isset($prod['stock_total']) ? $prod['stock_total'] : $prod['stock'] ?></td>
+                                            <td>$<?= number_format($prod['precio_vta'], 2) ?></td> <!-- Este es el precio de venta -->
+                                            <td><?= $prod['stock_total'] ?></td> <!-- Este es el stock real -->
+
                                             
                                             <!-- Columna Acciones (ahora arriba de los botones) -->
                                             <td class="text-center">
