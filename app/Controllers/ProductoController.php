@@ -33,7 +33,7 @@ class ProductoController extends Controller
         $dato['titulo'] = 'Crud productos';
 
         // Cargamos las vistas
-        echo view('front/head_view_crud', $dato);
+        echo view('front/head_view_crud', $data);
         echo view('front/nav_view');
         echo view('back/productos/AltaDeProductos', $data);
         echo view('front/footer_view');
@@ -46,9 +46,13 @@ class ProductoController extends Controller
         $data['categorias'] = $categoriasModel->getCategorias(); // Obtener categorías desde BD
 
         $productoModel = new Producto_model();
-        $data['producto'] = $productoModel->getProductoAll();
+        $data['producto'] = $productoModel->getProductosConCategorias();
 
-        echo view('back/CRUD_Productos/AltaDeProductos', $data);
+        $data['titulo'] = 'Alta de Productos';
+        echo view('front/head_view', $data);   
+        echo view('back/Admin_Navbar');
+        echo view('back/CRUD_Productos/ListaDeProductos', $data);
+        echo view('back/Admin_Footer');
     }
 
     // 🔴 Procesa el formulario de alta de producto
@@ -74,7 +78,7 @@ class ProductoController extends Controller
 
             $dato['titulo'] = 'Alta';
 
-            echo view('front/head_view', $dato);
+            echo view('front/head_view', $data);
             echo view('back/Admin_Navbar');
             echo view('back/CRUD_Productos/AltaDeProductos', $data);
             echo view('back/Admin_Footer');
@@ -108,7 +112,7 @@ class ProductoController extends Controller
             session()->setFlashdata('success', 'Alta Exitosa...');
 
             // Redireccionamos al formulario de alta
-            return $this->response->redirect(site_url('crear'));
+            return $this->response->redirect(site_url('producto/crear'));
         }
     }
 
