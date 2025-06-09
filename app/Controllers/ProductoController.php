@@ -75,9 +75,9 @@ class ProductoController extends Controller
             $dato['titulo'] = 'Alta';
 
             echo view('front/head_view', $dato);
-            echo view('front/nav_view');
-            echo view('back/productos/AltaDeProductos', $data);
-            echo view('front/footer_view');
+            echo view('back/Admin_Navbar');
+            echo view('back/CRUD_Productos/AltaDeProductos', $data);
+            echo view('back/Admin_Footer');
         } else {
             // ✅ Si la validación fue exitosa
 
