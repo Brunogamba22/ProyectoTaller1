@@ -1,5 +1,5 @@
-<div class="container py-5">
-    <div class="row">
+<div class="login-container py-5">
+    <div class="container">
         <div class="col-12">
             <!-- Tarjeta de tabla -->
             <div class="card shadow">

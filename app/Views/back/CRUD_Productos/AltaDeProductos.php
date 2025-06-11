@@ -1,6 +1,7 @@
-<div class="container mt-1 mb-1 d-flex justify-content-center">
-    <div class="card" style="width:75%">
-        <div class="card-header text-center">
+<div class="login-container py-5 ">
+    <div class="container">
+        <div class="card shadow">
+        <div class="card-header text-center ">
             <h2> Alta de Productos</h2>
         </div>
 
@@ -113,5 +114,6 @@
 
             </div>
         </form> <!-- Fin del formulario -->
+    </div>
     </div>
 </div>

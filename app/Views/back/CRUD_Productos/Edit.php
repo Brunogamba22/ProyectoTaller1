@@ -1,7 +1,5 @@
-<div class="contenedor-formulario-Edit.php">
-<div class="container py-5">
-    <div class="row justify-content-center">
-        <div class="col-lg-10">
+<div class="login-container py-5 ">
+    <div class="container">
             <div class="card shadow border-0">
                 <!-- Encabezado -->
                 <div class="card-header bg-gradient-primary text-white py-3">
@@ -102,7 +100,5 @@
                     </form>
                 </div>
             </div>
-        </div>
     </div>
-</div>
 </div>

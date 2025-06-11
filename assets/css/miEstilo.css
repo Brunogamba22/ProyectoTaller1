@@ -22,7 +22,7 @@
 body {
   font-family: 'Poppins', sans-serif; /* Fuente moderna y legible */
   margin: 0;                          /* Elimina márgenes predeterminados */
-  padding: 0;                         /* Elimina rellenos predeterminados */
+  padding: 0;                    /* Elimina rellenos predeterminados */
   padding-top: 80px;                  /* Espacio para navbar fija */
   background-color: var(--crema); /* Fondo principal */
   color: var(--texto-claro);          /* Color de texto predeterminado */
@@ -63,6 +63,7 @@ body {
 .navbar-umma {
         background-color: white;
         transition: all 0.3s ease;
+        height: 80px; /* Establece una altura fija para el navbar */
     }
     
     .navbar-umma .nav-link {
@@ -1007,6 +1008,14 @@ form label {
 
 /* ===== COMIENZO ESTILOS DEL FORMULARIO DE REGISTRO ===== */
  /* Efectos hover */
+    .register-container {
+        background-color: #C8A97E;
+        min-height: calc(100vh - 80px); /* Resta la altura del navbar */
+        display: flex;
+        align-items: center;
+        padding: 2rem 0;
+        margin-top: 80px; /* Asegura espacio adicional */
+    }
     .btn:hover {
         transform: translateY(-2px);
         box-shadow: 0 4px 12px rgba(200, 169, 126, 0.3);
@@ -1193,6 +1202,15 @@ form label {
 
 /* ===== INICIO ESTILOS FORMULARIO INICIO SESION ===== */
   /* Efectos hover */
+    .login-container{
+      background-color: #C8A97E;
+      min-height: calc(100vh - 80px);
+      display: flex;
+      align-items: center;
+      padding: 2rem 0;
+      margin-top: 80px;
+    }
+
     .input-group-login:hover {
         border-color: var(--dorado) !important;
     }
@@ -1240,6 +1258,9 @@ form label {
 }
 
 /* ===== NAVBAR ADMIN ===== */
+.navbar{
+  height: 80px; /* Establece una altura fija para el navbar */
+}
 .bg-gradient-admin {
     background: var(--azul-admin-gradient) !important;
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
