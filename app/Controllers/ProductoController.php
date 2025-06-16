@@ -8,8 +8,9 @@ use App\Models\Usuario_Model;
 use App\Models\Ventas_cabecera_model;
 use App\Models\Ventas_detalle_model;
 use App\Models\categoria_model;
-
+use App\Models\ProductoTallas_model;
 use CodeIgniter\Controller;
+use App\Models\Tallas_model;
 
 class ProductoController extends Controller
 {
@@ -28,7 +29,7 @@ class ProductoController extends Controller
         $productoModel = new Producto_model();
 
         // Obtener todos los productos desde el modelo
-        $data['producto'] = $productoModel->getProductosConCategorias(); // Esta función debe estar en el modelo
+        $data['producto'] = $productoModel->getProductosConStockTotal();
 
         $dato['titulo'] = 'Crud productos';
 
@@ -43,12 +44,23 @@ class ProductoController extends Controller
     public function crearproducto()
     {
         $categoriasModel = new Categoria_model();
-        $data['categorias'] = $categoriasModel->getCategorias(); // Obtener categorías desde BD
-
         $productoModel = new Producto_model();
-        $data['producto'] = $productoModel->getProductosConCategorias();
+        $tallasModel = new \App\Models\ProductoTallas_model();
+        $tallaModel = new \App\Models\Tallas_model(); // 👈 nuevo modelo para traer tallas
 
+        // Obtenemos todas las tallas disponibles
+        $productos = $productoModel->getProductosConStockTotal();
+
+        // Agregamos las tallas con su stock por producto
+        foreach ($productos as &$p) {
+            $p['tallas'] = $tallasModel->obtenerTallasPorProducto($p['id']);
+        }
+        // Preparamos los datos para la vista
+        $data['producto'] = $productos;
+        $data['categorias'] = $categoriasModel->getCategorias();
+        $data['todasLasTallas'] = $tallaModel->findAll(); // 👈 esta es la línea clave
         $data['titulo'] = 'Alta de Productos';
+        // Cargamos las vistas
         echo view('front/head_view', $data);   
         echo view('back/Admin_Navbar');
         echo view('back/CRUD_Productos/ListaDeProductos', $data);
@@ -107,6 +119,22 @@ class ProductoController extends Controller
 
             // Insertamos en la base de datos
             $productoModel->insert($data);
+
+            $tallasProductoModel = new \App\Models\ProductoTallas_model();
+            //. Guarda tallas
+            $producto_id = $productoModel->insertID(); // ID recién insertado
+            $stocks = $this->request->getPost('stock_por_talla'); // array con [talla_id => cantidad]
+
+            foreach ($stocks as $talla_id => $cantidad) {
+                if ($cantidad !== '' && $cantidad >= 0) {
+                    $tallasProductoModel->insert([
+                        'producto_id' => $producto_id,
+                        'talla_id' => $talla_id,
+                        'stock' => $cantidad,
+                        'stock_min' => 1 // o podrías tomarlo de un input si lo querés configurable
+                    ]);
+                }
+            }
 
             // Mensaje flash de éxito
             session()->setFlashdata('success', 'Alta Exitosa...');

@@ -37,4 +37,16 @@ class ProductoTallas_model extends Model
         
         return $builder->get()->getResultArray();
     }
+
+    // Método para obtener las tallas y stock de un producto específico
+    public function obtenerTallasPorProducto($producto_id)
+    {
+        return $this->db->table('producto_tallas pt')
+            ->select('t.nombre as talla, pt.stock, pt.stock_min')
+            ->join('tallas t', 't.id_talla = pt.talla_id')
+            ->where('pt.producto_id', $producto_id)
+            ->get()
+            ->getResultArray();
+    }
+
 }

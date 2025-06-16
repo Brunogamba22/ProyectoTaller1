@@ -43,6 +43,21 @@
                         </div>
                     <?php endif; ?>
                 </div>
+                
+                                <!-- Sección de Tallas -->
+                <div class="mb-2">
+                    <label class="form-label">Tallas y Stock</label>
+                    <?php foreach ($todasLasTallas as $talla): ?>
+                        <div class="input-group mb-1">
+                            <div class="input-group-text">
+                                <?= esc($talla['nombre']) ?>
+                            </div>
+                            <input type="number" class="form-control" name="stock_por_talla[<?= $talla['id_talla'] ?>]" 
+                                placeholder="Cantidad para talla <?= esc($talla['nombre']) ?>" min="0">
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+
                 <div class="mb-2">
                     <label for="precio" class="form-label">Precio de Costo</label>
                     <input class="form-control" type="text" name="precio" id="precio" value="<?= set_value('precio'); ?>">
@@ -53,7 +68,7 @@
                          </div>
                     <?php endif; ?>
                 </div>
-                <!-- Precio de venta -->
+                <!-- Precio de ventaa -->
                 <div class="mb-2">
                     <label for="precio_vta" class="form-label">Precio de Venta</label>
                     <input class="form-control" type="text" name="precio_vta" id="precio_vta" value="<?= set_value('precio_vta'); ?>">

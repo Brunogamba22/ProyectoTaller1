@@ -1,5 +1,5 @@
 <?php
-namespace app\Models;
+namespace App\Models;
 use CodeIgniter\Model;
 
 class Tallas_model extends Model{
