@@ -107,7 +107,7 @@ class Dashboard_Admin extends BaseController
 
     public function edicionProductos()
     {   
-        $categoriaModel = new \App\Models\Categoria_model();
+        $categoriaModel = new Categoria_model();
     
         $data = [
             'titulo' => 'Edición de Productos',

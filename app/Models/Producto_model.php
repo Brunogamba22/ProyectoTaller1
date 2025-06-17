@@ -36,6 +36,18 @@ class Producto_model extends Model
                   ->join('categorias', 'categorias.id = productos.categoria_id')
                   ->join('producto_tallas', 'producto_tallas.producto_id = productos.id', 'left')
                   ->groupBy('productos.id')
+                  ->where('productos.activo', 1) //filtra productos activos
+                  ->findAll();
+  }
+
+  public function getProductosEliminados()
+  {
+      return $this->select('productos.*, categorias.nombre as categoria_nombre, 
+                          COALESCE(SUM(producto_tallas.stock), 0) as stock_total')
+                  ->join('categorias', 'categorias.id = productos.categoria_id')
+                  ->join('producto_tallas', 'producto_tallas.producto_id = productos.id', 'left')
+                  ->where('productos.activo', 0) // ← solo productos eliminados
+                  ->groupBy('productos.id')
                   ->findAll();
   }
 

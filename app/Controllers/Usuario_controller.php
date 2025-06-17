@@ -61,7 +61,7 @@ class Usuario_controller extends Controller
             'nombre'  => 'required|min_length[3]',
             'apellido'=> 'required|min_length[3]|max_length[25]',
             'usuario' => 'required|min_length[3]',
-            'email'   => "required|min_length[10]|max_length[100]|valid_email|is_unique[usuarios.email,id_usuario,{$id}]",
+            'email'   => "required|min_length[10]|max_length[100]|valid_email|is_unique[usuarios.email,id_usuarios,{$id}]",
             'pass'    => 'permit_empty|min_length[6]|max_length[20]'
         ];
         
@@ -87,7 +87,7 @@ class Usuario_controller extends Controller
         $model->update($id, $data);
         
         session()->setFlashdata('success', 'Usuario actualizado correctamente');
-        return redirect()->to(base_url('usuarios'));
+        return redirect()->to(base_url('listaUsuarios'));
     }
 
     // Método para eliminar usuario

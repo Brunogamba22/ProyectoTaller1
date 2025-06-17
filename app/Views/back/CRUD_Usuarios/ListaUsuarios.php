@@ -1,4 +1,4 @@
-<div class="login-container py-5 ">
+<div class=" py-5 ">
     <div class="container">
         <div class="col-12">
             <!-- Tarjeta de tabla -->
@@ -65,9 +65,6 @@
                                                         <a href="<?= base_url('eliminar' . $user['id_usuarios']) ?>" class="btn btn-sm btn-danger"
                                                             onclick="return confirm('¿Estás seguro de eliminar este usuario?');">
                                                             <i class="fas fa-trash-alt"></i> Eliminar
-                                                        </a>
-                                                        <a href="<?= base_url('usuario/cambiarEstado/' . $user['id_usuarios']) ?>" class="btn btn-sm btn-secondary">
-                                                            <?= $user['baja'] == 'SI' ? 'Activar' : 'Desactivar' ?>
                                                         </a>
                                                     </div>
                                                 </div>
