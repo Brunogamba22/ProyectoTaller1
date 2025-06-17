@@ -27,7 +27,6 @@
                     <!-- Formulario de edición -->
                     <form action="<?= base_url('usuario/actualizar/'.$usuario['id_usuarios']) ?>" method="post" autocomplete="off">
                         <?= csrf_field() ?>
-                        <input type="hidden" name="_method" value="PUT">
 
                         <!-- Nombre y Apellido -->
                         <div class="row mb-4">
@@ -77,22 +76,15 @@
                                 </select>
                             </div>
                         </div>
-
-                        <!-- Contraseña (opcional) -->
-                        <div class="mb-4">
-                            <label for="pass" class="form-label">Nueva Contraseña</label>
-                            <input type="password" class="form-control" id="pass" name="pass">
-                            <small class="text-muted">Dejar en blanco para no cambiar (mínimo 6 caracteres)</small>
-                        </div>
-
                         <!-- Botones de acción -->
-                        <div class="d-flex justify-content-between mt-4">
-                            <a href="<?= base_url('usuarios') ?>" class="btn btn-secondary">
-                                <i class="fas fa-times me-1"></i> Cancelar
+                        <div class="btn-container-compact">
+                            <a href="<?= base_url('listaUsuarios') ?>" class="btn-action btn-cancel-compact">
+                                <i class="fas fa-times"></i> Cancelar
                             </a>
-                            <button type="submit" class="btn btn-success">
-                                <i class="fas fa-save me-1"></i> Guardar Cambios
+                            <button type="submit" class="btn-action btn-save-compact">
+                                <i  class="fas fa-save"></i> Guardar Cambios
                             </button>
+                        </div>
                         </div>
                     </form>
                 </div>

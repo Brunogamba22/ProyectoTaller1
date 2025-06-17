@@ -12,6 +12,8 @@ class Login_controller extends BaseController
         return view('login');
     }
 
+    
+
     public function auth()
     {
         $session = session();

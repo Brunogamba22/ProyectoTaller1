@@ -1,14 +1,21 @@
-<div class="login-container py-5">
+<div class=" py-5">
     <div class="container">
         <div class="col-12">
             <!-- Tarjeta de tabla -->
             <div class="card shadow">
                 <div class="card-header bg-gradient-primary text-white d-flex justify-content-between align-items-center">
                     <h4 class="mb-0"><i class="fas fa-boxes me-2"></i>Listado de Productos</h4>
-                    <!-- Botón para agregar nuevo producto -->
-                    <a href="<?= base_url('AltaProductos') ?>" class="btn btn-light text-primary">
-                        <i class="fas fa-plus"></i> Nuevo Producto
-                    </a>
+                    <div class="d-flex gap-2"> <!-- Contenedor flexible con espacio entre botones -->
+                        <!-- Botón Productos Eliminados -->
+                        <a href="<?= base_url('eliminados') ?>" class="btn btn-sm bg-white text-danger border-danger">
+                            <i class="fas fa-trash-restore me-1"></i> Productos Eliminados
+                        </a>
+                        
+                        <!-- Botón Nuevo Producto -->
+                        <a href="<?= base_url('AltaProductos') ?>" class="btn btn-sm bg-white text-primary border-primary">
+                            <i class="fas fa-plus me-1"></i> Nuevo Producto
+                        </a>
+                    </div>
                 </div>
 
                 <div class="card-body p-4">
@@ -84,7 +91,7 @@
                                                     <a href="<?= base_url('producto/editar/' . $prod['id']) ?>" class="btn btn-sm btn-warning me-1">
                                                         <i class="fas fa-edit"></i> Editar
                                                     </a>
-                                                    <a href="<?= base_url('producto/eliminar/' . $prod['id']) ?>" class="btn btn-sm btn-danger"
+                                                    <a href="<?= base_url('eliminar/' . $prod['id']) ?>" class="btn btn-sm btn-danger"
                                                     onclick="return confirm('¿Estás seguro de eliminar este producto?');">
                                                         <i class="fas fa-trash-alt"></i> Eliminar
                                                     </a>
@@ -99,7 +106,7 @@
                                 </tr>
                             <?php endif; ?>
                         </tbody>
-                        </table>
+                        </table>    
                     </div>
                 </div>
             </div>

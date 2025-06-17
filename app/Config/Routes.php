@@ -59,6 +59,8 @@ $routes->get('listaUsuarios', 'Dashboard_Admin::listarUsuarios');
 $routes->get('usuarioEdit/(:num)', 'Dashboard_Admin::editar/$1');
 $routes->post('usuarioEliminar', 'Dashboard_Admin::eliminarUsuario');
 $routes->get('usuarioEstado', 'Dashboard_Admin::estadoUsuario');
+$routes->post('usuario/actualizar/(:num)', 'Usuario_controller::update/$1');
+
 
 // ... otras rutas de admins
 
@@ -70,6 +72,9 @@ $routes->get('usuarioEstado', 'Dashboard_Admin::estadoUsuario');
 $routes->get('producto/editar/(:num)', 'ProductoController::editar/$1');
 $routes->post('producto/actualizar/(:num)', 'ProductoController::actualizar/$1');
 $routes->get('producto/crear', 'Dashboard_Admin::listaProductosAdmin');
+$routes->get('eliminar/(:num)', 'ProductoController::eliminarProducto/$1');
+$routes->get('eliminados', 'ProductoController::productosEliminados');
+$routes->get('reactivar-producto/(:num)', 'ProductoController::reactivarProducto/$1');
 
 $routes->post('enviar-prod', 'ProductoController::store');
 

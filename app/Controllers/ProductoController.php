@@ -282,5 +282,47 @@ class ProductoController extends Controller
         return redirect()->to(base_url('Listado')) ;
     }
 
+    public function eliminarProducto($id)
+    {
+        $productoModel = new Producto_model();
+        $productoModel->update($id, ['activo' => 0]);
 
+        session()->setFlashdata('success', 'Producto eliminado correctamente.');
+        return redirect()->to(base_url('producto/crear'));
+    }
+
+    public function productosEliminados()
+    {
+        $productoModel = new Producto_model();
+        $tallasModel = new ProductoTallas_model();
+
+        $productos = $productoModel->getProductosEliminados(); // solo inactivos
+
+        foreach ($productos as &$p) {
+            $p['tallas'] = $tallasModel->obtenerTallasPorProducto($p['id']);
+        }
+
+        $data = [
+            'titulo' => 'Productos Eliminados',
+            'productosEliminados' => $productos
+        ];
+
+        echo view('front/head_view', $data);
+        echo view('back/Admin_Navbar'); 
+        echo view('back/CRUD_Productos/productosEliminados', $data);
+        echo view('back/Admin_Footer');
+    }
+
+    public function reactivarProducto($id)
+    {
+        $productoModel = new Producto_model();
+
+        // Reactivar el producto
+        $productoModel->update($id, [
+            'activo' => 1,
+        ]);
+
+        session()->setFlashdata('success', 'Producto reactivado correctamente.');
+        return redirect()->to(base_url('eliminados'));
+    }
 }
