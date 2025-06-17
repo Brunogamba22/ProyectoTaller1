@@ -25,8 +25,8 @@
                         <!-- Nombre -->
                         <div class="mb-3">
                             <label for="nombre_prod" class="form-label">Nombre del Producto</label>
-                            <input type="text" name="nombre_prod" class="form-control"
-                                value="<?= isset($producto['nombre_prod']) ? esc($producto['nombre_prod']) : '' ?>" required>
+                            <input type="text" name="nombre" class="form-control"
+                                value="<?= isset($producto['nombre']) ? esc($producto['nombre']) : '' ?>" required>
                         </div>
 
                         <!-- Categoría -->
@@ -57,26 +57,25 @@
                             <input type="number" step="0.01" name="precio_vta" class="form-control"
                                 value="<?= isset($producto['precio_vta']) ? esc($producto['precio_vta']) : '' ?>" required>
                         </div>
-
                         <!-- Stock -->
-                        <div class="mb-3">
-                            <label for="stock" class="form-label">Stock</label>
-                            <input type="number" name="stock" class="form-control"
-                                value="<?= isset($producto['stock']) ? esc($producto['stock']) : '' ?>" required>
-                        </div>
+                         <?php foreach ($todasLasTallas as $talla): 
+                                $talla_id = $talla['id_talla'];
+                                $stock = $tallasProducto[$talla_id]['stock'] ?? '';
+                                $stock_min = $tallasProducto[$talla_id]['stock_min'] ?? '';
+                            ?>
+                                <div class="input-group mb-1">
+                                    <span class="input-group-text"><?= esc($talla['nombre']) ?></span>
+                                    <input type="number" class="form-control" name="stock_por_talla[<?= $talla_id ?>]" value="<?= esc($stock) ?>" placeholder="Stock">
+                                    <input type="number" class="form-control" name="stock_min_por_talla[<?= $talla_id ?>]" value="<?= esc($stock_min) ?>" placeholder="Stock mínimo">
+                                </div>
+                            <?php endforeach; ?>
 
-                        <!-- Stock mínimo -->
-                        <div class="mb-3">
-                            <label for="stock_min" class="form-label">Stock Mínimo</label>
-                            <input type="number" name="stock_min" class="form-control"
-                                value="<?= isset($producto['stock_min']) ? esc($producto['stock_min']) : '' ?>" required>
-                        </div>
 
                         <!-- Imagen actual -->
                         <?php if (!empty($producto['imagen'])) : ?>
                             <div class="mb-3">
                                 <label class="form-label">Imagen actual</label><br>
-                                <img src="<?= base_url('assets/uploads/' . $producto['imagen']) ?>" width="100" class="img-thumbnail">
+                                <img src="<?= base_url('assets/uploads/productos/' . $producto['imagen']) ?>" width="100" class="img-thumbnail">
                             </div>
                         <?php endif; ?>
 

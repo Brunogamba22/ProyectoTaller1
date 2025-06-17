@@ -45,8 +45,8 @@ class ProductoController extends Controller
     {
         $categoriasModel = new Categoria_model();
         $productoModel = new Producto_model();
-        $tallasModel = new \App\Models\ProductoTallas_model();
-        $tallaModel = new \App\Models\Tallas_model(); // 👈 nuevo modelo para traer tallas
+        $tallasModel = new ProductoTallas_model();
+        $tallaModel = new Tallas_model(); // 👈 nuevo modelo para traer tallas
 
         // Obtenemos todas las tallas disponibles
         $productos = $productoModel->getProductosConStockTotal();
@@ -145,47 +145,63 @@ class ProductoController extends Controller
     }
 
         // 🟡 Muestra el formulario para editar un producto existente
-    public function editar($id = null)
+        public function editar($id = null)
     {
         $productoModel = new Producto_model();
         $categoriaModel = new Categoria_model();
-        
-        $producto = $productoModel->find($id);
-        $categorias = $categoriaModel->getCategoria();
+        $tallasModel = new ProductoTallas_model();
+        $tallaBaseModel = new Tallas_model();
 
-        // Verifica que el producto exista
-        
+        $producto = $productoModel->find($id);
+        $categorias = $categoriaModel->getCategorias();
+
         if (!$producto) {
-            // Mejor manejo del error
-                session()->setFlashdata('error', 'Producto no encontrado');
-                return redirect()->to(base_url('Listado'));
+            session()->setFlashdata('error', 'Producto no encontrado');
+            return redirect()->to(base_url('Listado'));
+        }
+
+        // 🟢 Filtrar tallas según categoría
+        $todasLasTallas = $tallaBaseModel->findAll();
+        $tallasFiltradas = [];
+
+        if ($producto['categoria_id'] == 5) { // Calzado
+            $tallasFiltradas = array_filter($todasLasTallas, function($talla) {
+                return in_array($talla['nombre'], ['40', '41', '42', '43', '44']);
+            });
+        } else { // Ropa
+            $tallasFiltradas = array_filter($tallasFiltradas = array_filter($todasLasTallas, function($talla) {
+                return in_array($talla['nombre'], ['S', 'M', 'L', 'XL', 'XXL']);
+            }));
         }
 
         $data = [
-            'titulo' => 'Editar Producto',
+            'todasLasTallas' => $tallasFiltradas,
+            'tallasProducto' => $tallasModel->obtenerTallasPorProducto($id),
             'producto' => $producto,
             'categorias' => $categorias,
-            'validation' => session()->getFlashdata('validation') // Para mantener errores de validación
+            'validation' => session()->getFlashdata('validation'),
+            'titulo' => 'Editar Producto',
         ];
 
-
-        
-        //echo view('back/CRUD_Productos/Edit', $data);
+        echo view('front/head_view', ['titulo' => 'Editar Producto']);
+        echo view('back/Admin_Navbar');
+        echo view('back/CRUD_Productos/Edit', $data);
+        echo view('back/Admin_Footer');
     }
+
 
     // 🔵 Procesa el formulario de edición y actualiza el producto
     public function actualizar($id)
     {
         $productoModel = new Producto_model();
+        
 
         // Validaciones mínimas necesarias
         $rules = [
             'nombre' => 'required|min_length[3]',
-            'categoria'   => 'is_not_unique(categorias.id)',
+            'categoria'   => 'required|integer',
             'precio'      => 'required|numeric',
             'precio_vta'  => 'required|numeric',
-            'stock'       => 'required|numeric',
-            'stock_min'   => 'required|numeric',
         ];
 
         // Si hay una imagen nueva, la validamos también
@@ -228,11 +244,42 @@ class ProductoController extends Controller
         // Actualizamos en la base de datos
         $productoModel->update($id, $data);
 
+            // Procesamos tallas
+        $productoTallasModel = new ProductoTallas_model();
+        $stockPorTalla = $this->request->getPost('stock_por_talla');
+        $stockMinPorTalla = $this->request->getPost('stock_min_por_talla');
+
+        foreach ($stockPorTalla as $talla_id => $cantidad) {
+            $minimo = $stockMinPorTalla[$talla_id] ?? 1;
+
+            $existente = $productoTallasModel->where([
+                'producto_id' => $id,
+                'talla_id' => $talla_id
+            ])->first();
+
+            if ($existente) {
+                $productoTallasModel->where([
+                    'producto_id' => $id,
+                    'talla_id' => $talla_id
+                ])->set([
+                    'stock' => $cantidad,
+                    'stock_min' => $minimo
+                ])->update();
+            } else {
+                $productoTallasModel->insert([
+                    'producto_id' => $id,
+                    'talla_id' => $talla_id,
+                    'stock' => $cantidad,
+                    'stock_min' => $minimo
+                ]);
+            }
+        }
+
         // Mensaje flash de éxito
         session()->setFlashdata('success', 'Producto actualizado correctamente.');
 
         // Redirigimos al listado
-        return redirect()->to(base_url('admin/productos'));
+        return redirect()->to(base_url('Listado')) ;
     }
 
 

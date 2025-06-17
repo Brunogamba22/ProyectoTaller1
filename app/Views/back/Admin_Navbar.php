@@ -45,13 +45,8 @@
                         <li><a class="dropdown-item" href="<?= base_url('AltaProductos') ?>">
                             <i class="fas fa-plus-circle me-2"></i>Alta Producto
                         </a></li>
-                        <li><a class="dropdown-item" href="<?= base_url('EdicionProductos') ?>">
-                            <i class="fas fa-edit me-2"></i>Edición Múltiple
-                        </a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="<?= base_url('CategoriaProductos') ?>">
-                            <i class="fas fa-tags me-2"></i>Categorías
-                        </a></li>
+                       
                     </ul>
                 </li>
                 
