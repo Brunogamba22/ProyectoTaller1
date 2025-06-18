@@ -112,7 +112,7 @@
 
     <!-- Tarjeta de categoría: Remeras -->
     <div class="col">
-      <a href="<?= base_url('Remeras') ?>" class="text-decoration-none text-dark">
+      <a href="<?= base_url('productos/remeras') ?>" class="text-decoration-none text-dark">
         <div class="card h-100 text-center shadow-sm card-categoria">
           <div class="card-img-container">
             <img src="assets/img/Remeras/RemeraArenaOversize.webp" class="card-img-top" alt="Remeras">
@@ -127,7 +127,7 @@
 
     <!-- Tarjeta de categoría: Buzos -->
     <div class="col">
-      <a href="<?= base_url('Buzos') ?>" class="text-decoration-none text-dark">
+      <a href="<?= base_url('productos/buzos') ?>" class="text-decoration-none text-dark">
         <div class="card h-100 text-center shadow-sm card-categoria">
           <div class="card-img-container">
             <img src="assets/img/Buzos/Buzo1_CanguroNegro.webp" class="card-img-top" alt="Buzos">
@@ -142,7 +142,7 @@
 
     <!-- Tarjeta de categoría: Calzados -->
     <div class="col">
-      <a href="<?= base_url('Calzado') ?>" class="text-decoration-none text-dark">
+      <a href="<?= base_url('productos/calzado') ?>" class="text-decoration-none text-dark">
         <div class="card h-100 text-center shadow-sm card-categoria">
           <div class="card-img-container">
             <img src="assets/img/Calzado/JordanRetro1.webp" class="card-img-top" alt="Zapatillas">
@@ -157,7 +157,7 @@
 
     <!-- Tarjeta de categoría: Camisas -->
     <div class="col">
-      <a href="<?= base_url('Camisas') ?>" class="text-decoration-none text-dark">
+      <a href="<?= base_url('productos/camisas') ?>" class="text-decoration-none text-dark">
         <div class="card h-100 text-center shadow-sm card-categoria">
           <div class="card-img-container">
             <img src="assets/img/Camisas/Camisa2_MaoCamel.png" class="card-img-top" alt="Camisas">
@@ -172,7 +172,7 @@
 
     <!-- Tarjeta de categoría: Camperas -->
     <div class="col">
-      <a href="<?= base_url('Camperas') ?>" class="text-decoration-none text-dark">
+      <a href="<?= base_url('productos/camperas') ?>" class="text-decoration-none text-dark">
         <div class="card h-100 text-center shadow-sm card-categoria">
           <div class="card-img-container">
             <img src="assets/img/Camperas/CamperaRompevientosHovy.png" class="card-img-top" alt="Camperas">

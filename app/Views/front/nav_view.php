@@ -31,7 +31,7 @@ $perfil_id = $session->get('perfil_id');
                     </a>
                 </li>
 
-                <!-- Menú desplegable de Productos - CORREGIDO -->
+                <!-- Menú desplegable de Productos -- CORREGIDO -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle <?= (strpos(current_url(), 'Productos') !== false) ? 'active' : '' ?>"
                     href="#"

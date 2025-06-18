@@ -64,9 +64,15 @@ $routes->get('miPerfil', 'Home::');
 // ===================================================================================
 // RUTAS PARA ADMINISTRADORES (perfil_id = 1)
 // ===================================================================================
-
+//rutas para el dashboard del administrador
+// Esta ruta muestra el panel de administración
 $routes->get('admin', 'Dashboard_Admin::index');
+//rutas para el listado de productos del administrador
+// Esta ruta muestra la lista de productos en el panel de administración
 $routes->get('Listado', 'Dashboard_Admin::listaProductosAdmin');
+//ruta para alta de productos
+// Esta ruta muestra el formulario para crear un nuevo producto
+$routes->get('AltaProductos', 'Dashboard_Admin::altaProductos');
 
 // ===================================================================================
 // ===================================================================================
@@ -86,7 +92,7 @@ $routes->post('producto/actualizar/(:num)', 'ProductoController::actualizar/$1')
 $routes->get('eliminar/(:num)', 'ProductoController::eliminarProducto/$1');
 // Rutas para ver productos eliminados y reactivarlos
 $routes->get('eliminados', 'ProductoController::productosEliminados');
-// Ruta para reactivar un producto eliminado
+// Ruta para reactivar un producto eliminadoo
 $routes->get('reactivar-producto/(:num)', 'ProductoController::reactivarProducto/$1');
 
 // ===================================================================================

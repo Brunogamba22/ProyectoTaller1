@@ -1793,7 +1793,6 @@ footer {
 }
 /* =====FIN ESTILOS PARA BOTONES DE USUARIO ===== */
 
-<<<<<<< HEAD
 /* ===== ESTILOS PARA VISTA DE VENTAS ===== */
 .ventas-container {
     max-width: 1200px;
@@ -1918,8 +1917,6 @@ footer {
     background-color: var(--crema);
 }
 
-.user-info {
-=======
 /* ===== ESTILOS PARA LA VISTA DE PRODUCTOS DEL CLIENTE ===== */
 
 /* Estructura principal del grid de productos */
@@ -1961,12 +1958,11 @@ footer {
 .producto-contenido {
     padding: 20px;
     flex-grow: 1;
->>>>>>> ramaBruno2.0
     display: flex;
     flex-direction: column;
 }
 
-<<<<<<< HEAD
+
 .user-name {
     font-weight: 500;
 }
@@ -2075,7 +2071,6 @@ footer {
         width: 100%;
     }
 }
-=======
 /* Textos del producto */
 .producto-nombre {
     font-size: 1.2rem;
@@ -2153,4 +2148,3 @@ footer {
 }
 
 /* ===== FIN DE ESTILOS PARA LA VISTA DE PRODUCTOS DEL CLIENTE ===== */
->>>>>>> ramaBruno2.0

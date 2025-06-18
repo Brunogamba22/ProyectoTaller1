@@ -291,7 +291,7 @@ class ProductoController extends Controller
         $productoModel->update($id, ['activo' => 0]);
 
         session()->setFlashdata('success', 'Producto eliminado correctamente.');
-        return redirect()->to(base_url('producto/crear'));
+        return redirect()->to(base_url('Listado'));
     }
 
     public function productosEliminados()
