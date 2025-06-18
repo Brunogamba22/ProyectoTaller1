@@ -51,6 +51,92 @@ class Usuario_controller extends Controller
         }
     }
 
+    public function nuevoUsuario()
+    {
+        $data['titulo'] = 'Alta de Usuario';
+
+        echo view('front/head_view', $data);
+        echo view('back/Admin_Navbar');
+        echo view('back/CRUD_Usuarios/AltaUsuario', $data);
+        echo view('back/Admin_Footer');
+    }
+
+    public function crearUsuario()
+    {
+        helper(['form', 'url']);
+
+        $rules = [
+            'nombre'    => 'required|min_length[3]',
+            'apellido'  => 'required|min_length[3]|max_length[25]',
+            'usuario'   => 'required|min_length[3]',
+            'email'     => 'required|valid_email|is_unique[usuarios.email]',
+            'pass'      => 'required|min_length[6]|max_length[20]',
+            'perfil_id' => 'required|in_list[1,2]'
+        ];
+
+        if (!$this->validate($rules)) {
+            $data = [
+                'titulo'     => 'Alta de Usuario',
+                'validation' => $this->validator
+            ];
+            echo view('front/head_view', $data);
+            echo view('back/Admin_Navbar');
+            echo view('back/CRUD_Usuarios/AltaUsuario', $data);
+            echo view('back/Admin_Footer');
+            return;
+        }
+
+        $usuarioModel = new Usuario_model();
+        $usuarioModel->save([
+            'nombre'    => $this->request->getPost('nombre'),
+            'apellido'  => $this->request->getPost('apellido'),
+            'usuario'   => $this->request->getPost('usuario'),
+            'email'     => $this->request->getPost('email'),
+            'pass'      => password_hash($this->request->getPost('pass'), PASSWORD_DEFAULT),
+            'perfil_id' => $this->request->getPost('perfil_id'),
+            'baja'      => 'NO'
+        ]);
+
+        session()->setFlashdata('success', 'Usuario creado correctamente');
+        return redirect()->to(base_url('listaUsuarios'));
+    }
+
+
+    public function listarUsuarios(){
+        $usuarioModel = new Usuario_model();
+
+        $data = [
+            'usuarios' => $usuarioModel->orderBy('id_usuarios', 'ASC')->findAll(),
+            'titulo' => 'Lista de Usuarios'
+        ];
+
+        echo view('front/head_view', $data);
+        echo view('back/Admin_Navbar');
+        echo view('back/CRUD_Usuarios/ListaUsuarios', $data);
+        echo view('back/Admin_Footer');
+    }
+
+    public function editar($id = null)
+    {
+        $usuarioModel = new Usuario_model();
+
+        // Verificamos si el ID es válido
+        if ($id === null || !$usuarioModel->find($id)) {
+            return redirect()->to('/listaUsuarios')->with('error', 'Usuario no encontrado');
+        } else {
+            $data = [
+            'usuario' => $usuarioModel->find($id),
+            'titulo' => 'Editar Usuario'
+            ];
+        }
+        echo view('front/head_view', $data);
+            echo view('back/Admin_Navbar');
+            echo view('back/CRUD_Usuarios/EditUsuarios', $data);
+            echo view('back/Admin_Footer');
+
+        
+    }
+
     // Método para procesar la actualización de edicion
     public function update($id = null)
     {
@@ -79,10 +165,6 @@ class Usuario_controller extends Controller
             'baja'     => $this->request->getVar('baja')
         ];
         
-        // Solo actualizar contraseña si se proporcionó una nueva
-        if ($this->request->getVar('pass')) {
-            $data['pass'] = password_hash($this->request->getVar('pass'), PASSWORD_DEFAULT);
-        }
         
         $model->update($id, $data);
         
@@ -90,27 +172,24 @@ class Usuario_controller extends Controller
         return redirect()->to(base_url('listaUsuarios'));
     }
 
-    // Método para eliminar usuario
-    public function eliminar($id = null)
-    {
-        $model = new Usuario_model();
-        $model->where('id_usuarios', $id)->delete($id);
-        
-        session()->setFlashdata('success', 'Usuario eliminado correctamente');
-        return redirect()->to(base_url('usuarios'));
-    }
-
-    public function cambiarEstado($id)
+    public function cambiarEstado($id, $estado = null)
     {
         $usuarioModel = new Usuario_model();
         $usuario = $usuarioModel->find($id);
 
         if ($usuario) {
-            $nuevoEstado = ($usuario['baja'] == 'NO') ? 'SI' : 'NO';
+            // Protección para admin (opcional)
+            if ($usuario['usuario'] === 'admin') {
+                session()->setFlashdata('error', 'No se puede modificar al administrador.');
+                return redirect()->to(base_url('listaUsuarios'));
+            }
+
+            $nuevoEstado = ($estado === 'SI') ? 'SI' : 'NO';
             $usuarioModel->update($id, ['baja' => $nuevoEstado]);
             session()->setFlashdata('success', 'Estado del usuario actualizado');
         }
 
         return redirect()->to(base_url('listaUsuarios'));
     }
+
 }

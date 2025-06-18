@@ -6,7 +6,7 @@
                 <div class="card-header bg-gradient-primary text-white d-flex justify-content-between align-items-center">
                     <h4 class="mb-0"><i class="fas fa-users me-2"></i>Listado de Usuarios</h4>
                     <!-- Botón para agregar nuevo usuario -->
-                    <a href="<?= base_url('') ?>" class="btn btn-light text-primary">
+                    <a href="<?= base_url('altaUsuario') ?>" class="btn btn-light text-primary">
                         <i class="fas fa-plus"></i> Nuevo Usuario
                     </a>
                 </div>
@@ -62,10 +62,20 @@
                                                         <a href="<?= base_url('usuarioEdit/' . $user['id_usuarios']) ?>" class="btn btn-sm btn-warning me-1">
                                                             <i class="fas fa-edit"></i> Editar
                                                         </a>
-                                                        <a href="<?= base_url('eliminar' . $user['id_usuarios']) ?>" class="btn btn-sm btn-danger"
-                                                            onclick="return confirm('¿Estás seguro de eliminar este usuario?');">
-                                                            <i class="fas fa-trash-alt"></i> Eliminar
-                                                        </a>
+                                                        <?php if ($user['baja'] == 'NO') : ?>
+                                                            <a href="<?= base_url('usuarioEstado/' . $user['id_usuarios'] . '/SI') ?>" 
+                                                                class="btn btn-sm btn-danger" style="min-width: 100px;"
+                                                                onclick="return confirm('¿Estás seguro de desactivar este usuario?');">
+                                                                    <i class="fas fa-user-slash"></i> Desactivar
+                                                            </a>
+                                                        <?php else : ?>
+                                                            <a href="<?= base_url('usuarioEstado/' . $user['id_usuarios'] . '/NO') ?>" 
+                                                                class="btn btn-sm btn-success" style="min-width: 100px;"
+                                                                onclick="return confirm('¿Deseás activar este usuario?');">
+                                                                    <i class="fas fa-user-check"></i> Activar
+                                                            </a>
+                                                        <?php endif; ?>
+
                                                     </div>
                                                 </div>
                                             </td>

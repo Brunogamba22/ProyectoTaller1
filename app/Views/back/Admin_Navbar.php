@@ -23,7 +23,7 @@
                         <li><a class="dropdown-item" href="<?= base_url('listaUsuarios') ?>">
                             <i class="fas fa-list-ol me-2"></i>Listado Completo
                         </a></li>
-                        <li><a class="dropdown-item" href="<?= base_url('admin/usuarios/nuevo') ?>">
+                        <li><a class="dropdown-item" href="<?= base_url('altaUsuario') ?>">
                             <i class="fas fa-user-plus me-2"></i>Crear Usuario
                         </a></li>
                         <li><hr class="dropdown-divider"></li>

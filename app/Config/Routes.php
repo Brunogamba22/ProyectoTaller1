@@ -50,16 +50,17 @@ $routes->get('miPerfil', 'Home::');
 // ==============================================
 
 $routes->get('admin', 'Dashboard_Admin::index');
-$routes->get('AltaProductos', 'Dashboard_Admin::altaProductos');
 $routes->get('Listado', 'Dashboard_Admin::listaProductosAdmin');
 $routes->get('CategoriaProductos', 'Dashboard_Admin::categoriaProductos');
 
 //Rutas para CRUD de usuarios
-$routes->get('listaUsuarios', 'Dashboard_Admin::listarUsuarios');
-$routes->get('usuarioEdit/(:num)', 'Dashboard_Admin::editar/$1');
-$routes->post('usuarioEliminar', 'Dashboard_Admin::eliminarUsuario');
-$routes->get('usuarioEstado', 'Dashboard_Admin::estadoUsuario');
+$routes->get('listaUsuarios', 'Usuario_controller::listarUsuarios');
+$routes->get('usuarioEdit/(:num)', 'Usuario_controller::editar/$1');
 $routes->post('usuario/actualizar/(:num)', 'Usuario_controller::update/$1');
+$routes->get('usuarioEstado/(:num)/(:alpha)', 'Usuario_controller::cambiarEstado/$1/$2');
+$routes->get('altaUsuario', 'Usuario_controller::nuevoUsuario');
+$routes->post('guardarUsuario', 'Usuario_controller::crearUsuario');
+
 
 
 // ... otras rutas de admins

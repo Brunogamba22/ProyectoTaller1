@@ -23,40 +23,9 @@ class Dashboard_Admin extends BaseController
      * SECCIÓN USUARIOS
      *****************************************************************/
 
-    public function listarUsuarios(){
-        $usuarioModel = new Usuario_model();
+    
 
-        $data = [
-            'usuarios' => $usuarioModel->orderBy('id_usuarios', 'ASC')->findAll(),
-            'titulo' => 'Lista de Usuarios'
-        ];
-
-        echo view('front/head_view', $data);
-        echo view('back/Admin_Navbar');
-        echo view('back/CRUD_Usuarios/ListaUsuarios', $data);
-        echo view('back/Admin_Footer');
-    }
-
-    public function editar($id = null)
-    {
-        $usuarioModel = new Usuario_model();
-
-        // Verificamos si el ID es válido
-        if ($id === null || !$usuarioModel->find($id)) {
-            return redirect()->to('/listaUsuarios')->with('error', 'Usuario no encontrado');
-        } else {
-            $data = [
-            'usuario' => $usuarioModel->find($id),
-            'titulo' => 'Editar Usuario'
-            ];
-        }
-        echo view('front/head_view', $data);
-            echo view('back/Admin_Navbar');
-            echo view('back/CRUD_Usuarios/EditUsuarios', $data);
-            echo view('back/Admin_Footer');
-
-        
-    }
+    
 
 
 
