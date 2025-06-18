@@ -6,7 +6,7 @@
 
   <title><?= esc($titulo) ?> - UMMA</title>
 
-  <!-- Bootstrap CSS (CDN ÚNICA) -->
+  <!-- Bootstrap CSS (CDN ÚNICA) --->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Bootstrap Icons -->

@@ -1793,6 +1793,7 @@ footer {
 }
 /* =====FIN ESTILOS PARA BOTONES DE USUARIO ===== */
 
+<<<<<<< HEAD
 /* ===== ESTILOS PARA VISTA DE VENTAS ===== */
 .ventas-container {
     max-width: 1200px;
@@ -1918,10 +1919,54 @@ footer {
 }
 
 .user-info {
+=======
+/* ===== ESTILOS PARA LA VISTA DE PRODUCTOS DEL CLIENTE ===== */
+
+/* Estructura principal del grid de productos */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilos para cada tarjeta de producto */
+.producto-card {
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Imagen del producto */
+.producto-imagen {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* Contenido de la tarjeta */
+.producto-contenido {
+    padding: 20px;
+    flex-grow: 1;
+>>>>>>> ramaBruno2.0
     display: flex;
     flex-direction: column;
 }
 
+<<<<<<< HEAD
 .user-name {
     font-weight: 500;
 }
@@ -2030,3 +2075,82 @@ footer {
         width: 100%;
     }
 }
+=======
+/* Textos del producto */
+.producto-nombre {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 600;
+}
+
+.producto-descripcion {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    flex-grow: 1;
+    line-height: 1.4;
+}
+
+.producto-precio {
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+/* Formulario de producto */
+.producto-formulario {
+    margin-top: auto;
+}
+
+.talla-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #444;
+}
+
+.talla-selector {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    font-size: 0.9rem;
+}
+
+/* Botón de agregar al carrito */
+.boton-carrito {
+    background-color: #614d0c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    font-size: 0.95rem;
+}
+
+.boton-carrito:hover {
+    background-color: #C9A227;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .productos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 15px;
+    }
+    
+    .producto-contenido {
+        padding: 15px;
+    }
+}
+
+/* ===== FIN DE ESTILOS PARA LA VISTA DE PRODUCTOS DEL CLIENTE ===== */
+>>>>>>> ramaBruno2.0

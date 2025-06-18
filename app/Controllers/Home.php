@@ -131,16 +131,7 @@ class Home extends BaseController
         echo view('front/footer_view');
     }
 
-    //muestra la vista de carrito
-     public function carrito()
-    {
-        $data['titulo'] = 'carrito';
-        echo view('front/head_view', $data);
-        echo view('front/nav_view');
-        echo view('back/carrito');
-        echo view('front/footer_view');
-    }
-
+  
 
     //Muestra la vista del formulario registro
     public function registro()

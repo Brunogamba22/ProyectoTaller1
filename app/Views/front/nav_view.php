@@ -42,13 +42,13 @@ $perfil_id = $session->get('perfil_id');
                         Productos
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownProductos">
-                        <li><a class="dropdown-item" href="<?= base_url('Productos') ?>">Todos los productos</a></li>
+                       <li><a class="dropdown-item" href="<?= base_url('productos') ?>">Todos los productos</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="<?= base_url('Remeras') ?>">Remeras</a></li>
-                        <li><a class="dropdown-item" href="<?= base_url('Buzos') ?>">Buzos</a></li>
-                        <li><a class="dropdown-item" href="<?= base_url('Camisas') ?>">Camisas</a></li>
-                        <li><a class="dropdown-item" href="<?= base_url('Camperas') ?>">Camperas</a></li>
-                        <li><a class="dropdown-item" href="<?= base_url('Calzado') ?>">Calzado</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('productos/remeras') ?>">Remeras</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('productos/buzos') ?>">Buzos</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('productos/camisas') ?>">Camisas</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('productos/camperas') ?>">Camperas</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('productos/calzado') ?>">Calzado</a></li>
                     </ul>
                 </li>
 
