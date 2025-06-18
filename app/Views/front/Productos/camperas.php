@@ -1,85 +1,38 @@
 <!DOCTYPE html>
-<html lang="es"> <!-- Indica que el idioma del documento es español -->
-    <head>
-        <meta charset="UTF-8"> <!-- Define la codificación de caracteres para admitir tildes y caracteres especiales -->
-        <title> <?php echo $titulo; ?> Camperas </title> <!-- Título que se muestra en la pestaña del navegador -->
-        </head>
-    <body>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title><?= esc($titulo) ?></title>
+    <link rel="stylesheet" href="<?= base_url('assets/css/miEstilo.css') ?>">
+</head>
+<body>
+    <div class="productos-grid">
+        <?php foreach ($productos as $producto): ?>
+        <article class="producto-card">
+            <img src="<?= base_url('assets/uploads/productos/' . $producto['imagen']) ?>" 
+                 class="producto-imagen" 
+                 alt="<?= esc($producto['nombre']) ?>">
+            <div class="producto-contenido">
+                <h2 class="producto-nombre"><?= esc($producto['nombre']) ?></h2>
+                <p class="producto-descripcion"><?= esc($producto['descripcion']) ?></p>
+                <p class="producto-precio">$<?= esc($producto['precio_vta']) ?></p>
 
-        <!-- Contenedor principal con padding vertical -->
-        <div class="container py-5">
-        
-            <!-- Título centrado y con margen inferior -->
-            <h2 class="mb-4 text-center">Catálogo de Camperas</h2>
-            
-            <!-- Grid de Bootstrap: 1 columna en pantallas chicas, 3 en pantallas medianas en adelante -->
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                
-                            <!-- === Campera 1 === -->
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="assets/img/Camperas/CamperaRompevientosHovy.png" alt="Campera Rompevientos Hovy" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Campera Rompevientos Hovy</h5>
-                            <p class="card-text">Rompevientos liviano ideal para media estación. Resistente al viento y de secado rápido. Estilo urbano y moderno.</p>
-                            <p class="producto-info"><strong>Precio:</strong> $8900</p>
-                            <p class="producto-info"><strong>Stock disponible:</strong> 7 unidades</p>
-                        </div>
-                        <div class="card-footer text-center">
-                            <button class="btn btn-dorado">Agregar al carrito</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- === Campera 2 === -->
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="assets/img/Camperas/CamperaUrbanVenturaNegra.png" alt="Chaqueta Urban Ventura Negra" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Chaqueta Urban Ventura Negra</h5>
-                            <p class="card-text">Chaqueta negra con estilo urbano. Corte recto y bolsillos frontales. Comodidad y diseño para uso diario.</p>
-                            <p class="producto-info"><strong>Precio:</strong> $9800</p>
-                            <p class="producto-info"><strong>Stock disponible:</strong> 6 unidades</p>
-                        </div>
-                        <div class="card-footer text-center">
-                            <button class="btn btn-dorado">Agregar al carrito</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- === Campera 3 === -->
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="assets/img/Camperas/CamperaRompevientosIrupeNegra.png" alt="Campera Rompevientos Irupé Negra" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Campera Rompevientos Irupé Negra</h5>
-                            <p class="card-text">Rompevientos color negro, ideal para días frescos y ventosos. Liviana, compacta y fácil de guardar.</p>
-                            <p class="producto-info"><strong>Precio:</strong> $8500</p>
-                            <p class="producto-info"><strong>Stock disponible:</strong> 9 unidades</p>
-                        </div>
-                        <div class="card-footer text-center">
-                            <button class="btn btn-dorado">Agregar al carrito</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- === Campera 4 === -->
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="assets/img/Camperas/ChaquetaUrbanOxnardNegra.png" alt="Chaqueta Urban Oxnard Negra" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Chaqueta Urban Oxnard Negra</h5>
-                            <p class="card-text">Chaqueta con diseño minimalista y urbano. Cierre frontal, cuello alto y tela resistente. Ideal para días frescos.</p>
-                            <p class="producto-info"><strong>Precio:</strong> $9900</p>
-                            <p class="producto-info"><strong>Stock disponible:</strong> 4 unidades</p>
-                        </div>
-                        <div class="card-footer text-center">
-                            <button class="btn btn-dorado">Agregar al carrito</button>
-                        </div>
-                    </div>
-                </div>
-                
+                <form action="<?= base_url('carrito/agregar') ?>" method="post" class="producto-formulario">
+                    <input type="hidden" name="producto_id" value="<?= $producto['id'] ?>">
+                    <label for="talla" class="talla-label">Talle:</label>
+                    <select name="talla_id" class="talla-selector" required>
+                        <option disabled selected>Seleccionar</option>
+                        <?php foreach ($producto['talles'] as $t): ?>
+                            <option value="<?= $t['talla_id'] ?>">
+                                <?= esc($t['talla']) ?> (<?= $t['stock'] ?> disponibles)
+                            </option>
+                        <?php endforeach; ?>
+                    </select>
+                    <button type="submit" class="boton-carrito">Agregar al carrito</button>
+                </form>
             </div>
-        </div>
-    </body>
+        </article>
+        <?php endforeach; ?>
+    </div>
+</body>
 </html>

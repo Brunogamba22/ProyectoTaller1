@@ -122,7 +122,7 @@
                 <div class="form-group">
                     <button type="submit" id="send_form" class="btn btn-success">Enviar</button>
                     <button type="reset" class="btn btn-danger">Cancelar</button>
-                    <a href="<?= base_url('crear'); ?>" class="btn btn-secondary">Volver</a>
+                    <a href="<?= base_url('Listado'); ?>" class="btn btn-secondary">Volver</a>
                 </div>
 
             </div> <!-- Fin del card-body -->

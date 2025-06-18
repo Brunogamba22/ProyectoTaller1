@@ -13,7 +13,19 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 $routes->get('principal', 'Home::index');
 
-// Catálogo de productos
+
+// RUTAS PARA VISUALIZAR TODOS LOS PRODUCTOS
+$routes->get('productos', 'ProductoController::mostrarProductos');
+// RUTAS PARA VISUALIZAR PRODUCTOS POR CATEGORÍA
+$routes->get('productos/remeras', 'ProductoController::verRemeras');
+$routes->get('productos/buzos', 'ProductoController::verBuzos');
+$routes->get('productos/camisas', 'ProductoController::verCamisas');
+$routes->get('productos/camperas', 'ProductoController::verCamperas');
+$routes->get('productos/calzado', 'ProductoController::verCalzado');
+
+
+
+// Catálogo de productos CON DATOS ESTATICOS
 $routes->get('Productos', 'Home::productos');
 $routes->get('Remeras', 'Home::remeras');
 $routes->get('Buzos', 'Home::buzos');
@@ -41,18 +53,45 @@ $routes->get('PreguntasFrecuentes', 'Home::PreguntasFrecuentes');
 // ==============================================
 // RUTAS PARA CLIENTES LOGUEADOS (perfil_id = 2)
 // ==============================================
-$routes->get('carrito', 'Home::carrito');
+// Rutas para el carrito de compras
+$routes->post('carrito/agregar', 'CarritoController::agregar');
+$routes->get('carrito', 'CarritoController::index');
+
+
 $routes->get('miPerfil', 'Home::');
 
 
-// ==============================================
+// ===================================================================================
 // RUTAS PARA ADMINISTRADORES (perfil_id = 1)
-// ==============================================
+// ===================================================================================
 
 $routes->get('admin', 'Dashboard_Admin::index');
 $routes->get('AltaProductos', 'Dashboard_Admin::altaProductos');
 $routes->get('Listado', 'Dashboard_Admin::listaProductosAdmin');
-$routes->get('CategoriaProductos', 'Dashboard_Admin::categoriaProductos');
+
+// ===================================================================================
+// ===================================================================================
+
+// RUTAS PARA CRUD DE PRODUCTOS
+// Ruta para mostrar la lista de productos
+$routes->get('producto/lista', 'ProductoController::listarProductos');
+// Ruta para crear un nuevo producto
+$routes->get('producto/crear', 'ProductoController::crearproducto');
+// Ruta para enviar el formulario de alta de productos
+$routes->post('enviar-prod', 'ProductoController::store');
+//editar producto
+$routes->get('producto/editar/(:num)', 'ProductoController::editar/$1');
+//actualizar producto
+$routes->post('producto/actualizar/(:num)', 'ProductoController::actualizar/$1');
+// Rutas para eliminar productos
+$routes->get('eliminar/(:num)', 'ProductoController::eliminarProducto/$1');
+// Rutas para ver productos eliminados y reactivarlos
+$routes->get('eliminados', 'ProductoController::productosEliminados');
+// Ruta para reactivar un producto eliminado
+$routes->get('reactivar-producto/(:num)', 'ProductoController::reactivarProducto/$1');
+
+// ===================================================================================
+// ===================================================================================
 
 //Rutas para CRUD de usuarios
 $routes->get('listaUsuarios', 'Dashboard_Admin::listarUsuarios');
@@ -61,22 +100,6 @@ $routes->post('usuarioEliminar', 'Dashboard_Admin::eliminarUsuario');
 $routes->get('usuarioEstado', 'Dashboard_Admin::estadoUsuario');
 $routes->post('usuario/actualizar/(:num)', 'Usuario_controller::update/$1');
 
-
-// ... otras rutas de admins
-
-
-// ==============================================
-// RUTAS COMUNES AUTENTICADAS (cualquier perfil)
-// ==============================================
-// Rutas para CRUD de productos ARREGLAR ESTAS RUTAS
-$routes->get('producto/editar/(:num)', 'ProductoController::editar/$1');
-$routes->post('producto/actualizar/(:num)', 'ProductoController::actualizar/$1');
-$routes->get('producto/crear', 'Dashboard_Admin::listaProductosAdmin');
-$routes->get('eliminar/(:num)', 'ProductoController::eliminarProducto/$1');
-$routes->get('eliminados', 'ProductoController::productosEliminados');
-$routes->get('reactivar-producto/(:num)', 'ProductoController::reactivarProducto/$1');
-
-$routes->post('enviar-prod', 'ProductoController::store');
 
 
 

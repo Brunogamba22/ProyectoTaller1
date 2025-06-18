@@ -84,12 +84,15 @@ class ProductoController extends Controller
 
         // ❌ Si falla la validación
         if (!$input) {
-            $categoriaModel = new Categoria_model();
-            $data['categorias'] = $categoriaModel->getCategorias();
-            $data['validation'] = $this->validator;
-
-            $dato['titulo'] = 'Alta';
-
+        $categoriaModel = new Categoria_model();
+        $tallaModel = new Tallas_model();
+        
+        $data = [
+            'categorias' => $categoriaModel->getCategorias(),
+            'todasLasTallas' => $tallaModel->findAll(),
+            'validation' => $this->validator,
+            'titulo' => 'Alta de Productos'
+        ];
             echo view('front/head_view', $data);
             echo view('back/Admin_Navbar');
             echo view('back/CRUD_Productos/AltaDeProductos', $data);
@@ -140,7 +143,7 @@ class ProductoController extends Controller
             session()->setFlashdata('success', 'Alta Exitosa...');
 
             // Redireccionamos al formulario de alta
-            return $this->response->redirect(site_url('producto/crear'));
+            return $this->response->redirect(site_url('Listado'));
         }
     }
 
@@ -325,4 +328,98 @@ class ProductoController extends Controller
         session()->setFlashdata('success', 'Producto reactivado correctamente.');
         return redirect()->to(base_url('eliminados'));
     }
+
+
+// 🟣=========== Muestra productos por categoría ===========🟣
+    private function cargarVistaCategoria($categoria_id, $vista, $titulo) {
+        $productoModel = new Producto_model();
+        $productoTallas = new ProductoTallas_model();
+
+        $productos = $productoModel->where('categoria_id', $categoria_id)->findAll();
+
+        foreach ($productos as &$producto) {
+            $producto['talles'] = $productoTallas->obtenerTallasPorProducto($producto['id']);
+        }
+
+        $data = [
+            'titulo' => $titulo,
+            'productos' => $productos,
+        ];
+
+        echo view('front/head_view', $data);
+        echo view('front/nav_view');
+        echo view('front/Productos/' . $vista, $data);
+        echo view('front/footer_view');
+    }
+
+    // Métodos públicos
+    public function verRemeras() {
+        $this->cargarVistaCategoria(1, 'remeras', 'Remeras');
+    }
+
+    public function verBuzos() {
+        $this->cargarVistaCategoria(2, 'buzos', 'Buzos');
+    }
+
+    public function verCamisas() {
+        $this->cargarVistaCategoria(3, 'camisas', 'Camisas');
+    }
+
+    public function verCamperas() {
+        $this->cargarVistaCategoria(4, 'camperas', 'Camperas');
+    }
+
+    public function verCalzado() {
+        $this->cargarVistaCategoria(5, 'calzado', 'Calzado');
+    }
+
+
+// 🟢=========== Muestra todos los productos con sus tallas y stock ===========🟢
+        public function mostrarProductos()
+    {
+        $productoModel = new \App\Models\Producto_model();
+        $tallasModel = new \App\Models\ProductoTallas_model();
+
+        $productos = $productoModel->getProductosConStockTotal();
+
+        foreach ($productos as &$producto) {
+            $producto['tallas'] = $tallasModel->obtenerTallasPorProducto($producto['id']);
+        }
+
+        $data = [
+            'titulo' => 'Todos los Productos',
+            'productos' => $productos,
+        ];
+
+        echo view('front/head_view', $data);
+        echo view('front/nav_view');
+        echo view('front/Productos/productos', $data);  // esta es tu vista que falla
+        echo view('front/footer_view');
+    }
+
+
+        public function detalle($id)
+    {
+        $productoModel = new Producto_model();
+        $tallasModel = new ProductoTallas_model();
+
+        $producto = $productoModel->find($id);
+        $tallas = $tallasModel->obtenerTallasPorProducto($id); // ya devuelve nombre, stock, stock_min
+
+        if (!$producto) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException("Producto no encontrado");
+        }
+
+        $data = [
+            'producto' => $producto,
+            'tallas' => $tallas,
+            'titulo' => 'Detalle de Producto'
+        ];
+
+        echo view('front/head_view', $data);
+        echo view('front/nav_view');
+        echo view('front/Productos/DetalleProducto', $data);
+        echo view('front/footer_view');
+    }
+
 }

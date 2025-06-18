@@ -95,10 +95,11 @@ class Dashboard_Admin extends BaseController
             foreach ($productos as &$p) {
                 $p['tallas'] = $tallasModel->obtenerTallasPorProducto($p['id']);
             }
-
             $data['productos'] = $productos;
             $data['titulo'] = 'Lista de Productos';
             $data['todasLasTallas'] = $tallaModel->findAll();
+
+        // Cargar la vista con los datos
         echo view('front/head_view', $data);
         echo view('back/Admin_Navbar');
         echo view('back/CRUD_Productos/ListaDeProductos', $data);
@@ -106,14 +107,5 @@ class Dashboard_Admin extends BaseController
     }
 
 
-//ESTO LO SAQUE
-    public function categoriaProductos()
-    {   
-        $data['titulo'] = 'categoría de Productos';
-        // Aquí podrías cargar los datos de los productos para edición desde la base de datos
-        echo view('front/head_view', $data);
-        echo view('back/CRUD_Productos/CategoriaProductos');
-        echo view('back/Admin_Navbar');
-        echo view('back/Admin_Footer');
-    }
+
 }
