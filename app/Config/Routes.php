@@ -80,6 +80,10 @@ $routes->get('reactivar-producto/(:num)', 'ProductoController::reactivarProducto
 $routes->post('enviar-prod', 'ProductoController::store');
 
 
+// Rutas para CRUD de ventas
+$routes->get('admin/ventas', 'VentasController::ventas');
+
+
 
 
 

@@ -27,9 +27,6 @@
                             <i class="fas fa-user-plus me-2"></i>Crear Usuario
                         </a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="<?= base_url('admin/usuarios/roles') ?>">
-                            <i class="fas fa-user-tag me-2"></i>Administrar Roles
-                        </a></li>
                     </ul>
                 </li>
                 

@@ -1792,3 +1792,241 @@ footer {
     background-color: #1B5E20;
 }
 /* =====FIN ESTILOS PARA BOTONES DE USUARIO ===== */
+
+/* ===== ESTILOS PARA VISTA DE VENTAS ===== */
+.ventas-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ventas-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--beige);
+}
+
+.ventas-header h1 {
+    color: var(--marron-oscuro);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.ventas-stats {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.stat-card {
+    background: var(--marron-medio);
+    color: var(--texto-claro);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 120px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.ventas-filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.search-box {
+    position: relative;
+    width: 300px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 0.7rem 1rem 0.7rem 2.5rem;
+    border: 1px solid var(--beige);
+    border-radius: 6px;
+    background-color: var(--crema);
+    color: var(--texto-oscuro);
+    font-size: 0.95rem;
+}
+
+.search-box i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--marron-claro);
+}
+
+.filter-options select {
+    padding: 0.7rem 1rem;
+    border: 1px solid var(--beige);
+    border-radius: 6px;
+    background-color: var(--crema);
+    color: var(--texto-oscuro);
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.ventas-table-container {
+    overflow-x: auto;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.ventas-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.ventas-table thead {
+    background-color: var(--marron-oscuro);
+    color: var(--texto-claro);
+}
+
+.ventas-table th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.ventas-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--beige);
+    color: var(--texto-oscuro);
+}
+
+.ventas-table tbody tr:hover {
+    background-color: var(--crema);
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-weight: 500;
+}
+
+.user-email {
+    font-size: 0.85rem;
+    color: var(--marron-claro);
+    margin-top: 0.2rem;
+}
+
+.product-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.product-item {
+    font-size: 0.9rem;
+    padding: 0.2rem 0;
+}
+
+.total-amount {
+    font-weight: 600;
+    color: var(--marron-oscuro);
+}
+
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.view-btn {
+    background-color: var(--dorado);
+    color: var(--marron-oscuro);
+}
+
+.view-btn:hover {
+    background-color: var(--marron-claro);
+    color: var(--texto-claro);
+}
+
+.ventas-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.pagination-btn {
+    padding: 0.7rem 1.2rem;
+    background-color: var(--marron-medio);
+    color: var(--texto-claro);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.pagination-btn:hover {
+    background-color: var(--marron-claro);
+}
+
+.page-numbers {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.page-number {
+    padding: 0.5rem 0.9rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.page-number:hover, .page-number.active {
+    background-color: var(--dorado);
+    color: var(--marron-oscuro);
+    font-weight: 500;
+}
+
+.page-dots {
+    padding: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .ventas-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .ventas-filters {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .search-box {
+        width: 100%;
+    }
+}

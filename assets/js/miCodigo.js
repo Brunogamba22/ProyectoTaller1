@@ -88,3 +88,6 @@ document.addEventListener('DOMContentLoaded', function() {
 // Script para mostrar automáticamente el año actual en el footer 
 // Se obtiene el elemento con ID "year" y se actualiza su contenido
   document.getElementById("year").textContent = new Date().getFullYear();
+
+
+//modal de ver detalles de venta 
