@@ -2724,6 +2724,7 @@ footer {
 }
 /* ===== FIN DE ESTILOS PARA LA VISTA DEL CARRITO ===== */
 
+<<<<<<< HEAD
 /* Estilos para la vista de detalle de compra */
 .compra-container {
     max-width: 1200px;
@@ -2826,3 +2827,78 @@ footer {
         height: 40px;
     }
 }
+=======
+/* ===== PRINCIPIO DE ESTILOS PARA LA VISTA DE COMPRAS DEL CLIENTE ===== */
+
+/* Contenedor principal que envuelve toda la sección de compras */
+.compras-container {
+    background: #fff2e6; /* Color de fondo beige claro */
+    padding: 30px; /* Espaciado interno */
+    margin: 40px auto; /* Margen superior/inferior de 40px y centrado horizontal */
+    width: 90%; /* Ancho relativo al viewport */
+    max-width: 1000px; /* Ancho máximo fijo */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 0 12px rgba(0,0,0,0.15); /* Sombra suave */
+}
+
+/* Estilos para el título principal de la página */
+.compras-titulo {
+    text-align: center; /* Centrado horizontal */
+    margin-bottom: 25px; /* Espacio inferior */
+    color: #4b2e2e; /* Color marrón oscuro para el texto */
+    font-size: 2rem; /* Tamaño de fuente grande */
+}
+
+/* Estilos base para la tabla de compras */
+.tabla-compras {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    border-collapse: collapse; /* Bordes de celdas unidos */
+    font-size: 16px; /* Tamaño de fuente base */
+    background-color: #fffaf2; /* Fondo blanco cremoso */
+}
+
+/* Estilos compartidos para celdas (th y td) */
+.tabla-compras th,
+.tabla-compras td {
+    padding: 12px 14px; /* Espaciado interno */
+    text-align: center; /* Alineación centrada */
+    border-bottom: 1px solid #d2b48c; /* Borde inferior color café claro */
+    color: #3e2d2c; /* Color de texto marrón oscuro */
+}
+
+/* Estilos específicos para celdas de encabezado (th) */
+.tabla-compras th {
+    background-color: #d0a97a; /* Fondo marrón claro */
+    color: #000000; /* Texto negro */
+    font-weight: bold; /* Negrita */
+}
+
+/* Efecto hover para filas de la tabla */
+.tabla-compras tr:hover {
+    background-color: #e4c6a4; /* Fondo marrón más claro al pasar mouse */
+    color: #000; /* Texto negro para mejor contraste */
+}
+
+/* Estilos para el botón "Ver detalle" */
+.btn-ver-detalle {
+    background-color: #228b22; /* Verde forestal */
+    color: white; /* Texto blanco */
+    padding: 6px 12px; /* Espaciado interno */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 6px; /* Bordes redondeados */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Efecto hover para el botón "Ver detalle" */
+.btn-ver-detalle:hover {
+    background-color: #1a661a; /* Verde más oscuro al pasar mouse */
+}
+
+/* Estilos para el mensaje cuando no hay compras */
+.compras-vacio {
+    text-align: center; /* Centrado horizontal */
+    color: #777; /* Color gris para texto */
+    margin-top: 20px; /* Espacio superior */
+}
+/* ===== FIN DE ESTILOS PARA LA VISTA DE COMPRAS DEL CLIENTE ===== */
+>>>>>>> ramaBruno2.0

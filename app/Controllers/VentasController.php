@@ -141,21 +141,24 @@ class VentasController extends BaseController
         $venta_id = $ventasModel->insert($nueva_venta);
 
         foreach ($productos_validos as $item) {
-            $detalle = [
-                'id_venta'    => $venta_id,
-                'id_producto' => $item['id'],
-                'cantidad'    => $item['qty'],
-                'precio_unitario' => $item['subtotal'] / $item['qty']
-            ];
-            $detalleModel->insert($detalle);
+        $talla_id = $item['options']['talle'];
 
-            // Actualizar stock en producto_tallas
-            $productoTallaModel
-                ->where('producto_id', $item['id'])
-                ->where('talla_id', $item['talla_id'])
-                ->set('stock', 'stock - ' . (int)$item['qty'], false)
-                ->update();
-        }
+        $detalle = [
+            'id_venta'    => $venta_id,
+            'id_producto' => $item['id'],
+            'cantidad'    => $item['qty'],
+            'precio_unitario' => $item['subtotal'] / $item['qty']
+        ];
+        $detalleModel->insert($detalle);
+
+        // Actualizar stock en producto_tallas correctamente
+        $productoTallaModel
+            ->where('producto_id', $item['id'])
+            ->where('talla_id', $talla_id)
+            ->set('stock', 'stock - ' . (int)$item['qty'], false)
+            ->update();
+    }
+
 
         $cartController->borrar_carrito();
         $session->setFlashdata('mensaje', 'Venta registrada exitosamente.');
@@ -166,28 +169,25 @@ class VentasController extends BaseController
     // Función del usuario cliente para ver sus compras
     public function verCompras($perfil_id)
     {
-        $detalle_ventas = new Venta_det_model();
-        $data['venta'] = $detalle_ventas->getDetalles($perfil_id);
+        $session = session();
+        $id_usuario = $session->get('id_usuario');
 
-        $dato['titulo'] = "Mi compra";
+        $ventasModel = new \App\Models\Venta_cab_Model();
+
+        // Trae todas las ventas del usuario con su info
+        $ventas = $ventasModel
+            ->select('venta_cabecera.*, usuarios.nombre as nombre_cliente, usuarios.email')
+            ->join('usuarios', 'usuarios.id_usuarios = venta_cabecera.id_usuario')
+            ->where('id_usuario', $id_usuario)
+            ->orderBy('fecha_venta', 'DESC')
+            ->findAll();
+
+        $data = ['ventas' => $ventas];
+        $dato['titulo'] = "Mis Compras";
 
         echo view('front/head_view', $dato);
         echo view('front/nav_view');
         echo view('back/CRUD_Ventas/compras_cliente', $data);
-        echo view('front/footer_view');
-    }
-
-    // Función del cliente para ver el detalle de sus facturas de compras
-    public function verDetalleCompra($id_usuario)
-    {
-        $ventas = new Venta_cab_model();
-
-        $data['ventas'] = $ventas->getVentas($id_usuario);
-        $dato['titulo'] = "Todos mis compras";
-
-        echo view('front/head_view', $dato);
-        echo view('front/nav_view');
-        echo view('back/CRUD_Ventas/detalle_cliente', $data);
         echo view('front/footer_view');
     }
 
