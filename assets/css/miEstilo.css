@@ -2723,3 +2723,106 @@ footer {
     }
 }
 /* ===== FIN DE ESTILOS PARA LA VISTA DEL CARRITO ===== */
+
+/* Estilos para la vista de detalle de compra */
+.compra-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.compra-header {
+    background-color: var(--marron-oscuro);
+    color: var(--texto-claro);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.compra-header h2 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.compra-info {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+.compra-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.compra-table th {
+    background-color: var(--marron-medio);
+    color: var(--texto-claro);
+    padding: 1rem;
+    text-align: left;
+}
+
+.compra-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--beige);
+    color: var(--texto-oscuro);
+}
+
+.compra-table tbody tr:hover {
+    background-color: var(--crema);
+}
+
+.compra-table tfoot {
+    background-color: var(--crema);
+    font-weight: 600;
+}
+
+.product-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.compra-actions .btn {
+    margin: 0 0.5rem;
+    padding: 0.5rem 1.5rem;
+}
+
+.alert-info {
+    background-color: #e7f5ff;
+    color: #0b5ed7;
+    border: 1px solid #9fcdfe;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.alert-heading {
+    margin-top: 0;
+    color: #0b5ed7;
+}
+
+@media (max-width: 768px) {
+    .compra-info {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .compra-table {
+        font-size: 0.9rem;
+    }
+    
+    .compra-table th, 
+    .compra-table td {
+        padding: 0.75rem 0.5rem;
+    }
+    
+    .product-image {
+        width: 40px;
+        height: 40px;
+    }
+}

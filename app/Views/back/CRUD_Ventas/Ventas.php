@@ -44,7 +44,6 @@
                     <th>Cliente</th>
                     <th>Productos</th>
                     <th>Cantidad</th>
-                    <th>Método de Pago</th>
                     <th>Total</th>
                     <th>Subtotal</th>
                 </tr>
@@ -68,7 +67,6 @@
                         </div>
                     </td>
                     <td><?= array_sum(array_column($venta['detalles'], 'cantidad')) ?></td>
-                    <td><?= $venta['metodo_pago'] ?></td>
                     <td class="total-amount">$<?= number_format($venta['total_venta'], 2) ?></td>
                     <td>
                         $<?= number_format(array_sum(array_column($venta['detalles'], 'subtotal')), 2) ?>
