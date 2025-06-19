@@ -2,6 +2,8 @@
 
 use App\Models\Venta_cab_Model;
 use App\Models\Venta_det_Model;
+use App\Models\Producto_model;
+use App\Models\ProductoTallas_model;
 
 class VentasController extends BaseController
 {
@@ -88,4 +90,106 @@ class VentasController extends BaseController
         echo view('back/CRUD_Ventas/Ventas', $data);
         echo view('back/Admin_Footer');
     }
+
+    
+    public function registrar_venta()
+    {
+        $session = session();
+        require(APPPATH . 'Controllers/Carrito_controller.php');
+        $cartController = new Carrito_controller();
+        $carrito_contents = $cartController->devolver_carrito();
+
+        $productoTallaModel = new ProductoTallas_model();
+        $ventasModel = new Venta_cab_model();
+        $detalleModel = new Venta_det_model();
+
+        $productos_validos = [];
+        $productos_sin_stock = [];
+        $total = 0;
+
+        foreach ($carrito_contents as $item) {
+
+            $stockData = $productoTallaModel
+                ->where('producto_id', $item['id'])
+                ->where('talla_id', $item['options']['talle'])
+                ->first();
+
+            if ($stockData && $stockData['stock'] >= $item['qty']) {
+                $productos_validos[] = $item;
+                $total += $item['subtotal'];
+            } else {
+                $productos_sin_stock[] = $item['name'];
+                $cartController->eliminar_item($item['rowid']);
+            }
+        }
+
+        if (!empty($productos_sin_stock)) {
+            $mensaje = 'Los siguientes productos no tienen stock suficiente y fueron eliminados del carrito:<br>' . implode(', ', $productos_sin_stock);
+            $session->setFlashdata('mensaje', $mensaje);
+            return redirect()->to(base_url('muestro'));
+        }
+
+        if (empty($productos_validos)) {
+            $session->setFlashdata('mensaje', 'No hay productos válidos para registrar la venta.');
+            return redirect()->to(base_url('muestro'));
+        }
+
+        $nueva_venta = [
+            'id_usuario' => $session->get('id_usuario'),
+            'total' => $total
+        ];
+        $venta_id = $ventasModel->insert($nueva_venta);
+
+        foreach ($productos_validos as $item) {
+            $detalle = [
+                'id_venta'    => $venta_id,
+                'id_producto' => $item['id'],
+                'cantidad'    => $item['qty'],
+                'precio_unitario' => $item['subtotal'] / $item['qty']
+            ];
+            $detalleModel->insert($detalle);
+
+            // Actualizar stock en producto_tallas
+            $productoTallaModel
+                ->where('producto_id', $item['id'])
+                ->where('talla_id', $item['talla_id'])
+                ->set('stock', 'stock - ' . (int)$item['qty'], false)
+                ->update();
+        }
+
+        $cartController->borrar_carrito();
+        $session->setFlashdata('mensaje', 'Venta registrada exitosamente.');
+        return redirect()->to(base_url('vista_compras/' . $venta_id));
+    }
+
+
+    // Función del usuario cliente para ver sus compras
+    public function verCompras($perfil_id)
+    {
+        $detalle_ventas = new Venta_det_model();
+        $data['venta'] = $detalle_ventas->getDetalles($perfil_id);
+
+        $dato['titulo'] = "Mi compra";
+
+        echo view('front/head_view', $dato);
+        echo view('front/nav_view');
+        echo view('back/CRUD_Ventas/compras_cliente', $data);
+        echo view('front/footer_view');
+    }
+
+    // Función del cliente para ver el detalle de sus facturas de compras
+    public function verDetalleCompra($id_usuario)
+    {
+        $ventas = new Venta_cab_model();
+
+        $data['ventas'] = $ventas->getVentas($id_usuario);
+        $dato['titulo'] = "Todos mis compras";
+
+        echo view('front/head_view', $dato);
+        echo view('front/nav_view');
+        echo view('back/CRUD_Ventas/detalle_cliente', $data);
+        echo view('front/footer_view');
+    }
+
+
 }

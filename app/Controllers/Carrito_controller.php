@@ -24,7 +24,7 @@ class carrito_controller extends BaseController
         $productoModel = new Producto_Model();
 
         // obtenemos todos los productos ordenados por id descendente
-        $data['producto'] = $productoModel->orderBy('id', 'DESC')->findAll();
+        $data['productos'] = $productoModel->orderBy('id', 'DESC')->findAll();
 
         // cargamos la vista con los productos
         $dato['titulo'] = 'Todos los Productos';
@@ -51,6 +51,8 @@ class carrito_controller extends BaseController
 
         public function add() //agregar productos al carrito
     {
+        
+
         $request = \Config\Services::request(); //trae todo lo relacionado con la solicitud http
         $cart = \Config\Services::Cart(); //devuelve una instancia del carrito activa
 

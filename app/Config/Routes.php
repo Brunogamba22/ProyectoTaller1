@@ -63,22 +63,27 @@ $routes->get('miPerfil', 'Home::');
 // Rutas para el carrito
 
 // muestra todos los productos del catálogo
-$routes->get('productos', 'carrito_controller::catalogo', ['filter' => 'auth']);
+$routes->get('productos', 'Carrito_controller::catalogo', ['filter' => 'auth']);
 // carga la vista carrito_parte_view
-$routes->get('/muestro', 'carrito_controller::muestra', ['filter' => 'auth']);
+$routes->get('muestro', 'Carrito_controller::muestra', ['filter' => 'auth']);
 // actualiza los datos del carrito
-$routes->get('/carrito_actualiza', 'carrito_controller::actualiza_carrito', ['filter' => 'auth']);
+$routes->get('/carrito_actualiza', 'Carrito_controller::actualiza_carrito', ['filter' => 'auth']);
 // agregar los ítems seleccionados
-$routes->post('carrito/add', 'carrito_controller::add', ['filter' => 'auth']);
+$routes->post('carrito/agregar', 'Carrito_controller::add', ['filter' => 'auth']);
 // elimina un ítem del carrito
-$routes->get('carrito_elimina/(:any)', 'carrito_controller::remove/$1', ['filter' => 'auth']);
+$routes->get('carrito_elimina/(:any)', 'Carrito_controller::remove/$1', ['filter' => 'auth']);
 // eliminar todo el carrito
-$routes->get('/borrar', 'carrito_controller::borrar_carrito', ['filter' => 'auth']);
+$routes->get('/borrar', 'Carrito_controller::borrar_carrito', ['filter' => 'auth']);
 // registrar la venta en las tablas
 $routes->get('/carrito-comprar', 'Ventascontroller::registrar_venta', ['filter' => 'auth']);
 // botones de sumar y restar en la vista del carrito
-$routes->get('carrito_suma/(:any)', 'carrito_controller::suma/$1');
-$routes->get('carrito_resta/(:any)', 'carrito_controller::resta/$1');
+$routes->get('carrito_suma/(:any)', 'Carrito_controller::suma/$1');
+$routes->get('carrito_resta/(:any)', 'Carrito_controller::resta/$1');
+
+//Rutas del cliente para ver sus compras y detalle
+$routes->get('vista_compras/(:num)', 'VentasController::verCompras/$1', ['filter' => 'auth']);
+// Rutas para ver el detalle de una compra
+$routes->get('ver_factura/(:num)', 'VentasController::verDetalleCompra/$1', ['filter' => 'auth']);
 
 
 // ===================================================================================

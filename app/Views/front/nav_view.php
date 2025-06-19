@@ -103,7 +103,7 @@ $cantidad = $cart->totalItems();// Obtiene la cantidad total de productos en el 
                         </a>
                         <ul class="dropdown-menu dropdown-user" aria-labelledby="navbarDropdownUser">
                             <?php if ($perfil_id == 2): ?>
-                                <li><a class="dropdown-item" href="<?= base_url('misCompras') ?>">
+                                <li><a class="dropdown-item" href="<?= base_url('vista_compras/' . $session->get('perfil_id')) ?>">
                                     <i class="bi bi-bag me-2"></i>Mis Compras</a></li>
                             <?php endif; ?>
                             <li><hr class="dropdown-divider"></li>

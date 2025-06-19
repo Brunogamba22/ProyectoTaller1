@@ -34,4 +34,6 @@ class Venta_cab_Model extends Model {
         }
     }
 
+    
+
 }

@@ -51,4 +51,27 @@ class Producto_model extends Model
                   ->findAll();
   }
 
+    public function getProductoConStockTotalPorId($id)
+  {
+      return $this->db->table('productos p')
+          ->select('p.*, categorias.nombre as categoria_nombre, COALESCE(SUM(pt.stock), 0) as stock_total')
+          ->join('categorias', 'categorias.id = p.categoria_id')
+          ->join('producto_tallas pt', 'pt.producto_id = p.id', 'left')
+          ->where('p.id', $id)
+          ->groupBy('p.id')
+          ->get()
+          ->getRowArray();
+  }
+
+    public function getStockTotalPorProducto($id)
+    {
+        return $this->db->table('ProductoTallas_model')
+            ->selectSum('stock')
+            ->where('producto_id', $id)
+            ->get()
+            ->getRowArray();
+    }
+
+
+
 }

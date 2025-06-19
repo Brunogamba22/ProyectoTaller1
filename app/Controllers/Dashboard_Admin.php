@@ -36,8 +36,8 @@ class Dashboard_Admin extends BaseController
     {
         helper('form');
 
-        $categoriaModel = new \App\Models\Categoria_model();
-        $tallaModel = new \App\Models\Tallas_model(); // <-- agregá esta línea
+        $categoriaModel = new Categoria_model();
+        $tallaModel = new Tallas_model(); // <-- agregá esta línea
 
         $data['categorias'] = $categoriaModel->getCategorias();
         $data['todasLasTallas'] = $tallaModel->findAll(); //
@@ -54,9 +54,9 @@ class Dashboard_Admin extends BaseController
     //PARA MOSTRAR LA LISTA DE PRODUCTOS EN EL ADMIN
     public function listaProductosAdmin()
     {
-        $productoModel = new \App\Models\Producto_model();
-        $tallasModel = new \App\Models\ProductoTallas_model();
-        $tallaModel = new \App\Models\Tallas_model();
+        $productoModel = new Producto_model();
+        $tallasModel = new ProductoTallas_model();
+        $tallaModel = new Tallas_model();
         // Obtener todos los productos con stock total
             $productos = $productoModel->getProductosConStockTotal();
 

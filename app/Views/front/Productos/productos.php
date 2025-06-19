@@ -28,7 +28,7 @@
                 <p class="producto-precio">$<?= esc($producto['precio_vta']) ?></p>
                 
                 <!-- Formulario para seleccionar talle y agregar al carrito -->
-                <form action="<?= base_url('carrito/add') ?>" method="post" class="producto-formulario">
+                <form action="<?= base_url('carrito/agregar') ?>" method="post" class="producto-formulario">
                     <input type="hidden" name="id" value="<?= $producto['id'] ?>">
                     <input type="hidden" name="nombre_prod" value="<?= $producto['nombre'] ?>">
                     <input type="hidden" name="precio_vta" value="<?= $producto['precio_vta'] ?>">
@@ -38,7 +38,7 @@
                     <select name="talle" class="talla-selector" required>
                         <option disabled selected>Seleccionar</option>
                         <?php foreach ($producto['tallas'] as $t): ?>
-                            <option value="<?= $t['talla'] ?>">
+                            <option value="<?= $t['talla_id'] ?>"><?= $t['talla'] ?></option>
                                 <?= esc($t['talla']) ?> (<?= $t['stock'] ?> disponibles)
                             </option>
                         <?php endforeach; ?>
