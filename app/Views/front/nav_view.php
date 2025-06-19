@@ -4,6 +4,9 @@ $session = session();
 $nombre = $session->get('nombre');
 $logged_in = $session->get('logged_in');
 $perfil_id = $session->get('perfil_id');
+
+$cart = \Config\Services::cart();// Crea una instancia del servicio de carrito
+$cantidad = $cart->totalItems();// Obtiene la cantidad total de productos en el carrito
 ?>
 
 <!-- Navbar Modernizado -->
@@ -83,7 +86,7 @@ $perfil_id = $session->get('perfil_id');
                         <i class="bi bi-search"></i>
                     </button>
                     
-                    <!-- Barra de búsqueda -->
+                    <!-- Barra de búsqueda --->
                     <div class="search-bar">
                         <form class="search-form">
                             <input class="search-input" type="search" placeholder="Buscar productos...">
@@ -93,11 +96,12 @@ $perfil_id = $session->get('perfil_id');
                 </div>
 
                 <!-- Carrito -->
-                <a class="nav-link me-3 cart-icon" href="<?= base_url('carrito') ?>">
+                <a class="nav-link me-3 cart-icon" href="<?= base_url('/muestro') ?>">
                     <i class="bi bi-cart3"></i>
-                    <span class="cart-badge">0</span>
+                    <?php if ($cantidad > 0): ?>
+                        <span class="cart-badge"><?= esc($cantidad) ?></span>
+                    <?php endif; ?>
                 </a>
-
                 <!-- Usuario -->
                 <?php if ($logged_in): ?>
                     <div class="dropdown">
