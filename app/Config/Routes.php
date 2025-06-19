@@ -83,7 +83,7 @@ $routes->get('carrito_resta/(:any)', 'Carrito_controller::resta/$1');
 //Rutas del cliente para ver sus compras y detalle
 $routes->get('vista_compras/(:num)', 'VentasController::verCompras/$1', ['filter' => 'auth']);
 // Rutas para ver el detalle de una compra
-$routes->get('ver_factura/(:num)', 'VentasController::verDetalleCompra/$1', ['filter' => 'auth']);
+$routes->get('detalle_venta/(:num)', 'VentasController::verDetalleCompra/$1', ['filter' => 'auth']);
 
 
 // ===================================================================================

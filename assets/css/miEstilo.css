@@ -2724,7 +2724,6 @@ footer {
 }
 /* ===== FIN DE ESTILOS PARA LA VISTA DEL CARRITO ===== */
 
-<<<<<<< HEAD
 /* Estilos para la vista de detalle de compra */
 .compra-container {
     max-width: 1200px;
@@ -2827,7 +2826,6 @@ footer {
         height: 40px;
     }
 }
-=======
 /* ===== PRINCIPIO DE ESTILOS PARA LA VISTA DE COMPRAS DEL CLIENTE ===== */
 
 /* Contenedor principal que envuelve toda la sección de compras */
@@ -2883,7 +2881,7 @@ footer {
 .btn-ver-detalle {
     background-color: #228b22; /* Verde forestal */
     color: white; /* Texto blanco */
-    padding: 6px 12px; /* Espaciado interno */
+    padding: 2px 4px; /* Espaciado interno */
     text-decoration: none; /* Sin subrayado */
     border-radius: 6px; /* Bordes redondeados */
     font-weight: bold; /* Texto en negrita */
@@ -2901,4 +2899,3 @@ footer {
     margin-top: 20px; /* Espacio superior */
 }
 /* ===== FIN DE ESTILOS PARA LA VISTA DE COMPRAS DEL CLIENTE ===== */
->>>>>>> ramaBruno2.0

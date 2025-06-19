@@ -191,5 +191,40 @@ class VentasController extends BaseController
         echo view('front/footer_view');
     }
 
+    // Función del usuario cliente para ver el detalle de una compra
+    public function verDetalleCompra($venta_id){
+        $session = session();
+        $id_usuario = $session->get('id_usuario');
+
+        $ventasModel = new Venta_cab_Model();
+        $detalleModel = new Venta_det_Model();
+
+        // Trae la venta específica del usuario
+        $venta = $ventasModel
+            ->select('venta_cabecera.*, usuarios.nombre as nombre_cliente, usuarios.email')
+            ->join('usuarios', 'usuarios.id_usuarios = venta_cabecera.id_usuario')
+            ->where('id_usuario', $id_usuario)
+            ->where('id', $venta_id)
+            ->first();
+
+        if (!$venta) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException("Venta no encontrada");
+        }
+
+        // Trae los detalles de la venta
+        $detalles = $detalleModel->getDetalles($venta_id);
+
+        $data = [
+            'venta' => $venta,
+            'detalles' => $detalles
+        ];
+        $dato['titulo'] = "Detalle de Compra";
+
+        echo view('front/head_view', $dato);
+        echo view('front/nav_view');
+        echo view('back/CRUD_Ventas/detalle_cliente', $data);
+        echo view('front/footer_view');
+    }
+
 
 }

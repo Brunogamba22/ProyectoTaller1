@@ -11,7 +11,7 @@ class Venta_det_Model extends Model {
         $db = \Config\Database::connect();
         $builder = $db->table('venta_detalle');
         $builder->select('venta_detalle.*, productos.nombre AS nombre_producto'); 
-        $builder->join('venta_cabecera', 'venta_cabecera.id = venta_detalle.id_venta');
+        $builder->join('venta_cabecera', 'venta_cabecera.id = venta_detalle.id_venta, p.imagen AS imagen');
         $builder->join('productos', 'productos.id = venta_detalle.id_producto');
         $builder->join('usuarios', 'usuarios.id_usuarios = venta_cabecera.id_usuario');
         
