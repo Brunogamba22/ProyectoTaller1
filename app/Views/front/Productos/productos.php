@@ -28,21 +28,22 @@
                 <p class="producto-precio">$<?= esc($producto['precio_vta']) ?></p>
                 
                 <!-- Formulario para seleccionar talle y agregar al carrito -->
-                <form action="<?= base_url('carrito/agregar') ?>" method="post" class="producto-formulario">
-                    <input type="hidden" name="producto_id" value="<?= $producto['id'] ?>">
-                    
-                    <!-- Selector de talles -->
+                <form action="<?= base_url('carrito/add') ?>" method="post" class="producto-formulario">
+                    <input type="hidden" name="id" value="<?= $producto['id'] ?>">
+                    <input type="hidden" name="nombre_prod" value="<?= $producto['nombre'] ?>">
+                    <input type="hidden" name="precio_vta" value="<?= $producto['precio_vta'] ?>">
+                    <input type="hidden" name="imagen" value="<?= $producto['imagen'] ?>">
+
                     <label for="talla" class="talla-label">Talle:</label>
-                    <select name="talla_id" class="talla-selector" required>
+                    <select name="talle" class="talla-selector" required>
                         <option disabled selected>Seleccionar</option>
                         <?php foreach ($producto['tallas'] as $t): ?>
-                            <option value="<?= $t['talla_id'] ?>">
+                            <option value="<?= $t['talla'] ?>">
                                 <?= esc($t['talla']) ?> (<?= $t['stock'] ?> disponibles)
                             </option>
                         <?php endforeach; ?>
                     </select>
-                    
-                    <!-- Botón para agregar al carrito -->
+
                     <button type="submit" class="boton-carrito">Agregar al carrito</button>
                 </form>
             </div>

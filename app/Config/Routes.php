@@ -53,12 +53,32 @@ $routes->get('PreguntasFrecuentes', 'Home::PreguntasFrecuentes');
 // ==============================================
 // RUTAS PARA CLIENTES LOGUEADOS (perfil_id = 2)
 // ==============================================
-// Rutas para el carrito de compras
-$routes->post('carrito/agregar', 'CarritoController::agregar');
-$routes->get('carrito', 'CarritoController::index');
-
-
+//ruta para el perfil del usuario logueado
 $routes->get('miPerfil', 'Home::');
+
+
+// ==============================================
+// RUTAS PARA EL CARRITO DE COMPRAS
+// ==============================================
+// Rutas para el carrito
+
+// muestra todos los productos del catálogo
+$routes->get('productos', 'carrito_controller::catalogo', ['filter' => 'auth']);
+// carga la vista carrito_parte_view
+$routes->get('/muestro', 'carrito_controller::muestra', ['filter' => 'auth']);
+// actualiza los datos del carrito
+$routes->get('/carrito_actualiza', 'carrito_controller::actualiza_carrito', ['filter' => 'auth']);
+// agregar los ítems seleccionados
+$routes->post('carrito/add', 'carrito_controller::add', ['filter' => 'auth']);
+// elimina un ítem del carrito
+$routes->get('carrito_elimina/(:any)', 'carrito_controller::remove/$1', ['filter' => 'auth']);
+// eliminar todo el carrito
+$routes->get('/borrar', 'carrito_controller::borrar_carrito', ['filter' => 'auth']);
+// registrar la venta en las tablas
+$routes->get('/carrito-comprar', 'Ventascontroller::registrar_venta', ['filter' => 'auth']);
+// botones de sumar y restar en la vista del carrito
+$routes->get('carrito_suma/(:any)', 'carrito_controller::suma/$1');
+$routes->get('carrito_resta/(:any)', 'carrito_controller::resta/$1');
 
 
 // ===================================================================================
