@@ -89,5 +89,29 @@ document.addEventListener('DOMContentLoaded', function() {
 // Se obtiene el elemento con ID "year" y se actualiza su contenido
   document.getElementById("year").textContent = new Date().getFullYear();
 
+//Script para manejar la tabla de consultas
+$(document).ready(function() {
+    // Filtrar consultas
+    $('#searchInput').on('keyup', function() {
+        const value = $(this).val().toLowerCase();
+        $('.consultas-table tbody tr').filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
 
-//modal de ver detalles de venta 
+    $('#filterSelect').change(function() {
+        const filter = $(this).val();
+        $('.consultas-table tbody tr').each(function() {
+            if (filter === 'all') {
+                $(this).show();
+            } else {
+                const isAnswered = $(this).find('.status-badge').hasClass('answered');
+                if ((filter === 'pending' && !isAnswered) || (filter === 'answered' && isAnswered)) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            }
+        });
+    });
+});

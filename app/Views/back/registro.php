@@ -1,5 +1,5 @@
 <!-- Contenedor principal del formulario de registro -->
-<div class="register-container d-flex align-items-center" style="background-color: #C8A97E; min-height: calc(100vh - 160px); padding-top: 2rem; padding-bottom: 2rem;">
+<div class="d-flex align-items-center" style="background-color: #C8A97E; min-height: calc(100vh - 160px); padding-top: 2rem; padding-bottom: 2rem;">
     <div class="container">
         <!-- Tarjeta de registro -->
         <div class="card mx-auto p-4 p-lg-5 border-0" style="max-width: 700px; background-color: white; border-radius: 18px; box-shadow: 0 12px 35px rgba(62, 39, 35, 0.1);">

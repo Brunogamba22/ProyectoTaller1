@@ -7,7 +7,7 @@
 <!-- Sección Comercialización -->
 <div class="container py-5">
   <!-- Título principal de la sección -->
-  <h2 class="text-center mb-5 fw-bold">Comercialización</h2>
+  <h2 class="text-center mb-5 fw-bold titulo-seccion">Comercialización</h2>
 
   <!-- Fila de 3 tarjetas explicativas -->
   <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -66,7 +66,7 @@
 <!-- Tabla comparativa de opciones de envío -->
 <div class="container my-5">
   <!-- Título de la sección -->
-  <h4 class="text-center mb-4 fw-bold">Compará tus opciones</h4>
+  <h4 class="text-center mb-4 fw-bold titulo-seccion-secundaria">Compará tus opciones</h4>
 
   <div class="table-responsive">
     <table class="table table-bordered text-center align-middle shadow-sm">

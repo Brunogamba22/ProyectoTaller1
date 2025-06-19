@@ -119,6 +119,45 @@ body {
         opacity: 1;
     }
 
+    /* Estilo dropdown visible para cliente */
+    .dropdown-menu-client {
+    background-color: white !important;
+    color: black !important;
+    }
+
+    .dropdown-menu-client .dropdown-item {
+    color: black !important;
+    }
+
+    .dropdown-menu-client .dropdown-item:hover {
+    background-color: var(--beige) !important;
+    color: black !important;
+    }
+
+        /* Estilos exclusivos para dropdown del usuario (cliente) */
+    .dropdown-user {
+        background-color: white !important;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        padding: 0.5rem 0;
+    }
+
+    .dropdown-user .dropdown-item {
+        color: var(--marron-oscuro) !important;
+        font-weight: 500;
+    }
+
+    .dropdown-user .dropdown-item:hover {
+        background-color: var(--beige) !important;
+        color: var(--marron-oscuro) !important;
+    }
+
+    .dropdown-user .dropdown-item.text-danger {
+        color: red !important;
+    }
+
+
+
     /* Contenedor principal del buscador */
 .search-container {
     position: relative;
@@ -283,6 +322,14 @@ body.search-active {
   .navbar-personalizada .badge {
     top: 5px !important;
     left: 80% !important;
+  }
+
+  .navbar-cliente .navbar-collapse {
+      background-color: white !important;
+  }
+
+  .navbar-cliente .nav-link {
+      color: var(--marron-oscuro) !important;
   }
 } 
 
@@ -502,6 +549,8 @@ to { opacity: 1; transform: translate(-50%, -50%); }   /* Final visible */
 }
 
 /* ===== SECCIÓN SOBRE NOSOTROS ===== */
+/* Ajuste visual para sección SOBRE NOSOTROS */
+
 .sobre-nosotros {
   margin: 60px 0;           /* Espaciado vertical */
 }
@@ -509,14 +558,14 @@ to { opacity: 1; transform: translate(-50%, -50%); }   /* Final visible */
 .sobre-nosotros h2 {
   font-size: 2.5rem;        /* Tamaño destacado */
   font-weight: 700;         /* Negrita */
-  color: var(--dorado);     /* Color de acento */
+  color: var(--texto-oscuro);     /* Color de acento */
 }
 
 .sobre-nosotros .intro {
   font-size: 1.3rem;        /* Tamaño legible */
   max-width: 800px;         /* Ancho controlado */
   margin: 20px auto;        /* Centrado */
-  color: var(--beige);      /* Color suave */
+  color: var(--texto-oscuro);      /* Color suave */
 }
 
 .mision-vision {
@@ -532,7 +581,7 @@ to { opacity: 1; transform: translate(-50%, -50%); }   /* Final visible */
 .mision-vision p {
   max-width: 800px;         /* Limita ancho de texto */
   margin: 0 auto 20px;      /* Centrado con espaciado */
-  color: var(--beige);      /* Color legible */
+  color: var(--texto-oscuro);      /* Color legible */
   font-size: 1.3rem;        /* Tamaño generoso */
 }
 
@@ -586,7 +635,7 @@ to { opacity: 1; transform: translate(-50%, -50%); }   /* Final visible */
 .btn-dorado {
   background-color: var(--dorado); /* Color de acento */
   border: none;                   /* Sin bordes */
-  color:var(--marron-oscuro);                   /* Texto claro */
+  color:var(--marron-oscuro);                  
   font-weight: bold;              /* Negrita */
   transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones combinadas */
 }
@@ -666,6 +715,17 @@ form label {
   border: 1px solid var(--dorado); /* Borde decorativo */
   overflow: hidden;         /* Oculta excesos */
 }
+
+/* Estilo para títulos principales de sección */
+.titulo-seccion {
+  color: var(--marron-oscuro) !important;
+}
+
+/* Estilo para subtítulos secundarios */
+.titulo-seccion-secundaria {
+  color: var(--marron-oscuro) !important;
+}
+
 
 /* Hover especial solo para las tarjetas h-100 */
 .card.h-100:hover {
@@ -1083,20 +1143,21 @@ form label {
         transition: all 0.3s ease;
         background-color: white;
     }
-    
     .input-group-enhanced:hover {
         border-color: var(--dorado);
     }
     
     .input-group-icon {
-        padding: 0 1rem;
-        color: var(--dorado);
+        position: absolute;
+        left: 15px;
+        color: var(--marron-claro);
         font-size: 1.2rem;
+        z-index: 2;
     }
     
     .form-control-enhanced {
         flex: 1;
-        padding: 1rem 0.75rem;
+        padding: 0.75rem 0.75rem 0.75rem 45px; /* ← Aumentamos el padding-left */
         border: none;
         background: transparent;
         font-size: 1rem;
@@ -1962,7 +2023,10 @@ footer {
     flex-direction: column;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ramaJonathan
 .user-name {
     font-weight: 500;
 }
@@ -2148,3 +2212,274 @@ footer {
 }
 
 /* ===== FIN DE ESTILOS PARA LA VISTA DE PRODUCTOS DEL CLIENTE ===== */
+<<<<<<< HEAD
+=======
+
+/* ===== ESTILOS PARA LA VISTA DE CONSULTAS ADMINISTRADOR ===== */
+.consultas-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.consultas-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--beige);
+}
+
+.consultas-header h1 {
+    color: var(--marron-oscuro);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.consultas-stats {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.stat-card {
+    background: var(--marron-medio);
+    color: var(--texto-claro);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 120px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.consultas-filters {
+    margin-bottom: 1.5rem;
+}
+
+.clean-select {
+    padding: 10px 15px;
+    border: 1px solid var(--beige);
+    border-radius: 6px;
+    background-color: var(--crema);
+    color: var(--texto-oscuro);
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 220px;
+}
+
+.clean-select:focus {
+    outline: none;
+    border-color: var(--dorado);
+    box-shadow: 0 0 0 2px rgba(200, 169, 126, 0.3);
+}
+
+.clean-select:hover {
+    border-color: var(--marron-claro);
+}
+
+.search-box {
+    position: relative;
+    width: 300px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 0.7rem 1rem 0.7rem 2.5rem;
+    border: 1px solid var(--beige);
+    border-radius: 6px;
+    background-color: var(--crema);
+    color: var(--texto-oscuro);
+    font-size: 0.95rem;
+}
+
+.search-box i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--marron-claro);
+}
+
+.filter-options select {
+    padding: 0.7rem 1rem;
+    border: 1px solid var(--beige);
+    border-radius: 6px;
+    background-color: var(--crema);
+    color: var(--texto-oscuro);
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.consultas-table-container {
+    overflow-x: auto;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.consultas-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.consultas-table thead {
+    background-color: var(--marron-oscuro);
+    color: var(--texto-claro);
+}
+
+.consultas-table th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.consultas-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--beige);
+    color: var(--texto-oscuro);
+}
+
+.consultas-table tbody tr:hover {
+    background-color: var(--crema);
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-weight: 500;
+}
+
+.user-phone {
+    font-size: 0.85rem;
+    color: var(--marron-claro);
+    margin-top: 0.2rem;
+}
+
+.consulta-message {
+    max-width: 300px;
+}
+
+.toggle-message {
+    color: var(--dorado);
+    font-size: 0.85rem;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+.toggle-message:hover {
+    text-decoration: underline;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.status-badge.pending {
+    background-color: #FFF3CD;
+    color: #856404;
+}
+
+.status-badge.answered {
+    background-color: #D4EDDA;
+    color: #155724;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.answer-btn {
+    background-color: var(--dorado);
+    color: var(--marron-oscuro);
+}
+
+.answer-btn:hover {
+    background-color: var(--marron-claro);
+    color: var(--texto-claro);
+}
+
+.delete-btn {
+    background-color: #F8D7DA;
+    color: #721C24;
+}
+
+.delete-btn:hover {
+    background-color: #F5C6CB;
+}
+
+.alert {
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.alert-info {
+    background-color: #E7F5FF;
+    color: #0B5ED7;
+    border: 1px solid #9FCDFF;
+}
+
+.alert-heading {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .consultas-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .consultas-filters {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .search-box {
+        width: 100%;
+    }
+    
+    .consultas-table td, .consultas-table th {
+        padding: 0.75rem 0.5rem;
+    }
+}
+>>>>>>> ramaJonathan

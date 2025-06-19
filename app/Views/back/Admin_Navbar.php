@@ -56,7 +56,7 @@
                 
                 <!-- Consultas -->
                 <li class="nav-item">
-                    <a class="nav-link admin-nav-link" href="<?= base_url('admin/consultas') ?>">
+                    <a class="nav-link admin-nav-link" href="<?= base_url('listaConsultas') ?>">
                         <i class="fas fa-comments me-1"></i> Consultas
                     </a>
                 </li>

@@ -4,7 +4,7 @@
     </div>
 <?php endif; ?>
 
-<div class="login-container" style="background-color:  #C8A97E; min-height: calc(100vh - 160px); display: flex; align-items: center; padding: 2rem 0;">
+<div  style="background-color:  #C8A97E; min-height: calc(100vh - 160px); display: flex; align-items: center; padding: 2rem 0;">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-6">
@@ -48,21 +48,6 @@
                             <button type="submit" class="login-btn" style="width: 100%; padding: 1rem; background-color: var(--dorado); color: var(--texto-oscuro); border: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease; margin-bottom: 1.5rem;">
                                 Iniciar Sesión
                             </button>
-                            <!-- Redes sociales -->
-                            <div style="text-align: center; margin: 1.5rem 0;">
-                                <p style="color: var(--marron-claro); position: relative; margin: 1.5rem 0;">
-                                    <span style="background: white; padding: 0 1rem; position: relative; z-index: 1;">o inicia con</span>
-                                    <span style="position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: var(--beige); z-index: 0; transform: translateY(-50%);"></span>
-                                </p>
-                                <div style="display: flex; justify-content: center; gap: 1rem;">
-                                    <button type="button" style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid var(--beige); background: white; color: var(--marron-oscuro); display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
-                                        <i class="bi bi-google" style="font-size: 1.2rem;"></i>
-                                    </button>
-                                    <button type="button" style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid var(--beige); background: white; color: var(--marron-oscuro); display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
-                                        <i class="bi bi-facebook" style="font-size: 1.2rem;"></i>
-                                    </button>
-                                </div>
-                            </div>
                             <!-- Enlace a registro -->
                             <div style="text-align: center;">
                                 <p style="color: var(--marron-claro);">¿No tienes una cuenta? 
