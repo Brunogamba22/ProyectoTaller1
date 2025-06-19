@@ -1,4 +1,3 @@
-
 <div class="ventas-container">
     <div class="ventas-header">
         <h1>Reporte de Ventas</h1>
@@ -16,16 +15,23 @@
 
     <div class="ventas-filters">
         <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Buscar ventas...">
+            <form method="get" action="<?= base_url('admin/ventas') ?>" class="d-inline">
+                <input type="text" id="searchInput" name="busqueda" placeholder="Buscar ventas..." value="<?= esc($busqueda ?? '') ?>">
+                <input type="hidden" name="filtro" value="<?= esc($filtro ?? 'all') ?>">
+                <button type="submit" class="visually-hidden">Buscar</button>
+            </form>
             <i class="fas fa-search"></i>
         </div>
         <div class="filter-options">
-            <select id="filterSelect">
-                <option value="all">Todas las ventas</option>
-                <option value="today">Hoy</option>
-                <option value="week">Esta semana</option>
-                <option value="month">Este mes</option>
-            </select>
+            <form method="get" action="<?= base_url('admin/ventas') ?>" class="d-inline">
+                <input type="hidden" name="busqueda" value="<?= esc($busqueda ?? '') ?>">
+                <select id="filterSelect" name="filtro" onchange="this.form.submit()">
+                    <option value="all" <?= ($filtro == 'all') ? 'selected' : '' ?>>Todas las ventas</option>
+                    <option value="today" <?= ($filtro == 'today') ? 'selected' : '' ?>>Hoy</option>
+                    <option value="week" <?= ($filtro == 'week') ? 'selected' : '' ?>>Esta semana</option>
+                    <option value="month" <?= ($filtro == 'month') ? 'selected' : '' ?>>Este mes</option>
+                </select>
+            </form>
         </div>
     </div>
 
@@ -33,12 +39,14 @@
         <table class="ventas-table">
             <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>N° ORDEN</th>
                     <th>Fecha</th>
                     <th>Cliente</th>
                     <th>Productos</th>
                     <th>Cantidad</th>
+                    <th>Método de Pago</th>
                     <th>Total</th>
+                    <th>Subtotal</th>
                 </tr>
             </thead>
             <tbody>
@@ -59,8 +67,12 @@
                             <?php endforeach; ?>
                         </div>
                     </td>
-                    <td><?= array_reduce($venta['detalles'], function($carry, $item) { return $carry + $item['cantidad']; }, 0) ?></td>
+                    <td><?= array_sum(array_column($venta['detalles'], 'cantidad')) ?></td>
+                    <td><?= $venta['metodo_pago'] ?></td>
                     <td class="total-amount">$<?= number_format($venta['total_venta'], 2) ?></td>
+                    <td>
+                        $<?= number_format(array_sum(array_column($venta['detalles'], 'subtotal')), 2) ?>
+                    </td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>
@@ -68,14 +80,18 @@
     </div>
 
     <div class="ventas-pagination">
-        <button class="pagination-btn" id="prevPage"><i class="fas fa-chevron-left"></i> Anterior</button>
+        <?php if (isset($pagina) && $pagina > 1): ?>
+            <a class="pagination-btn" href="<?= base_url('admin/ventas') . '?filtro=' . $filtro . '&page=' . ($pagina - 1) ?>"><i class="fas fa-chevron-left"></i> Anterior</a>
+        <?php endif; ?>
         <div class="page-numbers">
-            <span class="page-number active">1</span>
-            <span class="page-number">2</span>
-            <span class="page-number">3</span>
-            <span class="page-dots">...</span>
-            <span class="page-number">8</span>
+            <?php if (isset($totalPaginas)): ?>
+                <?php for ($i = 1; $i <= $totalPaginas; $i++): ?>
+                    <a class="page-number <?= ($i == $pagina) ? 'active' : '' ?>" href="<?= base_url('admin/ventas') . '?filtro=' . $filtro . '&page=' . $i ?>"><?= $i ?></a>
+                <?php endfor; ?>
+            <?php endif; ?>
         </div>
-        <button class="pagination-btn" id="nextPage">Siguiente <i class="fas fa-chevron-right"></i></button>
+        <?php if (isset($pagina) && isset($totalPaginas) && $pagina < $totalPaginas): ?>
+            <a class="pagination-btn" href="<?= base_url('admin/ventas') . '?filtro=' . $filtro . '&page=' . ($pagina + 1) ?>">Siguiente <i class="fas fa-chevron-right"></i></a>
+        <?php endif; ?>
     </div>
 </div>

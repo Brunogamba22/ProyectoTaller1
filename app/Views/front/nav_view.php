@@ -7,7 +7,7 @@ $perfil_id = $session->get('perfil_id');
 ?>
 
 <!-- Navbar Modernizado -->
-<nav class="navbar navbar-expand-lg navbar-umma fixed-top shadow-sm">
+<nav class="navbar navbar-expand-lg navbar-umma navbar-cliente fixed-top shadow-sm">
     <div class="container">
         <!-- Logo/Marca -->
         <a class="navbar-brand" href="<?= base_url('principal') ?>">
@@ -41,7 +41,7 @@ $perfil_id = $session->get('perfil_id');
                     aria-expanded="false">
                         Productos
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownProductos">
+                    <ul class="dropdown-menu dropdown-menu-client" aria-labelledby="navbarDropdownProductos">
                        <li><a class="dropdown-item" href="<?= base_url('productos') ?>">Todos los productos</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="<?= base_url('productos/remeras') ?>">Remeras</a></li>
@@ -73,24 +73,13 @@ $perfil_id = $session->get('perfil_id');
                         Contacto
                     </a>
                 </li>
+
             </ul>
 
+                                
             <!-- Parte derecha del navbar -->
             <div class="d-flex align-items-center">
-                 <div class="search-container">
-                    <!-- Icono de lupa -->
-                    <button class="search-icon" type="button">
-                        <i class="bi bi-search"></i>
-                    </button>
-                    
-                    <!-- Barra de búsqueda -->
-                    <div class="search-bar">
-                        <form class="search-form">
-                            <input class="search-input" type="search" placeholder="Buscar productos...">
-                            <button type="submit" class="visually-hidden">Buscar</button>
-                        </form>
-                    </div>
-                </div>
+                 
 
                 <!-- Carrito -->
                 <a class="nav-link me-3 cart-icon" href="<?= base_url('carrito') ?>">
@@ -100,18 +89,18 @@ $perfil_id = $session->get('perfil_id');
 
                 <!-- Usuario -->
                 <?php if ($logged_in): ?>
+                    
+
                     <div class="dropdown">
                         <a class="nav-link dropdown-toggle user-dropdown" href="#" id="navbarDropdownUser" 
                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-person-circle me-1"></i>
                             <?= $nombre ?>
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownUser">
+                        <ul class="dropdown-menu dropdown-user" aria-labelledby="navbarDropdownUser">
                             <?php if ($perfil_id == 2): ?>
-                                <li><a class="dropdown-item" href="<?= base_url('misPedidos') ?>">
-                                    <i class="bi bi-bag me-2"></i>Mis Pedidos</a></li>
-                                <li><a class="dropdown-item" href="<?= base_url('miPerfil') ?>">
-                                    <i class="bi bi-person me-2"></i>Mi Perfil</a></li>
+                                <li><a class="dropdown-item" href="<?= base_url('misCompras') ?>">
+                                    <i class="bi bi-bag me-2"></i>Mis Compras</a></li>
                             <?php endif; ?>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item text-danger" href="<?= base_url('/logout') ?>">

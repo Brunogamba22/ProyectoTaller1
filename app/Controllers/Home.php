@@ -94,7 +94,7 @@ class Home extends BaseController
     }
     public function contacto()
     {
-        $data['titulo'] = 'contacto';
+        $data['titulo'] = 'Contacto';
         echo view('front/head_view', $data);
         echo view('front/nav_view');
         echo view('front/contacto');

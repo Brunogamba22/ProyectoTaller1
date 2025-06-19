@@ -5,7 +5,7 @@ class Venta_cab_Model extends Model {
 
     protected $table = 'venta_cabecera';
     protected $primaryKey = 'id'; // llave primaria
-    protected $allowedFields = ['id_usuario', 'fecha_venta', 'total', 'metodo_pago', 'estado']; // columnas de la tabla
+    protected $allowedFields = ['id_usuario', 'fecha_venta', 'total', 'metodo_pago']; // columnas de la tabla
 
 
     public function getBuilderVentas_cabecera(){

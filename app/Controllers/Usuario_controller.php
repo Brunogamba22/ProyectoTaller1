@@ -2,6 +2,7 @@
 namespace App\Controllers;
 use App\Models\Usuario_model;
 use CodeIgniter\Controller;
+use App\Models\Consulta_Model;
 
 class Usuario_controller extends Controller
 {
@@ -24,7 +25,8 @@ class Usuario_controller extends Controller
         ]);
 
 
-        //Instanciamos el modelo y guardamos los datos si lavalidación fuecorrecta.
+        //Instanciamos el modelo yguardamos losdatos si lavalidación fuecorrecta.
+        //Lugo enviamoselmensaje deéxito consetFlashdata
         $formModel = new Usuario_model();
 
         if (!$input) {
@@ -35,19 +37,18 @@ class Usuario_controller extends Controller
             echo view('front/footer_view');
             ;
         } else {
-            // Guardar los datos si la validación fue correcta
-            $formModel->save([
-                'nombre'   => $this->request->getVar('nombre'),
-                'apellido' => $this->request->getVar('apellido'),
-                'usuario'  => $this->request->getVar('usuario'),
-                'email'    => $this->request->getVar('email'),
-                // Guardar la contraseña hasheada
-                'pass'     => password_hash($this->request->getVar('pass'), PASSWORD_DEFAULT)
-            ]);
+    // Guardar los datos si la validación fue correcta
+    $formModel->save([
+        'nombre'   => $this->request->getVar('nombre'),
+        'apellido' => $this->request->getVar('apellido'),
+        'usuario'  => $this->request->getVar('usuario'),
+        'email'    => $this->request->getVar('email'),
+        'pass'     => password_hash($this->request->getVar('pass'), PASSWORD_DEFAULT)
+    ]);
 
-            // Mensaje de éxito usando Flashdata (se muestra una sola vez)
-            session()->setFlashdata('success', 'Usuario registrado con éxito');
-                return redirect()->to('/Registrarse');
+    // Mensaje de éxito usando Flashdata (se muestra una sola vez)
+    session()->setFlashdata('success', 'Usuario registrado con éxito');
+    return redirect()->to('/Registrarse');
         }
     }
 
@@ -190,6 +191,59 @@ class Usuario_controller extends Controller
         }
 
         return redirect()->to(base_url('listaUsuarios'));
+    }
+
+
+    public function listar_consultas()
+    {
+        $estado = $this->request->getGet('estado') ?? 'all'; // leer filtro
+
+        $consultas = new Consulta_Model();
+        $data['consultas'] = $consultas->getConsultas($estado);
+        $data['titulo'] = 'Gestión Consultas';
+        $data['estado'] = $estado;
+
+        echo view('front/head_view', $data);
+        echo view('back/Admin_Navbar');
+        echo view('back/Consultas', $data);
+        echo view('back/Admin_Footer');
+    }
+
+    public function atender_consulta($id = null)
+    {
+        $consultasM = new Consulta_Model();
+        $consultasM->update($id, ['respuesta' => 'SI']);
+
+        session()->setFlashdata('success', 'Consulta respondida exitosamente.');
+        return redirect()->to(base_url('listaConsultas'));
+    }
+
+    public function eliminar_consulta($id = null)
+    {
+        $model = new Consulta_Model();
+        $model->delete($id);
+
+        session()->setFlashdata('success', 'Consulta eliminada correctamente.');
+        return redirect()->to(base_url('listaConsultas'));
+    }
+
+    /**
+     * Registra una consulta enviada desde el formulario de contacto
+     */
+    public function registrarConsulta()
+    {
+        $consultaModel = new \App\Models\Consulta_model();
+        $data = [
+            'nombre'   => $this->request->getPost('nombre'),
+            'apellido' => $this->request->getPost('apellido'),
+            'telefono' => $this->request->getPost('telefono'),
+            'email'    => $this->request->getPost('email'),
+            'mensaje'  => $this->request->getPost('mensaje'),
+            'respuesta'=> 'NO',
+        ];
+        $consultaModel->insert($data);
+        session()->setFlashdata('success', '¡Tu consulta fue enviada correctamente!');
+        return redirect()->to(base_url('Contacto'));
     }
 
 }

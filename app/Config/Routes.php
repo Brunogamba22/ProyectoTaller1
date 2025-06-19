@@ -101,10 +101,15 @@ $routes->get('altaUsuario', 'Usuario_controller::nuevoUsuario');
 $routes->post('guardarUsuario', 'Usuario_controller::crearUsuario');
 
 
-
-
 // Rutas para CRUD de ventas
 $routes->get('admin/ventas', 'VentasController::ventas');
+
+// Gestion de consultas 
+$routes->get('listaConsultas', 'Usuario_controller::listar_consultas');
+$routes->get('atenderConsultas/(:segment)', 'Usuario_controller::atender_consulta/$1');
+$routes->get('eliminarConsulta/(:segment)', 'Usuario_controller::eliminar_consulta/$1');
+// Ruta para recibir el formulario de contacto
+$routes->post('enviar-consulta', 'Usuario_controller::registrarConsulta');
 
 
 

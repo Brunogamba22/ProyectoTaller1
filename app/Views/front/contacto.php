@@ -1,5 +1,5 @@
 <!-- Sección de Contacto-->
-<section class="contacto-umma" style="background-color:  #C8A97E; padding: 4rem 0;">
+<section class="contacto-umma" style=" padding: 4rem 0;">
   <div class="container">
     <!-- Cabecera con efecto especial -->
     <div class="text-center mb-5">
@@ -13,6 +13,8 @@
       </p>
     </div>
 
+    
+
     <div class="row g-4">
       <!-- Columna del formulario -->
       <div class="col-lg-7">
@@ -20,35 +22,52 @@
           <div class="card-header" style="background: linear-gradient(135deg, var(--marron-oscuro) 0%, var(--dorado) 100%); padding: 1.5rem; color: white;">
             <h4 style="margin: 0; font-weight: 600;">Envíanos tu mensaje</h4>
           </div>
+          <?php if (session()->getFlashdata('success')): ?>
+              <div class="alert alert-success">
+                  <?= session()->getFlashdata('success') ?>
+              </div>
+          <?php endif; ?>
           <div class="card-body" style="padding: 2rem; background-color: white;">
-            <form>
+            <form method="post" action="<?= base_url('enviar-consulta') ?>">
               <div class="col-md-6">
                 <div class="form-group-enhanced">
                   <label for="nombre" class="form-label-enhanced">Nombre</label>
-                    <div class="input-group-enhanced">
-                      <span class="input-group-icon">
-                        <i class="bi bi-person-fill"></i>
-                      </span>
-                      <input type="text" class="form-control-enhanced" id="nombre" placeholder="Ej: María">
-                    </div>
+                  <div class="input-group-enhanced">
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group-enhanced">
+                  <label for="apellido" class="form-label-enhanced">Apellido</label>
+                  <div class="input-group-enhanced">
+                    <input type="text" class="form-control" id="apellido" name="apellido" required>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group-enhanced">
+                  <label for="telefono" class="form-label-enhanced">Telefono</label>
+                  <div class="input-group-enhanced">
+                    <input type="text" class="form-control" id="telefono" name="telefono" required>
+                  </div>
                 </div>
               </div>
 
               <div class="col-12">
                 <div class="form-group-enhanced">
                   <label for="email" class="form-label-enhanced">Email</label>
-                    <div class="input-group-enhanced">
-                      <span class="input-group-icon">
-                        <i class="bi bi-envelope-fill"></i>
-                      </span>
-                      <input type="email" class="form-control-enhanced" id="email" placeholder="Ej: ejemplo@correo.com">
-                    </div>
+                  <div class="input-group-enhanced">
+                    <input type="email" class="form-control" id="email" name="email" required>
+                  </div>
                 </div>
               </div>
 
               <div class="mb-4">
                 <label for="mensaje" class="form-label" style="color: var(--marron-medio); font-weight: 500;">Mensaje</label>
-                <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribí tu mensaje acá..." style="border-color: var(--beige); min-height: 120px;"></textarea>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Escribí tu mensaje acá..." style="border-color: var(--beige); min-height: 120px;" required></textarea>
               </div>
 
               <button type="submit" class="btn btn-enviar" style="background-color: var(--dorado); color: var(--texto-oscuro); font-weight: 600; border: none; border-radius: 8px; padding: 0.75rem; width: 100%; transition: all 0.3s ease;">

@@ -24,4 +24,5 @@
       </div>
     </div>
   </div>
+  <script src="<?= base_url('assets/js/miCodigo.js') ?>"></script>
 </footer>
