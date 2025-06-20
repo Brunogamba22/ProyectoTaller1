@@ -7,11 +7,16 @@ class Home extends BaseController
 
     public function index()
     {
+        if (session()->get('perfil_id') == 1) {
+            return redirect()->to('admin');
+        }
+
         $data['titulo'] = 'principal'; 
-        // Si está logueado, o si ya eligió continuar como invitado (cookie o localStorage), no mostrar modal
         $modalShown = (isset($_COOKIE['modalShown']) && $_COOKIE['modalShown'] == '1')
             || (isset($_SESSION['modalMostrado']) && $_SESSION['modalMostrado'] == 'true');
+
         $data['show_login_modal'] = !session()->get('logged_in') && !$modalShown;
+
         echo view('front/head_view', $data);
         echo view('front/nav_view');
         echo view('front/principal');

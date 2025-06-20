@@ -18,7 +18,6 @@
             <h2>Detalle de Compra #<?= $venta['id'] ?></h2>
             <div class="compra-info">
                 <p><strong>Fecha:</strong> <?= date('d/m/Y H:i', strtotime($venta['fecha_venta'])) ?></p>
-                <p><strong>Método de pago:</strong> <?= ucfirst($venta['metodo_pago']) ?></p>
             </div>
         </div>
 
@@ -63,7 +62,7 @@
         </div>
 
         <div class="compra-actions text-center mt-4">
-            <a href="<?= base_url('mis-compras') ?>" class="btn btn-outline-secondary">
+            <a href="<?= base_url('vista_compras/' . $venta['id'])?>" class="btn btn-outline-secondary">
                 <i class="fas fa-arrow-left"></i> Volver a mis compras
             </a>
             <button onclick="window.print()" class="btn btn-primary">

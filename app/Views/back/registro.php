@@ -114,3 +114,34 @@
         </div>
     </div>
 </div>
+
+<script>
+    
+document.addEventListener('DOMContentLoaded', function () {
+    // Para botones en formularios con clase personalizada
+    document.querySelectorAll('.btn-toggle-password').forEach(button => {
+        button.addEventListener('click', function () {
+            const input = this.previousElementSibling;
+            const icon = this.querySelector('i');
+            const isPassword = input.getAttribute('type') === 'password';
+            input.setAttribute('type', isPassword ? 'text' : 'password');
+            icon.classList.toggle('bi-eye-fill');
+            icon.classList.toggle('bi-eye-slash-fill');
+        });
+    });
+
+    // Para botón dentro del formulario de login
+    const loginToggle = document.querySelector('#login-password + button');
+    if (loginToggle) {
+        loginToggle.addEventListener('click', function () {
+            const input = document.getElementById('login-password');
+            const icon = this.querySelector('i');
+            const isPassword = input.type === 'password';
+            input.type = isPassword ? 'text' : 'password';
+            icon.classList.toggle('bi-eye-fill');
+            icon.classList.toggle('bi-eye-slash-fill');
+        });
+    }
+});
+
+</script>

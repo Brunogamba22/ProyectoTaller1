@@ -40,9 +40,6 @@
                                         <i class="bi bi-eye-fill"></i>
                                     </button>
                                 </div>
-                                <div style="text-align: right; margin-top: 0.5rem;">
-                                    <a href="#" style="color: var(--dorado); text-decoration: none; font-size: 0.9rem;">¿Olvidaste tu contraseña?</a>
-                                </div>
                             </div>
                             <!-- Botón de Inicio de Sesión -->
                             <button type="submit" class="login-btn" style="width: 100%; padding: 1rem; background-color: var(--dorado); color: var(--texto-oscuro); border: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease; margin-bottom: 1.5rem;">
@@ -61,4 +58,33 @@
         </div>
     </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Para botones en formularios con clase personalizada
+    document.querySelectorAll('.btn-toggle-password').forEach(button => {
+        button.addEventListener('click', function () {
+            const input = this.previousElementSibling;
+            const icon = this.querySelector('i');
+            const isPassword = input.getAttribute('type') === 'password';
+            input.setAttribute('type', isPassword ? 'text' : 'password');
+            icon.classList.toggle('bi-eye-fill');
+            icon.classList.toggle('bi-eye-slash-fill');
+        });
+    });
+
+    // Para botón dentro del formulario de login
+    const loginToggle = document.querySelector('#login-password + button');
+    if (loginToggle) {
+        loginToggle.addEventListener('click', function () {
+            const input = document.getElementById('login-password');
+            const icon = this.querySelector('i');
+            const isPassword = input.type === 'password';
+            input.type = isPassword ? 'text' : 'password';
+            icon.classList.toggle('bi-eye-fill');
+            icon.classList.toggle('bi-eye-slash-fill');
+        });
+    }
+});
+</script>
 
