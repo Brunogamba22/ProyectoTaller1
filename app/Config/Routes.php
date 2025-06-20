@@ -86,12 +86,12 @@ $routes->get('vista_compras/(:num)', 'VentasController::verCompras/$1', ['filter
 $routes->get('detalle_venta/(:num)', 'VentasController::verDetalleCompra/$1', ['filter' => 'auth']);
 
 
-// ===================================================================================
+// -===================================================================================
 // RUTAS PARA ADMINISTRADORES (perfil_id = 1)
 // ===================================================================================
 //rutas para el dashboard del administrador
 // Esta ruta muestra el panel de administración
-$routes->get('admin', 'Dashboard_Admin::index');
+$routes->get('admin', 'Dashboard_Admin::listaProductosAdmin');
 //rutas para el listado de productos del administrador
 // Esta ruta muestra la lista de productos en el panel de administración
 $routes->get('Listado', 'Dashboard_Admin::listaProductosAdmin');
