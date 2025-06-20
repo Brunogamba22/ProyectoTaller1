@@ -2724,7 +2724,6 @@ footer {
 }
 /* ===== FIN DE ESTILOS PARA LA VISTA DEL CARRITO ===== */
 
-<<<<<<< HEAD
 /* Estilos para la vista de detalle de compra */
 .compra-container {
     max-width: 1200px;
@@ -2827,7 +2826,7 @@ footer {
         height: 40px;
     }
 }
-=======
+
 /* ===== PRINCIPIO DE ESTILOS PARA LA VISTA DE COMPRAS DEL CLIENTE ===== */
 
 /* Contenedor principal que envuelve toda la sección de compras */
@@ -2901,4 +2900,4 @@ footer {
     margin-top: 20px; /* Espacio superior */
 }
 /* ===== FIN DE ESTILOS PARA LA VISTA DE COMPRAS DEL CLIENTE ===== */
->>>>>>> ramaBruno2.0
+
