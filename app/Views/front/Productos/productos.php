@@ -21,7 +21,7 @@
                 <!-- Nombre del producto -->
                 <h2 class="producto-nombre"><?= esc($producto['nombre']) ?></h2>
                 
-                <!-- Descripción del producto -->
+                <!-- Descripción del productoo -->
                 <p class="producto-descripcion"><?= esc($producto['descripcion']) ?></p>
                 
                 <!-- Precio del producto -->

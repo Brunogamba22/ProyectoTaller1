@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="<?= base_url('assets/css/miEstilo.css') ?>">
 </head>
 <body>
+    <!-- Contenedor principal de productos -->
     <div class="productos-grid">
         <?php foreach ($productos as $producto): ?>
         <article class="producto-card">
@@ -26,8 +27,8 @@
                     <label for="talle" class="talla-label">Talle:</label>
                     <select name="talle" class="talla-selector" required>
                         <option value="" disabled selected hidden>Seleccionar</option>
-                        <?php foreach ($producto['talles'] as $t): ?>
-                            <option value="<?= $t['talla'] ?>">
+                        <?php foreach ($producto['tallas'] as $t): ?>
+                            <option value="<?= $t['talla_id'] ?>">
                                 <?= esc($t['talla']) ?> (<?= $t['stock'] ?> disponibles)
                             </option>
                         <?php endforeach; ?>

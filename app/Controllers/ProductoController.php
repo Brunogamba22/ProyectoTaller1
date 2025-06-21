@@ -335,10 +335,13 @@ class ProductoController extends Controller
         $productoModel = new Producto_model();
         $productoTallas = new ProductoTallas_model();
 
-        $productos = $productoModel->where('categoria_id', $categoria_id)->findAll();
+       $productos = $productoModel
+        ->where('categoria_id', $categoria_id)
+        ->where('activo', 1)
+        ->findAll();
 
         foreach ($productos as &$producto) {
-            $producto['talles'] = $productoTallas->obtenerTallasPorProducto($producto['id']);
+            $producto['tallas'] = $productoTallas->obtenerTallasPorProducto($producto['id']);
         }
 
         $data = [

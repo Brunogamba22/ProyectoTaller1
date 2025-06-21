@@ -26,8 +26,8 @@
                     <label for="talle" class="talla-label">Talle:</label>
                     <select name="talle" class="talla-selector" required>
                         <option disabled selected>Seleccionar</option>
-                        <?php foreach ($producto['talles'] as $t): ?>
-                            <option value="<?= $t['talla'] ?>">
+                        <?php foreach ($producto['tallas'] as $t): ?>
+                            <option value="<?= $t['talla_id'] ?>">
                                 <?= esc($t['talla']) ?> (<?= $t['stock'] ?> disponibles)
                             </option>
                         <?php endforeach; ?>
