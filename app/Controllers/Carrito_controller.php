@@ -35,17 +35,26 @@ class carrito_controller extends BaseController
     }
 
     // ✅ Función muestra() para ver el carrito
-    public function muestra() // carrito que se muestra
+        public function muestra()
     {
-        $cart = \Config\Services::cart(); // iniciamos cart
-        $cart = $cart->contents();        // obtenemos contenido del carrito
-        $data['cart'] = $cart;            // lo pasamos a la vista
+        $cart = \Config\Services::cart()->contents();
+        $data['cart'] = $cart;
+
+        // 👉 Importamos modelo de tallas
+        $tallaModel = new \App\Models\Tallas_model();
+
+        // Convertimos los ID de talles a nombre (S, M, etc.)
+        foreach ($data['cart'] as &$item) {
+            $idTalle = $item['options']['talle'];
+            $nombreTalle = $tallaModel->obtenerNombreTalle($idTalle);
+            $item['options']['talle_nombre'] = $nombreTalle;
+        }
 
         $dato['titulo'] = 'Confirmar compra';
 
         echo view('front/head_view', $dato);
         echo view('front/nav_view');
-        echo view('back/CRUD_Ventas/CarritoVista', $data);
+        echo view('back/CRUD_Ventas/CarritoVista', ['cart' => $data['cart']]);
         echo view('front/footer_view');
     }
 

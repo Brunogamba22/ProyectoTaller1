@@ -7,4 +7,12 @@ class Tallas_model extends Model{
     protected $primaryKey = 'id_talla'; //llave primaria
     protected $allowedFields = ['nombre','descripcion']; //Columnas de la tabla
 
+
+
+    public function obtenerNombreTalle($id_talla)
+{
+    return $this->where('id_talla', $id_talla)->first()['nombre'] ?? 'Sin Talle';
 }
+
+}
+

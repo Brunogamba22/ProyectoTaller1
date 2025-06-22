@@ -54,7 +54,7 @@
                 <tr class="fila-producto-umma">
                   <td><img src="<?= base_url('assets/uploads/productos/' . $item['options']['imagen']) ?>" alt="<?= esc($item['name']) ?>" class="imagen-producto-umma"></td>
                   <td><?= esc($item['name']) ?></td>
-                  <td><?= esc($item['options']['talle']) ?></td>
+                 <td><?= esc($item['options']['talle_nombre'] ?? $item['options']['talle']) ?></td>
                   <td>$<?= number_format($item['price'], 2) ?></td>
                   <td>
                     <div class="contador-cantidad-umma">
