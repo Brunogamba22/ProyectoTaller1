@@ -1,4 +1,4 @@
-<div class="container py-5">
+<div class="container formulario-alta-usuario py-5">
     <div class="row justify-content-center">
         <div class="col-lg-10">
             <div class="card shadow border-0">
