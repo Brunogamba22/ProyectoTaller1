@@ -106,7 +106,34 @@
                                 </tr>
                             <?php endif; ?>
                         </tbody>
-                        </table>    
+                        </table>   
+                        <!-- PAGINACIÓN -->
+                            <?php if (isset($pagina) && isset($totalPaginas) && $totalPaginas > 1): ?>
+                                <div class="d-flex justify-content-center mt-4">
+                                    <div class="productos-pagination d-flex align-items-center gap-2 flex-wrap">
+                                        <?php if ($pagina > 1): ?>
+                                            <a class="btn btn-outline-primary btn-sm" href="<?= base_url('/Listado') . '?page=' . ($pagina - 1) ?>">
+                                                <i class="fas fa-chevron-left"></i> Anterior
+                                            </a>
+                                        <?php endif; ?>
+
+                                        <?php for ($i = 1; $i <= $totalPaginas; $i++): ?>
+                                            <a class="btn btn-sm <?= ($i == $pagina) ? 'btn-primary text-white' : 'btn-outline-secondary' ?>"
+                                            href="<?= base_url('/Listado') . '?page=' . $i ?>">
+                                                <?= $i ?>
+                                            </a>
+                                        <?php endfor; ?>
+
+                                        <?php if ($pagina < $totalPaginas): ?>
+                                            <a class="btn btn-outline-primary btn-sm" href="<?= base_url('/Listado') . '?page=' . ($pagina + 1) ?>">
+                                                Siguiente <i class="fas fa-chevron-right"></i>
+                                            </a>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
+                                                        
+ 
                     </div>
                 </div>
             </div>

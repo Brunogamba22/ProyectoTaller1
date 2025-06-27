@@ -42,9 +42,9 @@
                             <td><?= $i++ ?></td>
                             <td><?= esc($detalle['nombre_producto']) ?></td>
                             <td>
-                                <img src="<?= base_url('assets/productos/' . $detalle['imagen'] ?? 'default.jpg') ?>" 
-                                     alt="<?= esc($detalle['nombre_producto']) ?>" 
-                                     class="product-image">
+                                <img src="<?= base_url('assets/uploads/productos/' . ($detalle['imagen'] ?? 'default.jpg')) ?>" 
+                                alt="<?= esc($detalle['nombre_producto']) ?>" 
+                                class="product-image">
                             </td>
                             <td><?= $detalle['cantidad'] ?></td>
                             <td>$<?= number_format($detalle['precio_unitario'], 2) ?></td>
@@ -61,7 +61,7 @@
             </table>
         </div>
 
-        <div class="compra-actions text-center mt-4">
+        <div class="compra-actions text-center mt-4 no-imprimir">
             <a href="<?= base_url('vista_compras/' . $venta['id'])?>" class="btn btn-outline-secondary">
                 <i class="fas fa-arrow-left"></i> Volver a mis compras
             </a>

@@ -2903,7 +2903,19 @@ footer {
 
 /* ===== FIN DE ESTILOS PARA LA VISTA DE COMPRAS DEL CLIENTE ===== */
 
+/* ====== Estilos solo para impresión ====== */
+@media print {
+    /* Oculta botones y navegación */
+    .no-imprimir,
+    .btn,
+    nav,
+    footer,
+    .barra-lateral,
+    .compra-actions {
+        display: none !important;
+    }
 
+<<<<<<< HEAD
 /* Estilos para acciones del listado de usuarios*/
 
 .btn-sm {
@@ -3044,4 +3056,53 @@ footer {
 .consultas-container .action-btn i {
     margin: 0;
     font-size: 14px;
+=======
+    /* Ajustes de layout para que se vea prolijo */
+    body {
+        margin: 0;
+        padding: 0;
+        font-size: 13px;
+        background: white;
+        color: black;
+    }
+
+    .compra-container {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .compra-table th,
+    .compra-table td {
+        border: 1px solid #555;
+        padding: 6px;
+    }
+
+    .compra-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+}
+/* ====== FIN DE ESTILOS SOLO PARA IMPRESIÓN ====== */
+
+/* ===== ESTILOS PARA PAGINACIÓN DE PRODUCTOS ===== */
+.productos-pagination {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+}
+
+.productos-pagination .btn {
+    flex-shrink: 0;
+}
+
+/* Opcional: ocultar scrollbar en Chrome */
+.productos-pagination::-webkit-scrollbar {
+    height: 6px;
+}
+.productos-pagination::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+>>>>>>> ramaBruno2.0
 }
