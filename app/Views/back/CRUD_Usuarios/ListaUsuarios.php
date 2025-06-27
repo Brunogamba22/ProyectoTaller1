@@ -55,29 +55,31 @@
                                             
                                             <!-- Columna Acciones -->
                                             <td class="text-center">
-                                                <!-- Contenedor de acciones -->
-                                                <div class="d-flex flex-column align-items-center">
-                                                    <!-- Botones de acciones -->
-                                                    <div class="btn-group">
-                                                        <a href="<?= base_url('usuarioEdit/' . $user['id_usuarios']) ?>" class="btn btn-sm btn-warning me-1">
-                                                            <i class="fas fa-edit"></i> Editar
-                                                        </a>
+                                                <!-- Botón Editar - ahora con ancho fijo -->
+                                                <div class="mb-1">
+                                                    <a href="<?= base_url('usuarioEdit/' . $user['id_usuarios']) ?>" class="btn btn-sm btn-warning action-btn">
+                                                        <i class="fas fa-edit"></i> Editar
+                                                    </a>
+                                                </div>
+                                                
+                                                <!-- Botones de estado (solo si aplica) -->
+                                                <?php if ($user['perfil_id'] != 1) : ?>
+                                                    <div>
                                                         <?php if ($user['baja'] == 'NO') : ?>
                                                             <a href="<?= base_url('usuarioEstado/' . $user['id_usuarios'] . '/SI') ?>" 
-                                                                class="btn btn-sm btn-danger" style="min-width: 100px;"
+                                                                class="btn btn-sm btn-danger action-btn"
                                                                 onclick="return confirm('¿Estás seguro de desactivar este usuario?');">
                                                                     <i class="fas fa-user-slash"></i> Desactivar
                                                             </a>
                                                         <?php else : ?>
                                                             <a href="<?= base_url('usuarioEstado/' . $user['id_usuarios'] . '/NO') ?>" 
-                                                                class="btn btn-sm btn-success" style="min-width: 100px;"
+                                                                class="btn btn-sm btn-success action-btn"
                                                                 onclick="return confirm('¿Deseás activar este usuario?');">
                                                                     <i class="fas fa-user-check"></i> Activar
                                                             </a>
                                                         <?php endif; ?>
-
                                                     </div>
-                                                </div>
+                                                <?php endif; ?>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>

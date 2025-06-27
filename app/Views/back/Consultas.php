@@ -76,16 +76,23 @@
                         <td>
                             <div class="action-buttons">
                                 <?php if ($consulta['respuesta'] === 'NO'): ?>
-                                    <a href="<?= base_url('atenderConsultas/'.$consulta['id_consulta']) ?>" class="action-btn answer-btn" title="Marcar como respondida">
+                                    <button onclick="window.location.href='<?= base_url('atenderConsultas/'.$consulta['id_consulta']) ?>'" 
+                                            class="action-btn answer-btn" 
+                                            title="Marcar como respondida">
                                         <i class="fas fa-check"></i>
-                                    </a>
+                                    </button>
+                                <?php else: ?>
+                                    <button class="action-btn answered-btn" title="Consulta respondida">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
                                 <?php endif; ?>
-                                <a href="<?= base_url('eliminarConsulta/'.$consulta['id_consulta']) ?>" class="action-btn delete-btn" title="Eliminar consulta" onclick="return confirm('¿Estás seguro de eliminar esta consulta?')">
+                                <button onclick="if(confirm('¿Estás seguro de eliminar esta consulta?')) { window.location.href='<?= base_url('eliminarConsulta/'.$consulta['id_consulta']) ?>' }" 
+                                        class="action-btn delete-btn" 
+                                        title="Eliminar consulta">
                                     <i class="fas fa-trash"></i>
-                                </a>
+                                </button>
                             </div>
                         </td>
-                    </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
