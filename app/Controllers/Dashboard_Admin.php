@@ -20,16 +20,6 @@ class Dashboard_Admin extends BaseController
     }
 
     /*****************************************************************
-     * SECCIÓN USUARIOS
-     *****************************************************************/
-
-    
-
-    
-
-
-
-    /*****************************************************************
      * SECCIÓN PRODUCTOS
      *****************************************************************/
     public function altaProductos()
@@ -51,29 +41,51 @@ class Dashboard_Admin extends BaseController
 
 
 
-    //PARA MOSTRAR LA LISTA DE PRODUCTOS EN EL ADMIN
-    public function listaProductosAdmin()
+        public function listaProductosAdmin()
     {
         $productoModel = new Producto_model();
         $tallasModel = new ProductoTallas_model();
         $tallaModel = new Tallas_model();
-        // Obtener todos los productos con stock total
-            $productos = $productoModel->getProductosConStockTotal();
 
-            // 🔁 Asociar tallas a cada producto
-            foreach ($productos as &$p) {
-                $p['tallas'] = $tallasModel->obtenerTallasPorProducto($p['id']);
-            }
-            $data['productos'] = $productos;
-            $data['titulo'] = 'Lista de Productos';
-            $data['todasLasTallas'] = $tallaModel->findAll();
+        // Usamos el query builder desde el modelo
+        $productos = $productoModel
+            ->getProductosConStockTotalQuery()
+             ->orderBy('productos.id', 'desc')
+            ->paginate(10); //  paginación de 10 productos
 
-        // Cargar la vista con los datos
+        //  Asignamos tallas a cada producto paginado
+        foreach ($productos as &$p) {
+            $p['tallas'] = $tallasModel->obtenerTallasPorProducto($p['id']);
+        }
+        $currentPage = $productoModel->pager->getCurrentPage();
+        $totalPages = $productoModel->pager->getPageCount();
+
+
+        // Lista de productos paginados (ya vienen ordenados por ID descendente)
+        $data['productos'] = $productos;
+
+        // Título que se usará en la vista (por ejemplo, en el <title> o encabezado)
+        $data['titulo'] = 'Lista de Productos';
+
+        // Se obtienen todas las tallas disponibles desde el modelo de tallas (para mostrar en filtros o formularios)
+        $data['todasLasTallas'] = $tallaModel->findAll();
+
+        // Se pasa el paginador para que la vista pueda usarlo (aunque lo estamos usando de forma personalizada)
+        $data['pager'] = $productoModel->pager;
+
+        // Página actual del paginado (número actual)
+        $data['pagina'] = $currentPage;
+
+        // Total de páginas disponibles según la cantidad de productos y la paginación (10 por página)
+        $data['totalPaginas'] = $totalPages;
+
+
         echo view('front/head_view', $data);
         echo view('back/Admin_Navbar');
         echo view('back/CRUD_Productos/ListaDeProductos', $data);
         echo view('back/Admin_Footer');
     }
+
 
 
 
